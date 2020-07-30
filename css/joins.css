@@ -1,0 +1,214 @@
+.join_style{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-left: 640px;
+    width: 640 px;
+    height: 100vh;
+}
+.hr_sly{
+    margin-left: 620px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 700px;
+    align-items: center;
+}
+tr,td{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.table_sty{
+    text-align:left; 
+     width= 940px; 
+    padding:5px 0 5px 0;
+    color: #333333;
+    font-size: 18px;
+}
+.s_btn
+{
+    margin-left: 13px;
+    width: 120px;
+    height: 48px;
+    background-color: #ffe201;
+    border: 0px;
+}
+.sm_btn
+{
+    margin-top: 80px;
+    border: 0px;
+    width: 100%;
+    height: 64px;
+    background-color: #ffe201;
+    font-size: 18px;
+}
+.input_text
+{
+        margin-left: 35px;
+    margin-bottom: 20px;
+    width: 362px;
+    height: 48px;
+    border: 1px solid #e2e2e2;
+}
+.input_text_502
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 35px;
+    width: 502px;
+    height: 48px;
+    border: 1px solid #e2e2e2;
+}
+.input_text_502_bnk
+{
+    margin-top: 10px;
+    margin-bottom: 70px;
+    margin-left: 35px;
+    width: 502px;
+    height: 48px;
+    border: 1px solid #e2e2e2;
+}
+.sp_blank
+{
+    border: 0px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.input_text_180
+{
+        margin-left: 35px;
+        margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 180px;
+    height: 48px;
+    border: 1px solid #e2e2e2;
+}
+.input_text_120
+{
+        margin-left: 35px;
+        margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 120px;
+    height: 48px;
+    border: 1px solid #e2e2e2;
+}
+.input_text_90
+{
+        margin-left: 35px;
+        margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 90px;
+    height: 48px;
+    border: 1px solid #e2e2e2;
+}
+.input_text_280
+{
+        margin-left: 35px;
+        margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 280px;
+    height: 48px;
+    border: 1px solid #e2e2e2;
+}
+.join_content{
+    margin-left: 823px;
+    margin-bottom: 40px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #999999;
+    font-size: 16px;
+    margin-top: 43px;
+
+}
+.aler_cont
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: -110px;
+    font-size: 14px;
+    color: #999999;
+}
+.box-radio-input input[type="radio"]{
+    display:none;
+}
+
+.box-radio-input input[type="radio"] + span{
+    display:inline-block;
+    background:none;
+    border:1px solid #e2e2e2;    
+    width: 60px;
+    text-align:center;
+    height:48px;
+    line-height:45px;
+    font-weight:500;
+    cursor:pointer;
+}
+
+.box-radio-input input[type="radio"]:checked + span{
+    border:1px solid #23a3a7;
+    background:#ffe201;
+    color:#333333;
+}
+.mb_radio_div{
+        margin-left: 690px;
+        margin-top: 90px;
+}
+.mb-radio-input input[type="radio"]{
+    display:none;
+
+}
+
+.mb-radio-input input[type="radio"] + span{
+    margin-right: 60px;
+    display:inline-block;
+    font-size: 22px;
+    background:url(../img/under_16_w.png);
+    border:1px solid #e2e2e2;    
+    width: 240px;
+    text-align:center;
+    height:240px;
+    line-height:45px;
+    font-weight:500;
+    color: #1c8286;
+    cursor:pointer;
+    
+}
+
+.mb-radio-input input[type="radio"]:checked + span{
+    border:1px solid #23a3a7;
+    background:url(../img/under_16_g.png);
+    color:#ffffff;
+}
+.age_img
+{
+    margin-top: 42px;
+}
+.mb_radio_div{
+        margin-left: 690px;
+        margin-top: 90px;
+}
+.mb-radio-input_2 input[type="radio"]{
+    display:none;
+
+}
+
+.mb-radio-input_2 input[type="radio"] + span{
+    margin-right: 60px;
+    display:inline-block;
+    font-size: 22px;
+    background:url(../img/over_16_w.png);
+    border:1px solid #e2e2e2;    
+    width: 240px;
+    text-align:center;
+    height:240px;
+    line-height:45px;
+    font-weight:500;
+    color: #1c8286;
+    cursor:pointer;
+}
+
+.mb-radio-input_2 input[type="radio"]:checked + span{
+    border:1px solid #23a3a7;
+    background:url(../img/over_16_g.png);
+    color:#ffffff;
+}

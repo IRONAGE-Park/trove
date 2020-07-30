@@ -1,0 +1,77 @@
+#te
+{
+    position: relative;
+    height: 150vh;
+}
+div.gallery {
+    margin-top: 40px;
+    margin-left: 320px;
+    float: left;
+    width: 160px;
+}
+
+div.gallery img {
+  width: 400px;
+  height: 240px;
+    margin-bottom: 0px;
+}
+
+div.desc {
+    font-size: 22px;
+    color: #333333;
+    width: 400px;
+    height: 136px;
+  padding: 15px;
+  text-align: center;
+    border: 1px solid #dbdbdb;
+}
+.cont_text {
+    font-size: 16px;
+    width: 400px;
+    height: 136px;
+    margin-left: -20px;
+    
+    color: #999999;
+    
+}
+.ib_title
+{ 
+    font-size: 22px;
+    width: 400px;
+    height: 136px;
+   padding: 20px;
+   border: 1px solid #dbdbdb;
+    position: relative;
+    display: inline-block;
+}
+.ib_cnt
+{
+    display: inline-block;
+    font-size: 22px;
+    color: #999999;
+}
+.ib_cont
+{
+    margin-top: 34px;
+    display: inline-block;
+    font-size: 18px;
+    color: #555555;
+}
+.ib_cont_2
+{
+    margin-left: 20px;
+    display: inline-block;
+    font-size: 16px;
+    color: #999999;
+}
+.heart_click
+{
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+}
+.hot_line
+{
+    margin-left: 320px;
+    width: 1360px;
+}

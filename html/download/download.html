@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Trove</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/info_style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/board_style.css">
+    <link rel="stylesheet" type="text/css"href="../../css/search_style.css">
+    <link rel="stylesheet" type="text/css"href="../../css/ques.css">
+    <link rel="stylesheet" type="text/css" href="../../css/down_style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="/lib/w3.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+        <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 5000); // Change image every 2 seconds
+            }
+
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+        }
+
+        $(document).on('mouseover', '.topMenu span', function() {
+            $('.dept01').slideDown(300);
+        });
+        $(document).on('mouseover', 'div', function () {
+        if (!$(this).hasClass('topMenu')) {
+            $('.dept01').slideUp(300);
+    }
+        });
+            $(document).ready(function(){
+	
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	});
+
+});
+            
+            $(document).ready(function(){
+  var fileTarget = $('.filebox .upload-hidden');
+
+    fileTarget.on('change', function(){
+        if(window.FileReader){
+            var filename = $(this)[0].files[0].name;
+        } else {
+            var filename = $(this).val().split('/').pop().split('\\').pop();
+        }
+
+        $(this).siblings('.upload-name').val(filename);
+    });
+}); 
+    </script>
+<body>
+		<header>
+
+			<div class="topMenu">
+            <ul class="menu01">
+                		<li><span>	<h2>
+				<img src="../../img/TROVE_LOGO.png" alt="" class="logo_img">
+			</h2></span>
+                    <ul class="dept01">
+
+                    </ul></li>
+                <li><span>뉴스</span>
+                    <ul class="dept01">
+                        <li class="nop">공지사항</li>
+                        <li class="nop">업데이트</li>
+                        <li class="nop">이벤트</li>
+                    </ul>
+                </li>
+                <li><span>정보</span>
+                    <ul class="dept01">
+                        <li class="nop">게임정보</li>
+                        <li class="nop">모험</li>
+                        <li class="nop">탐험</li>
+                        <li class="nop">제작</li>
+                    </ul>
+                </li>
+                <li><span>커뮤니티</span>
+                    <ul class="dept01">
+                        <li class="nop">자유게시판</li>
+                        <li class="nop">정보게시판</li>
+                        <li class="nop">이미지게시판</li>
+                    </ul>
+                </li>
+                <li><span>캐시샵</span>
+                    <ul class="dept01">
+                        <li class="nop">패키지</li>
+                        <li class="nop">프리미엄</li>
+                        <li class="nop">크레딧</li>
+                        <li class="nop">포인트샵</li>
+                    </ul>
+                </li>
+                <li><span>다운로드</span>
+                    <ul class="dept01">
+                        <li class="nop">클라이언트 다운</li>
+                    </ul>
+                </li>
+                 <li><span>고객지원</span>
+                    <ul class="dept01">
+                        <li class="nop">1:1문의</li>
+                        <li class="nop">FAQ</li>
+                    </ul>
+                </li>
+                <li><img src="../../img/login_btn.png" class="login_btn"></li>
+            </ul>
+        </div>
+		</header>
+        <section class="visual_sub">
+			<img src="../../img/down_main.jpg">
+            <input type="button" class="start_btn">
+                        <h2 class="page_title">다운로드</h2>
+		</section>
+        <section class="sub_nao">
+           <div class="sub_nav">
+            </div><br>
+            <hr color=#cccccc>
+        </section>
+   <div><h5 class="down_title">다운로드</h5>
+    <input type="button" class="down_btn"></div>
+    <h5 class="sy_title">권장사양</h5>
+    <table class="pc_sy">
+    <th class="pc_cate">항목</th>
+    <th class="pc_cate_2">최소사양</th>
+    <th class="pc_cate_3">권장사양</th>
+        <tr >
+            <td class="pc_row_1_cen">운영체제</td>
+            <td class="pc_row_1">Windows 7/8/8.1/10 - 64-bit</td>
+            <td class="pc_row_1">Windows 7/8/8.1/10 - 64-bit</td>
+        </tr>
+        <tr>
+            <td class="pc_row_1_cen">CPU</td>
+            <td class="pc_row_1">Intel Core i3-2100 @ 3.1GHz<br>
+(or AMD Phenom 7950 Quad-Core,<br>
+AMD Athlon II X4 620 equivalent)</td>
+            <td class="pc_row_1">Intel i5-2550K @ 3.4Ghz<br>
+(or AMD FX-6350 Six-Core equivalent)</td>
+        </tr>
+        <tr>
+            <td class="pc_row_1_cen">메모리</td>
+            <td class="pc_row_1">4GB</td>
+            <td class="pc_row_1">8GB</td>
+        </tr>
+        <tr>
+            <td class="pc_row_bt_cen">하드디스크 여유공간</td>
+            <td class="pc_row_bt">4GB</td>
+            <td class="pc_row_bt">8GB</td>
+        </tr>
+    </table>
+
+</body>
+ <footer class="footer">
+
+        <ul>
+            <li class="footer_nav_2">(주)TROVE &nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호 : 123-456-7890&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; 전화 : 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;팩스: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;주소 : 서울 중구 세종대로 110 &nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;E-mail : trove@trove.co.kr  </li>
+                   <hr class="footerline_2">
+           <li class="footer_nav_2">통신판매업 신고번호 : 제2020-서울-1234호&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;ⓒ 2020 TROVE KOREA Corporation ALL Rights Reserverd.</li>
+            
+        </ul>
+        <hr class="footerline">
+        <a href="html/mun/1_1mun.html" class="footer_nav">고객센터 </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="html/data_contact/eyong.html" class="footer_nav">이용약관 </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="html/data_contact/jungbo.html" class="footer_nav">개인정보처리방침 </a>
+    
+    </footer>
+</html>

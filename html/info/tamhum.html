@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Trove</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/info_style.css">
+        <link rel="stylesheet" type="text/css" href="../../css/adven_style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="/lib/w3.css">
+                <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 5000); // Change image every 2 seconds
+            }
+
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+        }
+
+        $(document).on('mouseover', '.topMenu span', function() {
+            $('.dept01').slideDown(300);
+        });
+        $(document).on('mouseover', 'div', function () {
+        if (!$(this).hasClass('topMenu')) {
+            $('.dept01').slideUp(300);
+    }
+        });
+  $('.tab_menu_btn').on('click',function(){
+  //버튼 색 제거,추가
+  $('.tab_menu_btn').removeClass('on');
+  $(this).addClass('on')
+  
+  //컨텐츠 제거 후 인덱스에 맞는 컨텐츠 노출
+  var idx = $('.tab_menu_btn').index(this);
+  
+  $('.tab_box').hide();
+  $('.tab_box').eq(idx).show();
+});
+    </script>
+<body>
+		<header>
+
+			<div class="topMenu">
+            <ul class="menu01">
+                		<li><span>	<h2>
+				<img src="../../img/TROVE_LOGO.png" alt="" class="logo_img">
+			</h2></span>
+                    <ul class="dept01">
+
+                    </ul></li>
+                <li><span>뉴스</span>
+                    <ul class="dept01">
+                        <li class="nop">공지사항</li>
+                        <li class="nop">업데이트</li>
+                        <li class="nop">이벤트</li>
+                    </ul>
+                </li>
+                <li><span>정보</span>
+                    <ul class="dept01">
+                        <li class="nop">게임정보</li>
+                        <li class="nop">모험</li>
+                        <li class="nop">탐험</li>
+                        <li class="nop">제작</li>
+                    </ul>
+                </li>
+                <li><span>커뮤니티</span>
+                    <ul class="dept01">
+                        <li class="nop">자유게시판</li>
+                        <li class="nop">정보게시판</li>
+                        <li class="nop">이미지게시판</li>
+                    </ul>
+                </li>
+                <li><span>캐시샵</span>
+                    <ul class="dept01">
+                        <li class="nop">패키지</li>
+                        <li class="nop">프리미엄</li>
+                        <li class="nop">크레딧</li>
+                        <li class="nop">포인트샵</li>
+                    </ul>
+                </li>
+                <li><span>다운로드</span>
+                    <ul class="dept01">
+                        <li class="nop">클라이언트 다운</li>
+                    </ul>
+                </li>
+                 <li><span>고객지원</span>
+                    <ul class="dept01">
+                        <li class="nop">1:1문의</li>
+                        <li class="nop">FAQ</li>
+                    </ul>
+                </li>
+                <li><img src="../../img/login_btn.png" class="login_btn"></li>
+            </ul>
+        </div>
+		</header>
+        <section class="visual_sub">
+			<img src="../../img/info_banner.jpg">
+            <input type="button" class="start_btn">
+            <h2 class="page_title">정보</h2>
+		</section>
+        <section class="sub_nao">
+           <div class="sub_nav">
+            <a href="#" class="g_info">게임정보</a>
+            <a href="#" class="g_info">모험</a>
+            <a href="#" class="g_info_selec">탐험</a>
+            <a href="#" class="g_info">제작</a>
+
+            </div>
+            <hr color=#cccccc>
+        </section>
+        <h2 class="trove_intro">탐험</h2>
+        <section id="game_infoo_2" style="margin-top: 65px;">
+            <div class="gamu_infom">
+                <div class="aaa2">
+                <img src="../../img/tamhum_1.png" alt=""></div>
+                <div class="bbb">
+
+                <h2 class="gamu_info"><br><br>타이틀 텍스트 입니다. </h2>
+                    <h5 class="gamu_content">텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트</h5>
+                </div>
+            </div>
+        </section>
+        <section id="tamhum_slider">
+            <div>
+            <h1 style="padding-left: 260px; padding-top: 52px;">
+                탐험 슬라이더 영역입니다.</h1>
+            </div>
+        </section>
+</body>
+ <footer class="footer">
+
+        <ul>
+            <li class="footer_nav_2">(주)TROVE &nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호 : 123-456-7890&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; 전화 : 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;팩스: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;주소 : 서울 중구 세종대로 110 &nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;E-mail : trove@trove.co.kr  </li>
+                   <hr class="footerline_2">
+           <li class="footer_nav_2">통신판매업 신고번호 : 제2020-서울-1234호&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;ⓒ 2020 TROVE KOREA Corporation ALL Rights Reserverd.</li>
+            
+        </ul>
+        <hr class="footerline">
+        <a href="html/mun/1_1mun.html" class="footer_nav">고객센터 </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="html/data_contact/eyong.html" class="footer_nav">이용약관 </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="html/data_contact/jungbo.html" class="footer_nav">개인정보처리방침 </a>
+    
+    </footer>
+</html>

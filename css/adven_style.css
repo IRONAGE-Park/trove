@@ -1,0 +1,43 @@
+#game_infoo_2{
+    margin-top: 40px;
+    margin-left: 320px;
+    width: 1280px;
+    height: 480px;
+}
+.gamu_info{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #555555;
+    font-size: 24px;
+    margin-top: 156px;
+    
+}
+.gamu_content{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #999999;
+    font-size: 16px;
+    margin-top: 43px;
+
+}
+#class_title{
+    width: 1280px;
+    height: 160px;
+    background-color: #f9f9f9;
+    margin-top: 60px;
+    margin-left: 320px;
+    padding-top: 40px;
+}
+
+#class_slider{
+    margin-top: 80px;
+    
+    width: 1920px;
+    height: 305px;
+    background-color: #f9f9f9;
+}
+#tamhum_slider{
+    margin-top: 80px;
+    
+    width: 1920px;
+    height: 305px;
+    background-color: #f9f9f9;
+}

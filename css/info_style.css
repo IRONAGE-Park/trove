@@ -1,0 +1,124 @@
+#g_info{
+    margin-right: 32px;
+    color: #555555;
+    
+}
+.trove_intro{
+    
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #333333;
+    font-size: 40px;
+    text-align: center;
+    margin-left: 890px;
+    margin-top: 82px;
+}
+
+
+.sub_nav{
+    align-content: center;
+    margin-left: 320px;
+    margin-top: 22px;
+    margin-bottom: 26px;
+    
+}
+
+.sub_nav button{
+    border: 0px solid skyblue;
+    background-color: rgba(0,0,0,0);
+    color: #999999;
+    padding: 5px;
+    font-size: 24px;
+    background:none;
+  border:0;
+  outline:0;
+  cursor:pointer;
+}
+.sub_nav button:hover{
+    border-bottom: 3px solid black;
+
+}
+.visual_sub {
+    
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+	background-size: cover;
+	background-position: 0% 20%;
+	width:100%;
+	height:360px;
+    margin-bottom: 10px;
+    position: relative
+}
+input.start_btn{
+    border: 0px;
+    background: url(../img/trove_start_min.png) no-repeat;
+    width: 200px;
+    height: 224px;
+    position: absolute;
+    top: 190px;
+    left: 1380px;
+    
+}
+#game_infoo{
+    margin-top: 21px;
+    margin-left: 320px;
+    width: 1280px;
+    height: 480px;
+}
+game_infoo.aaa{
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+game_infoo.bbb{
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
+    background: #000000;
+}
+.gamu_info{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #555555;
+    font-size: 24px;
+    margin-top: 1px;
+    
+}
+.gamu_content{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #999999;
+    font-size: 16px;
+    margin-top: 43px;
+
+}
+#game_infoo_2{
+    margin-top: -7px;
+    margin-left: 320px;
+    width: 1280px;
+    height: 480px;
+}
+.g_info{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    margin : 50px;
+    color: #999999;
+}
+.g_info_selec{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    margin : 20px;
+    padding-bottom: 24px;
+    border-bottom: 8px solid #555555;
+}
+.g_info:hover{
+    color: #555555;
+    padding-bottom: 24px;
+    border-bottom: 8px solid #555555;
+}
+
+
+#footer{
+    margin-top : 160px;
+    width: 1920px;
+    height: 200px;
+    background-color: #222222;
+        
+}

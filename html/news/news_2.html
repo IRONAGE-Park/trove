@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Trove</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+    	<link rel="stylesheet" type="text/css" href="../../css/news_style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/info_style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/board_style.css">
+    <link rel="stylesheet" type="text/css"href="../../css/search_style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="/lib/w3.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+        <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 5000); // Change image every 2 seconds
+            }
+
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+        }
+
+        $(document).on('mouseover', '.topMenu span', function() {
+            $('.dept01').slideDown(300);
+        });
+        $(document).on('mouseover', 'div', function () {
+        if (!$(this).hasClass('topMenu')) {
+            $('.dept01').slideUp(300);
+    }
+        });
+            $(document).ready(function(){
+	
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+
+})
+    </script>
+<body>
+		<header>
+
+			<div class="topMenu">
+            <ul class="menu01">
+                		<li><span>	<h2>
+				<img src="../../img/TROVE_LOGO.png" alt="" class="logo_img">
+			</h2></span>
+                    <ul class="dept01">
+
+                    </ul></li>
+                <li><span>뉴스</span>
+                    <ul class="dept01">
+                        <li class="nop">공지사항</li>
+                        <li class="nop">업데이트</li>
+                        <li class="nop">이벤트</li>
+                    </ul>
+                </li>
+                <li><span>정보</span>
+                    <ul class="dept01">
+                        <li class="nop">게임정보</li>
+                        <li class="nop">모험</li>
+                        <li class="nop">탐험</li>
+                        <li class="nop">제작</li>
+                    </ul>
+                </li>
+                <li><span>커뮤니티</span>
+                    <ul class="dept01">
+                        <li class="nop">자유게시판</li>
+                        <li class="nop">정보게시판</li>
+                        <li class="nop">이미지게시판</li>
+                    </ul>
+                </li>
+                <li><span>캐시샵</span>
+                    <ul class="dept01">
+                        <li class="nop">패키지</li>
+                        <li class="nop">프리미엄</li>
+                        <li class="nop">크레딧</li>
+                        <li class="nop">포인트샵</li>
+                    </ul>
+                </li>
+                <li><span>다운로드</span>
+                    <ul class="dept01">
+                        <li class="nop">클라이언트 다운</li>
+                    </ul>
+                </li>
+                 <li><span>고객지원</span>
+                    <ul class="dept01">
+                        <li class="nop">1:1문의</li>
+                        <li class="nop">FAQ</li>
+                    </ul>
+                </li>
+                <li><img src="../../img/login_btn.png" class="login_btn"></li>
+            </ul>
+        </div>
+		</header>
+        <section class="visual_sub">
+			<img src="../../img/news_main.jpg">
+            <input type="button" class="start_btn">
+            <h2 class="page_title">뉴스</h2>
+		</section>
+        <section class="sub_nao">
+           <div class="sub_nav">
+            <a href="#" class="g_board">공지사항</a>
+            <a href="#" class="g_board_selec">업데이트</a>
+            <a href="#" class="g_board">이벤트</a>
+
+            </div>
+            <hr color=#cccccc>
+        </section>
+        <h2 class="trove_intro">업데이트</h2>
+<section id="search_chaing">
+    <form><fieldset><input type="search" /><button type="submit"><i class="fa fa-search"></i></button></fieldset></form>
+    	</section>
+        <div class="row">
+		<div class="col-sm-9">
+			<div class="right_area page_cs_notice">
+				<!-- 컨텐츠 영역 -->
+				
+				<!-- //CS Center 탭버튼 -->
+				<div class="right_contents">
+					<table class="table_basic">
+						<colgroup>
+                            <col width="10%">
+							<col width="70%">
+ 							<col width="10%">
+							<col width="10%">
+						</colgroup>
+						<thead>
+
+						</thead>
+						<tbody>
+							<tr>
+                                    <td><img src="../../img/update_icon.png"></td>
+									<td class="tit_contents_td">
+										<a href="">트로브 업데이트 글입니다.</a>
+									</td>
+									<td>2020.07.10</td>
+                                    <td>TROVE</td>
+                                    <td>123
+									</td>
+								</tr><tr>
+                            <td><img src="../../img/update_icon.png"></td>
+									<td class="tit_contents_td">
+										<a href="">트로브 업데이트 글입니다.</a>
+									</td>
+									<td>2020.07.10</td>
+                                    <td>TROVE</td>
+                                    <td>123
+									</td>
+								</tr><tr>
+                            <td><img src="../../img/update_icon.png"></td>
+									<td class="tit_contents_td">
+										<a href="">트로브 업데이트 글입니다.</a>
+									</td>
+									<td>2020.07.10</td>
+                                    <td>TROVE</td>
+                                    <td>123
+									</td>
+								</tr>
+								<tr>
+                                    <td><img src="../../img/update_icon.png"></td>
+									<td class="tit_contents_td">
+										<a href=>트로브 업데이트 글입니다.</a>
+									</td>
+									<td>2020.07.10</td>
+                                    <td>TROVE</td>
+                                    <td>123
+									</td>
+								</tr>
+                            								<tr>
+                                                                <td><img src="../../img/update_icon.png"></td>
+								<td class="tit_contents_td">
+										<a href=>트로브 업데이트 글입니다.</a>
+									</td>
+									<td>2020.07.10</td>
+                                    <td>TROVE</td>
+                                    <td >123
+									</td>
+								</tr>
+                            								<tr>
+                                                                <td><img src="../../img/update_icon.png"></td>
+																		<td class="tit_contents_td">
+										<a href=>트로브 업데이트 글입니다.</a>
+									</td>
+									<td>2020.07.10</td>
+                                    <td>TROVE</td>
+                                    <td>123
+									</td>
+								</tr>
+							
+							
+							
+						</tbody>
+					</table>
+					<div class="boxed-list-wrapper">
+
+						<!-- 하단 페이징 -->
+						<div class="pagination-box box">
+							<div class="pagination">
+							
+								<div class="wrapper">
+									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=1" class="fa fa-angle-double-left paging-btn btn first"></a>
+									
+									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=${page-1}" class="fa fa-angle-left paging-btn btn prev"></a>
+									
+									
+									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=${i}" class="paging-btn btn active">1</a> 
+									
+									
+									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=${page+1}" class="fa fa-angle-right paging-btn btn next"></a>
+									
+									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=${tempEndPage}" class="fa fa-angle-double-right paging-btn btn last"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// 컨텐츠 영역 -->
+			</div>
+		</div>
+	</div>
+   
+</body>
+    <footer class="footer">
+
+        <ul>
+            <li class="footer_nav_2">(주)TROVE &nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호 : 123-456-7890&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; 전화 : 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;팩스: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;주소 : 서울 중구 세종대로 110 &nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;E-mail : trove@trove.co.kr  </li>
+                   <hr class="footerline_2">
+           <li class="footer_nav_2">통신판매업 신고번호 : 제2020-서울-1234호&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;ⓒ 2020 TROVE KOREA Corporation ALL Rights Reserverd.</li>
+            
+        </ul>
+        <hr class="footerline">
+        <a href="html/mun/1_1mun.html" class="footer_nav">고객센터 </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="html/data_contact/eyong.html" class="footer_nav">이용약관 </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="html/data_contact/jungbo.html" class="footer_nav">개인정보처리방침 </a>
+    
+    </footer>
+</html>

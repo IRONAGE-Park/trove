@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Trove</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/info_style.css">
+        <link rel="stylesheet" type="text/css" href="../../css/p_info.css">
+    <link rel="stylesheet" type="text/css" href="../../css/login.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="/lib/w3.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<div class="inner_login">
+    <div class="login_tistory">
+<h5 class="nic_title">아이디 찾기</h5>
+        <div class="nick_byun">
+       <h4 class="hyun_name">이름</h4> <input type="text" class="byunnick" value=""><br>
+
+                   <h4 class="hyun_numb">휴대폰 번호</h4> 
+            <input type="text" class="input_num" value="">
+            <input type="submit" class="req_num" value="인증번호 받기">
+                                
+            <input type="text" class="input_sms" value="">
+            <span id="timer" class="time_text"></span>
+               <button type="submit" class="btn_OK_2"  disabled>확인</button></div>
+        
+        
+    </div>
+    </div>
+<script>
+    function $ComTimer(){
+    //prototype extend
+}
+
+$ComTimer.prototype = {
+    comSecond : ""
+    , fnCallback : function(){}
+    , timer : ""
+    , domId : ""
+    , fnTimer : function(){
+    		debugger;
+        var m = Math.floor(this.comSecond / 60) + ": " +(this.comSecond % 60);	// 남은 시간 계산
+        this.comSecond--;					// 1초씩 감소
+        console.log(m);
+        this.domId.innerText = m;
+        if (this.comSecond < 0) {			// 시간이 종료 되었으면..
+            clearInterval(this.timer);		// 타이머 해제
+            alert("인증시간이 초과하였습니다. 다시 인증해주시기 바랍니다.")
+        }
+    }
+    ,fnStop : function(){
+        clearInterval(this.timer);
+    }
+}
+
+$(document).ready(function(){
+  var AuthTimer = new $ComTimer()
+  AuthTimer.comSecond = 180;
+  AuthTimer.fnCallback = function(){alert("다시인증을 시도해주세요.")}
+  AuthTimer.timer =  setInterval(function(){AuthTimer.fnTimer()},1000);
+  AuthTimer.domId = document.getElementById("timer");
+})
+    </script>
+</html>

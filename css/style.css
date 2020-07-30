@@ -1,0 +1,491 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR|ZCOOL+QingKe+HuangYou");
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+.logo_img {
+  margin-right: 68px;
+}
+.fn-font {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.new-font {
+  font-family: "Noto Sans KR", sans-serif;
+  color: white;
+  font-size: 22px;
+  text-align: center;
+}
+.login_btn {
+  margin-top: 20px;
+  text-align: center;
+}
+.logout_btn {
+  font-family: Roboto;
+  font-size: 20px;
+
+  font-weight: 500;
+  margin-right: 320px;
+}
+.more_btn {
+  background-color: #ffffff;
+  border: 0;
+  position: relative;
+  left: -400px;
+  top: 4px;
+}
+.n-font {
+  font-family: "Noto Sans KR", sans-serif;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+.wrap_content {
+  height: 100%;
+  margin-bottom: 50px;
+}
+ul {
+  list-style: none;
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+.container {
+  width: 1920px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header > h2 {
+  margin-left: 20px;
+  margin-right: 136px;
+  text-align: center;
+}
+
+header > nav {
+  width: 60px;
+  height: 100%;
+}
+
+header ul {
+  max-width: 1374px;
+  margin: auto;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+header ul > li {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  vertical-align: middle;
+  text-align: center;
+}
+.visual {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(visual.png);
+  background-size: cover;
+  background-position: 0% 20%;
+  width: 100%;
+  height: 480px;
+  position: relative;
+}
+.sosic_intro {
+  clear: both;
+  max-width: 1374px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  font-size: 44px;
+}
+input.start_btn {
+  border: 0px transparent;
+  background: url(../img/trove_start.png);
+  width: 272px;
+  height: 307px;
+  position: absolute;
+  top: 326px; left: 50%;
+  transform: translateX(-50%);
+}
+.sosick {
+  margin: auto;
+  margin-top: 55px;
+  margin-bottom: 125px;
+  max-width: 1374px;
+}
+.sosick_div {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+.info-content {
+    padding-top: 300px;
+}
+.woowha {
+  margin-top: 40px;
+}
+.news {
+  box-sizing: border-box;
+  border: 1px solid #e2e2e2;
+  background-color: #ffffff;
+  max-width: 800px;
+  width: 100%;
+}
+.aaa {
+  max-width: 440px;
+}
+.aaa2 {
+  margin-right: 80px;
+}
+.aaa3 {
+  margin-left: 80px;
+  margin-top: -7px;
+}
+.com_banner {
+    width: 100%;
+}
+.com-box-area {
+    display: flex;
+    max-width: 1374px;
+    justify-content: space-around;
+    margin: auto;
+}
+.gamu_con_title {
+  padding-left: 603px;
+  font-size: 28px;
+  color: #333333;
+}
+.gamu_con_text {
+  margin-top: 0px;
+  padding-left: 405px;
+  font-size: 20px;
+  color: #777777;
+}
+.com_intro {
+  text-align: center;
+  margin-top: 72px;
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+.com_box {
+  width: 305px;
+  height: 400px;
+  border: 1px solid #e2e2e2;
+  position: relative;
+  top: -250px;
+  background-color: #ffffff;
+  padding: 0 32px;
+}
+.artic {
+  max-width: 700px;
+  margin: 40px;
+}
+.cont_text {
+  font-size: 16px;
+  color: #777777;
+  vertical-align: middle;
+}
+.news_icon {
+  display: inline-block;
+  margin-right: 20px;
+}
+.itstitle_fir {
+  vertical-align: middle;
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #333333;
+}
+.itstitle {
+  margin-top: 40px;
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #333333;
+}
+.cash {
+    margin: auto;
+    margin-top: 55px;
+
+    max-width: 1280px;
+    height: 470px;
+    background-color: #222222;
+}
+.commu {
+  margin-top: 40px;
+  width: 100%;
+
+  position: relative;
+}
+.content {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 64px;
+  max-width: 1374px;
+}
+
+#focus {
+  width: 165px;
+  height: 63px;
+  font-family: NotoSansKR;
+  font-size: 44px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.52;
+  letter-spacing: -2.2px;
+  text-align: left;
+  color: #333333;
+}
+#content > .item {
+  width: 400px;
+}
+.img {
+  width: 100%;
+  height: 280px;
+}
+
+.img > img {
+  width: 400px;
+  height: 100%;
+  object-fit: cover;
+}
+.item .info {
+  background: #1c8286;
+  padding: 30px;
+  height: 144px;
+  width: 400px;
+
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+.item .info_2 {
+  background: #c6884a;
+  padding: 30px;
+  height: 144px;
+  width: 400px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+.item .info_3 {
+  background: #27575a;
+  padding: 30px;
+  height: 144px;
+  width: 400px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+.info > h4 {
+  font-size: 22px;
+  color: white;
+}
+.info > p {
+  font-size: 16px;
+  color: white;
+}
+#g_info {
+  margin-right: 32px;
+}
+#adven {
+  margin-right: 32px;
+  margin-left: 32px;
+}
+#tam {
+  margin-right: 32px;
+  margin-left: 32px;
+}
+#mak {
+  margin-right: 32px;
+  margin-left: 32px;
+}
+
+.footer {
+  font-size: 14px;
+  padding: 40px 0;
+  width: 100%;
+  min-height: 200px;
+  text-align: center;
+  background-color: #222222;
+}
+
+.footerline {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border: 1px solid #555555;
+}
+.footerline_2 {
+  margin-top: 5px;
+  margin-bottom: 2px;
+  border: 0px;
+}
+.footer_nav {
+  font-size: 16px;
+  color: #dbdbdb;
+  margin-bottom: 23px;
+}
+.footer_nav_2 {
+  font-size: 14px;
+  color: #555555;
+}
+.trove_intro {
+  text-align: center;
+  font-size: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.mySlides {
+  display: none;
+  width: 100%;
+}
+
+.topMenu {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: 80px;
+}
+.topMenu:hover {
+  background: rgab(51, 51, 51, 0.95);
+}
+.topMenu::after {
+  position: absolute;
+  width: 100%; height: 360px;
+  z-index: 998;
+  content: "";
+  display: none;
+  clear: both;
+  background: rgba(51, 51, 51, 0.95);
+}
+.dept-shade {
+    position: absolute;
+    width: 100%; height: 360px;
+    top: 80px;
+    z-index: 998;
+    background: rgba(51, 51, 51, 0.95);
+}
+.menu01 > li {
+  float: left;
+  width: 100%;
+  line-height: 42px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.menu01 span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 26px;
+  float: none;
+}
+.dept01 {
+  position: absolute;
+  top: 80px;
+  height: 360px;
+  z-index: 999;
+  display: inline-block;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
+.nop {
+  position: relative;
+  color: #cccccc;
+  font-size: 16px;
+  width: 130px;
+  margin: 0 auto 4px 3px;
+}
+
+.bd_tag {
+  font-size: 16px;
+  color: #187e7f;
+  margin-top: 49px;
+  margin-bottom: 11px;
+}
+.comuu_title {
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+.com_line {
+  width: 264px;
+  margin-left: -11.5px;
+  margin-bottom: 22px;
+  background-color: #e2e2e2;
+}
+.cont_com {
+  font-size: 16px;
+  color: #777777;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: -2px;
+}
+.nickname {
+  margin-top: 100px;
+  font-size: 18px;
+  color: #555555;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  display: inline-block;
+}
+.made_day {
+  font-size: 18px;
+  color: #555555;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  display: inline-block;
+  margin-left: 90px;
+}
+
+.title_3 {
+  text-align: center;
+  font-size: 44px;
+}
+.page_title {
+  font-size: 44px;
+  color: #ffffff;
+  position: absolute;
+  top: 257px;
+  left: 320px;
+  font-weight: 500;
+  font-family: NotoSansKr;
+}
+.tuuu {
+  position: absolute;
+  top: 414px;
+}
+.teeeeee {
+  position: absolute;
+  top: 616px;
+}
+.pwww {
+  position: absolute;
+  top: 495px;
+}

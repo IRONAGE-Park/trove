@@ -1,0 +1,49 @@
+.tabmenu{ 
+    height: 130vh;
+    position: relative;
+    margin-left: 320px;
+    margin-bottom: 50px;
+}
+.tabmenu ul li{
+    margin-top: 65px;
+    margin-bottom: 80px;
+  width:640px;
+height: 64px;
+  float:left;  
+  text-align:center; 
+  background :#ebebeb;
+border-bottom: 1px solid #cccccc;
+  line-height:40px;
+    font-size: 22px;
+
+}
+.tabmenu label{
+    padding-top: 12px;
+    height: 64px;
+  display:block;
+  width:100%; 
+  line-height:40px;
+    border: 1px solid #ebebeb;
+}
+.tabmenu input{display:none;}
+.tabCon{
+    margin-left: -340px;
+    margin-top: 80px;
+  display:none; 
+  text-align:left; 
+  padding: 20px;
+  position:absolute; 
+  left:0; top:40px; 
+  box-sizing: border-box; 
+margin-bottom: 20px;
+}
+.tabmenu input:checked ~ label{
+    height: 64px;
+  background:#ffffff;
+    color: #1c8286;
+    border-top: 4px solid #1c8286;
+
+}
+.tabmenu input:checked ~ .tabCon{
+  display:block;
+}
