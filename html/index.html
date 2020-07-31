@@ -2,19 +2,26 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Trove</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/slide_bar_st.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="http://www.w3ii.com/lib/w3.css" />
+    <!-- <link rel="stylesheet" href="http://www.w3ii.com/lib/w3.css" /> -->
     <script
       type="text/javascript"
       src="http://code.jquery.com/jquery-2.1.4.min.js"
     ></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
 
   <body>
@@ -29,7 +36,7 @@
             ></span>
             <ul class="dept01"></ul>
           </li>
-          <li>
+          <li class="header-nav">
             <span>뉴스</span>
             <ul class="dept01" style="display: none">
               <li class="nop">공지사항</li>
@@ -37,7 +44,7 @@
               <li class="nop">이벤트</li>
             </ul>
           </li>
-          <li>
+          <li class="header-nav">
             <span>정보</span>
             <ul class="dept01" style="display: none">
               <li class="nop">게임정보</li>
@@ -46,7 +53,7 @@
               <li class="nop">제작</li>
             </ul>
           </li>
-          <li>
+          <li class="header-nav">
             <span>커뮤니티</span>
             <ul class="dept01" style="display: none">
               <li class="nop">자유게시판</li>
@@ -54,7 +61,7 @@
               <li class="nop">이미지게시판</li>
             </ul>
           </li>
-          <li>
+          <li class="header-nav">
             <span>캐시샵</span>
             <ul class="dept01" style="display: none">
               <li class="nop">패키지</li>
@@ -63,31 +70,107 @@
               <li class="nop">포인트샵</li>
             </ul>
           </li>
-          <li>
+          <li class="header-nav">
             <span>다운로드</span>
             <ul class="dept01" style="display: none">
               <li class="nop">클라이언트 다운</li>
             </ul>
           </li>
-          <li>
+          <li class="header-nav">
             <span>고객지원</span>
             <ul class="dept01" style="display: none">
               <li class="nop">1:1문의</li>
               <li class="nop">FAQ</li>
             </ul>
           </li>
-          <li><img src="../img/login_btn.png" class="login_btn" /></li>
+          <li class="header-nav"><img src="../img/login_btn.png" class="login_btn" /></li>
+          <li>
+            <button class="more_btn" onclick="openNav()">
+              <a href="#">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="MainTitle_mobile-hamburger__1m_vf" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path></svg>
+              </a>
+            </button>
+          </li>
+            <div id="mysidenav" class="sidenav">
+              <div class="sl_idid">
+                <a href="#" class="closebtn" onclick="closeNav()">x</a>
+                <div class="sidenav-welcome">
+                  <h5 class="sli_nick">Trove 님</h5>
+                  <h6 class="wel_text">환영합니다!</h6>
+                </div>
+                <div class="sidenav-action">
+                  <button class="hre_minfo">내정보</button>
+                  <button class="hre_logout">로그아웃</button>
+                  <h5 class="PcBang_text">PC방</h5>
+                  <h5 class="OFF">OFF</h5>
+                  <h5 class="ON">ON</h5>
+                </div>
+              </div>
+              <div class="sidenav-cashinfo">
+                <h5 class="My_cash">나의 캐시</h5>
+                <hr class="herhr" />
+                <div class="My_credit cash-area">
+                  <h5 class="t_t_t">보유 크레딧</h5>
+                  <div class="t_cash-amount">
+                    <h6 style="background-color: #0069c3;" class="t_t">C</h6>
+                    <h5 class="t_m_t">29,000</h5>
+                  </div>
+                </div>
+                <div class="My_Point cash-area">
+                  <h5 class="t_t_t">보유 포인트</h5>
+                  <div class="t_cash-amount">
+                    <h6 style="background-color: #f7cd19;" class="t_t">P</h6>
+                    <h5 class="t_m_t">1,000</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <script>
+              function openNav() {
+                document.getElementById("mysidenav").style.width = "440px";
+              }
+              function closeNav() {
+                document.getElementById("mysidenav").style.width = "0";
+              }
+            </script>
         </ul>
       </div>
     </header>
-    <div class="wrap_content">
-      <section class="visual">
+    <div class="wrap_letteainBannert">
+      <div id="mainBanner-swiper-container" class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="mySlide-area" style="background-image: url('../img/main_banner.png')"></div>
+                <!-- <img class="mySlides" src="../img/main_banner.png" /> -->
+              </div>
+              <div class="swiper-slide">
+                <div class="mySlide-area" style="background-image: url('../img/banner_test_1.png')"></div>
+                <!-- <img class="mySlides" src="../img/main_banner@2x.png" /> -->
+              </div>
+              <div class="swiper-slide">
+                <div class="mySlide-area" style="background-image: url('../img/info_banner.jpg')"></div>
+                <!-- <img class="mySlides" src="../img/banner_test_1.png" /> -->
+              </div>
+              ...
+          </div>
+          <!-- If we need pagination -->
+          <div id="mainBanner-swiper-pagination" class="swiper-pagination"></div>
+      
+          <!-- If we need navigation buttons -->
+          <div id="mainBanner-swiper-button-prev" class="swiper-button-prev"></div>
+          <div id="mainBanner-swiper-button-next" class="swiper-button-next"></div>
+      
+          <!-- If we need scrollbar -->
+      </div>
+      <!-- <section class="visual">
         <div class="w3-content w3-section">
           <a href="#"
-            ><img class="mySlides" src="../img/main_banner.png" />
+            >
           </a>
           <a href="#"
-            ><img class="mySlides" src="../img/main_banner@2x.png" />
+            >
           </a>
           <button class="w3-btn-floating" onclick="plusDivs(-1)">
             &#10094;
@@ -97,7 +180,7 @@
           </button>
           <input type="button" class="start_btn" />
         </div>
-      </section>
+      </section> -->
       <section class="info-content">
         <h2 class="sosic_intro">트로브 소식</h2>
         <section class="sosick">
@@ -136,61 +219,88 @@
         <h2 class="sosic_intro">캐시샵</h2>
         <section class="cash">
           <div class="topic">
-            <div class="item">
+            <!-- <div class="item">
               <div class="btn_1">
                 <input type="button" name="btn1" value="<" />
               </div>
               <h3 class="n-font">아이템 슬라이더</h3>
+            </div> -->
+            <div id="item-swiper-container" class="swiper-container">
+              <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="mySlide-area" style="background-image: url('../img/main_banner.png')"></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="mySlide-area" style="background-image: url('../img/banner_test_1.png')"></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="mySlide-area" style="background-image: url('../img/info_banner.jpg')"></div>
+                    </div>
+                </div>
+                <div id="item-swiper-pagination" class="swiper-pagination"></div>
             </div>
           </div>
         </section>
         <section class="commu">
           <h2 class="com_intro">커뮤니티</h2>
-          <img class="com_banner" src="../img/commu_bg.png" />
-          <div class="com-box-area">
-            <div class="com_box">
-              <h4 class="bd_tag">[자유게시판]</h4>
-              <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
-              <hr class="com_line" />
-              <h5 class="cont_com">
-                트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.
-              </h5>
-              <h4 class="nickname">트로브</h4>
-              <h4 class="made_day">2020.00.00</h4>
-            </div>
-            <div class="com_box">
-              <h4 class="bd_tag">[자유게시판]</h4>
-              <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
-              <hr class="com_line" />
-              <h5 class="cont_com">
-                트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.
-              </h5>
-              <h4 class="nickname">트로브</h4>
-              <h4 class="made_day">2020.00.00</h4>
-            </div>
-            <div class="com_box">
-              <h4 class="bd_tag">[자유게시판]</h4>
-              <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
-              <hr class="com_line" />
-              <h5 class="cont_com">
-                트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.
-              </h5>
-              <h4 class="nickname">트로브</h4>
-              <h4 class="made_day">2020.00.00</h4>
-            </div>
-            <div class="com_box">
-              <h4 class="bd_tag">[자유게시판]</h4>
-              <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
-              <hr class="com_line" />
-              <h5 class="cont_com">
-                트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.
-              </h5>
-              <h4 class="nickname">트로브</h4>
-              <h4 class="made_day">2020.00.00</h4>
+          <div class="commu-area">
+            <div class="com-banner-area" style="background-image: url('../img/commu_bg.png');"></div>
+            <div class="com-box-area">
+              <div class="com_box">
+                <h4 class="bd_tag">[자유게시판]</h4>
+                <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
+                <hr class="com_line" />
+                <h5 class="cont_com">
+                    트로브 완전 좋은 팁 알려준다. 트로브 <br />
+                    완전 좋은 팁 알려준다. 트로브 완전 좋<br />
+                    은 팁 알려준다. 트로브 완전 좋은 팁 알<br />
+                    려준다.트로브 완전 좋은 팁 알려준다.<br />
+                </h5>
+                <h4 class="nickname">트로브</h4>
+                <h4 class="made_day">2020.00.00</h4>
+              </div>
+              <div class="com_box">
+                <h4 class="bd_tag">[자유게시판]</h4>
+                <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
+                <hr class="com_line" />
+                <h5 class="cont_com">
+                    트로브 완전 좋은 팁 알려준다. 트로브 <br />
+                    완전 좋은 팁 알려준다. 트로브 완전 좋<br />
+                    은 팁 알려준다. 트로브 완전 좋은 팁 알<br />
+                    려준다.트로브 완전 좋은 팁 알려준다.<br />
+                </h5>
+                <h4 class="nickname">트로브</h4>
+                <h4 class="made_day">2020.00.00</h4>
+              </div>
+              <div class="com_box">
+                <h4 class="bd_tag">[자유게시판]</h4>
+                <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
+                <hr class="com_line" />
+                <h5 class="cont_com">
+                    트로브 완전 좋은 팁 알려준다. 트로브 <br />
+                    완전 좋은 팁 알려준다. 트로브 완전 좋<br />
+                    은 팁 알려준다. 트로브 완전 좋은 팁 알<br />
+                    려준다.트로브 완전 좋은 팁 알려준다.<br />
+                </h5>
+                <h4 class="nickname">트로브</h4>
+                <h4 class="made_day">2020.00.00</h4>
+              </div>
+              <div class="com_box">
+                <h4 class="bd_tag">[자유게시판]</h4>
+                <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
+                <hr class="com_line" />
+                <h5 class="cont_com">
+                    트로브 완전 좋은 팁 알려준다. 트로브 <br />
+                    완전 좋은 팁 알려준다. 트로브 완전 좋<br />
+                    은 팁 알려준다. 트로브 완전 좋은 팁 알<br />
+                    려준다.트로브 완전 좋은 팁 알려준다.<br />
+                </h5>
+                <h4 class="nickname">트로브</h4>
+                <h4 class="made_day">2020.00.00</h4>
+              </div>
             </div>
           </div>
-        </section>
-
+      </section>
         <h2 class="title_3">게임 정보</h2>
         <section class="content">
           <div class="item">
@@ -248,56 +358,19 @@
         </li>
       </ul>
       <hr class="footerline" />
-      <a href="html/mun/1_1mun.html" class="footer_nav">고객센터 </a>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="html/data_contact/eyong.html" class="footer_nav">이용약관 </a>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="html/data_contact/jungbo.html" class="footer_nav"
-        >개인정보처리방침
-      </a>
+      <div class="footer-bottom">
+        <a href="html/mun/1_1mun.html" class="footer_nav">고객센터 </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="html/data_contact/eyong.html" class="footer_nav">이용약관 </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="html/data_contact/jungbo.html" class="footer_nav"
+          >개인정보처리방침
+        </a>
+      </div>
     </footer>
   </body>
 
   <script>
-    var myIndex = 0;
-    carousel();
-
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      myIndex++;
-      if (myIndex > x.length) {
-        myIndex = 1;
-      }
-      x[myIndex - 1].style.display = "block";
-      setTimeout(carousel, 5000); // Change image every 2 seconds
-    }
-
-    var slideIndex = 1;
-    showDivs(slideIndex);
-
-    function plusDivs(n) {
-      showDivs((slideIndex += n));
-    }
-
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      if (n > x.length) {
-        slideIndex = 1;
-      }
-      if (n < 1) {
-        slideIndex = x.length;
-      }
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      x[slideIndex - 1].style.display = "block";
-    }
-
     $(document).on("mouseover", ".topMenu span", function () {
       $(".dept01").slideDown(300);
       $(".dept-shade").slideDown(300);
@@ -308,5 +381,38 @@
         $(".dept-shade").slideUp(300);
       }
     });
+
+    const mainBannerSwiper = new Swiper('#mainBanner-swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '#mainBanner-swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '#mainBanner-swiper-button-next',
+        prevEl: '#mainBanner-swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      // scrollbar: {
+      //   el: '.swiper-scrollbar',
+      // },
+    })
+    const itemBannerSwiper = new Swiper('#item-swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '#item-swiper-pagination',
+      },
+    })
+    
   </script>
 </html>

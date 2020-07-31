@@ -1,90 +1,78 @@
-		/* 사이드바 스타일 */
-		.sidenav {
-			height:100%;
-			width: 0;
-			position: fixed;
-			z-index:999;
-			top: 0;
-			left: 1470px;
-			background-color: #ebebeb;
-			overflow-x: hidden;
-			transition:0.5s ease-in-out;
-			padding-top: 60px;
-		}
-		.sidenav a {
-			padding: 8px 8px 8px 32px;
-			text-decoration: none;
-			font-size: 25px;
-			color: #707070;
-			display: block;
-			transition: 0.2s ease-in-out;
-		}
-		.sidenav a:hover, .offcanvas a:focus {
-			color: #000;
-		}
-		.closebtn {
-			position: absolute;
-			top: 18px;;
-			right: 25px;
-			font-size: 36px !important;
-			margin-left: 50px;
-            
-		}
-
-.sl_idid
-{
-    position: absolute;
-    top: 0px;
-    padding-top: 40px; 
-    width: 100%;
-    height: 185px;
-    background-color: #f9f9f9;
+/* 사이드바 스타일 */
+.sidenav {
+  height: 100%;
+  width: 0;
+  max-width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0; right: 0;
+  background-color: #ebebeb;
+  overflow-x: hidden;
+  transition: 0.5s ease-in-out;
+  white-space: nowrap;
 }
-.sli_nick
-{
-    font-family: Roboto;
-    font-size: 20px;
-    color: #555555;
-    display: inline-block;
-    font-weight: 700;
-     position: absolute;
-    left: 40px;
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #707070;
+  display: block;
+  transition: 0.2s ease-in-out;
 }
-.wel_text
-{
-    font-family: NotoSansKR;
-    font-size: 20px;
-    color: #555555;
-    display: inline-block;
-    font-weight: normal;
-    position: absolute;
-    left: 120px;
+.sidenav a:hover,
+.offcanvas a:focus {
+  color: #000;
 }
-.hre_minfo
-{
-    letter-spacing: -0.8px;
-    font-size: 16px;
-    position: absolute;
-    top: 100px;
-    left: 40px;
-    background-color: #f9f9f9;
-    border: 0px;
-    color: #333333;
-    font-weight: 700;
+.closebtn {
+  position: absolute;
+  left: 80%;
+  font-size: 36px !important;
 }
-.hre_logout
-{
-    font-size: 16px;
-    background-color: #f9f9f9;
-    border: 0px; 
-    color: #777777;
-    position: absolute;
-    top: 100px;
-    left: 130px;
+.sl_idid {
+  padding-top: 40px;
+  width: 100%;
+  height: 185px;
+  background-color: #f9f9f9;
 }
-.PcBang_text
-{
-    font-family: NotoSansKR;
+.sidenav-welcome, .sidenav-action {
+    display: flex;
+    padding: 0 40px;
+    align-items: baseline;
+}
+.sli_nick {
+  font-family: Roboto;
+  font-size: 20px;
+  color: #555555;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.wel_text {
+  font-family: NotoSansKR;
+  font-size: 20px;
+  color: #555555;
+  font-weight: normal;
+}
+.sidenav-action {
+    padding-top: 50px;
+    width: 335px;
+    justify-content: space-between;
+}
+.hre_minfo {
+  letter-spacing: -0.8px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  border: 0px;
+  color: #333333;
+  font-weight: 700;
+}
+.hre_logout {
+  font-size: 16px;
+  background-color: #f9f9f9;
+  border: 0px;
+  color: #777777;
+}
+.PcBang_text {
+  font-family: NotoSansKR;
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
@@ -92,75 +80,53 @@
   line-height: 1.5;
   letter-spacing: -0.8px;
   color: #333333;
-    position: absolute;
-    top: 100px;
-    left: 235px;
 }
-.OFF
-{
-    line-height: 1.5;
-    letter-spacing: -0.8px;
-    font-size: 16px;
-    font-weight: 700;
-    color: #999999;
-    position: absolute;
-    top: 100px;
-    left: 275px;
+.OFF {
+  line-height: 1.5;
+  letter-spacing: -0.8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #999999;
 }
-.ON
-{
-    line-height: 1.5;
-    letter-spacing: -0.8px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #ffe201;
-    position: absolute;
-    top: 100px;
-    left: 320px;
+.ON {
+  line-height: 1.5;
+  letter-spacing: -0.8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffe201;
 }
-.My_cash
-{
-    position: absolute;
-    top: 225px;
-    left: 40px;
-    font-size: 18px;
-    color: #333333;
-    font-weight: 800;
-}
-.herhr
-{
-    width: 360px;
-    position: absolute;
-    color: #dbdbdb;
-    top: 272px;
-    margin-left: 40.5px;
-}
-.My_credit
-{
-    width: 360px;
-    height: 48px;
-    background-color: #ffffff;
-    border-radius: 100px;
-    position: absolute;
-    top: 292px;
-    left: 40px;
 
-    
+.sidenav-cashinfo {
+    position: relative;
+    text-align: left;
+    padding: 20px 40px;
 }
-.My_Point
-{ 
-    width: 360px;
-    height: 48px;
-    background-color: #ffffff;
+
+.My_cash {
+  font-size: 18px;
+  color: #333333;
+  font-weight: 800;
+  margin: 20px 0;
+}
+.herhr {
+  width: 100%;
+  color: #dbdbdb;
+  margin: 20px 0;
+}
+.cash-area {
+    width: 100%; height: 48px;
+    background-color: #fff;
     border-radius: 100px;
-    position: absolute;
-    top: 350px;
-    left: 40px;
-    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0 10%;
+    overflow: hidden;
 }
-.t_t_t
-{
-    font-family: NotoSansKR;
+.t_t_t {
+  font-family: NotoSansKR;
   font-size: 16px;
   font-weight: 700;
   font-stretch: normal;
@@ -168,57 +134,43 @@
   line-height: 1.5;
   letter-spacing: -0.8px;
   color: #555555;
-display: inline-block;
-        vertical-align: middle;
-    position: absolute;
-    top: 13px;
-    left: 40px;
+  flex-basis: 50%;
+  vertical-align: middle;
 }
-.t_c_t
-{
-    display: inline-block;
-    font-size: 22px;
-    width: 32px;
-    height: 32px;
-    border-radius: 30px;
-    color: #ffffff;
-    background-color: #0069c3;
-        vertical-align: middle;
-    position: absolute;
-    top: 8px;
-    left: 210px;
+.t_t {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  font-size: 22px;
+  width: 32px; height: 32px;
+  border-radius: 30px;
+  color: #ffffff;
+  
 }
-.t_m_t
-{
-    vertical-align: middle;
-    font-weight: normal;
-    display: inline-block;
-    font-family: NotoSansKR;
+.t_cash-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+.t_m_t {
+  vertical-align: middle;
+  font-weight: normal;
+  display: inline-block;
+  font-family: NotoSansKR;
+  font-size: 18px;
+}
+
+.MainTitle_mobile-hamburger__1m_vf {
+    width: 40px; height: 40px;
+}
+
+/* 미디어쿼리 적용 */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
     font-size: 18px;
-    position: absolute;
-    top: 13px;
-    left: 263px;
+  }
 }
-.t_p_t
-{
-    display: inline-block;
-    font-size: 22px;
-    width: 32px;
-    height: 32px;
-    border-radius: 30px;
-    color: #ffffff;
-    background-color: #f7cd19;
-    vertical-align: middle;
-    position: absolute;
-    top: 8px;
-    left: 210px;   
-}
-		/* 미디어쿼리 적용 */
-		@media screen and (max-height:450px) {
-			.sidenav {
-				padding-top:15px;
-			}
-			.sidenav a {
-				font-size: 18px;
-			}
-		}

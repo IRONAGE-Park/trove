@@ -9,17 +9,15 @@
     color: #333333;
     font-size: 40px;
     text-align: center;
-    margin-left: 890px;
     margin-top: 82px;
 }
 
 
 .sub_nav{
-    align-content: center;
-    margin-left: 320px;
+    max-width: 1374px;
+    margin: 0 auto;
     margin-top: 22px;
     margin-bottom: 26px;
-    
 }
 
 .sub_nav button{
@@ -54,7 +52,6 @@ input.start_btn{
     height: 224px;
     position: absolute;
     top: 190px;
-    left: 1380px;
     
 }
 #game_infoo{
@@ -63,13 +60,13 @@ input.start_btn{
     width: 1280px;
     height: 480px;
 }
-game_infoo.aaa{
+.game_infoo.aaa{
     width: 50%;
     float: right;
     box-sizing: border-box;
     background: #ffffff;
 }
-game_infoo.bbb{
+.game_infoo.bbb{
     width: 50%;
     float: right;
     box-sizing: border-box;

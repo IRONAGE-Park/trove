@@ -1,193 +1,164 @@
-.nick_byun{
-    margin-top: 83px;
-    
+.nick_byun {
+  margin-top: 83px;
+  display: table;
 }
-.sangtea
-{
-    font-size: 18px;
-    display: inline-block;
-    margin-right: 97px;
-    
+.nick_byun_input {
+  display: table-cell;
+  position: relative;
 }
-.sangtea_2_1
-{
-    font-size: 18px;
-    display: inline-block;
-    margin-right: 45px;
-    
+.sangtea {
+  font-size: 18px;
+  display: inline-block;
+  margin-right: 97px;
 }
-.nic_title{
-    font-size: 32px;
-    color:#333333;
-    margin-left: 170px;
+.sangtea_2_1 {
+  font-size: 18px;
+  display: inline-block;
+  margin-right: 45px;
 }
-.hyunnick{
-    font-family: Roboto;
-    width: 320px;
-    height: 48px;
-    border: 0px;
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #333333;
+.nic_title {
+  font-size: 32px;
+  color: #333333;
+  text-align: center;
 }
-.byunnick{
-    font-family: Roboto;
-    margin-top: 10px;
-    padding-left: 20px;
-    width: 310px;
-    height: 48px;
-    border: 1px solid #e2e2e2;
-    font-size: 16px;
-    color: #333333;
+.hyunnick {
+  font-family: Roboto;
+  width: 320px;
+  height: 48px;
+  border: 0px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333333;
 }
-.btn_OK{
-    margin-top: 245px;
+.byunnick {
+  font-family: Roboto;
+  margin-top: 10px;
+  padding-left: 20px;
+  width: 380px;
+  height: 48px;
+  border: 1px solid #e2e2e2;
+  font-size: 16px;
+  color: #333333;
+}
+.btn_OK {
+  margin-top: 245px;
 
-    width: 480px;
-    height: 56px;
-    border: 0px solid #e2e2e2;
-    font-size: 18px;
-    color: #555555;
-    background-color: #ffe201;
+  width: 480px;
+  height: 56px;
+  border: 0px solid #e2e2e2;
+  font-size: 18px;
+  color: #555555;
+  background-color: #ffe201;
 }
-.nick_OK{
-    font-size: 16px;
-    color:#1c8286;
+.nick_OK {
+  font-size: 16px;
+  color: #1c8286;
 }
-.nick_notOK{
-    font-size: 16px;
-    color:#c31111;
+.nick_notOK {
+  font-size: 16px;
+  color: #c31111;
 }
-.hyun_pw{
-     font-size: 18px;
-    display: inline-block;
-    margin-right: 61px;
-    color: #333333;
+.hyun_pw {
+  font-size: 18px;
+  display: inline-block;
+  margin-right: 61px;
+  color: #333333;
 }
-.g_line{
-    height: 1px; 
-    background-color: #e2e2e2;
-    width: 480px;
-    margin-top: 32px;
-    margin-bottom: 32px;
-    
+.g_line {
+  height: 1px;
+  background-color: #e2e2e2;
+  width: 480px;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
-.hyun_pw_2{
-     font-size: 18px;
-    display: inline-block;
-    margin-right: 77px;
-    color: #333333;
+.hyun_pw_2 {
+  font-size: 18px;
+  display: inline-block;
+  margin-right: 77px;
+  color: #333333;
 }
-.hyun_pw_3{
-     font-size: 14px;
-    margin-top: 11px;
-    margin-bottom: 20px;
-    color: #999999;
+.hyun_pw_3 {
+  font-size: 14px;
+  margin-top: 11px;
+  margin-bottom: 20px;
+  color: #999999;
 }
-.hyun_pw_4{
-     font-size: 18px;
-    display: inline-block;
-    margin-right: 41px;
-    color: #333333;
+.hyun_pw_4 {
+  font-size: 18px;
+  display: inline-block;
+  margin-right: 41px;
+  color: #333333;
 }
-.btn_OK_2{
-    margin-top: 119px;
-    width: 480px;
-    height: 56px;
-    border: 0px solid #e2e2e2;
-    font-size: 18px;
-    color: #555555;
-    background-color: #ffe201;
+.btn_OK_2 {
+  margin-top: 119px;
+  width: 480px;
+  height: 56px;
+  border: 0px solid #e2e2e2;
+  font-size: 18px;
+  color: #555555;
+  background-color: #ffe201;
 }
-.hyun_name{
-         font-size: 18px;
-    display: inline-block;
-    margin-right: 88px;
-    color: #333333;
+.hyun_name,
+.hyun_numb {
+  display: table-cell;
+  font-size: 18px;
+  width: 100px;
+  color: #333333;
 }
-.hyun_numb{
-    font-size: 18px;
-    display: inline-block;
-    margin-right: 37px;
-    color: #333333;
+.input_num {
+  margin-top: 40px;
+  width: 380px;
+  height: 48px;
+  margin-right: 0px;
+  border: 1px solid #e2e2e2;
 }
-.input_num
-{
-    margin-top: 40px;
-    width: 240px;
-    height: 48px;
-    margin-right: 0px;
-    border: 1px solid #e2e2e2;
-    
+.req_num {
+  width: 100px;
+  height: 48px;
+  position: absolute;
+  right: 0; bottom: 0;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #dbdbdb;
+  background-color: #f9f9f9;
 }
-.req_num{
-    width: 95px;
-    height: 48px;
-    margin-left: -30px;
-    text-align: center;
-    font-size: 14px;
-    border: 1px solid #dbdbdb;
-    background-color: #f9f9f9;
+.time_text {
+  font-size: 18px;
+  color: #777777;
 }
-.time_text{
-    font-size: 18px;
-    color: #777777;
-
+.input_sms {
+  margin-top: 8px;
+  margin-left: 100px;
+  width: 280px;
+  height: 48px;
+  border: 1px solid #dbdbdb;
 }
-.input_sms{
-    margin-top: 8px;
-    margin-left: 130px;
-    width:250px;
-    height: 48px;
-    border: 1px solid #dbdbdb;
+.img_info {
+  margin-top: 81px;
 }
-.img_info
-{
-    margin-left: 206px;
-    margin-top: 81px;
+.rululala {
+  background-color: #f9f9f9;
+  height: 248px;
+  text-align: center;
+  padding-top: 40px;
 }
-.rululala
-{
-    background-color: #f9f9f9;
-    height: 248px;
-    margin-top: 65px;
-    padding-top: 40px;
+.sangtea_2 {
+  font-size: 18px;
+  margin-top: 41px;
+  margin-left: 205px;
 }
-.sangtea_2
-{
-    font-size: 18px;
-    margin-top: 41px;
-    margin-left: 205px;
+.byunnick_2 {
+  font-family: Roboto;
+  margin-top: 10px;
+  padding-left: 20px;
+  width: 150px;
+  height: 48px;
+  border: 0px solid #e2e2e2;
+  font-size: 16px;
+  color: #333333;
+  background-color: #f9f9f9;
 }
-.byunnick_2{
-    font-family: Roboto;
-    margin-top: 10px;
-    padding-left: 20px;
-    width: 150px;
-    height: 48px;
-    border: 0px solid #e2e2e2;
-    font-size: 16px;
-    color: #333333;
-    background-color: #f9f9f9;
-}
-.btn_OK_3{
-    margin-left: 100px;
-    margin-top: 45px;
-    width: 480px;
-    height: 56px;
-    border: 0px solid #e2e2e2;
-    font-size: 18px;
-    color: #555555;
-    background-color: #ffe201;
-}
-.nic_title_2{
-    font-size: 32px;
-    color:#333333;
-    margin-left: 260px;
-}
-.hyn_2
-{
-    font-size: 18px;
-    margin-left: 205px;
-    display: inline-block;
+.hyn_2 {
+  font-size: 18px;
+  display: inline-block;
 }
