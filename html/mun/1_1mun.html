@@ -1,208 +1,293 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<title>Trove</title>
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../../css/info_style.css">
-    <link rel="stylesheet" type="text/css" href="../../css/board_style.css">
-    <link rel="stylesheet" type="text/css"href="../../css/search_style.css">
-    <link rel="stylesheet" type="text/css"href="../../css/ques.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="/lib/w3.css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-</head>
-        <script>
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";  
-            }
-            myIndex++;
-            if (myIndex > x.length) {myIndex = 1}    
-            x[myIndex-1].style.display = "block";  
-            setTimeout(carousel, 5000); // Change image every 2 seconds
-            }
-
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-        showDivs(slideIndex += n);
-        }
-
-        function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length} ;
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    x[slideIndex-1].style.display = "block";
-        }
-
-        $(document).on('mouseover', '.topMenu span', function() {
-            $('.dept01').slideDown(300);
-        });
-        $(document).on('mouseover', 'div', function () {
-        if (!$(this).hasClass('topMenu')) {
-            $('.dept01').slideUp(300);
-    }
-        });
-            $(document).ready(function(){
-	
-	$('ul.tabs li').click(function(){
-		var tab_id = $(this).attr('data-tab');
-
-		$('ul.tabs li').removeClass('current');
-		$('.tab-content').removeClass('current');
-
-		$(this).addClass('current');
-		$("#"+tab_id).addClass('current');
-	});
-
-});
-            
-            $(document).ready(function(){
-  var fileTarget = $('.filebox .upload-hidden');
-
-    fileTarget.on('change', function(){
-        if(window.FileReader){
-            var filename = $(this)[0].files[0].name;
-        } else {
-            var filename = $(this).val().split('/').pop().split('\\').pop();
-        }
-
-        $(this).siblings('.upload-name').val(filename);
-    });
-}); 
-    </script>
-<body>
-		<header>
-
-			<div class="topMenu">
-            <ul class="menu01">
-                		<li><span>	<h2>
-				<img src="../../img/TROVE_LOGO.png" alt="" class="logo_img">
-			</h2></span>
-                    <ul class="dept01">
-
-                    </ul></li>
-                <li><span>뉴스</span>
-                    <ul class="dept01">
-                        <li class="nop">공지사항</li>
-                        <li class="nop">업데이트</li>
-                        <li class="nop">이벤트</li>
-                    </ul>
-                </li>
-                <li><span>정보</span>
-                    <ul class="dept01">
-                        <li class="nop">게임정보</li>
-                        <li class="nop">모험</li>
-                        <li class="nop">탐험</li>
-                        <li class="nop">제작</li>
-                    </ul>
-                </li>
-                <li><span>커뮤니티</span>
-                    <ul class="dept01">
-                        <li class="nop">자유게시판</li>
-                        <li class="nop">정보게시판</li>
-                        <li class="nop">이미지게시판</li>
-                    </ul>
-                </li>
-                <li><span>캐시샵</span>
-                    <ul class="dept01">
-                        <li class="nop">패키지</li>
-                        <li class="nop">프리미엄</li>
-                        <li class="nop">크레딧</li>
-                        <li class="nop">포인트샵</li>
-                    </ul>
-                </li>
-                <li><span>다운로드</span>
-                    <ul class="dept01">
-                        <li class="nop">클라이언트 다운</li>
-                    </ul>
-                </li>
-                 <li><span>고객지원</span>
-                    <ul class="dept01">
-                        <li class="nop">1:1문의</li>
-                        <li class="nop">FAQ</li>
-                    </ul>
-                </li>
-                <li><img src="../../img/login_btn.png" class="login_btn"></li>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Trove</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/info_style.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/board_style.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/search_style.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/ques.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/slide_bar_st.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="/lib/w3.css"> -->
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-2.1.4.min.js"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="topMenu">
+        <div class="dept-shade" style="display: none;"></div>
+        <ul class="menu01">
+          <li>
+            <span>
+              <h2>
+                <img
+                  src="../../img/TROVE_LOGO.png"
+                  alt=""
+                  class="logo_img"
+                /></h2
+            ></span>
+            <ul class="dept01"></ul>
+          </li>
+          <li class="header-nav">
+            <span>뉴스</span>
+            <ul class="dept01" style="display: none;">
+              <li class="nop">공지사항</li>
+              <li class="nop">업데이트</li>
+              <li class="nop">이벤트</li>
             </ul>
-        </div>
-		</header>
-        <section class="visual_sub">
-			<img src="../../img/contact_main.jpg">
-            <input type="button" class="start_btn">
-            <h2 class="page_title">무엇을 도와드릴까요?</h2>
-		</section>
-        <section class="sub_nao">
-           <div class="sub_nav">
-            <a href="#" class="g_board_selec">1:1 문의하기 </a>
-            <a href="#" class="g_board">나의 문의내역</a>
-            <a href="#" class="g_board">FAQ</a>
-
+          </li>
+          <li class="header-nav">
+            <span>정보</span>
+            <ul class="dept01" style="display: none;">
+              <li class="nop">게임정보</li>
+              <li class="nop">모험</li>
+              <li class="nop">탐험</li>
+              <li class="nop">제작</li>
+            </ul>
+          </li>
+          <li class="header-nav">
+            <span>커뮤니티</span>
+            <ul class="dept01" style="display: none;">
+              <li class="nop">자유게시판</li>
+              <li class="nop">정보게시판</li>
+              <li class="nop">이미지게시판</li>
+            </ul>
+          </li>
+          <li class="header-nav">
+            <span>캐시샵</span>
+            <ul class="dept01" style="display: none;">
+              <li class="nop">패키지</li>
+              <li class="nop">프리미엄</li>
+              <li class="nop">크레딧</li>
+              <li class="nop">포인트샵</li>
+            </ul>
+          </li>
+          <li class="header-nav">
+            <span>다운로드</span>
+            <ul class="dept01" style="display: none;">
+              <li class="nop">클라이언트 다운</li>
+            </ul>
+          </li>
+          <li class="header-nav">
+            <span>고객지원</span>
+            <ul class="dept01" style="display: none;">
+              <li class="nop">1:1문의</li>
+              <li class="nop">FAQ</li>
+            </ul>
+          </li>
+          <li class="header-nav">
+            <img src="../../img/login_btn.png" class="login_btn" />
+          </li>
+          <li>
+            <button class="more_btn" onclick="openNav()">
+              <a href="#">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  class="MainTitle_mobile-hamburger__1m_vf"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"
+                  ></path>
+                </svg>
+              </a>
+            </button>
+          </li>
+          <div id="mysidenav" class="sidenav">
+            <div class="sl_idid">
+              <a href="#" class="closebtn" onclick="closeNav()">x</a>
+              <div class="sidenav-welcome">
+                <h5 class="sli_nick">Trove 님</h5>
+                <h6 class="wel_text">환영합니다!</h6>
+              </div>
+              <div class="sidenav-action">
+                <button class="hre_minfo">내정보</button>
+                <button class="hre_logout">로그아웃</button>
+                <h5 class="PcBang_text">PC방</h5>
+                <h5 class="OFF">OFF</h5>
+                <h5 class="ON">ON</h5>
+              </div>
             </div>
-            <hr color=#cccccc>
-        </section>
-        <h2 class="trove_intro">1:1문의 하기</h2>
-    <div class="m_body">
-    <div>
-        <h5 class="cate_title">카테고리</h5>
-        <select name="cate_1" class="cate_1" vlaue="문의하시는 유형을 선택해주세요">
-            <option value="초기값" selected>문의하시는 유형을 선택해주세요</option>
-            <option value="개인정보">개인정보</option>
-            <option value="계정">계정</option>
-            <option value="결제">결제</option>
-            <option value="결제">결제</option>
-        </select>
-        <select name="cate_2" class="cate_2" vlaue="문의하시는 유형을 선택해주세요">
-            <option value="초기값" selected>문의하시는 유형을 선택해주세요</option>
-            <option value="개인정보">개인정보</option>
-            <option value="계정">계정</option>
-            <option value="결제">결제</option>
-            <option value="결제">결제</option>
-        </select>
-        <h5 class="cate_title">제목</h5>
-        <input type="text" name="title" class="ques_title">
-
-    </div>
-    <div>
-            <h5 class="cate_content">내용</h5>
-        <input type="text" name="contents" class="ques_cont"> </div>
-        <div class="filebox bs3-primary">
-            <h5 class="cate_file">파일첨부</h5>
-            <input class="upload-name" value="파일은 최대 3개까지 선택 가능합니다." disabled="disabled">
-
-            <label for="ex_filename">찾아보기</label> 
-            <input type="file" id="ex_filename" class="upload-hidden"> 
-        </div>
-        <input type="submit" class="quest_accept" value="문의접수">
-        </div>
-       <footer class="footer">
-
-        <ul>
-            <li class="footer_nav_2">(주)TROVE &nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호 : 123-456-7890&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; 전화 : 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;팩스: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;주소 : 서울 중구 세종대로 110 &nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;E-mail : trove@trove.co.kr  </li>
-                   <hr class="footerline_2">
-           <li class="footer_nav_2">통신판매업 신고번호 : 제2020-서울-1234호&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;ⓒ 2020 TROVE KOREA Corporation ALL Rights Reserverd.</li>
-            
+            <div class="sidenav-cashinfo">
+              <h5 class="My_cash">나의 캐시</h5>
+              <hr class="herhr" />
+              <div class="My_credit cash-area">
+                <h5 class="t_t_t">보유 크레딧</h5>
+                <div class="t_cash-amount">
+                  <h6 style="background-color: #0069c3;" class="t_t">C</h6>
+                  <h5 class="t_m_t">29,000</h5>
+                </div>
+              </div>
+              <div class="My_Point cash-area">
+                <h5 class="t_t_t">보유 포인트</h5>
+                <div class="t_cash-amount">
+                  <h6 style="background-color: #f7cd19;" class="t_t">P</h6>
+                  <h5 class="t_m_t">1,000</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+            function openNav() {
+              document.getElementById("mysidenav").style.width = "440px";
+            }
+            function closeNav() {
+              document.getElementById("mysidenav").style.width = "0";
+            }
+          </script>
         </ul>
-        <hr class="footerline">
-        <a href="html/mun/1_1mun.html" class="footer_nav">고객센터 </a>
+      </div>
+    </header>
+    <section
+      class="visual_sub"
+      style="background-image: url('../../img/contact_main.jpg');"
+    >
+      <input type="button" class="start_btn" />
+      <h2 class="page_title">무엇을 도와드릴까요?</h2>
+    </section>
+    <section class="sub_nao">
+      <div class="sub_nav">
+        <a href="./1_1mun.html" class="g_board_selec">1:1 문의하기 </a>
+        <a href="./1_2mun.html" class="g_board">나의 문의내역</a>
+        <a href="./1_3mun.html" class="g_board">FAQ</a>
+      </div>
+      <hr color="#cccccc" />
+    </section>
+    <h2 class="trove_intro">1:1문의 하기</h2>
+    <div class="m_body">
+      <div class="m_content">
+        <div>
+          <div class="m_category">
+            <h5 class="cate_title">카테고리</h5>
+            <select
+              name="cate_1"
+              class="cate_1"
+              vlaue="문의하시는 유형을 선택해주세요"
+            >
+              <option value="초기값" selected
+                >문의하시는 유형을 선택해주세요</option
+              >
+              <option value="개인정보">개인정보</option>
+              <option value="계정">계정</option>
+              <option value="결제">결제</option>
+              <option value="결제">결제</option>
+            </select>
+            <select
+              name="cate_2"
+              class="cate_2"
+              vlaue="문의하시는 유형을 선택해주세요"
+            >
+              <option value="초기값" selected
+                >문의하시는 유형을 선택해주세요</option
+              >
+              <option value="개인정보">개인정보</option>
+              <option value="계정">계정</option>
+              <option value="결제">결제</option>
+              <option value="결제">결제</option>
+            </select>
+          </div>
+          <div class="m_title">
+            <h5 class="cate_title">제목</h5>
+            <input type="text" name="title" class="ques_title" />
+          </div>
+        </div>
+        <div class="m_context">
+          <h5 class="cate_title">내용</h5>
+          <input type="text" name="contents" class="ques_cont" />
+        </div>
+        <div class="filebox bs3-primary">
+          <h5 class="cate_title">파일첨부</h5>
+          <input
+            class="upload-name"
+            value="파일은 최대 3개까지 선택 가능합니다."
+            disabled="disabled"
+          />
+
+          <label for="ex_filename">찾아보기</label>
+          <input type="file" id="ex_filename" class="upload-hidden" />
+        </div>
+        <input type="submit" class="quest_accept" value="문의접수" />
+      </div>
+    </div>
+    <footer class="footer">
+      <ul>
+        <li class="footer_nav_2">
+          (주)TROVE &nbsp;&nbsp;&nbsp;&nbsp;|
+          &nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호 :
+          123-456-7890&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; 전화 :
+          1234-5678&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;팩스:
+          1234-5678&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;주소 : 서울
+          중구 세종대로 110 &nbsp;&nbsp;&nbsp;&nbsp;
+          |&nbsp;&nbsp;&nbsp;&nbsp;E-mail : trove@trove.co.kr
+        </li>
+        <hr class="footerline_2" />
+        <li class="footer_nav_2">
+          통신판매업 신고번호 :
+          제2020-서울-1234호&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;ⓒ
+          2020 TROVE KOREA Corporation ALL Rights Reserverd.
+        </li>
+      </ul>
+      <hr class="footerline" />
+      <div class="footer-bottom">
+        <a href="../mun/1_1mun.html" class="footer_nav">고객센터 </a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="html/data_contact/eyong.html" class="footer_nav">이용약관 </a>
+        <a href="../data_contact/eyong.html" class="footer_nav">이용약관 </a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="html/data_contact/jungbo.html" class="footer_nav">개인정보처리방침 </a>
-    
+        <a href="../data_contact/jungbo.html" class="footer_nav"
+          >개인정보처리방침
+        </a>
+      </div>
     </footer>
-</body>
+  </body>
 
+  <script>
+    $(document).on("mouseover", ".topMenu span", function () {
+      $(".dept01").slideDown(300);
+      $(".dept-shade").slideDown(300);
+    });
+    $(document).on("mouseover", "div", function () {
+      if (!$(this).hasClass("topMenu")) {
+        $(".dept01").slideUp(300);
+        $(".dept-shade").slideUp(300);
+      }
+    });
+    $(document).ready(function () {
+      $("ul.tabs li").click(function () {
+        var tab_id = $(this).attr("data-tab");
 
+        $("ul.tabs li").removeClass("current");
+        $(".tab-content").removeClass("current");
+
+        $(this).addClass("current");
+        $("#" + tab_id).addClass("current");
+      });
+    });
+    $(document).ready(function () {
+      var fileTarget = $(".filebox .upload-hidden");
+
+      fileTarget.on("change", function () {
+        if (window.FileReader) {
+          var filename = $(this)[0].files[0].name;
+        } else {
+          var filename = $(this).val().split("/").pop().split("\\").pop();
+        }
+
+        $(this).siblings(".upload-name").val(filename);
+      });
+    });
+  </script>
 </html>

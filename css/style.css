@@ -198,13 +198,11 @@ input.start_btn {
     margin: auto;
 }
 .gamu_con_title {
-  padding-left: 603px;
   font-size: 2.333rem;
   color: #333333;
 }
 .gamu_con_text {
   margin-top: 0px;
-  padding-left: 405px;
   font-size: 1.667rem;
   color: #777777;
 }
@@ -271,8 +269,7 @@ input.start_btn {
 .content {
   display: flex;
   justify-content: space-around;
-  margin: auto;
-  margin: 64px 0;
+  margin: 64px auto;
   max-width: 1374px;
 }
 

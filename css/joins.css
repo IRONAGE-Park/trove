@@ -1,7 +1,7 @@
 .join_style {
   font-family: "Noto Sans KR", sans-serif;
-  margin-left: 640px;
-  width: 640 px;
+  margin: 0 auto;
+  width: 640px;
   height: 100vh;
 }
 .hr_sly {
@@ -16,13 +16,12 @@ td {
 }
 .table_sty {
   text-align: left;
-  width: 940px;
+  width: 100%;
   padding: 5px 0 5px 0;
   color: #333333;
   font-size: 18px;
 }
 .s_btn {
-  margin-left: 13px;
   width: 120px;
   height: 48px;
   background-color: #ffe201;
@@ -37,16 +36,15 @@ td {
   font-size: 18px;
 }
 .input_text {
-  margin-left: 35px;
   margin-bottom: 20px;
-  width: 362px;
+  padding-left: 15px;
+  width: 360px;
   height: 48px;
   border: 1px solid #e2e2e2;
 }
 .input_text_502 {
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 35px;
   width: 502px;
   height: 48px;
   border: 1px solid #e2e2e2;
@@ -54,7 +52,6 @@ td {
 .input_text_502_bnk {
   margin-top: 10px;
   margin-bottom: 70px;
-  margin-left: 35px;
   width: 502px;
   height: 48px;
   border: 1px solid #e2e2e2;
@@ -65,7 +62,6 @@ td {
   margin-top: 40px;
 }
 .input_text_180 {
-  margin-left: 35px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -74,7 +70,6 @@ td {
   border: 1px solid #e2e2e2;
 }
 .input_text_120 {
-  margin-left: 35px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -83,7 +78,6 @@ td {
   border: 1px solid #e2e2e2;
 }
 .input_text_90 {
-  margin-left: 35px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -92,7 +86,6 @@ td {
   border: 1px solid #e2e2e2;
 }
 .input_text_280 {
-  margin-left: 35px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 10px;
@@ -101,7 +94,7 @@ td {
   border: 1px solid #e2e2e2;
 }
 .join_content {
-  margin-left: 823px;
+  text-align: center;
   margin-bottom: 40px;
   font-family: "Noto Sans KR", sans-serif;
   color: #999999;
@@ -111,7 +104,6 @@ td {
 .aler_cont {
   margin-top: 10px;
   margin-bottom: 20px;
-  margin-left: -110px;
   font-size: 14px;
   color: #999999;
 }
@@ -135,10 +127,6 @@ td {
   border: 1px solid #23a3a7;
   background: #ffe201;
   color: #333333;
-}
-.mb_radio_div {
-  margin-left: 690px;
-  margin-top: 90px;
 }
 .mb-radio-input input[type="radio"] {
   display: none;
@@ -168,24 +156,23 @@ td {
   margin-top: 42px;
 }
 .mb_radio_div {
-  margin-left: 690px;
-  margin-top: 90px;
+  text-align: center;
+  margin: 90px 0;
 }
 .mb-radio-input_2 input[type="radio"] {
   display: none;
 }
 
 .mb-radio-input_2 input[type="radio"] + span {
-  margin-right: 60px;
   display: inline-block;
   font-size: 22px;
   background: url(../img/over_16_w.png);
   border: 1px solid #e2e2e2;
   width: 240px;
-  text-align: center;
   height: 240px;
   line-height: 45px;
   font-weight: 500;
+  text-align: center;
   color: #1c8286;
   cursor: pointer;
 }
