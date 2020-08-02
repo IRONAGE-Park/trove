@@ -4,7 +4,7 @@
   background-color: #e69f3a;
 }
 .tabmenu {
-  min-height: 100vh;
+  min-height: 150vh;
   display: flex;
   position: relative;
   font-size: 22px;
@@ -54,6 +54,7 @@
   display: block;
 }
 .news-main {
+  display: block;
   max-width: 1374px;
   margin: 0 auto;
 }

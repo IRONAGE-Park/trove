@@ -31,7 +31,6 @@ body {
   text-align: center;
 }
 .login_btn {
-  margin-top: 1.667rem;
   text-align: center;
 }
 .logout_btn {
@@ -413,15 +412,12 @@ input.start_btn {
     background: rgba(51, 51, 51, 0.95);
 }
 .menu01 > li {
-  float: left;
   line-height: 42px;
-  margin-bottom: 20px;
   text-align: center;
 }
 .menu01 span {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 26px;
   float: none;
 }
 .dept01 {
@@ -497,17 +493,8 @@ input.start_btn {
   font-weight: 500;
   font-family: NotoSansKr;
 }
-.tuuu {
-  position: absolute;
-  top: 414px;
-}
 .teeeeee {
-  position: absolute;
-  top: 616px;
-}
-.pwww {
-  position: absolute;
-  top: 495px;
+  padding-bottom: 70px;
 }
 
 @media screen and (max-width: 1374px) {

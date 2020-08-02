@@ -1,11 +1,12 @@
 .m_body {
   max-width: 1374px;
   margin: 0 auto;
-  height: 100vh;
+  height: 150vh;
 }
 .m_content {
     margin: 0 auto;
     text-align: center;
+    padding-bottom: 100px;
 }
 .m_category, .m_title, .m_context, .filebox {
     display: flex;
@@ -107,8 +108,10 @@
 
 .filebox.bs3-primary label {
   padding-top: 13px;
-  width: 240px;
-  height: 48px;
+  width: 240px; height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #333333;
   background-color: #f9f9f9;
   border: 1px solid #dbdbdb;

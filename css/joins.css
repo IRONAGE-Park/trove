@@ -9,6 +9,10 @@
 
   max-width: 640px;
 }
+th {
+  text-align: left;
+  font-size: 16px;
+}
 tr,
 td {
   margin-top: 10px;
@@ -36,9 +40,8 @@ td {
   font-size: 18px;
 }
 .input_text {
-  margin-bottom: 20px;
-  padding-left: 15px;
-  width: 360px;
+  padding: 0 15px;
+  width: 375px;
   height: 48px;
   border: 1px solid #e2e2e2;
 }

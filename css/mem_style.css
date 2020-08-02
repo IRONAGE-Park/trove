@@ -126,6 +126,7 @@
   border-bottom: 1px solid #dbdbdb;
 }
 .myInfo-main {
+  display: block;
   max-width: 1374px;
   margin: 0 auto;
 }
