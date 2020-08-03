@@ -4,7 +4,7 @@
   background-color: #e69f3a;
 }
 .tabmenu {
-  min-height: 150vh;
+  min-height: 100vh;
   display: flex;
   position: relative;
   font-size: 22px;
@@ -16,10 +16,7 @@
   margin-top: 65px;
   margin-bottom: 65px;
   width: 100%;
-  height: 64px;
   text-align: center;
-  background: #ebebeb;
-  border-bottom: 1px solid #cccccc;
   line-height: 40px;
 }
 .tabmenu label {
@@ -27,6 +24,7 @@
   height: 64px;
   display: block;
   width: 100%;
+  background: #ebebeb;
   line-height: 40px;
   border: 1px solid #ebebeb;
 }
@@ -37,7 +35,7 @@
   margin-top: 80px;
   display: none;
   text-align: left;
-  position: absolute;
+  position: relative;
   left: 0;
   top: 40px;
   width: 100%;
@@ -57,4 +55,18 @@
   display: block;
   max-width: 1374px;
   margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.menu_num-three .tabCon {
+  width: 300%;
+}
+.menu_num-three #tab1 .tabCon {
+  left: 0;
+}
+.menu_num-three #tab2 .tabCon {
+  left: -100%;
+}
+.menu_num-three #tab3 .tabCon {
+  left: -200%;
 }

@@ -1,7 +1,7 @@
 .m_body {
   max-width: 1374px;
   margin: 0 auto;
-  height: 150vh;
+  min-height: 150vh;
 }
 .m_content {
     margin: 0 auto;
@@ -107,7 +107,6 @@
 }
 
 .filebox.bs3-primary label {
-  padding-top: 13px;
   width: 240px; height: 48px;
   display: flex;
   justify-content: center;

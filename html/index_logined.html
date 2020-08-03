@@ -28,7 +28,10 @@
         <div class="dept-shade" style="display: none"></div>
         <ul class="menu01">
           <li>
-            <span><h2><img src="../img/TROVE_LOGO.png" alt="" class="logo_img" /></h2></span>
+            <span>
+              <h2>
+                <img src="../img/TROVE_LOGO.png" alt="" class="logo_img" /></h2
+            ></span>
             <ul class="dept01"></ul>
           </li>
           <li class="header-nav">
@@ -74,61 +77,53 @@
           <li class="header-nav">
             <span>고객지원</span>
             <ul class="dept01" style="display: none">
-              <li class="nop">1:1문의</li>
+              <li class="nop">1:1 문의</li>
               <li class="nop">FAQ</li>
             </ul>
           </li>
-          <li class="header-nav logout_btn"><span>Trove</span></li>
-          
-          <li>
-            <button class="more_btn" onclick="openNav()">
-              <a href="#">
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="MainTitle_mobile-hamburger__1m_vf" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path></svg>
-              </a>
-            </button>
-          </li>
-          <div id="mysidenav" class="sidenav">
-            <div class="sl_idid">
-              <a href="#" class="closebtn" onclick="closeNav()">x</a>
-              <div class="sidenav-welcome">
-                <h5 class="sli_nick">Trove 님</h5>
-                <h6 class="wel_text">환영합니다!</h6>
-              </div>
-              <div class="sidenav-action">
-                <button class="hre_minfo">내정보</button>
-                <button class="hre_logout">로그아웃</button>
-                <h5 class="PcBang_text">PC방</h5>
-                <h5 class="OFF">OFF</h5>
-                <h5 class="ON">ON</h5>
-              </div>
-            </div>
-            <div class="sidenav-cashinfo">
-              <h5 class="My_cash">나의 캐시</h5>
-              <hr class="herhr" />
-              <div class="My_credit cash-area">
-                <h5 class="t_t_t">보유 크레딧</h5>
-                <div class="t_cash-amount">
-                  <h6 style="background-color: #0069c3;" class="t_t">C</h6>
-                  <h5 class="t_m_t">29,000</h5>
+          <li class="logout_btn"><button class="more_btn" onclick='openNav()'><span>Trove</span></button></li>
+            <div id="mysidenav" class="sidenav">
+              <div class="sl_idid">
+                <a href="#" class="closebtn" onclick="closeNav()">X</a>
+                <div class="sidenav-welcome">
+                  <h5 class="sli_nick">Trove 님</h5>
+                  <h6 class="wel_text">환영합니다!</h6>
+                </div>
+                <div class="sidenav-action">
+                  <button class="hre_minfo">내정보</button>
+                  <button class="hre_logout">로그아웃</button>
+                  <h5 class="PcBang_text">PC방</h5>
+                  <h5 class="OFF">OFF</h5>
+                  <h5 class="ON">ON</h5>
                 </div>
               </div>
-              <div class="My_Point cash-area">
-                <h5 class="t_t_t">보유 포인트</h5>
-                <div class="t_cash-amount">
-                  <h6 style="background-color: #f7cd19;" class="t_t">P</h6>
-                  <h5 class="t_m_t">1,000</h5>
+              <div class="sidenav-cashinfo">
+                <h5 class="My_cash">나의 캐시</h5>
+                <hr class="herhr" />
+                <div class="My_credit cash-area">
+                  <h5 class="t_t_t">보유 크레딧</h5>
+                  <div class="t_cash-amount">
+                    <h5 class="t_m_t">29,000</h5>
+                    <h6 style="background-color: #0069c3;" class="t_t">C</h6>
+                  </div>
+                </div>
+                <div class="My_Point cash-area">
+                  <h5 class="t_t_t">보유 포인트</h5>
+                  <div class="t_cash-amount">
+                    <h5 class="t_m_t">1,000</h5>
+                    <h6 style="background-color: #f7cd19;" class="t_t">P</h6>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <script>
-            function openNav() {
-              document.getElementById("mysidenav").style.width = "440px";
-            }
-            function closeNav() {
-              document.getElementById("mysidenav").style.width = "0";
-            }
-          </script>
+            <script>
+              function openNav() {
+                document.getElementById("mysidenav").style.width = "440px";
+              }
+              function closeNav() {
+                document.getElementById("mysidenav").style.width = "0";
+              }
+            </script>
         </ul>
       </div>
     </header>

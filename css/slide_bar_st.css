@@ -12,7 +12,6 @@
   white-space: nowrap;
 }
 .sidenav a {
-  padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #707070;
@@ -25,7 +24,9 @@
 }
 .closebtn {
   position: absolute;
-  left: 80%;
+  top: 40px; left: 90%;
+  vertical-align: middle;
+  line-height: 25px;
   font-size: 36px !important;
 }
 .sl_idid {
@@ -37,6 +38,7 @@
 .sidenav-welcome, .sidenav-action {
     display: flex;
     padding: 0 40px;
+    line-height: 30px;
     align-items: baseline;
 }
 .sli_nick {
@@ -120,7 +122,6 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin-top: 10px;
     padding: 0 10%;
     overflow: hidden;
@@ -142,23 +143,24 @@
     justify-content: center;
     align-items: flex-end;
   font-size: 22px;
+  line-height: 32px;
   width: 32px; height: 32px;
   border-radius: 30px;
   color: #ffffff;
   
 }
 .t_cash-amount {
+  width: 50%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    width: 50%;
 }
 .t_m_t {
-  vertical-align: middle;
+  margin-right: 10px;
   font-weight: normal;
   display: inline-block;
   font-family: NotoSansKR;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .MainTitle_mobile-hamburger__1m_vf {
@@ -168,7 +170,7 @@
 /* 미디어쿼리 적용 */
 @media screen and (max-height: 450px) {
   .sidenav {
-    padding-top: 15px;
+    /* padding-top: 15px; */
   }
   .sidenav a {
     font-size: 18px;

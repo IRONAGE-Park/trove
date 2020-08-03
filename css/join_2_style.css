@@ -18,7 +18,8 @@ a {
 #joinForm {
   max-width: 640px;
   margin: 0 auto;
-  height: 130vh;
+  min-height: 100vh;
+  padding-bottom: 100px;
 }
 ul.join_box {
   border: 1px solid #ddd;
@@ -59,7 +60,6 @@ ul.join_box {
   margin-top: 15px;
 }
 .footBtwrap > li {
-  float: left;
   width: 100%;
   height: 60px;
 }
