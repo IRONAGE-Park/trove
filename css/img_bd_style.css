@@ -3,6 +3,7 @@
   height: 150vh;
 }
 div.gallery {
+  width: 400px;
   margin-top: 40px;
 }
 div.gallery-box {
@@ -12,31 +13,25 @@ div.gallery-box {
 }
 
 div.gallery img {
-  width: 400px;
-  height: 240px;
+  width: 100%;
   margin-bottom: 0px;
 }
 
 div.desc {
-  font-size: 22px;
+  font-size: 1.833rem;
   color: #333333;
   width: 400px;
-  height: 136px;
   padding: 15px;
   text-align: center;
   border: 1px solid #dbdbdb;
 }
 .cont_text {
-  font-size: 16px;
-  width: 400px;
-  margin-left: -20px;
-
+  font-size: 1.333rem;
   color: #999999;
 }
 .ib_title {
-  font-size: 22px;
+  font-size: 1.833rem;
   width: 400px;
-  height: 136px;
   padding: 20px;
   border: 1px solid #dbdbdb;
   position: relative;
@@ -49,13 +44,13 @@ div.desc {
 .ib_cont {
   margin-top: 34px;
   display: inline-block;
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #555555;
 }
 .ib_cont_2 {
   margin-left: 10px;
   display: inline-block;
-  font-size: 14px;
+  font-size: 1.167rem;
   color: #999999;
 }
 .heart_click {
@@ -65,4 +60,20 @@ div.desc {
 }
 .hot_line {
   width: 100%;
+}
+
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+  div.gallery-box {
+    padding: 0 10px;
+  }
+  div.gallery, div.desc {
+    width: 100%;
+  }
+  .ib_title {
+    width: 100%;
+  }
 }

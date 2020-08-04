@@ -1,5 +1,4 @@
 .tabmenu {
-  min-height: 150vh;
   position: relative;
   max-width: 1374px;
   margin: 0 auto;
@@ -15,15 +14,15 @@
   width: 100%;
   text-align: center;
   line-height: 40px;
-  font-size: 22px;
+  font-size: 1.833rem;
   position: relative;
 }
 .tabmenu label {
-  padding-top: 12px;
   height: 64px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  line-height: 40px;
   background: #ebebeb;
   border: 1px solid #ebebeb;
 }
@@ -40,7 +39,6 @@
   position: relative;
 }
 .tabmenu input:checked ~ label {
-  height: 64px;
   background: #ffffff;
   color: #1c8286;
   border-top: 4px solid #1c8286;
@@ -57,4 +55,15 @@
 }
 .menu_num-two #tab2 .tabCon {
   left: -100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .tabmenu label {
+    height: 56px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .tabmenu label {
+    height: 48px;
+  }
 }

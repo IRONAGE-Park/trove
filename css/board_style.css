@@ -11,7 +11,7 @@
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
-  font-size: 20px;
+  font-size: 1.667rem;
   color: #333;
   text-transform: uppercase;
 }
@@ -31,7 +31,7 @@
 
 .single li a {
   color: #666;
-  font-size: 14px;
+  font-size: 1.167rem;
   text-transform: uppercase;
   border-bottom: 1px solid #f0f0f0;
   line-height: 40px;
@@ -53,6 +53,7 @@
 }
 
 .right_contents {
+  padding: 0 10px;
   width: 100%;
   position: relative;
 }
@@ -71,7 +72,7 @@
 
 .title-page {
   font-family: "Open Sans", sans-serif;
-  font-size: 24px;
+  font-size: 2rem;
   height: 17px;
   line-height: 17px;
   font-weight: normal;
@@ -118,7 +119,7 @@
   margin-top: 0;
   color: #000;
   font-family: "Open Sans", sans-serif !important;
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 
 .cs_center_tap ul li span {
@@ -137,7 +138,7 @@
   margin-top: 0;
   color: #000;
   font-family: "Open Sans", sans-serif !important;
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 
 .page_cs_notice .table_basic {
@@ -150,13 +151,15 @@
   border-spacing: 0;
   font-family: "Open Sans", Open Sans, Arial, sans-serif;
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
   background: #fff;
 }
 
 .table_basic tr {
   border-bottom: 2px solid #dbdbdb;
+  position: relative;
 }
-
 .table_basic th {
   border-top: 1px solid #444444;
   border-bottom: 2px solid #dbdbdb;
@@ -333,8 +336,8 @@
 }
 
 .plain-btn.search_again_btn {
-  font-size: 12px;
-  line-height: 12px;
+  font-size: 1rem;
+  line-height: 1rem;
 }
 
 .plain-btn {
@@ -365,19 +368,19 @@
 }
 .g_board {
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 24px;
+  font-size: 2rem;
   margin: 20px;
   color: #999999;
 }
 .g_board_selec {
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 24px;
+  font-size: 2rem;
   margin: 20px;
-  padding-bottom: 24px;
+  padding-bottom: 21px;
   border-bottom: 8px solid #555555;
 }
 .g_board:hover {
-  padding-bottom: 24px;
+  padding-bottom: 21px;
   border-bottom: 8px solid #555555;
 }
 
@@ -386,4 +389,76 @@
   margin: 0 auto;
   padding-bottom: 100px;
   display: block;
+}
+@media screen and (max-width: 1024px) {
+  .g_board_selec {
+    padding-bottom: 16px;
+  }
+  .g_board:hover {
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .g_board_selec {
+    padding-bottom: 11px;
+  }
+  .g_board:hover {
+    padding-bottom: 11px;
+  }
+
+
+  .table_basic > tbody > tr, .table_basic > tbody > tr > td {
+    display: block;
+  }
+  .table_basic > thead > tr > th:nth-last-child(1),
+  .table_basic > thead > tr > th:nth-last-child(2),
+  .table_basic > thead > tr > th:nth-last-child(3),
+  .table_basic > thead > tr > th:nth-last-child(5) {
+    display: none;
+  }
+  .table_basic > thead > tr > th:nth-last-child(4) {
+    width: 100%;
+  }
+  .table_basic > tbody > tr > td:nth-last-child(1),
+  .table_basic > tbody > tr > td:nth-last-child(2),
+  .table_basic > tbody > tr > td:nth-last-child(3),
+  .table_basic > tbody > tr > td:nth-last-child(5)  {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    font-size: 1rem;
+  }
+  .table_basic > tbody > tr > td:nth-last-child(5) {
+    top: 50%; left: 10px;
+    padding: 0; height: 15px;
+    transform: translateY(-50%);
+  }
+  .table_basic > tbody > tr > td:nth-last-child(1) {
+    left: 50px;
+  }
+  .table_basic > tbody > tr > td:nth-last-child(2) {
+    left: 100px;
+  }
+  .table_basic > tbody > tr > td:nth-last-child(3) {
+    left: 170px;
+  }
+  .table_basic > tbody > tr > td > img {
+    width: 40px;
+  }
+  
+  .table_basic > tbody > tr > td:nth-last-child(2)::before,
+  .table_basic > tbody > tr > td:nth-last-child(3)::before {
+    content: '|';
+    position: absolute;
+    left: -5px;
+  }
+  
+  .table_basic > tbody > tr > .tit_contents_td {
+    position: relative;
+    left: 50px;
+    padding-top: 10px;
+    padding-right: 60px;
+    padding-bottom: 30px; 
+  }
 }

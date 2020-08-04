@@ -13,7 +13,7 @@
   width: 200px;
   height: 64px;
   background-color: #f9f9f9;
-  font-size: 18px;
+  font-size: 1.5rem;
   text-align: center;
   border-top: 1px solid #dbdbdb;
   color: #333333;
@@ -22,7 +22,7 @@
   width: 200px;
   height: 64px;
   background-color: #f9f9f9;
-  font-size: 18px;
+  font-size: 1.5rem;
   text-align: center;
   border-top: 1px solid #dbdbdb;
   border-bottom: 1px solid #dbdbdb;
@@ -32,7 +32,7 @@
   padding-left: 20px;
   width: 440px; height: 64px;
   position: relative;
-  font-size: 18px;
+  font-size: 1.5rem;
   text-align: left;
   border-top: 1px solid #dbdbdb;
   color: #333333;
@@ -42,7 +42,7 @@
   border-bottom: 1px solid #dbdbdb;
 }
 .byun_btn {
-  font-size: 16px;
+  font-size: 1.333rem;
   width: 120px;
   height: 44px;
   position: absolute;
@@ -65,11 +65,11 @@
   height: 56px;
   background-color: #27575a;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 1.5rem;
   margin-top: 64px;
 }
 .mem_bye_btn {
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #27575a;
   margin-top: 20px;
   width: 640px;
@@ -80,11 +80,11 @@
 .byebye {
   text-align: center;
   margin-top: 22px;
-  font-size: 20px;
+  font-size: 1.667rem;
   color: #777777;
 }
 .pw_tag {
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #333333;
   display: inline-block;
 }
@@ -105,21 +105,21 @@
   height: 56px;
   margin-top: 40px;
   background-color: #ffe201;
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #555555;
   border: 0px;
 }
 .bye_title {
-  font-size: 32px;
+  font-size: 2.667rem;
   text-align: center;
 }
 .bye_cont {
-  font-size: 18px;
+  font-size: 1.5rem;
   text-align: center;
   color: #999999;
 }
 .credit_tes {
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #777777;
   margin-top: 13px;
   margin-bottom: 65px;

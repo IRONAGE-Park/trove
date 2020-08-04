@@ -6,22 +6,27 @@ fieldset {
   display: inline-block;
   background: #fff;
   border: none;
+  white-space: nowrap;
+  width: 350px;
   border-radius: 5px;
+  transition: width .3s ease-in-out;
 }
 form {
+  margin-top: 50px;
+  padding: 0 10px;
   text-align: right;
 }
 fieldset input,
 fieldset button {
   position: relative;
-  width: 300px;
+  width: calc(100% - 50px);
   height: 50px;
   display: inline-block;
   border: 1px solid #dbdbdb;
 }
 
 input {
-        padding: 0 20px;
+  padding: 0 20px;
   color: #666;
   z-index: 1;
   border: 1px solid #dbdbdb;
@@ -33,27 +38,14 @@ input:focus {
 
 input:focus + button {
   -webkit-transform: translate(0, 0);
-
   -ms-transform: translate(0, 0);
-
   transform: translate(0, 0);
-
-  -webkit-transition-duration: 0.3s;
-
-  transition-duration: 0.3s;
 }
 
 input:focus + button .fa {
   -webkit-transform: translate(0px, 0);
-
   -ms-transform: translate(0px, 0);
-
   transform: translate(0px, 0);
-
-  -webkit-transition-duration: 0.3s;
-
-  transition-duration: 0.3s;
-
   color: #000000;
 }
 
@@ -64,15 +56,10 @@ fieldset button {
   border-left: 0px;
   background: #ffffff;
   cursor: pointer;
-
   -webkit-transform: translate(-50px, 0);
-
   -ms-transform: translate(-50px, 0);
-
   transform: translate(-50px, 0);
-
   -webkit-transition-duration: 0.3s;
-
   transition-duration: 0.3s;
 }
 
@@ -81,18 +68,22 @@ fieldset button {
   color: #29abe2;
   z-index: 3;
   top: 25%;
-
   -webkit-transform: translate(-250px, 0);
-
   -ms-transform: translate(-250px, 0);
-
   transform: translate(-250px, 0);
-
   -webkit-transition-duration: 0.3s;
-
   transition-duration: 0.3s;
-
   -webkit-transition: all 0.1s ease-in-out;
-
   transition: all 0.1s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  fieldset {
+    width: calc(100% - 60px);
+  }
+  .fa-search {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
 }

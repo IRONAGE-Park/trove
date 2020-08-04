@@ -10,42 +10,40 @@
 }
 .cash_area {
   background-color: #f9f9f9;
-  height: 80px;
   width: 100%;
-  margin-bottom: 66px;
+  margin-bottom: 80px;
+  padding: 10px 0;
 }
 .cash_intro {
-  margin-top: 66px;
+  margin-top: 80px;
   text-align: center;
-  font-size: 40px;
+  font-size: 3.333rem;
   color: #333333;
 }
 
 .filte_box {
   margin-bottom: 50px;
-  width: 120px;
-  height: 50px;
+  width: 120px; height: 50px;
   position: absolute;
   left: -120px;
   border: 1px solid #dbdbdb;
   background-color: #dbdbdb;
   padding-left: 15px;
-  font-size: 14px;
+  font-size: 1.167rem;
   color: #777777;
+  transition: width .3s ease-in-out;
 }
 #cash_gallery {
   overflow: hidden;
   margin-top: 40px;
   margin-left: 40px;
-  float: left;
   width: 620px;
 }
 
 #cash_gallery img {
   background-color: #f5f5f5;
   overflow: hidden;
-  width: 240px;
-  height: 240px;
+  width: 240px; height: 240px;
   margin-bottom: 0px;
 }
 
@@ -53,7 +51,7 @@
   padding-top: 60px;
   padding-left: 40px;
   float: right;
-  font-size: 22px;
+  font-size: 1.833rem;
   color: #333333;
   width: 380px;
   height: 240px;
@@ -62,14 +60,13 @@
 }
 .cash_money {
   margin-top: 22px;
-  font-size: 30px;
+  font-size: 2.5rem;
   color: #555555;
   display: inline-block;
 }
 .gd_line {
   margin-top: 20px;
-  margin-left: 0px;
-  width: 300px;
+  max-width: 300px;
   border: 1px solid #dbdbdb;
 }
 .gd_line_2 {
@@ -79,18 +76,23 @@
 }
 .shop_section {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  margin-top: 40px;
+  padding: 0 10px;
 }
 .cash_text {
   text-align: center;
 
   margin-top: 35px;
-  font-size: 16px;
+  font-size: 1.333rem;
   color: #777777;
 }
 .pre_section {
   margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 #pre_gallery {
   width: 305px;
@@ -113,7 +115,7 @@
   border: 1px solid #ebebeb;
   width: 305px;
   height: 280px;
-  font-size: 20px;
+  font-size: 1.667rem;
   color: #777777;
 }
 .pre_line {
@@ -123,39 +125,39 @@
 }
 .pre_cont {
   margin-top: 15px;
-  font-size: 28px;
+  font-size: 2.333rem;
   color: #555555;
 }
 .crediit {
   margin-top: 43px;
-  font-size: 20px;
+  font-size: 1.667rem;
   width: 240px;
   height: 56px;
   background-color: #ffe201;
 }
 .cause_div {
   margin-top: 120px;
-  width: 1280px;
-  height: 264px;
   padding: 0;
 }
 .cause_title {
   padding-top: 12px;
   padding-left: 20px;
-  width: 1280px;
   height: 56px;
   background-color: #f9f9f9;
-  font-size: 24px;
+  font-size: 2rem;
   color: #333333;
   vertical-align: middle;
 }
 .cause_cint {
   margin-top: 42px;
-  font-size: 16px;
+  font-size: 1.333rem;
+  padding: 0 20px;
+  box-sizing: border-box;
   color: #777777;
 }
 .chase_much {
-  width: 400px; height: 56px;
+  max-width: 400px; min-width: 300px;
+  width: calc(100% - 66px); height: 56px;
   border-radius: 28px;
   background-color: #ffffff;
   position: relative;
@@ -169,7 +171,7 @@
   width: 32px; height: 32px;
   line-height: 32px;
   border: 0px solid #333333;
-  font-size: 22px;
+  font-size: 1.833rem;
   color: #ffffff;
   background-color: #0069c3;
   border-radius: 30px;
@@ -179,7 +181,7 @@
 .cash_money_t {
   display: inline-block;
   font-family: NotoSansKR;
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #333333;
 }
@@ -200,7 +202,7 @@
   line-height: 32px;;
   border: 0px solid #333333;
   display: inline-block;
-  font-size: 22px;
+  font-size: 1.833rem;
   color: #ffffff;
   background-color: #f7cd19;
   border-radius: 30px;
@@ -209,16 +211,16 @@
 .cash_point_t {
   display: inline-block;
   font-family: NotoSansKR;
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #333333;
 }
 .point_icon {
   text-align: center;
-  width: 32px;
-  height: 32px;
+  width: 32px; height: 32px;
+  line-height: 32px;
   border: 0px solid #333333;
-  font-size: 22px;
+  font-size: 1.833rem;
   color: #ffffff;
   background-color: #f7cd19;
   border-radius: 30px;
@@ -240,9 +242,53 @@
 .private-cash-info {
     max-width: 1374px;
     height: 100%;
+    flex-wrap: wrap;
+    padding: 0 10px;
     justify-content: flex-end;
     align-items: center;
     margin: 0 auto;
     position: relative;
     display: flex;
+}
+
+
+@media screen and (max-width: 768px) {
+  .filte_box {
+    width: 60px;
+    left: -60px;
+    padding-left: 5px;
+  }
+  #cash_gallery {
+    margin: 0;
+    width: 100%;
+  }
+  #cash_gallery img {
+    width: 200px; height: 200px;
+  }
+  .desc_cash {
+    width: calc(100% - 200px); height: 200px;
+    padding: 40px 30px;
+  }
+  .more_aa {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #cash_gallery {
+    margin-top: 20px;
+  }
+  #cash_gallery img {
+    width: 100%; height: auto;
+  }
+  .desc_cash {
+    width: 100%; height: 200px;
+    padding: 40px 30px;
+  }
+  .chung_btn {
+    margin: 0 10px;
+  }
+  .chase_much {
+    padding: 0 10px;
+  }
 }

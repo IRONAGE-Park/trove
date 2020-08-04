@@ -1,12 +1,16 @@
 .FAQ_title {
   margin-top: 80px;
-  font-size: 40px;
+  font-size: 3.333rem;
   text-align: center;
   margin-bottom: 40px;
 }
 .btn_div {
   margin-top: 80px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .fq_btn {
   margin-left: 10px;
@@ -14,7 +18,7 @@
   height: 56px;
   background-color: #27575a;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 1.667rem;
   margin-right: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -28,7 +32,7 @@
 .article_search_field,
 .article_search_submit {
   border: solid 1px #dbdbdb;
-  font-size: 16px;
+  font-size: 1.333rem;
 }
 .article_search_field {
   width: 85%;

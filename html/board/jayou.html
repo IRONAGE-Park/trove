@@ -13,74 +13,141 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 <body>
-        <header>
-            <div class="topMenu">
-              <div class="dept-shade" style="display: none;"></div>
-              <ul class="menu01">
-                <li>
-                  <span>
-                    <h2>
-                      <img
-                        src="../../img/TROVE_LOGO.png"
-                        alt=""
-                        class="logo_img"
-                      /></h2
-                  ></span>
-                  <ul class="dept01"></ul>
-                </li>
-                <li class="header-nav">
-                  <span>뉴스</span>
-                  <ul class="dept01" style="display: none;">
-                    <li class="nop">공지사항</li>
-                    <li class="nop">업데이트</li>
-                    <li class="nop">이벤트</li>
-                  </ul>
-                </li>
-                <li class="header-nav">
-                  <span>정보</span>
-                  <ul class="dept01" style="display: none;">
-                    <li class="nop">게임정보</li>
-                    <li class="nop">모험</li>
-                    <li class="nop">탐험</li>
-                    <li class="nop">제작</li>
-                  </ul>
-                </li>
-                <li class="header-nav">
-                  <span>커뮤니티</span>
-                  <ul class="dept01" style="display: none;">
-                    <li class="nop">자유게시판</li>
-                    <li class="nop">정보게시판</li>
-                    <li class="nop">이미지게시판</li>
-                  </ul>
-                </li>
-                <li class="header-nav">
-                  <span>캐시샵</span>
-                  <ul class="dept01" style="display: none;">
-                    <li class="nop">패키지</li>
-                    <li class="nop">프리미엄</li>
-                    <li class="nop">크레딧</li>
-                    <li class="nop">포인트샵</li>
-                  </ul>
-                </li>
-                <li class="header-nav">
-                  <span>다운로드</span>
-                  <ul class="dept01" style="display: none;">
-                    <li class="nop">클라이언트 다운</li>
-                  </ul>
-                </li>
-                <li class="header-nav">
-                  <span>고객지원</span>
-                  <ul class="dept01" style="display: none;">
-                    <li class="nop">1:1문의</li>
-                    <li class="nop">FAQ</li>
-                  </ul>
-                </li>
-                <li class="header-nav">
-                  <img src="../../img/login_btn.png" class="login_btn" />
-                </li>
-              </ul>
-            </div>
-          </header>
+  <div class="shade"></div>
+  <div class="mobile-sidebar">
+    <div class="mobile-sidebar-header">
+      <img src="../../img/TROVE_LOGO.png" alt="" class="logo_img" />
+    </div>
+    <ul class="mobile-sidebar-content">
+      <li class="content-list">
+        <label class="content-list-title" for="news_list">뉴스</label>
+        <input type="checkbox" id="news_list" />
+        <ul class="content-child-list">
+          <li><a href="../news/news_1.html">공지사항</a></li>
+          <li><a href="../news/news_2.html">업데이트</a></li>
+          <li><a href="../news/news_3.html">이벤트</a></li>
+        </ul>
+      </li>
+      <li class="content-list">
+        <label class="content-list-title" for="information_list">정보</label>
+        <input type="checkbox" id="information_list" />
+        <ul class="content-child-list">
+          <li><a href="../info/game_info.html">게임정보</a></li>
+          <li><a href="../info/mohum.html">모험</a></li>
+          <li><a href="../info/tamhum.html">탐험</a></li>
+          <li><a href="../info/jejak.html">제작</a></li>
+        </ul>
+      </li>
+      <li class="content-list">
+        <label class="content-list-title" for="community_list"
+          >커뮤니티</label
+        >
+        <input type="checkbox" id="community_list" />
+        <ul class="content-child-list">
+          <li><a href="../board/jayou.html">자유게시판</a></li>
+          <li><a href="../board/info_board.html">정보게시판</a></li>
+          <li><a href="../board/img_board.html">이미지게시판</a></li>
+        </ul>
+      </li>
+      <li class="content-list">
+        <label class="content-list-title" for="cashshop_list">캐시샵</label>
+        <input type="checkbox" id="cashshop_list" />
+        <ul class="content-child-list">
+          <li><a href="../cash/cash_1.html">패키지</a></li>
+          <li><a href="../cash/cash_2.html">프리미엄</a></li>
+          <li><a href="../cash/cash_3.html">크레딧</a></li>
+          <li><a href="../cash/cash_4.html">포인트샵</a></li>
+        </ul>
+      </li>
+      <li class="content-list">
+        <label class="content-list-title" for="download_list">다운로드</label>
+        <input type="checkbox" id="download_list" />
+        <ul class="content-child-list">
+          <li><a href="../download/download.html">클라이언트 다운</a></li>
+        </ul>
+      </li>
+      <li class="content-list">
+        <label class="content-list-title" for="support_list">고객지원</label>
+        <input type="checkbox" id="support_list" />
+        <ul class="content-child-list">
+          <li><a href="../mun/1_1mun.html">1:1 문의</a></li>
+          <li><a href="../mun/1_3mun.html">FAQ</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <header>
+    <div class="topMenu">
+      <div class="dept-shade" style="display: none;"></div>
+      <ul class="menu01">
+        <li class="mobile-sidebtn">
+          <div class="hamburger" id="hamburger-11">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </li>
+        <li>
+          <span>
+            <h2>
+              <img src="../../img/TROVE_LOGO.png" alt="" class="logo_img" />
+            </h2>
+          </span>
+          <ul class="dept01"></ul>
+        </li>
+        <li class="header-nav">
+          <span>뉴스</span>
+          <ul class="dept01" style="display: none;">
+            <li class="nop">공지사항</li>
+            <li class="nop">업데이트</li>
+            <li class="nop">이벤트</li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>정보</span>
+          <ul class="dept01" style="display: none;">
+            <li class="nop">게임정보</li>
+            <li class="nop">모험</li>
+            <li class="nop">탐험</li>
+            <li class="nop">제작</li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>커뮤니티</span>
+          <ul class="dept01" style="display: none;">
+            <li class="nop">자유게시판</li>
+            <li class="nop">정보게시판</li>
+            <li class="nop">이미지게시판</li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>캐시샵</span>
+          <ul class="dept01" style="display: none;">
+            <li class="nop">패키지</li>
+            <li class="nop">프리미엄</li>
+            <li class="nop">크레딧</li>
+            <li class="nop">포인트샵</li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>다운로드</span>
+          <ul class="dept01" style="display: none;">
+            <li class="nop">클라이언트 다운</li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>고객지원</span>
+          <ul class="dept01" style="display: none;">
+            <li class="nop">1:1 문의</li>
+            <li class="nop">FAQ</li>
+          </ul>
+        </li>
+        <li class="login_btn">
+          <img src="../../img/login_btn.png" class="login_btn" />
+        </li>
+      </ul>
+    </div>
+  </header>
           <section
               class="visual_sub"
               style="background-image: url('../../img/commu_banner.jpg');"
@@ -110,70 +177,55 @@
 				<div class="right_contents">
 					<table class="table_basic">
 						<colgroup>
-							<col width="70%">
-                            <col width="10%">
-							<col width="10%">
-							<col width="10%">
+							<col width="55%">
+                            <col width="15%">
+							<col width="15%">
+							<col width="15%">
 						</colgroup>
 						<thead>
 							<tr>
 								<th scope="col">제목</th>
 								<th scope="col">등록일</th>
-                                <th scope="col">닉네임</th>
-                                <th scope="col">조회수</th>
+                <th scope="col">닉네임</th>
+                <th scope="col">조회수</th>
 							</tr>
 						</thead>
 						<tbody>
-							
 								<tr>
 									<td class="tit_contents_td">
 										<a href=>자유게시판 글입니다.</a>
 									</td>
 									<td>2020.07.10</td>
-                                    <td>TROVE</td>
-                                    <td>123
-									</td>
-								</tr>
-                            								<tr>
-								<td class="tit_contents_td">
+                  <td>TROVE</td>
+                  <td>123</td>
+                </tr>
+                <tr>
+								  <td class="tit_contents_td">
 										<a href=>자유게시판 글입니다.</a>
 									</td>
-									<td>2020.07.10</td>
-                                    <td>TROVE</td>
-                                    <td >123
-									</td>
-								</tr>
-                            								<tr>
-																		<td class="tit_contents_td">
+                  <td>2020.07.10</td>
+                  <td>TROVE</td>
+                  <td>123</td>
+                </tr>
+                <tr>
+                  <td class="tit_contents_td">
 										<a href=>자유게시판 글입니다.</a>
 									</td>
-									<td>2020.07.10</td>
-                                    <td>TROVE</td>
-                                    <td>123
-									</td>
+                  <td>2020.07.10</td>
+                  <td>TROVE</td>
+                  <td>123</td>
 								</tr>
-							
-							
-							
 						</tbody>
 					</table>
 					<div class="boxed-list-wrapper">
-
 						<!-- 하단 페이징 -->
 						<div class="pagination-box box">
 							<div class="pagination">
-							
 								<div class="wrapper">
 									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=1" class="fa fa-angle-double-left paging-btn btn first"></a>
-									
 									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=${page-1}" class="fa fa-angle-left paging-btn btn prev"></a>
-									
-									
 									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=${i}" class="paging-btn btn active">1</a> 
-									
-									
 									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=${page+1}" class="fa fa-angle-right paging-btn btn next"></a>
-									
 									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=${tempEndPage}" class="fa fa-angle-double-right paging-btn btn last"></a>
 								</div>
 							</div>
@@ -186,55 +238,52 @@
     </div>
     </main>
     <footer class="footer">
-        <ul>
-          <li class="footer_nav_2">
-            (주)TROVE &nbsp;&nbsp;&nbsp;&nbsp;|
-            &nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호 :
-            123-456-7890&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; 전화 :
-            1234-5678&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;팩스:
-            1234-5678&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;주소 : 서울
-            중구 세종대로 110 &nbsp;&nbsp;&nbsp;&nbsp;
-            |&nbsp;&nbsp;&nbsp;&nbsp;E-mail : trove@trove.co.kr
-          </li>
-          <hr class="footerline_2" />
-          <li class="footer_nav_2">
-            통신판매업 신고번호 :
-            제2020-서울-1234호&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;ⓒ
-            2020 TROVE KOREA Corporation ALL Rights Reserverd.
-          </li>
-        </ul>
-        <hr class="footerline" />
-        <div class="footer-bottom">
-          <a href="../mun/1_1mun.html" class="footer_nav">고객센터 </a>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="../data_contact/eyong.html" class="footer_nav">이용약관 </a>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="../data_contact/jungbo.html" class="footer_nav"
-            >개인정보처리방침
-          </a>
-        </div>
-      </footer>
-    </body>
-    <script>
-      $(document).on("mouseover", ".topMenu span", function () {
-        $(".dept01").slideDown(300);
-        $(".dept-shade").slideDown(300);
-      });
-      $(document).on("mouseover", "div", function () {
-        if (!$(this).hasClass("topMenu")) {
-          $(".dept01").slideUp(300);
-          $(".dept-shade").slideUp(300);
-        }
-      });
+      <ul>
+        <li class="footer_nav_2">
+          <span>(주)TROVE&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span>|&nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호: 123-456-7890&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span>|&nbsp;&nbsp;&nbsp;&nbsp;전화: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span>|&nbsp;&nbsp;&nbsp;&nbsp;팩스: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span>|&nbsp;&nbsp;&nbsp;&nbsp;주소: 서울 중구 세종대로 110 &nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span>|&nbsp;&nbsp;&nbsp;&nbsp;E-mail: trove@trove.co.kr</span>
+        </li>
+        <hr class="footerline_2" />
+        <li class="footer_nav_2">
+          <span>통신판매업 신고번호: 제2020-서울-1234호&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span>|&nbsp;&nbsp;&nbsp;&nbsp; ⓒ 2020 TROVE KOREA Corporation ALL Rights Reserverd.</span>
+        </li>
+      </ul>
+      <hr class="footerline" />
+      <div class="footer-bottom">
+        <a href="../mun/1_1mun.html" class="footer_nav">고객센터</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="../data_contact/eyong.html" class="footer_nav">이용약관</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="../data_contact/jungbo.html" class="footer_nav">개인정보처리방침</a>
+      </div>
+    </footer>
+  </body>
+  <script>
+    $(document).on("mouseover", ".topMenu span", function () {
+      	$(".dept01").slideDown(300);
+      	$(".dept-shade").slideDown(300);
+    });
+    $(".dept01").on("mouseleave", function () {
+        $(".dept01").slideUp(300);
+        $(".dept-shade").slideUp(300);
+    });
+    document.querySelector('.hamburger').addEventListener('click', function (e) {
+      	$("body").toggleClass("open-sidebar");
+      	$(".sidebar").toggleClass("is-active");
+      	$(".shade").toggleClass("is-active");
+    });
+    $(".shade").click(function () {
+      	$("body").removeClass("open-sidebar");
+      	$(this).removeClass("is-active");
+      	$(".sidebar").removeClass("is-active");
+    });
+
     
-      $(document).on("mouseover", ".topMenu span", function () {
-        $(".dept01").slideDown(300);
-      });
-      $(document).on("mouseover", "div", function () {
-        if (!$(this).hasClass("topMenu")) {
-          $(".dept01").slideUp(300);
-        }
-      });
       $(document).ready(function () {
         $("ul.tabs li").click(function () {
           var tab_id = $(this).attr("data-tab");

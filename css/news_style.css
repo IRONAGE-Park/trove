@@ -4,46 +4,41 @@
   background-color: #e69f3a;
 }
 .tabmenu {
-  min-height: 100vh;
   display: flex;
   position: relative;
-  font-size: 22px;
+  font-size: 1.833rem;
 }
 .tabmenu ul {
   width: 33.33333%;
 }
 .tabmenu ul li {
-  margin-top: 65px;
-  margin-bottom: 65px;
+  margin: 50px 0;
   width: 100%;
   text-align: center;
   line-height: 40px;
 }
 .tabmenu label {
-  padding-top: 12px;
   height: 64px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   background: #ebebeb;
-  line-height: 40px;
   border: 1px solid #ebebeb;
 }
 .tabmenu input {
   display: none;
 }
 .tabCon {
-  margin-top: 80px;
+  margin-top: 40px;
   display: none;
   text-align: left;
   position: relative;
-  left: 0;
-  top: 40px;
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 20px;
 }
 .tabmenu input:checked ~ label {
-  height: 64px;
   background: #ffffff;
   color: #1c8286;
   border-top: 4px solid #1c8286;
@@ -69,4 +64,16 @@
 }
 .menu_num-three #tab3 .tabCon {
   left: -200%;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .tabmenu label {
+    height: 56px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .tabmenu label {
+    height: 48px;
+  }
 }

@@ -1,19 +1,23 @@
 /* 사이드바 스타일 */
 .sidenav {
-  height: 100%;
   width: 0;
-  max-width: 100%;
+  height: 100%;
+  max-width: 440px;
   position: fixed;
   z-index: 999;
-  top: 0; right: 0;
+  top: 0;
+  right: 0;
   background-color: #ebebeb;
   overflow-x: hidden;
   transition: 0.5s ease-in-out;
   white-space: nowrap;
 }
+.sidenav.open-sidenav {
+  width: 100%;
+}
 .sidenav a {
   text-decoration: none;
-  font-size: 25px;
+  font-size: 2.083rem;
   color: #707070;
   display: block;
   transition: 0.2s ease-in-out;
@@ -24,10 +28,11 @@
 }
 .closebtn {
   position: absolute;
-  top: 40px; left: 90%;
+  top: 40px;
+  left: 90%;
   vertical-align: middle;
   line-height: 25px;
-  font-size: 36px !important;
+  font-size: 3rem !important;
 }
 .sl_idid {
   padding-top: 40px;
@@ -35,47 +40,48 @@
   height: 185px;
   background-color: #f9f9f9;
 }
-.sidenav-welcome, .sidenav-action {
-    display: flex;
-    padding: 0 40px;
-    line-height: 30px;
-    align-items: baseline;
+.sidenav-welcome,
+.sidenav-action {
+  display: flex;
+  padding: 0 40px;
+  line-height: 30px;
+  align-items: baseline;
 }
 .sli_nick {
   font-family: Roboto;
-  font-size: 20px;
+  font-size: 1.667rem;
   color: #555555;
   font-weight: 700;
   margin-right: 10px;
 }
 .wel_text {
   font-family: NotoSansKR;
-  font-size: 20px;
+  font-size: 1.667rem;
   color: #555555;
   font-weight: normal;
 }
 .sidenav-action {
-    padding-top: 50px;
-    width: 335px;
-    justify-content: space-between;
+  padding-top: 50px;
+  width: 320px;
+  justify-content: space-between;
 }
 .hre_minfo {
   letter-spacing: -0.8px;
-  font-size: 16px;
+  font-size: 1.333rem;
   background-color: #f9f9f9;
   border: 0px;
   color: #333333;
   font-weight: 700;
 }
 .hre_logout {
-  font-size: 16px;
+  font-size: 1.333rem;
   background-color: #f9f9f9;
   border: 0px;
   color: #777777;
 }
 .PcBang_text {
   font-family: NotoSansKR;
-  font-size: 16px;
+  font-size: 1.333rem;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -86,26 +92,26 @@
 .OFF {
   line-height: 1.5;
   letter-spacing: -0.8px;
-  font-size: 16px;
+  font-size: 1.333rem;
   font-weight: 700;
   color: #999999;
 }
 .ON {
   line-height: 1.5;
   letter-spacing: -0.8px;
-  font-size: 16px;
+  font-size: 1.333rem;
   font-weight: 500;
   color: #ffe201;
 }
 
 .sidenav-cashinfo {
-    position: relative;
-    text-align: left;
-    padding: 20px 40px;
+  position: relative;
+  text-align: left;
+  padding: 20px 40px;
 }
 
 .My_cash {
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #333333;
   font-weight: 800;
   margin: 20px 0;
@@ -116,19 +122,20 @@
   margin: 20px 0;
 }
 .cash-area {
-    width: 100%; height: 48px;
-    background-color: #fff;
-    border-radius: 100px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    padding: 0 10%;
-    overflow: hidden;
+  width: 100%;
+  height: 48px;
+  background-color: #fff;
+  border-radius: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0 10%;
+  overflow: hidden;
 }
 .t_t_t {
   font-family: NotoSansKR;
-  font-size: 16px;
+  font-size: 1.333rem;
   font-weight: 700;
   font-stretch: normal;
   font-style: normal;
@@ -139,40 +146,65 @@
   vertical-align: middle;
 }
 .t_t {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 1.833rem;
   line-height: 32px;
-  width: 32px; height: 32px;
+  width: 32px;
+  height: 32px;
   border-radius: 30px;
   color: #ffffff;
-  
 }
 .t_cash-amount {
   width: 50%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 .t_m_t {
   margin-right: 10px;
   font-weight: normal;
   display: inline-block;
   font-family: NotoSansKR;
-  font-size: 16px;
+  font-size: 1.333rem;
 }
 
 .MainTitle_mobile-hamburger__1m_vf {
-    width: 40px; height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
-/* 미디어쿼리 적용 */
-@media screen and (max-height: 450px) {
+@media screen and (max-width: 1374px) {
+}
+@media screen and (max-width: 1024px) {
   .sidenav {
-    /* padding-top: 15px; */
+    max-width: 400px;
   }
-  .sidenav a {
-    font-size: 18px;
+
+  .sidenav-welcome,
+  .sidenav-action {
+    padding: 0 30px;
+  }
+  .sidenav-action {
+    padding-top: 40px;
+  }
+  .sidenav-cashinfo {
+    padding: 20px 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sidenav {
+    max-width: 340px;
+  }
+  .sidenav-welcome,
+  .sidenav-action {
+    padding: 0 20px;
+  }
+  .sidenav-action {
+    padding-top: 30px;
+  }
+  .sidenav-cashinfo {
+    padding: 20px 20px;
   }
 }

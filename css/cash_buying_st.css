@@ -10,7 +10,7 @@
   padding-top: 25px;
 }
 .cash_title {
-  font-size: 28px;
+  font-size: 2.333rem;
   color: #ffffff;
   text-align: center;
 }
@@ -36,18 +36,18 @@
   text-align: center;
 }
 .unit_cash {
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #555555;
   display: inline-block;
 }
 .nick_cash {
   padding: 0 30px;
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #555555;
   display: inline-block;
 }
 .how_cash {
-  font-size: 24px;
+  font-size: 2rem;
   display: inline-block;
   margin-left: 8px;
 }
@@ -81,7 +81,7 @@
   color: #333333;
 }
 .much {
-  font-size: 18px;
+  font-size: 1.5rem;
   text-align: right;
   padding-right: 10px;
   width: 100%;
@@ -99,14 +99,14 @@
 }
 .remain {
   padding: 0 30px;
-  font-size: 14px;
+  font-size: 1.167rem;
   color: #999999;
   margin-top: 11px;
   text-align: right;
   font-weight: normal;
 }
 .remain_2 {
-  font-size: 14px;
+  font-size: 1.167rem;
   color: #999999;
   text-align: center;
   margin-top: 41px;
@@ -117,7 +117,7 @@
   width: 80px;
   height: 48px;
   background-color: #ffffff;
-  font-size: 16px;
+  font-size: 1.333rem;
   border: 1px solid #ebebeb;
 }
 .agree_area {
@@ -151,7 +151,7 @@
   height: 56px;
   background-color: #ffe201;
   border: 0px;
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 .btn_not_go, .btn_not_go_2 {
   margin-top: 56px;
@@ -159,14 +159,14 @@
   height: 56px;
   background-color: #ebebeb;
   border: 0px;
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 .btn_not_go_2 {
   margin-top: 238px;
 }
 .agree_yack, .agree_yack_2 {
   padding: 0 30px;
-  font-size: 16px;
+  font-size: 1.333rem;
   color: #555555;
   font-weight: normal;
   font-stretch: normal;
@@ -175,7 +175,7 @@
   margin-top: 42px;
 }
 .v_num {
-  font-size: 24px;
+  font-size: 2rem;
   color: #333333;
   text-align: center;
 }
@@ -184,13 +184,13 @@
   margin: 0 auto;
   margin-top: 21px;
   width: 360px;
-  font-size: 16px;
+  font-size: 1.333rem;
 }
 .tab_11 {
   padding-left: 20px;
   height: 48px;
   text-align: left;
-  font-size: 16px;
+  font-size: 1.333rem;
   border: 1px solid #f0f0f0;
   border-right: 0px;
 }
@@ -199,7 +199,7 @@
   padding-right: 40px;
   height: 48px;
   text-align: right;
-  font-size: 16px;
+  font-size: 1.333rem;
   border: 1px solid #f0f0f0;
   border-left: 0px;
 }
@@ -210,7 +210,7 @@
   height: 56px;
   background-color: #ffe201;
   border: 0px;
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 .btn_go_3 {
   margin-top: 20px;
@@ -218,7 +218,7 @@
   height: 56px;
   background-color: #ffe201;
   border: 0px;
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 .btn_go_3_1 {
   margin-top: 10px;
@@ -226,26 +226,32 @@
   height: 56px;
   background-color: #ffffff;
   border: 1px solid #dbdbdb;
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 #cash_contain_2 {
+  margin: 0 auto;
   border: 1px solid #000000;
   max-width: 640px;
-  padding: 0 80px;
-  padding-bottom: 40px;
+  padding: 80px;
 }
 .buzok {
-  margin-top: 86px;
   text-align: center;
-  font-size: 24px;
+  font-size: 2rem;
   color: #333333;
 }
 .clip_B {
   border: 1px solid #dbdbdb;
-  font-size: 16px;
+  font-size: 1.333rem;
   color: #333333;
   text-align: center;
   width: 100%;
   height: 56px;
   margin-top: 40px;
+}
+
+
+@media screen and (max-width: 450px) {
+  #cash_contain_2 {
+    padding: 50px;
+  }
 }

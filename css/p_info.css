@@ -7,17 +7,17 @@
   position: relative;
 }
 .sangtea {
-  font-size: 18px;
+  font-size: 1.5rem;
   display: inline-block;
   margin-right: 97px;
 }
 .sangtea_2_1 {
-  font-size: 18px;
+  font-size: 1.5rem;
   display: inline-block;
   margin-right: 45px;
 }
 .nic_title {
-  font-size: 32px;
+  font-size: 2.667rem;
   color: #333333;
   text-align: center;
 }
@@ -26,7 +26,7 @@
   width: 320px;
   height: 48px;
   border: 0px;
-  font-size: 16px;
+  font-size: 1.333rem;
   margin-bottom: 10px;
   color: #333333;
 }
@@ -37,7 +37,7 @@
   width: 380px;
   height: 48px;
   border: 1px solid #e2e2e2;
-  font-size: 16px;
+  font-size: 1.333rem;
   color: #333333;
 }
 .btn_OK {
@@ -46,20 +46,20 @@
   width: 480px;
   height: 56px;
   border: 0px solid #e2e2e2;
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #555555;
   background-color: #ffe201;
 }
 .nick_OK {
-  font-size: 16px;
+  font-size: 1.333rem;
   color: #1c8286;
 }
 .nick_notOK {
-  font-size: 16px;
+  font-size: 1.333rem;
   color: #c31111;
 }
 .hyun_pw {
-  font-size: 18px;
+  font-size: 1.5rem;
   display: inline-block;
   margin-right: 61px;
   color: #333333;
@@ -72,19 +72,19 @@
   margin-bottom: 32px;
 }
 .hyun_pw_2 {
-  font-size: 18px;
+  font-size: 1.5rem;
   display: inline-block;
   margin-right: 77px;
   color: #333333;
 }
 .hyun_pw_3 {
-  font-size: 14px;
+  font-size: 1.167rem;
   margin-top: 11px;
   margin-bottom: 20px;
   color: #999999;
 }
 .hyun_pw_4 {
-  font-size: 18px;
+  font-size: 1.5rem;
   display: inline-block;
   margin-right: 41px;
   color: #333333;
@@ -94,14 +94,14 @@
   width: 480px;
   height: 56px;
   border: 0px solid #e2e2e2;
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #555555;
   background-color: #ffe201;
 }
 .hyun_name,
 .hyun_numb {
   display: table-cell;
-  font-size: 18px;
+  font-size: 1.5rem;
   width: 100px;
   color: #333333;
 }
@@ -118,12 +118,12 @@
   position: absolute;
   right: 0; bottom: 0;
   text-align: center;
-  font-size: 14px;
+  font-size: 1.167rem;
   border: 1px solid #dbdbdb;
   background-color: #f9f9f9;
 }
 .time_text {
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #777777;
 }
 .input_sms {
@@ -143,7 +143,7 @@
   padding-top: 40px;
 }
 .sangtea_2 {
-  font-size: 18px;
+  font-size: 1.5rem;
   margin-top: 41px;
   margin-left: 205px;
 }
@@ -154,11 +154,11 @@
   width: 150px;
   height: 48px;
   border: 0px solid #e2e2e2;
-  font-size: 16px;
+  font-size: 1.167rem;
   color: #333333;
   background-color: #f9f9f9;
 }
 .hyn_2 {
-  font-size: 18px;
+  font-size: 1.5rem;
   display: inline-block;
 }

@@ -1,7 +1,6 @@
 .m_body {
   max-width: 1374px;
   margin: 0 auto;
-  min-height: 150vh;
 }
 .m_content {
     margin: 0 auto;
@@ -16,7 +15,7 @@
 }
 
 .cate_title {
-  font-size: 20px;
+  font-size: 1.667rem;
   color: #333333;
   width: 100px;
   text-align: left;
@@ -26,14 +25,14 @@
   width: 470px;
   height: 48px;
   color: #999999;
-  font-size: 16px;
+  font-size: 1.333rem;
   border: 1px solid #dbdbdb;
 }
 .cate_2 {
   width: 470px;
   height: 48px;
   color: #999999;
-  font-size: 16px;
+  font-size: 1.333rem;
   border: 1px solid #dbdbdb;
   margin-left: 41px;
 }
@@ -41,7 +40,7 @@
   width: 980px;
   height: 48px;
   color: #999999;
-  font-size: 16px;
+  font-size: 1.333rem;
   border: 1px solid #dbdbdb;
 }
 
@@ -49,11 +48,11 @@
   width: 980px;
   height: 310px;
   color: #999999;
-  font-size: 16px;
+  font-size: 1.333rem;
   border: 1px solid #dbdbdb;
 }
 .filebox label {
-  font-size: 20px;
+  font-size: 1.667rem;
   color: #333333;
 }
 .filebox input[type="file"] {
@@ -94,7 +93,7 @@
   height: 48px;
   width: 740px;
   display: inline-block;
-  font-size: 14px;
+  font-size: 1.167rem;
   color: #999999;
   font-family: inherit;
   line-height: normal;
@@ -115,27 +114,27 @@
   background-color: #f9f9f9;
   border: 1px solid #dbdbdb;
   text-align: center;
-  font-size: 16px;
+  font-size: 1.333rem;
 }
 .quest_accept {
   max-width: 640px;
   width: 100%;
   height: 56px;
   background-color: #ffe201;
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #333333;
   border: 0px;
   margin-top: 170px;
 }
 .mun_title {
   margin-top: 82px;
-  font-size: 40px;
+  font-size: 3.333rem;
   text-align: center;
   color: #333333;
 }
 .mun_text {
   margin-top: 22px;
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #555555;
 }
 .mun-content {

@@ -5,16 +5,22 @@
 .trove_intro {
   font-family: "Noto Sans KR", sans-serif;
   color: #333333;
-  font-size: 40px;
+  font-size: 3.333rem;
   text-align: center;
   margin-top: 82px;
 }
 
+.sub_nao {
+  width: 100%;
+  position: relative;
+  overflow-x: auto;
+}
 .sub_nav {
   max-width: 1374px;
   margin: 0 auto;
-  margin-top: 22px;
-  margin-bottom: 26px;
+  white-space: nowrap;
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
 
 .sub_nav button {
@@ -22,7 +28,7 @@
   background-color: rgba(0, 0, 0, 0);
   color: #999999;
   padding: 5px;
-  font-size: 24px;
+  font-size: 2rem;
   background: none;
   border: 0;
   outline: 0;
@@ -32,21 +38,15 @@
   border-bottom: 3px solid black;
 }
 .visual_sub {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   background-size: cover;
-  background-position: 0% 20%;
-  width: 100%;
-  height: 360px;
-  margin-bottom: 10px;
+  background-position: center;
+  width: 100%; height: 360px;
   position: relative;
+  transition: height .3s ease-in-out;
 }
 input.start_btn {
-  border: 0px;
-  background: url(../img/trove_start_min.png) no-repeat;
-  width: 200px;
-  height: 224px;
-  position: absolute;
-  top: 190px;
+  top: 360px;
+  width: 200px; height: 220px;
 }
 #game_infoo {
   margin-top: 21px;
@@ -67,44 +67,36 @@ input.start_btn {
 .gamu_info {
   font-family: "Noto Sans KR", sans-serif;
   color: #555555;
-  font-size: 24px;
+  font-size: 2rem;
   margin-top: 1px;
 }
 .gamu_content {
   font-family: "Noto Sans KR", sans-serif;
   color: #999999;
-  font-size: 16px;
-  margin-top: 43px;
+  font-size: 1.333rem;
+  margin-top: 40px;
 }
 #game_infoo_2 {
   width: 100%;
 }
 .g_info {
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 24px;
+  font-size: 2rem;
   margin: 50px;
   color: #999999;
 }
 .g_info_selec {
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 24px;
+  font-size: 2rem;
   margin: 50px;
-  padding-bottom: 24px;
+  padding-bottom: 21px;
   border-bottom: 8px solid #555555;
 }
 .g_info:hover {
   color: #555555;
-  padding-bottom: 24px;
+  padding-bottom: 21px;
   border-bottom: 8px solid #555555;
 }
-
-#footer {
-  margin-top: 160px;
-  width: 1920px;
-  height: 200px;
-  background-color: #222222;
-}
-
 
 .gamu_infom {
     display: table;
@@ -119,4 +111,64 @@ input.start_btn {
 }
 .gamu-text {
     padding: 40px 20px;
+}
+
+
+@media screen and (max-width: 1024px) {
+  input.start_btn {
+    width: 150px; height: 165px;
+    top: 300px;
+  }
+  .visual_sub {
+    height: 300px;
+    margin-bottom: 75px;
+  }
+  .sub_nav {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  .g_info_selec {
+    padding-bottom: 16px;
+  }
+  .g_info:hover {
+    padding-bottom: 16px;
+  }
+  .gamu_content {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  input.start_btn {
+    width: 100px; height: 110px;
+    top: 250px;
+  }
+  .visual_sub {
+    height: 250px;
+  }
+  .sub_nav {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .g_info_selec {
+    padding-bottom: 11px;
+  }
+  .g_info:hover {
+    padding-bottom: 11px;
+  }
+  .gamu_infom > div {
+    display: block;
+    width: 100%;
+  }
+  #game_infoo_2 > .gamu_infom {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .gamu-text {
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+  .gamu_content {
+    margin-top: 10px;
+  }
 }
