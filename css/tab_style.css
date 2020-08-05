@@ -60,10 +60,15 @@
 @media screen and (max-width: 1024px) {
   .tabmenu label {
     height: 56px;
+    font-size: 1.667rem;
   }
 }
 @media screen and (max-width: 768px) {
   .tabmenu label {
     height: 48px;
+    font-size: 1.5rem;
+  }
+  .tabmenu ul li {
+    line-height: 30px;
   }
 }

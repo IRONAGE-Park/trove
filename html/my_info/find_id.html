@@ -2,6 +2,7 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Trove</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/info_style.css" />
@@ -59,7 +60,6 @@
       fnTimer: function () {
         var m = Math.floor(this.comSecond / 60) + ": " + (this.comSecond % 60); // 남은 시간 계산
         this.comSecond--; // 1초씩 감소
-        console.log(m);
         this.domId.innerText = m;
         if (this.comSecond < 0) {
           // 시간이 종료 되었으면..

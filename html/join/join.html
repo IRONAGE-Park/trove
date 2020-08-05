@@ -2,6 +2,7 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Trove</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/joins.css" />
@@ -47,7 +48,9 @@
           </ul>
         </li>
         <li class="content-list">
-          <label class="content-list-title" for="community_list">커뮤니티</label>
+          <label class="content-list-title" for="community_list"
+            >커뮤니티</label
+          >
           <input type="checkbox" id="community_list" />
           <ul class="content-child-list">
             <li><a href="../board/jayou.html">자유게시판</a></li>
@@ -56,7 +59,7 @@
           </ul>
         </li>
         <li class="content-list">
-          <label class="content-list-title" for="cashshop_list" >캐시샵</label>
+          <label class="content-list-title" for="cashshop_list">캐시샵</label>
           <input type="checkbox" id="cashshop_list" />
           <ul class="content-child-list">
             <li><a href="../cash/cash_1.html">패키지</a></li>
@@ -84,7 +87,7 @@
     </div>
     <header>
       <div class="topMenu">
-        <div class="dept-shade" style="display: none"></div>
+        <div class="dept-shade" style="display: none;"></div>
         <ul class="menu01">
           <li class="mobile-sidebtn">
             <div class="hamburger" id="hamburger-11">
@@ -103,7 +106,7 @@
           </li>
           <li class="header-nav">
             <span>뉴스</span>
-            <ul class="dept01" style="display: none">
+            <ul class="dept01" style="display: none;">
               <li class="nop">공지사항</li>
               <li class="nop">업데이트</li>
               <li class="nop">이벤트</li>
@@ -111,7 +114,7 @@
           </li>
           <li class="header-nav">
             <span>정보</span>
-            <ul class="dept01" style="display: none">
+            <ul class="dept01" style="display: none;">
               <li class="nop">게임정보</li>
               <li class="nop">모험</li>
               <li class="nop">탐험</li>
@@ -120,7 +123,7 @@
           </li>
           <li class="header-nav">
             <span>커뮤니티</span>
-            <ul class="dept01" style="display: none">
+            <ul class="dept01" style="display: none;">
               <li class="nop">자유게시판</li>
               <li class="nop">정보게시판</li>
               <li class="nop">이미지게시판</li>
@@ -128,7 +131,7 @@
           </li>
           <li class="header-nav">
             <span>캐시샵</span>
-            <ul class="dept01" style="display: none">
+            <ul class="dept01" style="display: none;">
               <li class="nop">패키지</li>
               <li class="nop">프리미엄</li>
               <li class="nop">크레딧</li>
@@ -137,19 +140,20 @@
           </li>
           <li class="header-nav">
             <span>다운로드</span>
-            <ul class="dept01" style="display: none">
+            <ul class="dept01" style="display: none;">
               <li class="nop">클라이언트 다운</li>
             </ul>
           </li>
           <li class="header-nav">
             <span>고객지원</span>
-            <ul class="dept01" style="display: none">
+            <ul class="dept01" style="display: none;">
               <li class="nop">1:1 문의</li>
               <li class="nop">FAQ</li>
             </ul>
           </li>
-          <li class="login_btn
-          "><img src="../../img/login_btn.png" class="login_btn" /></li>
+          <li class="login_btn">
+            <img src="../../img/login_btn.png" class="login_btn" />
+          </li>
         </ul>
       </div>
     </header>
@@ -268,19 +272,21 @@
               <option value="30">30</option>
               <option value="31">31</option>
             </select>
-            <label class="box-radio-input"
-              ><input
-                type="radio"
-                name="cp_item"
-                value="옵션1"
-                checked="checked"
-              /><span>남</span></label
-            >
-            <label class="box-radio-input"
-              ><input type="radio" name="cp_item" value="옵션2" /><span
-                >여</span
-              ></label
-            >
+            <span style="display: inline-block; white-space: nowrap; margin-bottom: 10px;">
+              <label class="box-radio-input"
+                ><input
+                  type="radio"
+                  name="cp_item"
+                  value="옵션1"
+                  checked="checked"
+                /><span>남</span></label
+              >
+              <label class="box-radio-input"
+                ><input type="radio" name="cp_item" value="옵션2" /><span
+                  >여</span
+                ></label
+              >
+            </span>
           </td>
         </tr>
         <tr>
@@ -293,7 +299,8 @@
         <tr>
           <th>이메일</th>
           <td>
-            <input type="text" name="email" class="input_text_180" />@
+            <input type="text" name="email" class="input_text_180" />
+            <span style="display: inline-block; margin: 0 10px;">@</span>
             <select name="emailaddr" class="input_text_280">
               <option value="">직접입력</option>
               <option value="daum.net">daum.net</option>
@@ -318,16 +325,32 @@
       <ul>
         <li class="footer_nav_2">
           <span>(주)TROVE&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호: 123-456-7890&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;전화: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;팩스: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;주소: 서울 중구 세종대로 110 &nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span
+            >|&nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호:
+            123-456-7890&nbsp;&nbsp;&nbsp;&nbsp;</span
+          >
+          <span
+            >|&nbsp;&nbsp;&nbsp;&nbsp;전화:
+            1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span
+          >
+          <span
+            >|&nbsp;&nbsp;&nbsp;&nbsp;팩스:
+            1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span
+          >
+          <span
+            >|&nbsp;&nbsp;&nbsp;&nbsp;주소: 서울 중구 세종대로 110
+            &nbsp;&nbsp;&nbsp;&nbsp;</span
+          >
           <span>|&nbsp;&nbsp;&nbsp;&nbsp;E-mail: trove@trove.co.kr</span>
         </li>
         <hr class="footerline_2" />
         <li class="footer_nav_2">
-          <span>통신판매업 신고번호: 제2020-서울-1234호&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp; ⓒ 2020 TROVE KOREA Corporation ALL Rights Reserverd.</span>
+          <span
+            >통신판매업 신고번호:
+            제2020-서울-1234호&nbsp;&nbsp;&nbsp;&nbsp;</span
+          >
+          <span>|&nbsp;&nbsp;&nbsp;&nbsp; ⓒ 2020 TROVE KOREA Corporation</span>
+          <span> ALL Rights Reserverd.</span>
         </li>
       </ul>
       <hr class="footerline" />
@@ -336,45 +359,48 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="../data_contact/eyong.html" class="footer_nav">이용약관</a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="../data_contact/jungbo.html" class="footer_nav">개인정보처리방침</a>
+        <a href="../data_contact/jungbo.html" class="footer_nav"
+          >개인정보처리방침</a
+        >
       </div>
     </footer>
   </body>
   <script>
     $(document).on("mouseover", ".topMenu span", function () {
-      	$(".dept01").slideDown(300);
-      	$(".dept-shade").slideDown(300);
+      $(".dept01").slideDown(300);
+      $(".dept-shade").slideDown(300);
     });
     $(".dept01").on("mouseleave", function () {
-        $(".dept01").slideUp(300);
-        $(".dept-shade").slideUp(300);
+      $(".dept01").slideUp(300);
+      $(".dept-shade").slideUp(300);
     });
-    document.querySelector('.hamburger').addEventListener('click', function (e) {
-      	$("body").toggleClass("open-sidebar");
-      	$(".sidebar").toggleClass("is-active");
-      	$(".shade").toggleClass("is-active");
-    });
+    document
+      .querySelector(".hamburger")
+      .addEventListener("click", function (e) {
+        $("body").toggleClass("open-sidebar");
+        $(".sidebar").toggleClass("is-active");
+        $(".shade").toggleClass("is-active");
+      });
     $(".shade").click(function () {
-      	$("body").removeClass("open-sidebar");
-      	$(this).removeClass("is-active");
-      	$(".sidebar").removeClass("is-active");
+      $("body").removeClass("open-sidebar");
+      $(this).removeClass("is-active");
+      $(".sidebar").removeClass("is-active");
     });
 
+    $(".tab_menu_btn").on("click", function () {
+      $(".tab_menu_btn").removeClass("on");
+      $(this).addClass("on");
+    });
+    //1번 컨텐츠
+    $(".tab_menu_btn1").on("click", function () {
+      $(".tab_box").hide();
+      $(".tab_box1").show();
+    });
 
-      $(".tab_menu_btn").on("click", function () {
-        $(".tab_menu_btn").removeClass("on");
-        $(this).addClass("on");
-      });
-      //1번 컨텐츠
-      $(".tab_menu_btn1").on("click", function () {
-        $(".tab_box").hide();
-        $(".tab_box1").show();
-      });
-  
-      //2번 컨텐츠
-      $(".tab_menu_btn2").on("click", function () {
-        $(".tab_box").hide();
-        $(".tab_box2").show();
-      });
-    </script>
+    //2번 컨텐츠
+    $(".tab_menu_btn2").on("click", function () {
+      $(".tab_box").hide();
+      $(".tab_box2").show();
+    });
+  </script>
 </html>

@@ -16,6 +16,9 @@
 }
 .cash_button {
   width: 100%;
+  padding: 0 10px;
+  max-width: 360px;
+  margin: 0 auto;
   text-align: center;
 }
 .cash_connn {
@@ -26,7 +29,7 @@
 .cash_connn-content {
   width: 100%;
   padding-top: 30px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   background: #fff;
 }
 .container-sort {
@@ -109,11 +112,14 @@
   font-size: 1.167rem;
   color: #999999;
   text-align: center;
-  margin-top: 41px;
+  margin-top: 40px;
+  padding: 0 10px;
+  word-break: keep-all;
   font-weight: normal;
 }
 .plus_won {
   margin-right: 5px;
+  margin-bottom: 5px;
   width: 80px;
   height: 48px;
   background-color: #ffffff;
@@ -121,29 +127,30 @@
   border: 1px solid #ebebeb;
 }
 .agree_area {
-  padding-left: 33px;
+  padding: 20px 30px;
   margin-top: 10px;
   width: 100%;
-  height: 88px;
   border: 1px solid #e2e2e2;
-  padding-top: 20px;
   background-color: #f9f9f9;
+  display: flex;
+  flex-wrap: wrap;
 }
-.yack {
+.agree_area label{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+.agree_area label input {
+  margin-right: 10px;
+}
+.yack, .yack_2 {
   width: 32px;
   height: 20px;
   border: 1px solid #dbdbdb;
   background-color: #e2e2e2;
-  margin-right: 46px;
-  margin-bottom: 9px;
-}
-.yack_2 {
-  width: 32px;
-  height: 20px;
-  border: 1px solid #dbdbdb;
-  background-color: #e2e2e2;
-  margin-right: 18px;
-  margin-bottom: 9px;
+  margin-left: 10px;
 }
 .btn_go {
   margin-top: 56px;
@@ -154,7 +161,7 @@
   font-size: 1.5rem;
 }
 .btn_not_go, .btn_not_go_2 {
-  margin-top: 56px;
+  margin-top: 10px;
   width: 264px;
   height: 56px;
   background-color: #ebebeb;
@@ -162,7 +169,8 @@
   font-size: 1.5rem;
 }
 .btn_not_go_2 {
-  margin-top: 238px;
+  margin-top: 56px;
+  margin-top: 120px;
 }
 .agree_yack, .agree_yack_2 {
   padding: 0 30px;
@@ -175,6 +183,7 @@
   margin-top: 42px;
 }
 .v_num {
+  padding: 0 10px;
   font-size: 2rem;
   color: #333333;
   text-align: center;
@@ -182,8 +191,11 @@
 .tablo {
   border: 0px;
   margin: 0 auto;
-  margin-top: 21px;
-  width: 360px;
+  margin-top: 20px;
+  padding: 0 10px;
+  border-spacing: 0 5px;
+  width: 100%;
+  max-width: 360px;
   font-size: 1.333rem;
 }
 .tab_11 {
@@ -205,8 +217,8 @@
 }
 .btn_go_2 {
   margin: 0 auto;
-  margin-top: 70px;
-  width: 354px;
+  margin-top: 40px;
+  width: 100%;
   height: 56px;
   background-color: #ffe201;
   border: 0px;
@@ -249,9 +261,41 @@
   margin-top: 40px;
 }
 
-
+@media screen and (max-width: 600px) {
+  .agree_area label {
+    width: 100%;
+  }
+  .box-radio-input input[type="radio"] + span {
+    width: 80px; height: 36px;
+    line-height: 31px;
+  }
+  .much {
+    height: 64px;
+  }
+  .cash_connn {
+    padding: 15px;
+  }
+}
 @media screen and (max-width: 450px) {
   #cash_contain_2 {
     padding: 50px;
+  }
+  .container-sort {
+    padding: 0 10px;
+  }
+  .container-sort button{
+    width: 100%;
+  }
+  .agree_area {
+    padding: 20px 10px;
+  }
+  .much-before {
+    display: none;
+  }
+  .much {
+    height: 48px;
+  }
+  .cash_connn {
+    padding: 10px;
   }
 }

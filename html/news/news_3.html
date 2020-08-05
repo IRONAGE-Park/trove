@@ -2,11 +2,13 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Trove</title>
 	<link rel="stylesheet" type="text/css" href="../../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../../css/news_style.css">
     <link rel="stylesheet" type="text/css" href="../../css/info_style.css">
     <link rel="stylesheet" type="text/css" href="../../css/board_style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/res-default_board_style.css">
     <link rel="stylesheet" type="text/css"href="../../css/search_style.css">
     <link rel="stylesheet" type="text/css"href="../../css/img_bd_style.css">
     <link rel="stylesheet" type="text/css" href="../../css/slide_bar_st.css" />
@@ -152,7 +154,7 @@
             <h2 class="page_title">뉴스</h2>
 		</section>
         <section class="sub_nao">
-           <div class="sub_nav">
+           <div class="sub_nav three-item">
             <a href="./news_1.html" class="g_board">공지사항</a>
             <a href="./news_2.html" class="g_board">업데이트</a>
             <a href="./news_3.html" class="g_board_selec">이벤트</a>
@@ -246,11 +248,11 @@
 						</colgroup>
 						<thead>
 							<tr>
-								<th scope="col">상태</th>
-								<th scope="col">제목</th>
-								<th scope="col">등록일</th>
-                                <th scope="col">닉네임</th>
-                                <th scope="col">조회수</th>
+								<th class="tab-state" scope="col">상태</th>
+								<th class="tab-title" scope="col">제목</th>
+								<th class="tab-regist" scope="col">등록일</th>
+                <th class="tab-nickname" scope="col">닉네임</th>
+                <th class="tab-view_count" scope="col">조회수</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -360,7 +362,8 @@
       <hr class="footerline_2" />
       <li class="footer_nav_2">
         <span>통신판매업 신고번호: 제2020-서울-1234호&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span>|&nbsp;&nbsp;&nbsp;&nbsp; ⓒ 2020 TROVE KOREA Corporation ALL Rights Reserverd.</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp; ⓒ 2020 TROVE KOREA Corporation</span>
+        <span> ALL Rights Reserverd.</span>
       </li>
     </ul>
     <hr class="footerline" />

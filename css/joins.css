@@ -1,30 +1,27 @@
 .join_style {
   font-family: "Noto Sans KR", sans-serif;
   margin: 0 auto;
-  width: 640px;
-  min-height: 100vh;
+  max-width: 640px;
   padding-bottom: 100px;
 }
 .hr_sly {
   margin: 40px auto;
-
+  padding: 0 10px;
   max-width: 640px;
 }
 th {
+  margin-top: 20px;
+  min-width: 100px;
   text-align: left;
   font-size: 1.333rem;
-}
-tr,
-td {
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 .table_sty {
   text-align: left;
   width: 100%;
-  padding: 5px 0 5px 0;
+  padding: 5px 10px;
   color: #333333;
   font-size: 1.5rem;
+  border-spacing: 0;
 }
 .s_btn {
   width: 120px;
@@ -42,22 +39,21 @@ td {
 }
 .input_text {
   padding: 0 15px;
-  margin-top: 10px;
-  width: 375px;
+  margin-bottom: 20px;
+  width: calc(100% - 130px);
   height: 48px;
   border: 1px solid #e2e2e2;
 }
 .input_text_502 {
   margin-top: 10px;
-  margin-bottom: 10px;
-  width: 502px;
+  width: 100%;
   height: 48px;
   border: 1px solid #e2e2e2;
 }
 .input_text_502_bnk {
   margin-top: 10px;
   margin-bottom: 70px;
-  width: 502px;
+  width: 100%;
   height: 48px;
   border: 1px solid #e2e2e2;
 }
@@ -67,34 +63,30 @@ td {
   margin-top: 40px;
 }
 .input_text_180 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
+  margin: 10px 0;
   width: 180px;
   height: 48px;
   border: 1px solid #e2e2e2;
 }
 .input_text_120 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  width: 120px;
+  margin: 10px 0;
+  margin-right: 5px;
+  width: 100px;
   height: 48px;
   border: 1px solid #e2e2e2;
 }
 .input_text_90 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  width: 90px;
+  margin: 10px 0;
+  margin-right: 5px;
+  width: 80px;
   height: 48px;
   border: 1px solid #e2e2e2;
 }
 .input_text_280 {
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 10px;
-  width: 280px;
+  max-width: 280px;
+  width: 100%;
   height: 48px;
   border: 1px solid #e2e2e2;
 }
@@ -107,8 +99,7 @@ td {
   margin-top: 43px;
 }
 .aler_cont {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 5px;
   font-size: 1.167rem;
   color: #999999;
 }
@@ -138,7 +129,7 @@ td {
 }
 
 .mb-radio-input input[type="radio"] + span {
-  margin-right: 60px;
+  margin: 0 15px;
   display: inline-block;
   font-size: 1.833rem;
   background: url(../img/under_16_w.png);
@@ -169,12 +160,12 @@ td {
 }
 
 .mb-radio-input_2 input[type="radio"] + span {
+  margin: 0 15px;
   display: inline-block;
   font-size: 1.833rem;
   background: url(../img/over_16_w.png);
   border: 1px solid #e2e2e2;
-  width: 240px;
-  height: 240px;
+  width: 240px; height: 240px;
   line-height: 45px;
   font-weight: 500;
   text-align: center;
@@ -186,4 +177,18 @@ td {
   border: 1px solid #23a3a7;
   background: url(../img/over_16_g.png);
   color: #ffffff;
+}
+
+
+@media screen and (max-width: 768px) {
+  .table_sty tr {
+    display: flex;
+    flex-direction: column;
+  }
+  .teeeeee {
+    padding-bottom: 10px;
+  }
+  .input_text_502_bnk {
+    margin-bottom: 30px;
+  }
 }

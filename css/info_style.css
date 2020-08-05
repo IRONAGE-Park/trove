@@ -16,11 +16,11 @@
   overflow-x: auto;
 }
 .sub_nav {
+  display: flex;
   max-width: 1374px;
   margin: 0 auto;
   white-space: nowrap;
   margin-top: 20px;
-  margin-bottom: 25px;
 }
 
 .sub_nav button {
@@ -46,6 +46,7 @@
 }
 input.start_btn {
   top: 360px;
+  left: 75%;
   width: 200px; height: 220px;
 }
 #game_infoo {
@@ -82,13 +83,13 @@ input.start_btn {
 .g_info {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 2rem;
-  margin: 50px;
+  margin: 0 50px;
   color: #999999;
 }
 .g_info_selec {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 2rem;
-  margin: 50px;
+  margin: 0 50px;
   padding-bottom: 21px;
   border-bottom: 8px solid #555555;
 }
@@ -117,6 +118,7 @@ input.start_btn {
 @media screen and (max-width: 1024px) {
   input.start_btn {
     width: 150px; height: 165px;
+    left: 50%;
     top: 300px;
   }
   .visual_sub {
@@ -125,7 +127,6 @@ input.start_btn {
   }
   .sub_nav {
     margin-top: 15px;
-    margin-bottom: 20px;
   }
   .g_info_selec {
     padding-bottom: 16px;
@@ -147,13 +148,27 @@ input.start_btn {
     height: 250px;
   }
   .sub_nav {
+    justify-content: space-around;
     margin-top: 10px;
-    margin-bottom: 15px;
+  }
+  .sub_nav a {
+    text-align: center;
+  }
+  .sub_nav.three-item a {
+    width: 33.333%;
+  }
+  .sub_nav.four-item a {
+    width: 25%;
+  }
+  .g_info {
+    margin: 0;
   }
   .g_info_selec {
+    margin: 0;
     padding-bottom: 11px;
   }
   .g_info:hover {
+    margin: 0;
     padding-bottom: 11px;
   }
   .gamu_infom > div {
@@ -170,5 +185,13 @@ input.start_btn {
   }
   .gamu_content {
     margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .g_info,
+  .g_info_selec,
+  .g_info:hover {
+    font-size: 1.5rem;
   }
 }

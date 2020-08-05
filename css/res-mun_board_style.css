@@ -1,0 +1,50 @@
+@media screen and (max-width: 768px) {
+  .table_basic > tbody > tr,
+  .table_basic > tbody > tr > td {
+    display: block;
+  }
+  .table_basic > thead > tr > th.tab-number,
+  .table_basic > thead > tr > th.tab-state,
+  .table_basic > thead > tr > th.tab-state2,
+  .table_basic > thead > tr > th.tab-regist,
+  .table_basic > thead > tr > th.tab-nickname,
+  .table_basic > thead > tr > th.tab-view_count {
+    display: none;
+  }
+  .table_basic > thead > tr > th.tab-title {
+    width: 100%;
+  }
+  .table_basic > tbody > tr > td:nth-last-child(1),
+  .table_basic > tbody > tr > td:nth-last-child(2),
+  .table_basic > tbody > tr > td:nth-last-child(4) {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    font-size: 1rem;
+  }
+  .table_basic > tbody > tr > td:nth-last-child(1) {
+    top: 50%;
+    left: 10px;
+    padding: 0;
+    height: 15px;
+    transform: translateY(-50%);
+  }
+  .table_basic > tbody > tr > td:nth-last-child(4) {
+    left: 50px;
+  }
+  .table_basic > tbody > tr > td:nth-last-child(2) {
+    left: 80px;
+  }
+  .table_basic > tbody > tr > td:nth-last-child(2)::before {
+    content: "|";
+    position: absolute;
+    left: -5px;
+  }
+  .table_basic > tbody > tr > td:nth-last-child(3) {
+    position: relative;
+    left: 50px;
+    padding-top: 10px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+  }
+}

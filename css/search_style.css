@@ -81,9 +81,16 @@ fieldset button {
   fieldset {
     width: calc(100% - 60px);
   }
+  fieldset.full-size {
+    width: 100%;
+  }
   .fa-search {
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
+  }
+
+  input {
+    padding: 0 10px;
   }
 }

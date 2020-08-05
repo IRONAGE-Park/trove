@@ -1,0 +1,68 @@
+@media screen and (max-width: 768px) {
+  .table_basic > tbody > tr,
+  .table_basic > tbody > tr > td {
+    display: flex;
+  }
+  .table_basic > tbody > tr > td {
+    border-bottom: none;
+  }
+
+  .table_basic > thead > tr > th.tab-type,
+  .table_basic > thead > tr > th.tab-price,
+  .table_basic > thead > tr > th.tab-day {
+    display: none;
+  }
+  .table_basic > thead > tr > th.tab-pname {
+    width: 100%;
+  }
+  .table_basic > tbody > tr > td:nth-last-child(1),
+  .table_basic > tbody > tr > td:nth-last-child(2),
+  .table_basic > tbody > tr > td:nth-last-child(4) {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    font-size: 1.5rem;
+  }
+  .table_basic > tbody > tr > td:nth-last-child(4) {
+    top: 50%;
+    left: 10px;
+    padding: 0;
+    height: 15px;
+    transform: translateY(-50%);
+  }
+  .table_basic > tbody > tr > td:nth-last-child(1) {
+    left: 180px;
+  }
+  .table_basic > tbody > tr > td:nth-last-child(2) {
+    left: 80px;
+  }
+  .table_basic > tbody > tr > td:nth-last-child(1)::before {
+    content: "|";
+    position: absolute;
+    left: -5px;
+  }
+  .table_basic > tbody > tr > td:nth-last-child(3) {
+    position: relative;
+    left: 80px;
+    font-size: 2.333rem;
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+
+  .table_basic.no-left-identify  > tbody > tr > td:nth-last-child(1) {
+    left: 110px;
+  }
+  .table_basic.no-left-identify  > tbody > tr > td:nth-last-child(2) {
+    left: 10px;
+  }
+  .table_basic.no-left-identify  > tbody > tr > td:nth-last-child(1)::before {
+    content: "|";
+    position: absolute;
+    left: -5px;
+  }
+  .table_basic.no-left-identify  > tbody > tr > td:nth-last-child(3) {
+    position: relative;
+    left: 10px;
+    font-size: 2.333rem;
+  }
+}

@@ -18,7 +18,7 @@ a {
 #joinForm {
   max-width: 640px;
   margin: 0 auto;
-  min-height: 100vh;
+  padding: 0 10px;
   padding-bottom: 100px;
 }
 ul.join_box {
@@ -37,6 +37,7 @@ ul.join_box {
 }
 .checkBox > ul > li:first-child {
   width: 85%;
+  word-break: keep-all;
   padding: 15px;
   font-weight: 600;
   background-color: #f9f9f9f9;
@@ -100,7 +101,6 @@ ul.join_box {
 .inz_phone {
   margin: 0 auto;
   margin-top: 80px;
-
   max-width: 640px;
   height: 160px;
   display: flex;
@@ -114,10 +114,22 @@ ul.join_box {
   font-size: 1.667rem;
   color: #333333;
 }
+.cont_icon {
+  width: 64px; height: 64px;
+}
 .phone_btn {
   width: 160px;
   height: 64px;
   background-color: #ffe201;
   border: 0px;
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 450px) {
+  .phone_btn {
+    width: 120px; height: 48px;
+  }
+  .cont_icon {
+    width: 48px; height: 48px;
+  }
 }
