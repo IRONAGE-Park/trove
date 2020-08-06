@@ -554,6 +554,9 @@ input.start_btn {
 }
 .menu01 > li > span > h2 {
   height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .menu01 > li > span > h2 > img {
   height: 100%;
@@ -1002,6 +1005,9 @@ div.hamburger {
   }
   .img > img {
     width: 100%;
+  }
+  .page_title {
+    font-size: 2.333rem;
   }
 }
 

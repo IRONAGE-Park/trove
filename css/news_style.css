@@ -79,4 +79,10 @@
     height: 36px;
     font-size: 1.333rem;
   }
+  .tabmenu ul li {
+    margin: 10px 0;
+  }
+  .tabCon {
+    margin-top: 10px;
+  }
 }

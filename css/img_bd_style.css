@@ -62,10 +62,6 @@ div.desc {
   width: 100%;
 }
 
-
-@media screen and (max-width: 1024px) {
-}
-
 @media screen and (max-width: 768px) {
   div.gallery, div.desc {
     width: 100%;
@@ -73,5 +69,8 @@ div.desc {
   }
   .ib_title {
     width: 100%;
+  }
+  .hot_line {
+    display: none;
   }
 }

@@ -110,4 +110,8 @@
   .down_btn {
     height: 150px;
   }
+  
+  .pc_cate, .pc_cate_2, .pc_cate_3 {
+    border: 1px solid #ffffff;
+  }
 }

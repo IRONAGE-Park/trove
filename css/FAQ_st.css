@@ -48,16 +48,31 @@
     margin: 0 auto;
     padding-bottom: 100px;
 }
+.mobile-select-div {
+  display: none;
+}
+
+.mobile-select-div {
+  justify-content: flex-end;
+
+}
+.mobile-select-div > .cate_1 {
+  max-width: 300px;
+}
 
 @media screen and (max-width: 1024px) {
+  
+  .btn_div {
+    display: none;
+  }
+  .mobile-select-div {
+    display: flex;
+  }
   .article_search {
     height: 56px;
   }
   .article_search_submit {
     width: 100px;
-  }
-  .btn_div {
-    margin-top: 50px;
   }
   .fq_btn {
     width: 220px;
@@ -76,14 +91,6 @@
   .article_search_submit {
     width: 80px;
   }
-  .btn_div {
-    margin-top: 20px;
-  }
-  .fq_btn {
-    width: 150px;
-    height: 42px;
-    margin: 2px 5px;
-  }
   .FAQ_title {
     margin-top: 40px;
     font-size: 2.667rem;
@@ -94,13 +101,8 @@
   .article_search {
     height: 36px;
   }
-  .btn_div {
-    margin-top: 10px;
-  }
-  .fq_btn {
-    font-size: 1.333rem;
-    width: 120px;
-    height: 30px;
-    margin: 2px 5px;
+  .mobile-select-div > .cate_1 {
+    height: 36px;
+    max-width: 100%;
   }
 }

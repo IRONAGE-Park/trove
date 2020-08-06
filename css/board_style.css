@@ -16,6 +16,9 @@
   text-transform: uppercase;
 }
 
+.board-content {
+  padding: 0 10px;
+}
 .single h3.side-title:after {
   content: "";
   width: 60px;
