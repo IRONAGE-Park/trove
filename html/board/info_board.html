@@ -290,7 +290,8 @@
 <script>
 var mobileMoveTop = document.querySelector(".mobile-move_top")
 window.addEventListener("scroll", function (e) {
-  if (scrollY < 200) { mobileMoveTop.classList.remove('visible') }
+      var scrollpos = window.scrollY || window.pageYOffset;
+      if (scrollpos < 200) { mobileMoveTop.classList.remove('visible') }
   else { mobileMoveTop.classList.add('visible') }
 })
 mobileMoveTop.addEventListener('click', function (e) {

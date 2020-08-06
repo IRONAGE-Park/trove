@@ -103,7 +103,7 @@ header {
   height: 100%;
   top: 0;
   left: -250px;
-  overflow-y: scroll;
+  overflow-y: auto;
   background-color: #1a1a1a;
   z-index: -999;
   transition: left 0.3s ease-in-out;
@@ -851,6 +851,7 @@ div.hamburger {
     height: 25px;
   }
   .page_title {
+    font-size: 3rem;
     left: 50%;
     transform: translate(-50%, -50%);
   }

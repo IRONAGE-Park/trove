@@ -151,6 +151,7 @@
   .byun_btn {
     width: 80px;
     height: 33px;
+    -ms-transform: translateY(-5px);
     right: 0px;
   }
 }

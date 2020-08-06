@@ -185,6 +185,9 @@ th {
     display: flex;
     flex-direction: column;
   }
+  .table_sty th, .table_sty td {
+    display: block;
+  }
   .teeeeee {
     padding-bottom: 10px;
   }
