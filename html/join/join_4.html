@@ -155,15 +155,17 @@
         </ul>
       </div>
     </header>
-    <h2 class="trove_intro">본인확인</h2>
-    <hr class="hr_sly" />
-    <h5 class="bonin_text">고객님의 본인확인을 진행해주세요.</h5>
+    <main class="join-main">
+      <h2 class="trove_intro">본인확인</h2>
+      <hr class="hr_sly" />
+      <h5 class="bonin_text">고객님의 본인확인을 진행해주세요.</h5>
 
-    <div class="inz_phone">
-      <img src="../../img/phone_icon.png" class="cont_icon" />
-      <h5 class="cont_text">휴대폰 인증</h5>
-      <button class="phone_btn">인증하기</button>
-    </div>
+      <div class="inz_phone">
+        <img src="../../img/phone_icon.png" class="cont_icon" />
+        <h5 class="cont_text">휴대폰 인증</h5>
+        <button class="phone_btn">인증하기</button>
+      </div>
+    </main>
     <footer class="footer">
       <ul>
         <li class="footer_nav_2">
@@ -190,8 +192,21 @@
         <a href="../data_contact/jungbo.html" class="footer_nav">개인정보처리방침</a>
       </div>
     </footer>
+    <div class="mobile-move_top">
+      <img src="../../img/move_top.svg" />
+    </div>
   </body>
   <script>
+    var mobileMoveTop = document.querySelector(".mobile-move_top")
+    window.addEventListener("scroll", function (e) {
+      if (scrollY < 200) { mobileMoveTop.classList.remove('visible') }
+      else { mobileMoveTop.classList.add('visible') }
+    })
+    mobileMoveTop.addEventListener('click', function (e) {
+      window.scrollTo({top:0, left:0, behavior:'smooth'});
+    })
+
+    
     $(document).on("mouseover", ".topMenu span", function () {
       	$(".dept01").slideDown(300);
       	$(".dept-shade").slideDown(300);

@@ -7,6 +7,7 @@
 .nick_byun_input {
   display: table-cell;
   position: relative;
+  width:100%;
 }
 .sangtea {
   font-size: 1.5rem;
@@ -25,7 +26,7 @@
 }
 .hyunnick {
   font-family: Roboto;
-  width: 320px;
+  width: 100%;
   height: 48px;
   border: 0px;
   font-size: 1.333rem;
@@ -109,7 +110,7 @@
 }
 .input_num {
   margin-top: 40px;
-  width: 380px;
+  width: 100%;
   height: 48px;
   margin-right: 0px;
   border: 1px solid #e2e2e2;
@@ -131,7 +132,7 @@
 .input_sms {
   margin-top: 8px;
   margin-left: 100px;
-  width: 280px;
+  width: 260px;
   height: 48px;
   border: 1px solid #dbdbdb;
 }
@@ -163,4 +164,20 @@
 .hyn_2 {
   font-size: 1.5rem;
   display: inline-block;
+}
+
+
+@media screen and (max-width: 450px) {
+  .phone_btn {
+    width: 120px; height: 48px;
+  }
+  .cont_icon {
+    width: 48px; height: 48px;
+  }
+  .find-input-area > * {
+    display: block;
+  }
+  .input_sms {
+    margin-left: 0px;
+  }
 }

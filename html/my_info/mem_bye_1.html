@@ -176,8 +176,10 @@
     <h2 class="trove_intro">회원탈퇴</h2>
 
     <div class="pw_input_area">
-      <h5 class="pw_tag">비밀번호 확인</h5>
-      <input type="password" class="pw_input" />
+      <div class="delete-input-area">
+        <h5 class="pw_tag">비밀번호 확인</h5>
+        <input type="password" class="pw_input" />
+      </div>
       <button class="next_btn">다음</button>
     </div>
     <footer class="footer">
@@ -206,8 +208,21 @@
         <a href="../data_contact/jungbo.html" class="footer_nav">개인정보처리방침</a>
       </div>
     </footer>
+    <div class="mobile-move_top">
+      <img src="../../img/move_top.svg" />
+    </div>
   </body>
   <script>
+    var mobileMoveTop = document.querySelector(".mobile-move_top")
+    window.addEventListener("scroll", function (e) {
+      if (scrollY < 200) { mobileMoveTop.classList.remove('visible') }
+      else { mobileMoveTop.classList.add('visible') }
+    })
+    mobileMoveTop.addEventListener('click', function (e) {
+      window.scrollTo({top:0, left:0, behavior:'smooth'});
+    })
+
+    
     $(document).on("mouseover", ".topMenu span", function () {
       	$(".dept01").slideDown(300);
       	$(".dept-shade").slideDown(300);

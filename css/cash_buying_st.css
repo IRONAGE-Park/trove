@@ -154,7 +154,8 @@
 }
 .btn_go {
   margin-top: 56px;
-  width: 264px;
+  width: 100%;
+  max-width: 264px;
   height: 56px;
   background-color: #ffe201;
   border: 0px;
@@ -162,7 +163,8 @@
 }
 .btn_not_go, .btn_not_go_2 {
   margin-top: 10px;
-  width: 264px;
+  width: 100%;
+  max-width: 264px;
   height: 56px;
   background-color: #ebebeb;
   border: 0px;

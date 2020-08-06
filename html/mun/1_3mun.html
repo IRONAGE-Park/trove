@@ -284,26 +284,19 @@
         <a href="../data_contact/jungbo.html" class="footer_nav">개인정보처리방침</a>
       </div>
     </footer>
+    <div class="mobile-move_top">
+      <img src="../../img/move_top.svg" />
+    </div>
   </body>
   <script>
-    $(document).on("mouseover", ".topMenu span", function () {
-      	$(".dept01").slideDown(300);
-      	$(".dept-shade").slideDown(300);
-    });
-    $(".dept01").on("mouseleave", function () {
-        $(".dept01").slideUp(300);
-        $(".dept-shade").slideUp(300);
-    });
-    document.querySelector('.hamburger').addEventListener('click', function (e) {
-      	$("body").toggleClass("open-sidebar");
-      	$(".sidebar").toggleClass("is-active");
-      	$(".shade").toggleClass("is-active");
-    });
-    $(".shade").click(function () {
-      	$("body").removeClass("open-sidebar");
-      	$(this).removeClass("is-active");
-      	$(".sidebar").removeClass("is-active");
-    });
+    var mobileMoveTop = document.querySelector(".mobile-move_top")
+    window.addEventListener("scroll", function (e) {
+      if (scrollY < 200) { mobileMoveTop.classList.remove('visible') }
+      else { mobileMoveTop.classList.add('visible') }
+    })
+    mobileMoveTop.addEventListener('click', function (e) {
+      window.scrollTo({top:0, left:0, behavior:'smooth'});
+    })
 
 
     $(document).ready(function () {
