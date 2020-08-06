@@ -5,6 +5,7 @@
 }
 .tabmenu {
   display: flex;
+  padding: 0 10px;
   position: relative;
   font-size: 1.833rem;
 }
@@ -75,7 +76,7 @@
 }
 @media screen and (max-width: 768px) {
   .tabmenu label {
-    height: 48px;
-    font-size: 1.5rem;
+    height: 36px;
+    font-size: 1.333rem;
   }
 }

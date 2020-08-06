@@ -46,7 +46,7 @@ input:focus + button .fa {
   -webkit-transform: translate(0px, 0);
   -ms-transform: translate(0px, 0);
   transform: translate(0px, 0);
-  color: #000000;
+  color: #29abe2;
 }
 
 fieldset button {
@@ -65,7 +65,7 @@ fieldset button {
 
 .fa-search {
   font-size: 1.4rem;
-  color: #29abe2;
+  color: #000000;
   z-index: 3;
   top: 25%;
   -webkit-transform: translate(-250px, 0);
@@ -85,6 +85,11 @@ fieldset button {
     width: 100%;
   }
   .fa-search {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  fieldset button {
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);

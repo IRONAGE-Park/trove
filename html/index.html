@@ -12,6 +12,12 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
+    
+    <link rel="stylesheet" href="../css/animate.css">
+    <script src="../wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=Number.isNaN"></script>
     <script
       type="text/javascript"
@@ -33,8 +39,8 @@
       </div>
       <ul class="mobile-sidebar-content">
         <li class="content-list">
+          <input type="radio" name="mobile-sidebar-radio" id="news_list" />
           <label class="content-list-title" for="news_list">뉴스</label>
-          <input type="checkbox" id="news_list" />
           <ul class="content-child-list">
             <li><a href="./news/news_1.html">공지사항</a></li>
             <li><a href="./news/news_2.html">업데이트</a></li>
@@ -42,8 +48,8 @@
           </ul>
         </li>
         <li class="content-list">
+          <input type="radio" name="mobile-sidebar-radio" id="information_list" />
           <label class="content-list-title" for="information_list">정보</label>
-          <input type="checkbox" id="information_list" />
           <ul class="content-child-list">
             <li><a href="./info/game_info.html">게임정보</a></li>
             <li><a href="./info/mohum.html">모험</a></li>
@@ -52,8 +58,8 @@
           </ul>
         </li>
         <li class="content-list">
+          <input type="radio" name="mobile-sidebar-radio" id="community_list" />
           <label class="content-list-title" for="community_list">커뮤니티</label>
-          <input type="checkbox" id="community_list" />
           <ul class="content-child-list">
             <li><a href="./board/jayou.html">자유게시판</a></li>
             <li><a href="./board/info_board.html">정보게시판</a></li>
@@ -61,8 +67,8 @@
           </ul>
         </li>
         <li class="content-list">
+          <input type="radio" name="mobile-sidebar-radio" id="cashshop_list" />
           <label class="content-list-title" for="cashshop_list" >캐시샵</label>
-          <input type="checkbox" id="cashshop_list" />
           <ul class="content-child-list">
             <li><a href="./cash/cash_1.html">패키지</a></li>
             <li><a href="./cash/cash_2.html">프리미엄</a></li>
@@ -71,15 +77,15 @@
           </ul>
         </li>
         <li class="content-list">
+          <input type="radio" name="mobile-sidebar-radio" id="download_list" />
           <label class="content-list-title" for="download_list">다운로드</label>
-          <input type="checkbox" id="download_list" />
           <ul class="content-child-list">
             <li><a href="./download/download.html">클라이언트 다운</a></li>
           </ul>
         </li>
         <li class="content-list">
+          <input type="radio" name="mobile-sidebar-radio" id="support_list" />
           <label class="content-list-title" for="support_list">고객지원</label>
-          <input type="checkbox" id="support_list" />
           <ul class="content-child-list">
             <li><a href="./mun/1_1mun.html">1:1 문의</a></li>
             <li><a href="./mun/1_3mun.html">FAQ</a></li>
@@ -89,7 +95,7 @@
     </div>
     <header>
       <div class="topMenu">
-        <div class="dept-shade" style="display: none"></div>
+        <div class="dept-shade"></div>
         <ul class="menu01">
           <li class="mobile-sidebtn">
             <div class="hamburger" id="hamburger-11">
@@ -101,60 +107,63 @@
           <li>
             <span>
               <h2>
-                <img src="../img/TROVE_LOGO.png" alt="" class="logo_img" />
+                <a href="./index.html">
+                  <img src="../img/TROVE_LOGO.png" alt="" class="logo_img" />
+                </a>
               </h2>
             </span>
             <ul class="dept01"></ul>
           </li>
           <li class="header-nav">
             <span>뉴스</span>
-            <ul class="dept01" style="display: none">
-              <li class="nop">공지사항</li>
-              <li class="nop">업데이트</li>
-              <li class="nop">이벤트</li>
+            <ul class="dept01" >
+              <li class="nop"><a href="./news/news_1.html">공지사항</a></li>
+              <li class="nop"><a href="./news/news_2.html">업데이트</a></li>
+              <li class="nop"><a href="./news/news_3.html">이벤트</a></li>
             </ul>
           </li>
           <li class="header-nav">
             <span>정보</span>
-            <ul class="dept01" style="display: none">
-              <li class="nop">게임정보</li>
-              <li class="nop">모험</li>
-              <li class="nop">탐험</li>
-              <li class="nop">제작</li>
+            <ul class="dept01" >
+              <li class="nop"><a href="./info/game_info.html">게임정보</a></li>
+              <li class="nop"><a href="./info/mohum.html">모험</a></li>
+              <li class="nop"><a href="./info/tamhum.html">탐험</a></li>
+              <li class="nop"><a href="./info/jejak.html">제작</a></li>
             </ul>
           </li>
           <li class="header-nav">
             <span>커뮤니티</span>
-            <ul class="dept01" style="display: none">
-              <li class="nop">자유게시판</li>
-              <li class="nop">정보게시판</li>
-              <li class="nop">이미지게시판</li>
+            <ul class="dept01" >
+              <li class="nop"><a href="./board/jayou.html">자유게시판</a></li>
+              <li class="nop"><a href="./board/info_board.html">정보게시판</a></li>
+              <li class="nop"><a href="./board/img_board.html">이미지게시판</a></li>
             </ul>
           </li>
           <li class="header-nav">
             <span>캐시샵</span>
-            <ul class="dept01" style="display: none">
-              <li class="nop">패키지</li>
-              <li class="nop">프리미엄</li>
-              <li class="nop">크레딧</li>
-              <li class="nop">포인트샵</li>
+            <ul class="dept01" >
+              <li class="nop"><a href="./cash/cash_1.html">패키지</a></li>
+              <li class="nop"><a href="./cash/cash_2.html">프리미엄</a></li>
+              <li class="nop"><a href="./cash/cash_3.html">크레딧</a></li>
+              <li class="nop"><a href="./cash/cash_4.html">포인트샵</a></li>
             </ul>
           </li>
           <li class="header-nav">
             <span>다운로드</span>
-            <ul class="dept01" style="display: none">
-              <li class="nop">클라이언트 다운</li>
+            <ul class="dept01" >
+              <li class="nop"><a href="./download/download.html">클라이언트 다운</a></li>
             </ul>
           </li>
           <li class="header-nav">
             <span>고객지원</span>
-            <ul class="dept01" style="display: none">
-              <li class="nop">1:1 문의</li>
-              <li class="nop">FAQ</li>
+            <ul class="dept01" >
+              <li class="nop"><a href="./mun/1_1mun.html">1:1 문의</a></li>
+              <li class="nop"><a href="./mun/1_3mun.html">FAQ</a></li>
             </ul>
           </li>
-          <li class="login_btn
-          "><img src="../img/login_btn.png" class="login_btn" /></li>
+          <li class="login_btn">
+            <a href="./my_info/login.html"><img src="../img/login_btn.png" class="login_btn" /></a>
+          </li>
         </ul>
       </div>
     </header>
@@ -177,7 +186,7 @@
       </div>
       <section class="info-content">
         <h2 class="sosic_intro">트로브 소식</h2>
-        <section class="sosick">
+        <section class="sosick wow fadeInUp" data-wow-duration="1s">
           <div class="sosick_div">
             <div class="aaa">
               <img src="../img/event_440ban.png" alt="" />
@@ -186,9 +195,11 @@
             <div class="news">
               <article class="artic">
                 <li class="cont_text">
-                  <img src="../img/news_2.png" class="news_icon" />
-                  <h5 class="itstitle_fir">20.6월 정기점검 공지</h5>
-                  <br />20년 6월 20일 정기점검 있습니다.....
+                  <h5 class="itstitle">
+                    <img src="../img/news_2.png" class="news_icon" />
+                    20.6월 정기점검 공지
+                  </h5>
+                  20년 6월 20일 정기점검 있습니다.....
                 </li>
                 <hr class="woowha" />
                 <li class="cont_text">
@@ -234,64 +245,60 @@
           <div class="commu-area">
             <div class="com-banner-area" style="background-image: url('../img/commu_bg.png');"></div>
             <div class="com-box-area">
-              <div class="com_box">
+              <div class="com_box  wow fadeInUp" data-wow-duration="1s">
                 <h4 class="bd_tag">[자유게시판]</h4>
                 <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
                 <hr class="com_line" />
                 <h5 class="cont_com">
-                    트로브 완전 좋은 팁 알려준다. 트로브 <br />
-                    완전 좋은 팁 알려준다. 트로브 완전 좋<br />
-                    은 팁 알려준다. 트로브 완전 좋은 팁 알<br />
-                    려준다.트로브 완전 좋은 팁 알려준다.<br />
+                    트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.트로브 완전 좋은 팁 알려준다.
                 </h5>
-                <h4 class="nickname">트로브</h4>
-                <h4 class="made_day">2020.00.00</h4>
+                <div class="com_box_bottom">
+                  <h4 class="nickname">트로브</h4>
+                  <h4 class="made_day">2020.00.00</h4>
+                </div>
               </div>
-              <div class="com_box">
+              <div class="com_box  wow fadeInUp" data-wow-duration="1s">
                 <h4 class="bd_tag">[자유게시판]</h4>
                 <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
                 <hr class="com_line" />
                 <h5 class="cont_com">
-                    트로브 완전 좋은 팁 알려준다. 트로브 <br />
-                    완전 좋은 팁 알려준다. 트로브 완전 좋<br />
-                    은 팁 알려준다. 트로브 완전 좋은 팁 알<br />
-                    려준다.트로브 완전 좋은 팁 알려준다.<br />
+                    트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.트로브 완전 좋은 팁 알려준다.
                 </h5>
-                <h4 class="nickname">트로브</h4>
-                <h4 class="made_day">2020.00.00</h4>
+                <div class="com_box_bottom">
+                  <h4 class="nickname">트로브</h4>
+                  <h4 class="made_day">2020.00.00</h4>
+                </div>
               </div>
-              <div class="com_box">
+              <div class="com_box  wow fadeInUp" data-wow-duration="1s">
                 <h4 class="bd_tag">[자유게시판]</h4>
                 <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
                 <hr class="com_line" />
                 <h5 class="cont_com">
-                    트로브 완전 좋은 팁 알려준다. 트로브 <br />
-                    완전 좋은 팁 알려준다. 트로브 완전 좋<br />
-                    은 팁 알려준다. 트로브 완전 좋은 팁 알<br />
-                    려준다.트로브 완전 좋은 팁 알려준다.<br />
+                    트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.트로브 완전 좋은 팁 알려준다.
                 </h5>
-                <h4 class="nickname">트로브</h4>
-                <h4 class="made_day">2020.00.00</h4>
+                <div class="com_box_bottom">
+                  <h4 class="nickname">트로브</h4>
+                  <h4 class="made_day">2020.00.00</h4>
+                </div>
               </div>
-              <div class="com_box">
+              <div class="com_box  wow fadeInUp" data-wow-duration="1s">
                 <h4 class="bd_tag">[자유게시판]</h4>
                 <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
                 <hr class="com_line" />
                 <h5 class="cont_com">
-                    트로브 완전 좋은 팁 알려준다. 트로브 <br />
-                    완전 좋은 팁 알려준다. 트로브 완전 좋<br />
-                    은 팁 알려준다. 트로브 완전 좋은 팁 알<br />
-                    려준다.트로브 완전 좋은 팁 알려준다.<br />
+                    트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.
                 </h5>
-                <h4 class="nickname">트로브</h4>
-                <h4 class="made_day">2020.00.00</h4>
+                <div class="com_box_bottom">
+                  <h4 class="nickname">트로브</h4>
+                  <h4 class="made_day">2020.00.00</h4>
+                </div>
               </div>
             </div>
           </div>
       </section>
         <h2 class="title_3">게임 정보</h2>
         <section class="content">
-          <div class="item">
+          <div class="item wow fadeInUp" data-wow-duration="1s">
             <div class="img">
               <img src="../img/trove_info.png" />
             </div>
@@ -302,7 +309,7 @@
               </p>
             </div>
           </div>
-          <div class="item">
+          <div class="item wow fadeInUp" data-wow-duration="1s">
             <div class="img">
               <img src="../img/trove_world_2.png" />
             </div>
@@ -313,7 +320,7 @@
               </p>
             </div>
           </div>
-          <div class="item">
+          <div class="item wow fadeInUp" data-wow-duration="1s">
             <div class="img">
               <img src="../img/trove_world.png" />
             </div>
@@ -362,21 +369,14 @@
     window.addEventListener("scroll", function (e) {
 
       var scrollpos = window.scrollY || window.pageYOffset;
-      if (scrollpos < 200) { mobileMoveTop.classList.remove('visible') }
+      if (scrollpos < 100) { mobileMoveTop.classList.remove('visible') }
       else { mobileMoveTop.classList.add('visible') }
     })
     mobileMoveTop.addEventListener('click', function (e) {
       window.scrollTo({top:0, left:0, behavior:'smooth'});
     })
-  
-    $(document).on("mouseover", ".topMenu span", function () {
-      $(".dept01").slideDown(300);
-      $(".dept-shade").slideDown(300);
-    });
-    $(".dept01").on("mouseleave", function () {
-        $(".dept01").slideUp(300);
-        $(".dept-shade").slideUp(300);
-    });
+
+
       document.querySelector('.hamburger').addEventListener('click', function (e) {
         $("body").toggleClass("open-sidebar");
         $(".sidebar").toggleClass("is-active");

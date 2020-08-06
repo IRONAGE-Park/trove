@@ -7,6 +7,11 @@
   font-family: "Noto Sans KR", sans-serif;
   box-sizing: border-box;
 }
+.swiper-button-next:after, .swiper-button-prev:after {
+  color: #fff;
+  text-shadow: 0px 1px 10px #333;
+  font-size: 1rem;
+}
 html {
   font-size: 12px;
   position: relative;
@@ -40,6 +45,9 @@ body {
 .login_btn {
   text-align: center;
   width: 100%;
+}
+.login_btn > a {
+  display: flex;
 }
 .logout_btn {
   display: flex;
@@ -113,7 +121,6 @@ header {
   justify-content: center;
   align-items: center;
   height: 65px;
-  border-bottom: solid 2px #444;
   transition: height 0.3s ease-in-out;
 }
 .mobile-sidebar-content {
@@ -121,38 +128,76 @@ header {
   font-size: 1.5rem;
   border: solid #444;
   border-width: 1px 0;
+  line-height: 30px;
 }
 .content-list {
   padding: 5px;
   overflow: hidden;
   box-sizing: border-box;
+  transition: background-color .3s ease-in-out;
+}
+.content-list:hover {
+  background-color: #222;
 }
 .content-list-title {
   display: block;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding-bottom: 5px;
   cursor: pointer;
+  position: relative;
+  color: #999;
+  transition: color .3s ease-in-out;
+}
+.content-list-title:hover {
+  color: #fff;
 }
 .content-list > input {
   display: none;
 }
-.mobile-sidebar-content * {
-  color: #fff;
-}
 .content-child-list {
   overflow: hidden;
   max-height: 0;
-  transition: max-height .3s ease-in-out;
+  transition: max-height .6s ease-in-out;
 }
 .content-child-list > li {
-  padding: 10px;
-  background: #2b2b2b;
+  font-size: 1.333rem;
+  padding: 5px;
+  background: #2a2a2a;
+}
+.content-child-list > li:hover {
+  background: #3b3b3b;
+}
+.content-child-list > li > a {
+  display: inline-block;
+  width: 100%;
+  color: #ccc;
+}
+.content-child-list > li > a:hover {
+  color: #fff;
 }
 .content-child-list > li + li {
   margin-top: 3px;
 }
-.content-list > input:checked + .content-child-list {
-  max-height: 300px;
+.content-list > input:checked ~ .content-child-list {
+  max-height: 200px;
+}
+.content-list > input:checked + .content-list-title::after {
+  background-image: url('../img/minus.svg');
+  transform: none;
+}
+ .content-list-title::after {
+  content: '';
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../img/plus.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 15px; height: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
 }
 .content-list + .content-list {
   border-top: 1px solid #444;
@@ -202,11 +247,10 @@ header ul > li {
   position: relative;
 }
 .sosic_intro {
-  clear: both;
   max-width: 1374px;
   width: 100%;
   text-align: center;
-  margin: auto;
+  margin: 0 auto;
   font-size: 3.667rem;
 }
 input.start_btn {
@@ -226,7 +270,7 @@ input.start_btn {
   cursor: pointer;
 }
 .sosick {
-  margin: auto;
+  margin: 0 auto;
   margin-top: 55px;
   margin-bottom: 125px;
   max-width: 1374px;
@@ -241,7 +285,7 @@ input.start_btn {
   padding-top: 150px;
 }
 .woowha {
-  margin-top: 40px;
+  margin: 40px 0;
 }
 .news {
   box-sizing: border-box;
@@ -261,21 +305,22 @@ input.start_btn {
 }
 .commu-area {
   position: relative;
-  margin-top: 400px;
+  margin-top: 250px;
   width: 100%;
-  height: 600px;
 }
 .com-banner-area {
   position: absolute;
-  top: -60%;
+  top: -200px;
   width: 100%;
-  height: 100%;
+  height: 400px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .com-box-area {
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   max-width: 1374px;
   padding: 0 20px;
   justify-content: space-around;
@@ -283,6 +328,7 @@ input.start_btn {
 }
 .gamu_con_title {
   font-size: 2.333rem;
+  margin-bottom: 10px;
   color: #333333;
 }
 .gamu_con_text {
@@ -292,14 +338,13 @@ input.start_btn {
 }
 .com_intro {
   text-align: center;
-  margin-top: 72px;
+  margin-top: 60px;
   font-size: 3.667rem;
-  margin-bottom: 20px;
 }
 .com_box {
   width: 305px;
   min-width: 305px;
-  margin-right: 10px;
+  margin: 0 10px;
   border: 1px solid #e2e2e2;
   margin-bottom: 10px;
   position: relative;
@@ -320,23 +365,17 @@ input.start_btn {
   display: inline-block;
   margin-right: 20px;
 }
-.itstitle_fir {
-  vertical-align: middle;
-  display: inline-block;
-  margin-bottom: 12px;
-  font-size: 1.5rem;
-  color: #333333;
-}
 .itstitle {
-  margin-top: 40px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
   color: #333333;
 }
 .cash {
-  margin: auto;
-  margin-top: 55px;
-  margin-bottom: 100px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 80px;
   max-width: 1280px;
 }
 .commu {
@@ -351,6 +390,7 @@ input.start_btn {
 .content {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   margin: 64px auto;
   padding: 0 20px;
   max-width: 1374px;
@@ -373,6 +413,7 @@ input.start_btn {
   min-width: 400px;
   max-width: 400px;
   margin-right: 10px;
+  margin-bottom: 10px;
   overflow: hidden;
 }
 .img {
@@ -388,7 +429,6 @@ input.start_btn {
 .item .info {
   background: #1c8286;
   padding: 30px;
-  height: 144px;
 
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
 }
@@ -484,23 +524,16 @@ input.start_btn {
   text-align: center;
   height: 100%;
 }
-.topMenu:hover {
-  background: rgab(51, 51, 51, 0.95);
-}
-.topMenu::after {
-  position: absolute;
-  width: 100%;
+.topMenu:hover .menu01 .dept01,
+.topMenu:hover .dept-shade {
   height: 360px;
-  z-index: 998;
-  content: "";
-  display: none;
-  clear: both;
-  background: rgba(51, 51, 51, 0.95);
 }
 .dept-shade {
   position: absolute;
   width: 100%;
-  height: 360px;
+  height: 0;
+  overflow: hidden;
+  transition: height .3s ease-in-out;
   top: 80px;
   z-index: 998;
   background: rgba(51, 51, 51, 0.95);
@@ -517,6 +550,7 @@ input.start_btn {
 .menu01 span {
   font-size: 1.5rem;
   font-weight: bold;
+  cursor: pointer;
 }
 .menu01 > li > span > h2 {
   height: 40px;
@@ -528,7 +562,9 @@ input.start_btn {
   position: absolute;
   top: 80px;
   left: 0;
-  height: 360px;
+  height: 0;
+  overflow: hidden;
+  transition: height .3s ease-in-out;
   z-index: 999;
   display: inline-block;
   padding-top: 30px;
@@ -537,14 +573,19 @@ input.start_btn {
 
 .nop {
   position: relative;
-  color: #cccccc;
   font-size: 1.333rem;
   width: 120px;
   text-align: center;
   display: flex;
   justify-content: center;
 }
-
+.nop a {
+  color: #999;
+  transition: color .3s ease-in-out;
+}
+.nop a:hover {
+  color: #fff;
+}
 .bd_tag {
   font-size: 1.333rem;
   color: #187e7f;
@@ -585,11 +626,17 @@ input.start_btn {
   font-stretch: normal;
   font-style: normal;
   display: inline-block;
-  margin-left: 90px;
+}
+
+.com_box_bottom {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .title_3 {
-  margin-top: 50px;
+  margin-top: 100px;
   text-align: center;
   font-size: 3.667rem;
 }
@@ -711,19 +758,28 @@ div.hamburger {
 .mobile-move_top > img{
   width: 32px; height: 32px;
 }
-
+@media screen and (max-width: 1500px) {
+  
+  .mainBanner-container,
+  .swiper-container {
+    height: 400px;
+  }
+  input.start_btn {
+    width: 250px;
+    height: 275px;
+    top: 400px;
+  }
+}
 @media screen and (max-width: 1374px) {
-  .com-box-area {
-    justify-content: start;
-    overflow-x: auto;
+  
+  .mainBanner-container,
+  .swiper-container {
+    height: 350px;
   }
-  .commu-area {
-    height: 500px;
-    margin-top: 350px;
-  }
-  .content {
-    justify-content: start;
-    overflow-x: auto;
+  input.start_btn {
+    width: 220px;
+    height: 242px;
+    top: 350px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -754,7 +810,6 @@ div.hamburger {
     justify-content: flex-start;
   }
   .com_box {
-    width: 45%;
     padding: 24px;
   }
   .sosick_div {
@@ -768,7 +823,6 @@ div.hamburger {
     width: 100%;
   }
   .commu-area {
-    height: 450px;
     margin-top: 300px;
   }
   .com-box-area {
@@ -777,21 +831,36 @@ div.hamburger {
   .artic {
     margin: 30px;
   }
+  .woowha {
+    margin: 30px 0;
+  }
   .aaa {
     max-width: 380px;
+    max-height: 372px;
   }
 
+  .commu-area {
+    position: relative;
+    margin-top: 200px;
+    width: 100%;
+  }
+  .com-banner-area {
+    position: absolute;
+    top: -150px;
+    width: 100%;
+    height: 300px;
+  }
   .visual_sub {
     height: 300px;
   }
   input.start_btn {
-    width: 250px;
-    height: 275px;
-    top: 350px;
+    width: 200px;
+    height: 220px;
+    top: 300px;
   }
   .mainBanner-container,
   .swiper-container {
-    height: 350px;
+    height: 300px;
   }
 
   .mobile-sidebar {
@@ -806,6 +875,12 @@ div.hamburger {
   .menu01 > li > span > h2 {
     height: 30px;
   }
+  .sosic_intro, .com_intro, .title_3 {
+    font-size: 2.667rem;
+  }
+  .content {
+    margin-top: 32px;
+  }
 }
 @media screen and (max-width: 768px) {
   html {
@@ -817,17 +892,19 @@ div.hamburger {
   .mobile-sidebar-header {
     height: 50px;
   }
-  .com_box {
-    width: 100%;
-    top: 0;
-  }
   .sosick_div {
     display: block;
     padding: 0 10px;
   }
   .commu-area {
-    height: 400px;
     margin-top: 250px;
+  }
+  .info-content {
+    padding-top: 40px;
+  }
+  .sosick {
+    margin-top: 40px;
+    margin-bottom: 80px;
   }
   .com-box-area {
     padding: 0 10px;
@@ -835,8 +912,12 @@ div.hamburger {
   .artic {
     margin: 20px;
   }
+  .woowha {
+    margin: 20px 0;
+  }
   .aaa {
     max-width: 100%;
+    max-height: 100%;
   }
   .aaa > img {
     width: 100%;
@@ -856,9 +937,7 @@ div.hamburger {
     transform: translate(-50%, -50%);
   }
   input.start_btn {
-    width: 180px;
-    height: 198px;
-    top: 250px;
+    display: none;
   }
   .mainBanner-container,
   .swiper-container {
@@ -866,5 +945,70 @@ div.hamburger {
   }
   .mobile-move_top {
     display: flex;
+  }
+  .sosic_intro, .com_intro, .title_3 {
+    font-size: 2rem;
+  }
+  .com_intro {
+    margin-top: 40px;
+  }
+  .commu-area {
+    position: relative;
+    margin-top: 150px;
+    width: 100%;
+  }
+  .com-banner-area {
+    position: absolute;
+    top: -100px;
+    width: 100%;
+    height: 200px;
+  }
+  .content {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+  .mainBanner-container,
+  .swiper-container {
+    height: 200px;
+  }
+  .commu-area {
+    margin-top: 150px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  
+  .mainBanner-container,
+  .swiper-container {
+    height: 150px;
+  }
+  .com-banner-area {
+    top: -25px;
+  }
+  .commu-area {
+    margin-top: 75px;
+  }
+  .com_box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .content > .item {
+    min-width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+  }
+  .img > img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  
+  .mainBanner-container,
+  .swiper-container {
+    height: 100px;
   }
 }

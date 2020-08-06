@@ -126,42 +126,48 @@
   margin-top: 170px;
 }
 .mun_title {
-  margin-top: 82px;
+  margin-top: 80px;
   font-size: 3.333rem;
   text-align: center;
   color: #333333;
 }
 .mun_text {
-  margin-top: 22px;
+  margin: 20px 0;
   padding: 0 10px;
-  font-size: 1.5rem;
+  font-size: 1.333rem;
   color: #555555;
 }
 .mun-content {
+  padding: 0 10px;
     max-width: 1374px;
     margin: 0 auto;
     padding-bottom: 100px;
 }
 
-
-@media screen and (max-width: 1374px) {
-  
-}
 @media screen and (max-width: 1024px) {
-
+  .mun_title {
+    margin-top: 60px;
+    font-size: 2.667rem;
+  }
 }
+
 @media screen and (max-width: 768px) {
+  .mun_title {
+    margin-top: 40px;
+    font-size: 2rem;
+  }
   .m_category, .m_title, .m_context, .filebox {
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: flex-start;
   }
   .cate_2 {
     margin-top: 10px;
-    margin-left: 85px;
+    margin-left: 0;
   }
   .cate_1, .cate_2 {
+    font-size: 1.167rem;
     max-width: 100%;
-    width: calc(100% - 85px);
+    width: 100%;
   }
   .m_title, .m_context, .filebox {
     margin-top: 30px;
@@ -171,18 +177,19 @@
   }
   .filebox .upload-name {
     width: calc(100% - 70px);
+    height: 36px;
   }
   .filebox.bs3-primary label {
     width: 70px;
+    height: 36px;
+  }
+  .quest_accept {
+    height: 48px;
+  }
+  .mun_text {
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 450px) {
-  .cate_2 {
-    margin-left: 0;
-  }
-  .cate_1, .cate_2 {
-    font-size: 1.167rem;
-    max-width: 100%;
-    width: 100%;
-  }
+
 }

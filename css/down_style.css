@@ -1,7 +1,7 @@
 .down_title {
   font-size: 3.333rem;
   color: #333333;
-  margin-top: 100px;
+  margin-top: 80px;
   text-align: center;
 }
 .down_top {
@@ -87,11 +87,27 @@
   padding: 10px;
 }
 
+@media screen and (max-width: 1024px) {
+  .sy_title, .down_title {
+    font-size: 2.667rem;
+    margin-top: 60px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .pc_sy {
     display: none;
   }
   .mb_sy {
     display: block;
+  }
+  .sy_title, .down_title {
+    padding: 0 10px;
+    text-align: left;
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+  .down_btn {
+    height: 150px;
   }
 }

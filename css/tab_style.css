@@ -3,7 +3,8 @@
   max-width: 1374px;
   margin: 0 auto;
   display: flex;
-  margin-bottom: 50px;
+  padding: 0 10px;
+  margin-bottom: 100px;
 }
 .tabmenu ul {
   width: 50%;
@@ -33,7 +34,6 @@
   margin-top: 80px;
   display: none;
   text-align: left;
-  top: 40px;
   box-sizing: border-box;
   margin-bottom: 20px;
   position: relative;
@@ -65,8 +65,8 @@
 }
 @media screen and (max-width: 768px) {
   .tabmenu label {
-    height: 48px;
-    font-size: 1.5rem;
+    height: 36px;
+    font-size: 1.333rem;
   }
   .tabmenu ul li {
     line-height: 30px;

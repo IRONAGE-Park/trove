@@ -26,7 +26,8 @@ input {
   border-image: initial;
 }
 .inner_login {
-  max-width: 480px;
+  max-width: 500px;
+  padding: 50px 10px;
   margin: 0 auto;
 }
 .login_tistory {

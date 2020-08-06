@@ -7,13 +7,12 @@
   color: #333333;
   font-size: 3.333rem;
   text-align: center;
-  margin-top: 82px;
+  margin-top: 80px;
 }
 
 .sub_nao {
   width: 100%;
   position: relative;
-  overflow-x: auto;
 }
 .sub_nav {
   display: flex;
@@ -83,13 +82,13 @@ input.start_btn {
 .g_info {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 2rem;
-  margin: 0 50px;
+  margin: 0 30px;
   color: #999999;
 }
 .g_info_selec {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 2rem;
-  margin: 0 50px;
+  margin: 0 30px;
   padding-bottom: 21px;
   border-bottom: 8px solid #555555;
 }
@@ -116,14 +115,17 @@ input.start_btn {
 
 
 @media screen and (max-width: 1024px) {
+  .trove_intro {
+    font-size: 2.667rem;
+    margin-top: 60px;
+  }
   input.start_btn {
     width: 150px; height: 165px;
-    left: 50%;
-    top: 300px;
+    top: 250px;
   }
   .visual_sub {
-    height: 300px;
-    margin-bottom: 75px;
+    height: 250px;
+    margin-bottom: 0;
   }
   .sub_nav {
     margin-top: 15px;
@@ -137,15 +139,25 @@ input.start_btn {
   .gamu_content {
     margin-top: 20px;
   }
+  .g_info_selec {
+    border-bottom: 6px solid #555555;
+  }
+  .g_info:hover {
+    border-bottom: 6px solid #555555;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .trove_intro {
+    font-size: 2rem;
+    margin-top: 40px;
+  }
   input.start_btn {
     width: 100px; height: 110px;
     top: 250px;
   }
   .visual_sub {
-    height: 250px;
+    height: 150px;
   }
   .sub_nav {
     justify-content: space-around;
@@ -185,6 +197,12 @@ input.start_btn {
   }
   .gamu_content {
     margin-top: 10px;
+  }
+  .g_info_selec {
+    border-bottom: 4px solid #555555;
+  }
+  .g_info:hover {
+    border-bottom: 4px solid #555555;
   }
 }
 
