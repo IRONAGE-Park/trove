@@ -185,6 +185,9 @@ th {
     display: flex;
     flex-direction: column;
   }
+  .table_sty .tuuu {
+    margin-bottom: 10px;
+  }
   .table_sty th, .table_sty td {
     display: block;
   }

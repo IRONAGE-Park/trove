@@ -3,12 +3,12 @@
 }
 div.gallery {
   width: 400px;
+  margin: 0 20px;
   margin-top: 40px;
 }
 div.gallery-box {
   display: flex;
   padding: 0 10px;
-  justify-content: space-around;
   flex-wrap: wrap;
 }
 

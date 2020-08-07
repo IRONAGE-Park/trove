@@ -22,7 +22,7 @@
 
 .filte_box {
   margin-bottom: 50px;
-  width: 120px; height: 50px;
+  width: 120px; height: 100%;
   position: absolute;
   left: -120px;
   border: 1px solid #dbdbdb;
@@ -111,8 +111,8 @@
   color: #777777;
 }
 .pre_line {
-  margin-top: 32px;
-  width: 1280px;
+  margin-top: 30px;
+  width: 100%;
   border: 1px solid #dbdbdb;
 }
 .pre_cont {
@@ -293,6 +293,9 @@
   #cash_gallery img {
     width: 100%; height: auto;
   }
+  #pre_gallery img {
+    margin: 0;
+  }
   .desc_cash {
     box-sizing: border-box;
     width: 100%; height: auto;
@@ -324,6 +327,7 @@
     font-size: 1.167rem;
   }
   .shop_section {
+    margin-top: 20px;
     justify-content: space-around;
   }
 
@@ -367,5 +371,10 @@
   }
   .cash_money {
     font-size: 2rem;
+  }
+  .cash_icon, .point_icon_t {
+    width: 24px; height: 24px;
+    line-height: 24px;
+    font-size: 1.5rem;
   }
 }

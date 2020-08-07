@@ -29,7 +29,7 @@
 .closebtn {
   position: absolute;
   top: 40px;
-  left: 90%;
+  right: 20px;
   vertical-align: middle;
   line-height: 25px;
   font-size: 3rem !important;
