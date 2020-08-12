@@ -24,8 +24,8 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  background: #ebebeb;
-  border: 1px solid #ebebeb;
+  background: #F9F9F9;
+  border: 1px solid #EBEBEB;
 }
 .tabmenu input {
   display: none;

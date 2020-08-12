@@ -158,62 +158,73 @@
               <li class="nop"><a href="../mun/1_3mun.html">FAQ</a></li>
             </ul>
           </li>
-          <li class="login_btn">
-            <a href="../my_info/login.html"><img src="../../img/login_btn.png" class="login_btn" /></a>
+          <li class="login_btn-area">
+            <a class="login_btn" href="../my_info/login.html">
+              로그인
+            </a>
           </li>
         </ul>
       </div>
     </header>
-    <h2 class="trove_intro">약관동의</h2>
-    <hr class="hr_sly" />
-    <form action="" id="joinForm">
-      <ul class="join_box">
-        <li class="checkBox check01">
-          <ul class="clearfix">
-            <li>
-              트로브 서비스 이용약관, 개인정보 수집 및 이용,이벤트등 프로모션
-              안내메일수신(선택)에
-              <h5 class="all_agree">모두동의</h5>
-              합니다.
-            </li>
-            <li class="checkAllBtn">
-              <input type="checkbox" name="chkAll" id="chk" class="chkAll" />
-            </li>
-          </ul>
-        </li>
-        <li class="checkBox check02">
-          <ul class="clearfix">
-            <li>이용약관 동의(필수)</li>
-            <li class="checkBtn">
-              <input type="checkbox" name="chk" />
-            </li>
-          </ul>
-          <textarea name="" id=""> </textarea>
-        </li>
-        <li class="checkBox check03">
-          <ul class="clearfix">
-            <li>개인정보 수집 및 이용에 대한 안내(필수)</li>
-            <li class="checkBtn">
-              <input type="checkbox" name="chk" />
-            </li>
-          </ul>
+    <main class="join-main">
+      <h2 class="trove_intro">약관동의</h2>
+      <hr class="hr_sly" />
+      <form action="" id="joinForm">
+        <ul class="join_box">
+          <li class="checkBox check01">
+            <ul class="clearfix">
+              <li class="checkAllBtn">
+                <input type="checkbox" name="chkAll" id="joinChkAll" class="ch-checkbox" />
+                <label tabindex="0" class="ch-checkbox" for="joinChkAll"></label>
+              </li>
+              <li>
+                트로브 서비스 이용약관, 개인정보 수집 및 이용,이벤트등 프로모션
+                안내메일수신(선택)에
+                <h5 class="all_agree">모두동의</h5>
+                합니다.
+              </li>
+            </ul>
+          </li>
+          <li class="checkBox check02">
+            <ul class="clearfix">
+              <li class="checkBtn">
+                <input type="checkbox" name="chk" id="joinChk02" class="ch-checkbox" />
+                <label tabindex="0" class="ch-checkbox" for="joinChk02"></label>
+              </li>
+              <li>이용약관 동의(필수)</li>
+            </ul>
+            <div class="join_form-terms">
+              <textarea readonly>제 1장</textarea>
+            </div>
+          </li>
+          <li class="checkBox check03">
+            <ul class="clearfix">
+              <li class="checkBtn">
+                <input type="checkbox" name="chk" id="joinChk03" class="ch-checkbox" />
+                <label tabindex="0" class="ch-checkbox" for="joinChk03"></label>
+              </li>
+              <li>개인정보 수집 및 이용에 대한 안내(필수)</li>
+            </ul>
+            <div class="join_form-terms">
+              <textarea readonly>제 1장</textarea>
+            </div>
+          </li>
 
-          <textarea name="" id=""> </textarea>
-        </li>
-
-        <li class="checkBox check04">
-          <ul class="clearfix">
-            <li>(선택) 이벤트 등 프로모션 알림 메일 수신</li>
-            <li class="checkBtn">
-              <input type="checkbox" name="chk" />
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="footBtwrap clearfix">
-        <li><button class="fpmgBt2">다음</button></li>
-      </ul>
-    </form>
+          <li class="checkBox check04">
+            <ul class="clearfix">
+              <li class="checkBtn">
+                <input type="checkbox" name="chk" id="joinChk04" class="ch-checkbox"/>
+                <label tabindex="0" class="ch-checkbox" for="joinChk04"></label>
+              </li>
+              <li class="reception-mail">(선택) 이벤트 등 프로모션 알림 메일 수신</li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="footBtwrap clearfix">
+          <li><button class="fpmgBt2">다음</button></li>
+        </ul>
+      </form>
+    </main>
     <footer class="footer">
       <ul>
         <li class="footer_nav_2">

@@ -126,6 +126,38 @@ body {
   width: 100%;
   height: 100%;
 }
+.swiper-navigation {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  bottom: 75px;
+  z-index: 100;
+}
+#mainBanner-swiper-pagination {
+  bottom: 0px;
+  padding: 50px 0;
+}
+#mainBanner-swiper-button-next,
+#mainBanner-swiper-button-prev {
+  bottom: 0;
+}
+.swiper-pagination-bullet {
+	padding: 5px 10px;
+	border-radius: 0;
+	width: auto;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 12px;
+	color:#000;
+	opacity: 1;
+	background: rgba(0,0,0,0.2);
+}
+.swiper-pagination-bullet-active {
+	color:#fff;
+	background: #007aff;
+}
 
 .mainBanner-container,
 .swiper-container {
@@ -133,6 +165,11 @@ body {
   height: 450px;
   transition: height 0.3s ease-in-out;
 }
+
+#item-swiper-container {
+  height: auto;
+}
+
 .fn-font {
   font-family: "Noto Sans KR", sans-serif;
 }
@@ -144,10 +181,17 @@ body {
 }
 .login_btn {
   text-align: center;
-  width: 100%;
+  width: 100%; height: 100%;
+  box-sizing: border-box;
+  border-radius: 24px;
+  border: solid 2px #555555;
+  color: #555555;
+  transition: background .15s ease-in-out;
 }
-.login_btn > a {
-  display: flex;
+.login_btn:hover {
+  background-color: #187E7F;
+  border: solid 2px #187E7F !important;
+  color: #ebebeb !important; 
 }
 .logout_btn {
   display: flex;
@@ -159,15 +203,14 @@ body {
   font-weight: 500;
 }
 .more_btn {
-  background-color: #ffffff;
+  background-color: transparent;
   border: 0;
   position: relative;
   outline: none;
   cursor: pointer;
 }
 .logout_btn .login-v {
-  margin-left: 25px;
-  font: 400 13.3333px "Noto Sans KR", sans-serif;
+  margin-left: 10px;
 }
 .n-font {
   font-family: "Noto Sans KR", sans-serif;
@@ -242,12 +285,13 @@ header > nav {
 }
 
 header ul {
-  max-width: 1374px;
-  margin: auto;
+  max-width: 1280px;
+  box-sizing: content-box;
+  padding: 0 20px; 
+  margin: 0 auto;
   height: 100%;
-  box-sizing: border-box;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
 }
@@ -270,11 +314,21 @@ header ul > li {
   position: relative;
 }
 .sosic_intro {
-  max-width: 1374px;
-  width: 100%;
-  text-align: center;
+  max-width: 1280px;
+  box-sizing: content-box;
+  padding: 0 20px; 
   margin: 0 auto;
+  position: relative;
+  text-align: center;
   font-size: 3.667rem;
+}
+.sosic_intro svg,
+.com_intro svg,
+.title_3 svg {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 input.start_btn {
   transition: all 0.3s ease-in-out;
@@ -293,16 +347,17 @@ input.start_btn {
   cursor: pointer;
 }
 .sosick {
+  max-width: 1280px;
+  box-sizing: content-box;
+  padding: 0 20px; 
   margin: 0 auto;
   margin-top: 55px;
   margin-bottom: 125px;
-  max-width: 1374px;
 }
 .sosick_div {
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 0 30px;
 }
 .info-content {
   padding-top: 150px;
@@ -328,7 +383,6 @@ input.start_btn {
 }
 .commu-area {
   position: relative;
-  margin-top: 250px;
   width: 100%;
 }
 .com-banner-area {
@@ -343,10 +397,13 @@ input.start_btn {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  max-width: 1374px;
+  max-width: 1280px;
+  box-sizing: content-box;
   justify-content: center;
+  padding: 0 20px; 
   margin: 0 auto;
-  padding-top: 300px;
+  top: 300px;
+  padding-bottom: 300px;
 }
 .gamu_con_title {
   font-size: 2.333rem;
@@ -361,14 +418,19 @@ input.start_btn {
 .com_intro {
   color: #fff;
   text-align: center;
+  margin: 0 auto;
   margin-top: 100px;
+  max-width: 1280px;
+  box-sizing: content-box;
+  padding: 0 20px; 
   font-size: 3.667rem;
+  position: relative;
 }
 .com_box {
   width: 305px;
   min-width: 305px;
-  margin: 0 10px;
   border: 1px solid #e2e2e2;
+  margin: 0 5px;
   margin-bottom: 10px;
   position: relative;
   background-color: #ffffff;
@@ -396,13 +458,14 @@ input.start_btn {
   color: #333333;
 }
 .cash {
+  max-width: 1280px;
+  box-sizing: content-box;
+  padding: 0 20px; 
   margin: 0 auto;
   margin-top: 40px;
-  margin-bottom: 80px;
-  max-width: 1280px;
+  margin-bottom: 160px;
 }
 .commu {
-  margin-top: 40px;
   width: 100%;
   position: relative;
 }
@@ -415,8 +478,9 @@ input.start_btn {
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 64px auto;
-  padding: 0 20px;
-  max-width: 1374px;
+  max-width: 1280px;
+  box-sizing: content-box;
+  padding: 0 20px; 
 }
 
 #focus {
@@ -501,9 +565,10 @@ input.start_btn {
 }
 .footer ul,
 .footer-bottom {
-  max-width: 1374px;
-  padding: 20px;
-  margin: auto;
+  max-width: 1280px;
+  box-sizing: content-box;
+  padding: 0 20px; 
+  margin: 0 auto;
 }
 .footerline {
   margin-top: 40px;
@@ -540,17 +605,47 @@ input.start_btn {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.cash-swiper-item {
+  border: solid 1px #EBEBEB;
+  background-color: #F9F9F9;
+  text-align: center;
+  overflow: hidden;
+  padding: 40px;
+}
+.cash-swiper-image {
+  max-width: 180px;
+  margin: 0 auto;
+}
+.cash-swiper-image > img {
+  width: 100%;
+}
+.cash-swiper-text {
+  color: #555555;
+  font-size: 2rem;
+  margin-top: 30px;
+}
 
 .topMenu {
   position: relative;
-  width: 100%;
+  width: 100%; height: 100%;
   text-align: center;
-  height: 100%;
+  transition: background .3s ease-in-out;
 }
 .topMenu:hover .menu01 .dept01,
 .topMenu:hover .dept-shade {
   height: 360px;
 }
+.topMenu:hover {
+  background-color: #333333;
+}
+.topMenu:hover .menu01 span {
+  color: #EBEBEB;
+}
+.topMenu:hover .login_btn {
+  border: solid 2px #CCCCCC;
+  color: #EBEBEB;
+}
+
 .dept-shade {
   position: absolute;
   width: 100%;
@@ -572,7 +667,7 @@ input.start_btn {
 }
 .menu01 span {
   font-size: 1.5rem;
-  font-weight: bold;
+  color: #555555;
   cursor: pointer;
 }
 .menu01 > li > span > h2 {
@@ -589,14 +684,16 @@ input.start_btn {
 }
 .dept01 {
   position: absolute;
-  top: 80px;
+  top: 60px;
   left: 0;
   height: 0;
   overflow: hidden;
   transition: height 0.3s ease-in-out;
   z-index: 999;
   display: inline-block;
-  padding-top: 30px;
+  box-sizing: border-box;
+  padding: 0;
+  padding-top: 45px;
   margin: 0 auto;
 }
 
@@ -609,11 +706,25 @@ input.start_btn {
   justify-content: center;
 }
 .nop a {
-  color: #999;
+  position: relative;
+  color: #CCCCCC;
+  font-weight: bold;
   transition: color 0.3s ease-in-out;
+}
+.nop a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0px; height: 1px;
+  background-color: #fff;
+  transition: width .1s ease-in-out;
 }
 .nop a:hover {
   color: #fff;
+}
+.nop a:hover::after {
+  width: 100%;
 }
 .bd_tag {
   font-size: 1.333rem;
@@ -665,9 +776,14 @@ input.start_btn {
 }
 
 .title_3 {
+  margin: 0 auto;
+  box-sizing: content-box;
   margin-top: 100px;
   text-align: center;
   font-size: 3.667rem;
+  max-width: 1280px;
+  padding: 0 20px;
+  position: relative;
 }
 .page_title {
   font-size: 3.667rem;
@@ -813,7 +929,6 @@ div.hamburger {
   .menu01 > li {
     width: 100px;
     line-height: 30px;
-    height: 30px;
   }
   header {
     height: 65px;
@@ -836,9 +951,6 @@ div.hamburger {
   .com_box {
     padding: 24px;
   }
-  .sosick_div {
-    padding: 0 20px;
-  }
 
   .content {
     padding: 0 15px;
@@ -846,11 +958,10 @@ div.hamburger {
   .content > .item {
     width: 100%;
   }
-  .commu-area {
-    margin-top: 300px;
-  }
   .com-box-area {
     padding: 0 15px;
+    padding-bottom: 175px;
+    top: 175px;
   }
   .artic {
     margin: 30px;
@@ -865,7 +976,6 @@ div.hamburger {
 
   .commu-area {
     position: relative;
-    margin-top: 200px;
     width: 100%;
   }
   .com-banner-area {
@@ -900,6 +1010,18 @@ div.hamburger {
   .content {
     margin-top: 32px;
   }
+  
+  .topMenu:hover {
+    background-color: #fff;
+  }
+  .topMenu:hover .login_btn {
+    border: solid 2px #555;
+    color: #555;
+  }
+  .topMenu:hover .logout_btn span {
+    color: #555;
+  }
+
 }
 @media screen and (max-width: 768px) {
   html {
@@ -913,10 +1035,6 @@ div.hamburger {
   }
   .sosick_div {
     display: block;
-    padding: 0 10px;
-  }
-  .commu-area {
-    margin-top: 250px;
   }
   .info-content {
     padding-top: 40px;
@@ -927,6 +1045,11 @@ div.hamburger {
   }
   .com-box-area {
     padding: 0 10px;
+    padding-bottom: 100px;
+    top: 100px;
+  }
+  .login_btn {
+    font-size: 1.333rem;
   }
   .artic {
     margin: 20px;
@@ -951,7 +1074,6 @@ div.hamburger {
   .menu01 > li {
     width: 60px;
     line-height: 25px;
-    height: 25px;
   }
   .page_title {
     font-size: 3rem;
@@ -978,7 +1100,6 @@ div.hamburger {
   }
   .commu-area {
     position: relative;
-    margin-top: 150px;
     width: 100%;
   }
   .com-banner-area {
@@ -994,18 +1115,12 @@ div.hamburger {
   .swiper-container {
     height: 200px;
   }
-  .commu-area {
-    margin-top: 150px;
-  }
 }
 
 @media screen and (max-width: 450px) {
   .mainBanner-container,
   .swiper-container {
     height: 150px;
-  }
-  .commu-area {
-    margin-top: 75px;
   }
   .com_box {
     width: 100%;

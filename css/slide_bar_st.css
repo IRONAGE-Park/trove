@@ -1,4 +1,21 @@
 /* 사이드바 스타일 */
+
+
+.shade {
+  position: fixed;
+  width: 100%; height: 100%;
+  z-index: 500;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity .3s ease-in-out;
+  opacity: 0;
+  left: 100%; top: 0;
+}
+.shade.open-sidenav {
+  opacity: 1;
+  left: 0;
+}
+
+
 .sidenav {
   width: 0;
   height: 100%;
@@ -41,9 +58,8 @@
   transform: rotate(225deg);
 }
 .sl_idid {
-  padding-top: 40px;
+  padding: 40px 0;
   width: 100%;
-  height: 185px;
   background-color: #f9f9f9;
 }
 .sidenav-welcome,
@@ -85,26 +101,29 @@
   border: 0px;
   color: #777777;
 }
+.PcBang_Content {
+  display: flex;
+  align-items: center;
+}
+.PcBang_Content + .PcBang_Content {
+  margin-top: 10px;
+}
 .PcBang_text {
-  font-family: NotoSansKR;
   font-size: 1.333rem;
   font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.5;
-  letter-spacing: -0.8px;
   color: #333333;
 }
 .OFF {
+  margin-left: 5px;
   line-height: 1.5;
-  letter-spacing: -0.8px;
   font-size: 1.333rem;
   font-weight: 700;
   color: #999999;
 }
 .ON {
+  margin-left: 5px;
   line-height: 1.5;
-  letter-spacing: -0.8px;
   font-size: 1.333rem;
   font-weight: 500;
   color: #ffe201;
@@ -127,6 +146,36 @@
   color: #dbdbdb;
   margin: 20px 0;
 }
+
+.cash-popup {
+  display: none;
+  position: absolute;
+  right: 40px;
+  padding: 15px 10px;
+  background-color: #fff;
+  border-radius: 2px;
+  border: solid 1px #ccc;
+}
+.cash-popup-content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.333rem;
+}
+.cash-popup.open-popup {
+  display: block;
+}
+
+.popup-title {
+  color: #555555;
+}
+.popup-amount {
+  color: #777777;
+  margin-left: 25px;
+}
+#MyCredit {
+  bottom: 78px;
+}
+
 .cash-area {
   width: 100%;
   height: 48px;
@@ -138,15 +187,19 @@
   margin-top: 10px;
   padding: 0 10%;
   overflow: hidden;
+  cursor: pointer;
+}
+.cash-area:hover {
+  background-color: #1C8286;
+}
+.cash-area:hover .t_t_t,
+.cash-area:hover .t_m_t {
+  color: #fff;
 }
 .t_t_t {
-  font-family: NotoSansKR;
   font-size: 1.333rem;
   font-weight: 700;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.5;
-  letter-spacing: -0.8px;
   color: #555555;
   flex-basis: 50%;
   vertical-align: middle;

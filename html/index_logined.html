@@ -168,13 +168,15 @@
            <li class="logout_btn">
             <button class="more_btn" onclick='openNav()'>
               <span>Trove</span>
-              <span class="login-v">V</span>
+              <span class="login-v">
+                <img src="../img/Logout_Plus.svg" />
+              </span>
             </button>
           </li>
         </ul>
       </div>
     </header>
-    
+    <div class="shade" onclick="closeNav()"></div>
     <div id="mysidenav" class="sidenav">
       <div class="sl_idid">
         <a href="#" class="closebtn" onclick="closeNav()">
@@ -187,15 +189,20 @@
         <div class="sidenav-action">
           <button class="hre_minfo">내정보</button>
           <button class="hre_logout">로그아웃</button>
-          <h5 class="PcBang_text">PC방</h5>
-          <h5 class="OFF">OFF</h5>
-          <h5 class="ON">ON</h5>
+          <div>
+            <div class="PcBang_Content">
+              <h5 class="PcBang_text">PC방</h5><h5 class="OFF">OFF</h5>
+            </div>
+            <div class="PcBang_Content">
+              <h5 class="PcBang_text">PC방</h5><h5 class="ON">ON</h5>
+            </div>
+          </div>
         </div>
       </div>
       <div class="sidenav-cashinfo">
         <h5 class="My_cash">나의 캐시</h5>
         <hr class="herhr" />
-        <div class="My_credit cash-area">
+        <div class="My_credit cash-area" onclick="togglePopup('MyCredit')">
           <h5 class="t_t_t">보유 크레딧</h5>
           <div class="t_cash-amount">
             <h5 class="t_m_t">29,000</h5>
@@ -209,14 +216,30 @@
             <h6 style="background-color: #f7cd19;" class="t_t">P</h6>
           </div>
         </div>
+        <div id="MyCredit" class="cash-popup">
+          <div class="cash-popup-content">
+            <span class="popup-title">충전캐시</span>
+            <span class="popup-amount">19,000</span>
+          </div>
+          <hr class="herhr" style="margin: 5px 0;"/>
+          <div class="cash-popup-content">
+            <span class="popup-title">보너스캐시</span>
+            <span class="popup-amount">10,000</span>
+          </div>
+        </div>
       </div>
     </div>
     <script>
       function openNav() {
         document.getElementById("mysidenav").classList.add('open-sidenav');
+        document.querySelector('.shade').classList.add('open-sidenav');
       }
       function closeNav() {
         document.getElementById("mysidenav").classList.remove('open-sidenav');
+        document.querySelector('.shade').classList.remove('open-sidenav');
+      }
+      function togglePopup(id) {
+        document.getElementById(id).classList.toggle('open-popup');
       }
     </script>
     
@@ -225,7 +248,7 @@
       <div id="mainBanner-swiper-container" class="swiper-container">
         <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="mySlide-area" style="background-image: url('../img/main_banner.png')"></div>
+                <div class="mySlide-area" style="background-image: url('../img/main_banner1.png')"></div>
               </div>
               <div class="swiper-slide">
                 <div class="mySlide-area" style="background-image: url('../img/banner_test_1.png')"></div>
@@ -234,11 +257,28 @@
                 <div class="mySlide-area" style="background-image: url('../img/info_banner.jpg')"></div>
               </div>
           </div>
-          <div id="mainBanner-swiper-button-prev" class="swiper-button-prev"></div>
-          <div id="mainBanner-swiper-button-next" class="swiper-button-next"></div>
+          <div id="mainBanner-swiper-pagination" class="swiper-pagination"></div>
+          <div class="swiper-navigation">
+            <div id="mainBanner-swiper-button-prev" class="swiper-button-prev"></div>
+            <div id="mainBanner-swiper-button-next" class="swiper-button-next"></div>
+          </div>
       </div>
       <section class="info-content">
-        <h2 class="sosic_intro">트로브 소식</h2>
+        <h2 class="sosic_intro">
+          트로브 소식
+          <a href="./news/news_1.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <g id="그룹_34" data-name="그룹 34" transform="translate(-1568 -3510)">
+                <g id="사각형_147" data-name="사각형 147" transform="translate(1568 3510)" fill="none" stroke="#aaa" stroke-width="1">
+                  <rect width="32" height="32" stroke="none"/>
+                  <rect x="0.5" y="0.5" width="31" height="31" fill="none"/>
+                </g>
+                <line id="선_21" data-name="선 21" x2="20" transform="translate(1574 3526)" fill="none" stroke="#777" stroke-width="1"/>
+                <line id="선_22" data-name="선 22" x2="20" transform="translate(1584 3516) rotate(90)" fill="none" stroke="#777" stroke-width="1"/>
+              </g>
+            </svg>      
+          </a>    
+        </h2>
         <section class="sosick wow fadeInUp" data-wow-duration="1s">
           <div class="sosick_div">
             <div class="aaa">
@@ -274,29 +314,66 @@
             </div>
           </div>
         </section>
-        <h2 class="sosic_intro">캐시샵</h2>
+        <h2 class="sosic_intro">
+          캐시샵
+          <a href="./cash/cash_1.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <g id="그룹_34" data-name="그룹 34" transform="translate(-1568 -3510)">
+                <g id="사각형_147" data-name="사각형 147" transform="translate(1568 3510)" fill="none" stroke="#aaa" stroke-width="1">
+                  <rect width="32" height="32" stroke="none"/>
+                  <rect x="0.5" y="0.5" width="31" height="31" fill="none"/>
+                </g>
+                <line id="선_21" data-name="선 21" x2="20" transform="translate(1574 3526)" fill="none" stroke="#777" stroke-width="1"/>
+                <line id="선_22" data-name="선 22" x2="20" transform="translate(1584 3516) rotate(90)" fill="none" stroke="#777" stroke-width="1"/>
+              </g>
+            </svg>
+          </a>
+        </h2>
         <section class="cash">
           <div class="topic">
             <div id="item-swiper-container" class="swiper-container">
               <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <div class="mySlide-area" style="background-image: url('../img/main_banner.png')"></div>
+                      <div class="cash-swiper-item">
+                        <div class="cash-swiper-image"><img src="../img/main_banner_item1.png" /></div>
+                        <p class="cash-swiper-text">Summer Pinata</p>
+                      </div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="mySlide-area" style="background-image: url('../img/banner_test_1.png')"></div>
+                      <div class="cash-swiper-item">
+                        <div class="cash-swiper-image"><img src="../img/main_banner_item2.png" /></div>
+                        <p class="cash-swiper-text">Summer Pinata</p>
+                      </div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="mySlide-area" style="background-image: url('../img/info_banner.jpg')"></div>
+                      <div class="cash-swiper-item">
+                        <div class="cash-swiper-image"><img src="../img/main_banner_item3.png" /></div>
+                        <p class="cash-swiper-text">Summer Pinata</p>
+                      </div>
                     </div>
                 </div>
-                <div id="item-swiper-pagination" class="swiper-pagination"></div>
             </div>
           </div>
         </section>
         <section class="commu">
-          <h2 class="com_intro">커뮤니티</h2>
           <div class="commu-area">
-            <div class="com-banner-area" style="background-image: url('../img/commu_bg.png');"></div>
+            <div class="com-banner-area" style="background-image: url('../img/commu_bg.png');">
+              <h2 class="com_intro">
+                커뮤니티
+                <a href="./board/info_board.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                    <g id="그룹_34" data-name="그룹 34" transform="translate(-1568 -3510)">
+                      <g id="사각형_147" data-name="사각형 147" transform="translate(1568 3510)" fill="none" stroke="#aaa" stroke-width="1">
+                        <rect width="32" height="32" stroke="none"/>
+                        <rect x="0.5" y="0.5" width="31" height="31" fill="none"/>
+                      </g>
+                      <line id="선_21" data-name="선 21" x2="20" transform="translate(1574 3526)" fill="none" stroke="#777" stroke-width="1"/>
+                      <line id="선_22" data-name="선 22" x2="20" transform="translate(1584 3516) rotate(90)" fill="none" stroke="#777" stroke-width="1"/>
+                    </g>
+                  </svg>      
+                </a>    
+              </h2>
+            </div>
             <div class="com-box-area">
               <div class="com_box  wow fadeInUp" data-wow-duration="1s">
                 <h4 class="bd_tag">[자유게시판]</h4>
@@ -348,8 +425,22 @@
               </div>
             </div>
           </div>
-      </section>
-        <h2 class="title_3">게임 정보</h2>
+        </section>
+        <h2 class="title_3">
+          게임 정보
+          <a href="./info/game_info.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <g id="그룹_34" data-name="그룹 34" transform="translate(-1568 -3510)">
+                <g id="사각형_147" data-name="사각형 147" transform="translate(1568 3510)" fill="none" stroke="#aaa" stroke-width="1">
+                  <rect width="32" height="32" stroke="none"/>
+                  <rect x="0.5" y="0.5" width="31" height="31" fill="none"/>
+                </g>
+                <line id="선_21" data-name="선 21" x2="20" transform="translate(1574 3526)" fill="none" stroke="#777" stroke-width="1"/>
+                <line id="선_22" data-name="선 22" x2="20" transform="translate(1584 3516) rotate(90)" fill="none" stroke="#777" stroke-width="1"/>
+              </g>
+            </svg>
+          </a>
+        </h2>
         <section class="content">
           <div class="item wow fadeInUp" data-wow-duration="1s">
             <div class="img">
@@ -451,6 +542,14 @@
         nextEl: '#mainBanner-swiper-button-next',
         prevEl: '#mainBanner-swiper-button-prev',
       },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+      },
+
 
       // And if we need scrollbar
       // scrollbar: {
@@ -460,15 +559,14 @@
     const itemBannerSwiper = new Swiper('#item-swiper-container', {
       // Optional parameters
       direction: 'horizontal',
+      slidesPerView: 3,
+      spaceBetween: 30,
       loop: true,
+      loopFillGroupWithBlank: true,
 
       autoplay: {
         delay: 2500,
         disableOnInteraction: false,
-      },
-      // If we need pagination
-      pagination: {
-        el: '#item-swiper-pagination',
       },
     })
   </script>

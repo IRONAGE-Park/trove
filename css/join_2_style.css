@@ -9,64 +9,73 @@ ul > li {
 a {
   text-decoration: none;
 }
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
+ul.clearfix {
+  display: flex;
+  align-items: center;
 }
 
 .join-main {
-  padding: 0 10px;
+  display: block;
+  padding: 100px 10px;
 }
 
 #joinForm {
   max-width: 640px;
   margin: 0 auto;
-  padding: 0 10px;
   padding-bottom: 100px;
-}
-ul.join_box {
-  border: 1px solid #ddd;
-  background-color: #f9f9f9f9;
 }
 .auth-form {
   padding: 15px;
+}
+.auth-check {
+  font-size: 1.333rem;
 }
 .checkBox,
 .checkBox > ul {
   position: relative;
 }
-.checkBox > ul > li {
-  float: left;
+.check02 > .clearfix,
+.check03 > .clearfix,
+.check04 > .clearfix {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9f9;
 }
 .checkBox > ul > li:first-child {
-  width: 85%;
-  word-break: keep-all;
   padding: 15px;
-  font-weight: 600;
-  background-color: #f9f9f9f9;
-  color: #333333;
 }
 .checkBox > ul > li:nth-child(2) {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  margin-top: -10px;
-  background-color: #f9f9f9f9;
+  word-break: keep-all;
+  padding: 15px 0;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #333333;
+}
+.checkBox > .clearfix > .reception-mail {
+  color: #999;
+}
+.admit-text {
+  padding-left: 15px;
+}
+.join_form-terms,
+.auth-form {
+  overflow-y: auto;
+  height: 200px;
+  border: 1px solid #ddd;
+  border-top: none;
 }
 .checkBox textarea {
-  width: 100%;
-  height: 204px;
+  resize: none;
+  border: none;
+  width: 100%; height: 500px;
   background-color: #ffffff;
   color: #333333;
-  border: 1px solid #e2e2e2;
 }
 .footBtwrap {
   margin-top: 15px;
 }
 .footBtwrap > li {
   width: 100%;
-  height: 60px;
 }
 .footBtwrap > li > button {
   display: block;
@@ -103,14 +112,12 @@ ul.join_box {
   color: #333333;
 }
 .inz_phone {
-  margin: 0 auto;
-  margin-top: 80px;
+  margin: 90px auto;
   max-width: 640px;
   height: 160px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 200px;
   border: 1px solid #e2e2e2;
   background-color: #f9f9f9f9;
 }
@@ -129,6 +136,12 @@ ul.join_box {
   font-size: 1.5rem;
 }
 
+@media screen and (max-width: 1024px) {
+  .join-main {
+    padding: 50px 10px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .footBtwrap > li {
     height: 48px;
@@ -136,6 +149,13 @@ ul.join_box {
   .footBtwrap > li > button {
     margin-top: 40px;
     line-height: 48px;
+  }
+  .inz_btn {
+    width: 100px;
+  }
+  
+  .join-main {
+    padding: 0 10px;
   }
 }
 

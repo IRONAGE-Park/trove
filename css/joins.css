@@ -18,7 +18,6 @@ th {
 .table_sty {
   text-align: left;
   width: 100%;
-  padding: 5px 10px;
   color: #333333;
   font-size: 1.5rem;
   border-spacing: 0;
@@ -39,7 +38,6 @@ th {
 }
 .input_text {
   padding: 0 15px;
-  margin-bottom: 20px;
   width: calc(100% - 130px);
   height: 48px;
   border: 1px solid #e2e2e2;
@@ -63,7 +61,7 @@ th {
   margin-top: 40px;
 }
 .input_text_180 {
-  margin: 10px 0;
+  margin-top: 10px;
   width: 180px;
   height: 48px;
   border: 1px solid #e2e2e2;
@@ -84,11 +82,27 @@ th {
 }
 .input_text_280 {
   margin-top: 10px;
-  margin-bottom: 10px;
   max-width: 280px;
   width: 100%;
   height: 48px;
   border: 1px solid #e2e2e2;
+}
+.password-guide {
+  position: relative;
+}
+.password-guide::after {
+  content: '영문/숫자/특수문자를 조합하여 10-16자로 입력해주세요.';
+  display: block;
+  position: absolute;
+  min-width: 320px;
+  width: 500%;
+  max-width: 640px;
+  bottom: -100%;
+  font-size: 1.167rem;
+  color: #999;
+}
+.join-password .input_text_502 {
+  margin-bottom: 30px;
 }
 .join_content {
   text-align: center;
@@ -97,11 +111,6 @@ th {
   color: #999999;
   font-size: 1.333rem;
   margin-top: 43px;
-}
-.aler_cont {
-  margin-top: 5px;
-  font-size: 1.167rem;
-  color: #999999;
 }
 .box-radio-input input[type="radio"] {
   display: none;
@@ -143,6 +152,27 @@ th {
   cursor: pointer;
 }
 
+input.ch-checkbox {
+  display: none;
+}
+
+label.ch-checkbox {
+  display: block;
+  cursor: pointer;
+  background-color: #fff;
+  width: 20px; height: 20px;
+  border: 1px solid #DBDBDB;
+}
+label.ch-checkbox:hover {
+  background-color: #ededed;
+}
+input.ch-checkbox:checked + label.ch-checkbox {
+  background-image: url(../img/checked.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .mb-radio-input input[type="radio"]:checked + span {
   border: 1px solid #23a3a7;
   background: url(../img/under_16_g.png);
@@ -179,6 +209,16 @@ th {
   color: #ffffff;
 }
 
+.use_flex_td {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.use_no_wrap {
+  white-space: nowrap;
+}
 
 @media screen and (max-width: 768px) {
   .table_sty tr {
@@ -196,5 +236,9 @@ th {
   }
   .input_text_502_bnk {
     margin-bottom: 30px;
+  }
+  .password-guide::after {
+    display: inline;
+    position: relative;
   }
 }
