@@ -11,17 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/board_style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/mem_style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/slide_bar_st.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
-    <!-- <link rel="stylesheet" href="http://www.w3ii.com/lib/w3.css" /> -->
-    <script
-      type="text/javascript"
-      src="http://code.jquery.com/jquery-2.1.4.min.js"
-    ></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   </head>
 
   <body>
@@ -160,18 +150,19 @@
               <li class="nop"><a href="../mun/1_3mun.html">FAQ</a></li>
             </ul>
           </li>
-          <li class="login_btn">
-            <a href="../my_info/login.html"><img src="../../img/login_btn.png" class="login_btn" /></a>
+          <li class="login_btn-area">
+            <a class="login_btn" href="../my_info/login.html">
+              로그인
+            </a>
           </li>
         </ul>
       </div>
     </header>
-    <section
-      class="visual_sub"
-      style="background-image: url('../../img/my_info_main.jpg');"
-    >
-      <input type="button" class="start_btn" />
-      <h2 class="page_title">회원정보</h2>
+    <section class="visual_sub" style="background-image: url('../../img/my_info_main.jpg');">
+      <div class="start-btn-area">
+        <input type="button" class="start_btn" />
+        <h2 class="page_title">회원정보</h2>
+      </div>
     </section>
     <section class="sub_nao">
       <div class="sub_nav four-item small-font">
@@ -182,15 +173,17 @@
       </div>
       <hr color="#cccccc" />
     </section>
-    <h2 class="trove_intro">회원탈퇴</h2>
+    <main class="myInfo-main">
+      <h2 class="trove_intro">회원탈퇴</h2>
 
-    <div class="pw_input_area">
-      <div class="delete-input-area">
-        <h5 class="pw_tag">비밀번호 확인</h5>
-        <input type="password" class="pw_input" />
+      <div class="pw_input_area">
+        <div class="delete-input-area">
+          <h5 class="pw_tag">비밀번호 확인</h5>
+          <input type="password" class="pw_input" />
+        </div>
+        <button class="next_btn" onclick="location.href = './mem_bye_2.html'">다음</button>
       </div>
-      <button class="next_btn">다음</button>
-    </div>
+    </main>
     <footer class="footer">
       <ul>
         <li class="footer_nav_2">

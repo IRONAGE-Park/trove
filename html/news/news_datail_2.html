@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Trove</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/news_style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/info_style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/board_style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/res-default_board_style.css">
+    <link rel="stylesheet" type="text/css"href="../../css/search_style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/slide_bar_st.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="/lib/w3.css"> -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+    <div class="mobile-sidebar">
+        <div class="mobile-sidebar-header">
+        <img src="../../img/plus.svg" class="sidebar-closebtn" />
+        </div>
+        <div class="accordion arrows">
+        <input type="radio" name="accordion" id="cb1" />
+        <section class="box">
+            <label class="box-title" for="cb1">뉴스</label>
+            <label class="box-close" for="acc-close"></label>
+            <ul class="box-content">
+            <li><a href="../news/news_1.html">공지사항</a></li>
+            <li><a href="../news/news_2.html">업데이트</a></li>
+            <li><a href="../news/news_3.html">이벤트</a></li>
+            </ul>
+        </section>
+        <input type="radio" name="accordion" id="cb2" />
+        <section class="box">
+            <label class="box-title" for="cb2">정보</label>
+            <label class="box-close" for="acc-close"></label>
+            <ul class="box-content">
+            <li><a href="../info/game_info.html">게임정보</a></li>
+            <li><a href="../info/mohum.html">모험</a></li>
+            <li><a href="../info/tamhum.html">탐험</a></li>
+            <li><a href="../info/jejak.html">제작</a></li>
+            </ul>
+        </section>
+        <input type="radio" name="accordion" id="cb3" />
+        <section class="box">
+            <label class="box-title" for="cb3">커뮤니티</label>
+            <label class="box-close" for="acc-close"></label>
+            <ul class="box-content">
+            <li><a href="../board/jayou.html">자유게시판</a></li>
+            <li><a href="../board/info_board.html">정보게시판</a></li>
+            <li><a href="../board/img_board.html">이미지게시판</a></li>
+            </ul>
+        </section>
+        <input type="radio" name="accordion" id="cb4" />
+        <section class="box">
+            <label class="box-title" for="cb4">캐시샵</label>
+            <label class="box-close" for="acc-close"></label>
+            <ul class="box-content">
+            <li><a href="../cash/cash_1.html">패키지</a></li>
+            <li><a href="../cash/cash_2.html">프리미엄</a></li>
+            <li><a href="../cash/cash_3.html">크레딧</a></li>
+            <li><a href="../cash/cash_4.html">포인트샵</a></li>
+            </ul>
+        </section>
+        <input type="radio" name="accordion" id="cb5" />
+        <section class="box">
+            <label class="box-title" for="cb5">다운로드</label>
+            <label class="box-close" for="acc-close"></label>
+            <ul class="box-content">
+            <li><a href="../download/download.html">클라이언트 다운</a></li>
+            </ul>
+        </section>
+        <input type="radio" name="accordion" id="cb6" />
+        <section class="box">
+            <label class="box-title" for="cb6">고객지원</label>
+            <label class="box-close" for="acc-close"></label>
+            <ul class="box-content">
+            <li><a href="../mun/1_1mun.html">1:1 문의</a></li>
+            <li><a href="../mun/1_3mun.html">FAQ</a></li>
+            </ul>
+        </section>
+        <input type="radio" name="accordion" id="acc-close" />
+        </div>
+    </div>
+    <header>
+    <div class="topMenu">
+      <div class="dept-shade"></div>
+      <ul class="menu01">
+        <li class="mobile-sidebtn">
+          <div class="hamburger" id="hamburger-11">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </li>
+        <li>
+          <span>
+            <h2>
+              <a href="../index.html">
+                <img src="../../img/TROVE_LOGO.png" alt="" class="logo_img" />
+              </a>
+            </h2>
+          </span>
+          <ul class="dept01"></ul>
+        </li>
+        <li class="header-nav">
+          <span>뉴스</span>
+          <ul class="dept01" >
+            <li class="nop"><a href="../news/news_1.html">공지사항</a></li>
+            <li class="nop"><a href="../news/news_2.html">업데이트</a></li>
+            <li class="nop"><a href="../news/news_3.html">이벤트</a></li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>정보</span>
+          <ul class="dept01" >
+            <li class="nop"><a href="../info/game_info.html">게임정보</a></li>
+            <li class="nop"><a href="../info/mohum.html">모험</a></li>
+            <li class="nop"><a href="../info/tamhum.html">탐험</a></li>
+            <li class="nop"><a href="../info/jejak.html">제작</a></li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>커뮤니티</span>
+          <ul class="dept01" >
+            <li class="nop"><a href="../board/jayou.html">자유게시판</a></li>
+            <li class="nop"><a href="../board/info_board.html">정보게시판</a></li>
+            <li class="nop"><a href="../board/img_board.html">이미지게시판</a></li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>캐시샵</span>
+          <ul class="dept01" >
+            <li class="nop"><a href="../cash/cash_1.html">패키지</a></li>
+            <li class="nop"><a href="../cash/cash_2.html">프리미엄</a></li>
+            <li class="nop"><a href="../cash/cash_3.html">크레딧</a></li>
+            <li class="nop"><a href="../cash/cash_4.html">포인트샵</a></li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>다운로드</span>
+          <ul class="dept01" >
+            <li class="nop"><a href="../download/download.html">클라이언트 다운</a></li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>고객지원</span>
+          <ul class="dept01" >
+            <li class="nop"><a href="../mun/1_1mun.html">1:1 문의</a></li>
+            <li class="nop"><a href="../mun/1_3mun.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li class="login_btn-area">
+          <a class="login_btn" href="../my_info/login.html">
+            로그인
+          </a>
+        </li>
+      </ul>
+    </div>
+    </header>
+    <section class="visual_sub" style="background-image: url('../../img/news_main.jpg');">
+        <div class="start-btn-area">
+            <input type="button" class="start_btn">
+            <h2 class="page_title">뉴스</h2>
+        </div>
+	</section>
+    <section class="sub_nao">
+       <div class="sub_nav three-item">
+            <a href="./news_1.html" class="g_board">공지사항</a>
+            <a href="./news_2.html" class="g_board">업데이트</a>
+            <a href="./news_3.html" class="g_board_selec">이벤트</a>
+        </div>
+        <hr color=#cccccc>
+    </section>
+	<main class="news-main">
+        <div class="main-content-top">
+            <h2 class="trove_intro">이벤트</h2>
+            <a href="./news_1.html" class="to_board_list">
+                목록
+            </a>
+        </div>
+        <div class="board-article">
+            <div class="board-head">
+                <div class="board-head-left">
+                    <img src="../../img/event_ing.png" />
+                    <h2>트로브 이벤트입니다.</h2>
+                </div>
+                <div class="board-head-right">
+                    <p class="board-date">2020.00.00</p>
+                    <a class="board-shared-button" href="">
+                        <img src="../../img/share_icon.svg" />
+                    </a>
+                </div>
+            </div>
+            <div class="board-image-content">
+              <img src="../../img/event_banner.png" />
+            </div>
+
+            <div class="board-comment">
+              <div class="board-comment-head">
+                <h2>댓글</h2>
+                <p>24</p>
+              </div>
+              <div class="board-comment-list">
+                <div class="board-comment-item">
+                  <div class="board-comment-writer">
+                    <p>아이디</p>
+                    <p class="board-date">2020.00.00</p>
+                  </div>
+                  <div class="board-comment-text">
+                    댓글내용텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트
+                  </div>
+                </div>
+
+
+                <div class="board-comment-item">
+                  <div class="board-comment-writer">
+                    <p>아이디</p>
+                    <p class="board-date">2020.00.00</p>
+                  </div>
+                  <div class="board-comment-text">
+                    댓글내용텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트
+                  </div>
+                </div>
+
+                <div class="board-pagination">
+                  <div class="board-pagination-wrapper">
+                    <a class="pagination-to_prev" href="">
+                      <img src="../../img/more_left.svg" />
+                    </a>
+                    <a class="pagination-page pagination-current" href="">1</a>
+                    <a class="pagination-page" href="">2</a>
+                    <a class="pagination-page" href="">3</a>
+                    <a class="pagination-to_next" href="">
+                      <img src="../../img/more_right.svg" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="board-comment-write">
+                <div class="board-comment-input">
+                  <textarea></textarea>
+                </div>
+                <div class="board-comment-state">
+                  <span>(0/200)</span>
+                  <button class="board-comment-regist">등록</button>
+                </div>
+              </div>
+            </div>
+        </div>
+	</main>
+    <footer class="footer">
+    <ul>
+      <li class="footer_nav_2">
+        <span>(주)TROVE&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호: 123-456-7890&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp;전화: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp;팩스: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp;주소: 서울 중구 세종대로 110 &nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp;E-mail: trove@trove.co.kr</span>
+      </li>
+      <hr class="footerline_2" />
+      <li class="footer_nav_2">
+        <span>통신판매업 신고번호: 제2020-서울-1234호&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp; ⓒ 2020 TROVE KOREA Corporation</span>
+        <span> ALL Rights Reserverd.</span>
+      </li>
+    </ul>
+    <hr class="footerline" />
+    <div class="footer-bottom">
+      <a href="../mun/1_1mun.html" class="footer_nav">고객센터</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../data_contact/eyong.html" class="footer_nav">이용약관</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../data_contact/jungbo.html" class="footer_nav">개인정보처리방침</a>
+    </div>
+  </footer>
+  <div class="mobile-move_top">
+    <img src="../../img/move_top.svg" />
+  </div>
+</body>
+<script>
+  var mobileMoveTop = document.querySelector(".mobile-move_top")
+  window.addEventListener("scroll", function (e) {
+      var scrollpos = window.scrollY || window.pageYOffset;
+      if (scrollpos < 200) { mobileMoveTop.classList.remove('visible') }
+    else { mobileMoveTop.classList.add('visible') }
+  })
+  mobileMoveTop.addEventListener('click', function (e) {
+    window.scrollTo({top:0, left:0, behavior:'smooth'});
+  })
+  
+  document.querySelector('.hamburger').addEventListener('click', function (e) {
+        $("body").toggleClass("open-sidebar");
+        $("html").toggleClass("hidden")
+      });
+      $(".sidebar-closebtn").click(function () {
+        $("body").removeClass("open-sidebar");
+        $("html").removeClass("hidden")
+      });
+
+  </script>
+</html>

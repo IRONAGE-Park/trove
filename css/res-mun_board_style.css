@@ -3,15 +3,6 @@
   .table_basic > tbody > tr > td {
     display: block;
   }
-  .table_basic > thead > tr > th.tab-number,
-  .table_basic > thead > tr > th.tab-state,
-  .table_basic > thead > tr > th.tab-state2,
-  .table_basic > thead > tr > th.tab-regist,
-  .table_basic > thead > tr > th.tab-nickname,
-  .table_basic > thead > tr > th.tab-view_count,
-  .table_basic > thead > tr > th.tab-title {
-    display: none;
-  }
   .table_basic > tbody > tr > td:nth-last-child(1),
   .table_basic > tbody > tr > td:nth-last-child(2),
   .table_basic > tbody > tr > td:nth-last-child(4) {

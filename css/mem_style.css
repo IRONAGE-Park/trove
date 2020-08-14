@@ -1,5 +1,4 @@
 .wrap_table {
-  min-height: 100vh;
   height: 100%;
   padding-bottom: 100px;
   box-sizing: border-box;
@@ -81,11 +80,13 @@
 .pw_tag {
   font-size: 1.5rem;
   color: #333333;
-  min-width: 90px;
+  min-width: 120px;
+  margin-right: 20px;
   display: inline-block;
 }
 .pw_input {
-  width: 300px;
+  width: 100%;
+  padding-left: 20px;
   height: 48px;
   border: 1px solid #e2e2e2;
 }
@@ -135,8 +136,9 @@
 }
 .myInfo-main {
   display: block;
-  padding: 0 10px;
-  max-width: 1374px;
+  padding: 100px 20px;
+  max-width: 1280px;
+  box-sizing: content-box;
   margin: 0 auto;
 }
 .mem_info-action {
@@ -146,12 +148,29 @@
     align-items: center;
     margin: 0 auto;
 }
+@media screen and (max-width: 1024px) {
+  .myInfo-main {
+    padding: 50px 10px;
+  }
+}
 
 @media screen and (max-width: 768px) {
+  .myInfo-main {
+    padding: 0 10px;
+  }
   .byun_btn {
     width: 80px;
     height: 33px;
     -ms-transform: translateY(5px);
     right: 0px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .delete-input-area {
+    flex-wrap: wrap;
+  }
+  .pw_input {
+    margin-top: 10px;
   }
 }

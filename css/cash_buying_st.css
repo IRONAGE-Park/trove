@@ -246,7 +246,20 @@
   margin: 0 auto;
   border: 1px solid #000000;
   max-width: 640px;
+  position: relative;
   padding: 80px;
+}
+#cash_contain_2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 25px; right: 5%;
+  width: 32px; height: 32px;
+  transform: rotate(45deg);
+  background-image: url(../img/plus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .buzok {
   text-align: center;

@@ -372,6 +372,33 @@ input.start_btn {
   max-width: 800px;
   width: 100%;
 }
+
+
+
+
+.modal_form {
+  max-width: 640px;
+  padding-top: 50px;
+  margin: 0 auto;
+  position: relative;
+  border: solid 1px #dbdbdb;
+}
+.modal_form::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50px; right: 5%;
+  width: 32px; height: 32px;
+  transform: rotate(45deg);
+  background-image: url(../img/plus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+
 .aaa {
   max-width: 440px;
 }
@@ -459,11 +486,11 @@ input.start_btn {
 }
 .cash {
   max-width: 1280px;
-  box-sizing: content-box;
-  padding: 0 20px; 
+  padding: 0 80px; 
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 160px;
+  position: relative;
 }
 .commu {
   width: 100%;
@@ -611,6 +638,7 @@ input.start_btn {
   text-align: center;
   overflow: hidden;
   padding: 40px;
+  margin: 0 10px;
 }
 .cash-swiper-image {
   max-width: 180px;
@@ -790,10 +818,9 @@ input.start_btn {
   color: #ffffff;
   position: absolute;
   white-space: nowrap;
-  top: 50%;
-  left: 20%;
+  bottom: 20%;
+  left: 20px;
   font-weight: 500;
-  font-family: NotoSansKr;
 }
 .teeeeee {
   padding-bottom: 70px;
@@ -1136,6 +1163,12 @@ div.hamburger {
   }
   .page_title {
     font-size: 2.333rem;
+  }
+  .modal_form {
+    padding-top: 0;
+  }
+  .modal_form::after {
+    top: 10px;
   }
 }
 

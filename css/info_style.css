@@ -10,13 +10,27 @@
   margin-top: 80px;
 }
 
+.main-content-top {
+  position: relative;
+}
+.to_board_list {
+  position: absolute;
+  top: 50%; right: 0;
+  transform: translateY(-50%);
+  padding: 10px 30px;
+  border: solid 1px #DBDBDB;
+}
+.to_board_list:hover {
+  background-color: #fafafa;
+}
+
 .sub_nao {
   width: 100%;
   position: relative;
 }
 .sub_nav {
   display: flex;
-  max-width: 1374px;
+  max-width: 1280px;
   margin: 0 auto;
   white-space: nowrap;
   margin-top: 20px;
@@ -43,9 +57,17 @@
   position: relative;
   transition: height .3s ease-in-out;
 }
+.start-btn-area {
+  width: 100%; height: 100%;
+  max-width: 1280px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 input.start_btn {
   top: 360px;
-  left: 75%;
+  left: 100%;
+  transform: translate(-100%, -75%);
   width: 200px; height: 220px;
 }
 #game_infoo {

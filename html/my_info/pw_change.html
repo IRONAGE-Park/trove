@@ -8,34 +8,75 @@
     <link rel="stylesheet" type="text/css" href="../../css/info_style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/p_info.css" />
     <link rel="stylesheet" type="text/css" href="../../css/login.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
-    <!-- <link rel="stylesheet" href="/lib/w3.css"> -->
-    <script
-      type="text/javascript"
-      src="http://code.jquery.com/jquery-2.1.4.min.js"
-    ></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   </head>
-  <div class="inner_login">
-    <div class="login_tistory">
-      <h5 class="nic_title">비밀번호 변경</h5>
-      <div class="nick_byun">
-        <h4 class="hyun_pw">현재 비밀번호</h4>
-        <input type="password" class="byunnick" value="" /><br />
-        <hr class="g_line" />
-        <h4 class="hyun_pw_2">새 비밀번호</h4>
-        <input type="text" class="byunnick" value="" />
-        <h4 class="hyun_pw_3">
-          영문/숫자/특수문자를 조합하여 10-16자로 입력해주세요
-        </h4>
-        <h4 class="hyun_pw_4">새 비밀번호 확인</h4>
-        <input type="text" class="byunnick" value="" />
-        <button type="submit" class="btn_OK_2" disabled>확인</button>
+  <body>
+    <div class="modal_form">
+      <div class="inner_login">
+        <div class="login_tistory">
+          <h5 class="nic_title">비밀번호 변경</h5>
+          <div class="nick_byun">
+            <div class="find-input-area">
+              <h4 class="new_password">현재 비밀번호</h4>
+              <div class="nick_byun_input">
+                <input type="password" class="byunnick" />
+              </div>
+            </div>
+            <hr class="g_line" />
+
+            <div class="find-input-area">
+              <h4 class="new_password">새 비밀번호</h4>
+              <div class="nick_byun_input">
+                <input id="changePassword" type="password" class="change_byunnick" />
+                <span class="change-input-result" id="testResultPassword"></span>
+              </div>
+            </div>
+            <p class="new_password_guide">영문/숫자/특수문자를 조합하여 10-16자로 입력해주세요.</p>
+            <div class="find-input-area">
+              <h4 class="new_password_chk">새 비밀번호 확인</h4>
+              <div class="nick_byun_input">
+                <input id="changePasswordCheck" type="password" class="change_byunnick" />
+                <span class="change-input-result" id="testResultPasswordCheck"></span>
+              </div>
+            </div>
+            <button type="submit" class="btn_OK_2" disabled>확인</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </body>
+  <script>
+    const testResultPassword = document.getElementById('testResultPassword');
+    const changePassword = document.getElementById('changePassword');
+    changePassword.addEventListener('change', function (e) {
+      if (e.target.value === 'Trove') {
+        testResultPassword.innerHTML = "사용가능";
+        testResultPassword.classList.remove('error');
+        e.target.classList.remove('error');
+        e.target.classList.add('clear');
+      } else {
+        testResultPassword.innerHTML = "사용불가";
+        testResultPassword.classList.add('error');
+        e.target.classList.remove('clear');
+        e.target.classList.add('error');
+      }
+    });
+
+    const testResultPasswordCheck = document.getElementById('testResultPasswordCheck');
+    const changePasswordCheck = document.getElementById('changePasswordCheck');
+    changePasswordCheck.addEventListener('change', function (e) {
+      if (e.target.value === changePassword.value) {
+        testResultPasswordCheck.innerHTML = "일치";
+        testResultPasswordCheck.classList.remove('error');
+        e.target.classList.remove('error');
+        e.target.classList.add('clear');
+      } else {
+        testResultPasswordCheck.innerHTML = "불일치";
+        testResultPasswordCheck.classList.add('error');
+        e.target.classList.remove('clear');
+        e.target.classList.add('error');
+      }
+    })
+
+  </script>
 </html>

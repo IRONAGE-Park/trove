@@ -8,42 +8,36 @@
     <link rel="stylesheet" type="text/css" href="../../css/info_style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/p_info.css" />
     <link rel="stylesheet" type="text/css" href="../../css/login.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
-    <!-- <link rel="stylesheet" href="/lib/w3.css" /> -->
-    <script
-      type="text/javascript"
-      src="http://code.jquery.com/jquery-2.1.4.min.js"
-    ></script>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   </head>
-  <div class="inner_login">
-    <div class="login_tistory">
-      <h5 class="nic_title">아이디 찾기</h5>
-      <div class="nick_byun">
-        <div class="find-input-area">
-          <h4 class="hyun_name">이름</h4>
-          <div class="nick_byun_input">
-            <input type="text" class="byunnick" value="" />
+  <div class="modal_form">
+    <div class="inner_login">
+      <div class="login_tistory">
+        <h5 class="nic_title">아이디 찾기</h5>
+        <div class="nick_byun">
+          <div class="find-input-area">
+            <h4 class="hyun_name">이름</h4>
+            <div class="nick_byun_input">
+              <input type="text" class="byunnick" />
+            </div>
           </div>
-        </div>
-        <div class="find-input-area">
-          <h4 class="hyun_numb">휴대폰 번호</h4>
-          <div class="nick_byun_input">
-            <input type="text" class="input_num" value="" />
-            <input type="submit" class="req_num" value="인증번호 받기" />
+          <div class="find-input-area">
+            <h4 class="hyun_numb">휴대폰 번호</h4>
+            <div class="nick_byun_input">
+              <input type="text" class="input_num" />
+              <input type="submit" id="requestNumber" class="req_num" value="인증번호 받기" tabindex="0" />
+            </div>
           </div>
-        </div>
-        <div class="find-input-area">
-          <div class="nick_byun_input">
-            <input type="text" class="input_sms" value="" />
-            <span id="timer" class="time_text"></span>
+          <div class="find-input-area">
+            <h4 class="hyun_numb"></h4>
+            <div class="nick_byun_input">
+              <input id="inputRequestNumber" type="text" class="input_sms" />
+              <span id="timer" class="time_text"></span>
+            </div>
           </div>
+          <button type="submit" class="btn_OK_2" onclick="location.href = './result_id.html'">확인</button>
         </div>
-        <button type="submit" class="btn_OK_2" disabled>확인</button>
       </div>
     </div>
   </div>
@@ -51,10 +45,8 @@
     function $ComTimer() {
       //prototype extend
     }
-
     $ComTimer.prototype = {
       comSecond: "",
-      fnCallback: function () {},
       timer: "",
       domId: "",
       fnTimer: function () {
@@ -72,16 +64,25 @@
       },
     };
 
-    $(document).ready(function () {
-      var AuthTimer = new $ComTimer();
+    const AuthTimer = new $ComTimer();
+    const requestNumber = document.getElementById('requestNumber');
+    requestNumber.addEventListener('click', function (e) {
+      if (AuthTimer.timer) AuthTimer.fnStop();
       AuthTimer.comSecond = 180;
-      AuthTimer.fnCallback = function () {
-        alert("다시인증을 시도해주세요.");
-      };
       AuthTimer.timer = setInterval(function () {
         AuthTimer.fnTimer();
       }, 1000);
       AuthTimer.domId = document.getElementById("timer");
-    });
+    })
+
+    document.getElementById('inputRequestNumber').addEventListener('change', function (e) {
+      if (e.target.value === "123456") {
+        e.target.classList.remove('discord');
+        e.target.classList.add('coincide');
+      } else {
+        e.target.classList.remove('coincide');
+        e.target.classList.add('discord');
+      }
+    })
   </script>
 </html>

@@ -1,31 +1,25 @@
 .nick_byun {
   margin-top: 80px;
   width: 100%;
-  padding: 0 10px;
   display: table;
 }
 .nick_byun_input {
   display: table-cell;
   position: relative;
-  width:100%;
+  width: 100%;
 }
 .sangtea {
   font-size: 1.5rem;
-  display: inline-block;
-  margin-right: 97px;
-}
-.sangtea_2_1 {
-  font-size: 1.5rem;
-  display: inline-block;
-  margin-right: 45px;
+  display: table-cell;
+  min-width: 150px;
 }
 .nic_title {
   font-size: 2.667rem;
   color: #333333;
+  font-weight: 500;
   text-align: center;
 }
 .hyunnick {
-  font-family: Roboto;
   width: 100%;
   height: 48px;
   border: 0px;
@@ -33,12 +27,59 @@
   margin-bottom: 10px;
   color: #333333;
 }
-.byunnick {
-  font-family: Roboto;
+
+.change_hyunnick {
+  width: 100%;
+  padding-left: 20px;
+  height: 48px;
+  border: 0px;
+  font-size: 1.333rem;
+  color: #333333;
+}
+
+.change_byunnick {
+  padding-left: 20px;
+  width: 100%;
+  height: 48px;
+  outline: none;
+  border: 1px solid #e2e2e2;
+  font-size: 1.333rem;
+  color: #333333;
+}
+.change_byunnick.clear {
+  border: 1px solid #1c8286;
+}
+.change_byunnick.error {
+  border: 1px solid #c31111;
+}
+
+.nick_change_flex {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.change-input-result {
+  position: absolute;
+  font-size: 1.333rem;
+  top: 50%;
+  right: 10px;
+  color: #1c8286;
+  transform: translateY(-50%);
+}
+.change-input-result.error {
+  color: #c31111;
+}
+
+.byunnick,
+.input_num,
+.input_sms {
   margin-top: 10px;
   padding-left: 20px;
   width: 100%;
   height: 48px;
+  outline: none;
   border: 1px solid #e2e2e2;
   font-size: 1.333rem;
   color: #333333;
@@ -96,48 +137,109 @@
   margin-top: 120px;
   width: 100%;
   height: 56px;
-  border: 0px solid #e2e2e2;
   font-size: 1.5rem;
   color: #555555;
+  border: none;
   background-color: #ffe201;
 }
 .hyun_name,
 .hyun_numb {
   display: table-cell;
   font-size: 1.5rem;
+  font-weight: 500;
   min-width: 100px;
   color: #333333;
 }
-.input_num {
+
+.find-result {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+}
+.find-result-id {
+  color: #333333;
+  font-weight: 700;
+  font-size: 1.667rem;
+}
+.find-result-day {
+  color: #999999;
   margin-top: 40px;
+  font-size: 1.333rem;
+}
+.to_find-pw {
+  margin-top: 10px;
   width: 100%;
-  height: 48px;
-  margin-right: 0px;
-  border: 1px solid #e2e2e2;
+  height: 56px;
+  font-size: 1.5rem;
+  color: #555555;
+  background-color: transparent;
+  border: solid 1px #ffe201;
+}
+
+.new_password,
+.new_password_chk {
+  display: table-cell;
+  font-size: 1.5rem;
+  font-weight: 500;
+  min-width: 150px;
+  color: #333333;
+  position: relative;
+}
+
+.new_password_guide {
+  font-size: 1.167rem;
+  font-weight: lighter;
+  text-align: right;
+  color: #999;
+}
+
+.find-input-area {
+  margin-top: 10px;
 }
 .req_num {
   width: 100px;
   height: 48px;
+  cursor: pointer;
   position: absolute;
-  right: 0; bottom: 0;
+  right: 0;
+  bottom: 0;
   text-align: center;
   font-size: 1.167rem;
   border: 1px solid #dbdbdb;
   background-color: #f9f9f9;
 }
 .time_text {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 1.5rem;
   color: #777777;
 }
+
 .input_sms {
-  margin-top: 8px;
-  margin-left: 100px;
-  width: 260px;
-  height: 48px;
-  border: 1px solid #dbdbdb;
+  margin-top: 0;
+}
+.input_sms.coincide {
+  border: solid 1px #1c8286;
+}
+.input_sms.coincide::after {
+  content: "일치";
+  display: inline;
+  color: #1c8286;
+}
+.input_sms.discord {
+  border: solid 1px #c31111;
+}
+.input_sms.discord::after {
+  content: "불일치";
+  display: inline;
+  color: #c31111;
 }
 .img_info {
-  margin-top: 81px;
+  margin-top: 80px;
+  margin-bottom: 40px;
 }
 .rululala {
   background-color: #f9f9f9;
@@ -166,18 +268,28 @@
   display: inline-block;
 }
 
-
 @media screen and (max-width: 450px) {
   .phone_btn {
-    width: 120px; height: 48px;
+    width: 120px;
+    height: 48px;
   }
   .cont_icon {
-    width: 48px; height: 48px;
+    width: 48px;
+    height: 48px;
   }
   .find-input-area > * {
     display: block;
   }
+  .nick_byun_input {
+    margin-top: 10px;
+  }
   .input_sms {
     margin-left: 0px;
+  }
+  .new_password_guide {
+    text-align: left;
+  }
+  .nick_change_flex {
+    flex-wrap: wrap;
   }
 }

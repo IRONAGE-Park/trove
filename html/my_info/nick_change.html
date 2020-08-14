@@ -8,33 +8,50 @@
     <link rel="stylesheet" type="text/css" href="../../css/info_style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/p_info.css" />
     <link rel="stylesheet" type="text/css" href="../../css/login.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
-    <!-- <link rel="stylesheet" href="/lib/w3.css"> -->
-    <script
-      type="text/javascript"
-      src="http://code.jquery.com/jquery-2.1.4.min.js"
-    ></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js" ></script>
   </head>
-  <div class="inner_login">
-    <div class="login_tistory">
-      <h5 class="nic_title">닉네임 변경</h5>
-      <div class="nick_byun">
-        <h4 class="sangtea">현재 닉네임</h4>
-        <input
-          type="text"
-          class="hyunnick"
-          readonly
-          value="현재 닉네임"
-        /><br />
-        <h4 class="sangtea_2_1">변경하실 닉네임</h4>
-        <input type="text" class="byunnick" value="" />
-        <button type="submit" class="btn_OK" disabled>확인</button>
+  <body>
+    <div class="modal_form">
+      <div class="inner_login">
+        <div class="login_tistory">
+          <h5 class="nic_title">닉네임 변경</h5>
+          <div class="nick_byun">
+            <div class="nick_change_flex">
+              <h4 class="sangtea">현재 닉네임</h4>
+              <input
+                type="text"
+                class="change_hyunnick"
+                readonly
+                value="현재 닉네임"
+              />
+            </div>
+            <div class="nick_change_flex">
+              <h4 class="sangtea">변경하실 닉네임</h4>
+              <div class="nick_byun_input">
+                <input id="changeNickname" type="text" class="change_byunnick" value="" />
+                <span class="change-input-result" id="testResultNickname"></span>
+              </div>
+            </div>
+            <button type="submit" class="btn_OK" disabled>확인</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </body>
+  <script>
+    const testResultNickname = document.getElementById('testResultNickname');
+    document.getElementById('changeNickname').addEventListener('change', function (e) {
+      if (e.target.value === 'Trove') {
+        testResultNickname.innerHTML = "사용가능";
+        testResultNickname.classList.remove('error');
+        e.target.classList.remove('error');
+        e.target.classList.add('clear');
+      } else {
+        testResultNickname.innerHTML = "사용불가";
+        testResultNickname.classList.add('error');
+        e.target.classList.remove('clear');
+        e.target.classList.add('error');
+      }
+    });
+  </script>
 </html>

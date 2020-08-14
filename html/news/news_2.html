@@ -151,15 +151,19 @@
             <li class="nop"><a href="../mun/1_3mun.html">FAQ</a></li>
           </ul>
         </li>
-        <li class="login_btn">
-          <a href="../my_info/login.html"><img src="../../img/login_btn.png" class="login_btn" /></a>
+        <li class="login_btn-area">
+          <a class="login_btn" href="../my_info/login.html">
+            로그인
+          </a>
         </li>
       </ul>
     </div>
   </header>
     <section class="visual_sub" style="background-image: url('../../img/news_main.jpg');">
-            <input type="button" class="start_btn">
-            <h2 class="page_title">뉴스</h2>
+      <div class="start-btn-area">
+        <input type="button" class="start_btn">
+        <h2 class="page_title">뉴스</h2>
+      </div>
 		</section>
         <section class="sub_nao">
            <div class="sub_nav three-item">
@@ -173,7 +177,7 @@
         <main class="news-main">
         <h2 class="trove_intro">업데이트</h2>
 <section id="search_chaing">
-    <form><fieldset class="full-size"><input type="search" /><button type="submit"><i class="fa fa-search"></i></button></fieldset></form>
+    <form><fieldset class="full-size"><input type="search" /><button type="submit"><img class="fa fa-search" src="../../img/search_button.svg" /></button></fieldset></form>
         </section>
         <div class="tabmenu">
         <div class="tabCon" style="display: block;">
@@ -192,20 +196,11 @@
                             <col width="10%">
 							<col width="10%">
 						</colgroup>
-						<thead>
-							<tr>
-								<th class="tab-state" scope="col">상태</th>
-								<th class="tab-title" scope="col">제목</th>
-								<th class="tab-regist" scope="col">등록일</th>
-                <th class="tab-nickname" scope="col">닉네임</th>
-                <th class="tab-view_count" scope="col">조회수</th>
-							</tr>
-						</thead>
 						<tbody>
 							<tr>
                                     <td><img src="../../img/update_icon.png"></td>
 									<td class="tit_contents_td">
-										<a href="">트로브 업데이트 글입니다.</a>
+										<a href="./news_datail_1.html">트로브 업데이트 글입니다.</a>
 									</td>
 									<td>2020.07.10</td>
                                     <td>TROVE</td>
@@ -214,7 +209,7 @@
 								</tr><tr>
                             <td><img src="../../img/update_icon.png"></td>
 									<td class="tit_contents_td">
-										<a href="">트로브 업데이트 글입니다.</a>
+										<a href="./news_datail_1.html">트로브 업데이트 글입니다.</a>
 									</td>
 									<td>2020.07.10</td>
                                     <td>TROVE</td>
@@ -223,7 +218,7 @@
 								</tr><tr>
                             <td><img src="../../img/update_icon.png"></td>
 									<td class="tit_contents_td">
-										<a href="">트로브 업데이트 글입니다.</a>
+										<a href="./news_datail_1.html">트로브 업데이트 글입니다.</a>
 									</td>
 									<td>2020.07.10</td>
                                     <td>TROVE</td>
@@ -233,7 +228,7 @@
 								<tr>
                                     <td><img src="../../img/update_icon.png"></td>
 									<td class="tit_contents_td">
-										<a href=>트로브 업데이트 글입니다.</a>
+										<a href="./news_datail_1.html">트로브 업데이트 글입니다.</a>
 									</td>
 									<td>2020.07.10</td>
                                     <td>TROVE</td>
@@ -243,7 +238,7 @@
                             								<tr>
                                                                 <td><img src="../../img/update_icon.png"></td>
 								<td class="tit_contents_td">
-										<a href=>트로브 업데이트 글입니다.</a>
+                  <a href="./news_datail_1.html">트로브 업데이트 글입니다.</a>
 									</td>
 									<td>2020.07.10</td>
                                     <td>TROVE</td>
@@ -253,7 +248,7 @@
                             								<tr>
                                                                 <td><img src="../../img/update_icon.png"></td>
 																		<td class="tit_contents_td">
-										<a href=>트로브 업데이트 글입니다.</a>
+                                      <a href="./news_datail_1.html">트로브 업데이트 글입니다.</a>
 									</td>
 									<td>2020.07.10</td>
                                     <td>TROVE</td>
@@ -265,27 +260,20 @@
 							
 						</tbody>
 					</table>
-					<div class="boxed-list-wrapper">
-
-						<!-- 하단 페이징 -->
-						<div class="pagination-box box">
-							<div class="pagination">
-							
-								<div class="wrapper">
-									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=1" class="fa fa-angle-double-left paging-btn btn first"></a>
-									
-									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=${page-1}" class="fa fa-angle-left paging-btn btn prev"></a>
-									
-									
-									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=${i}" class="paging-btn btn active">1</a> 
-									
-									
-									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=${page+1}" class="fa fa-angle-right paging-btn btn next"></a>
-									
-									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=${tempEndPage}" class="fa fa-angle-double-right paging-btn btn last"></a>
-								</div>
-							</div>
-						</div>
+          <div class="board-pagination">
+            <div class="board-pagination-wrapper">
+              <a class="pagination-to_prev" href="">
+                <img src="../../img/more_left.svg" />
+              </a>
+              <a class="pagination-page pagination-current" href="">1</a>
+              <a class="pagination-page" href="">2</a>
+              <a class="pagination-page" href="">3</a>
+              <a class="pagination-page" href="">4</a>
+              <a class="pagination-page" href="">5</a>
+              <a class="pagination-to_next" href="">
+                <img src="../../img/more_right.svg" />
+              </a>
+            </div>
           </div>
           
           <div class='mobile-pagination'>

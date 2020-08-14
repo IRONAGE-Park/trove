@@ -1,312 +1,322 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Trove</title>
-    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/info_style.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/adven_style.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/slide_bar_st.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../../css/animate.css">
-    <script src="../../wow.min.js"></script>
-    <script>
-      new WOW().init();
-    </script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=Number.isNaN"></script>
-    <!-- <link rel="stylesheet" href="/lib/w3.css" /> -->
-    <script
-      type="text/javascript"
-      src="http://code.jquery.com/jquery-2.1.4.min.js"
-    ></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  </head>
-  <body>
-    <div class="mobile-sidebar">
-      <div class="mobile-sidebar-header">
-        <img src="../../img/plus.svg" class="sidebar-closebtn" />
-      </div>
-      <div class="accordion arrows">
-        <input type="radio" name="accordion" id="cb1" />
-        <section class="box">
-          <label class="box-title" for="cb1">뉴스</label>
-          <label class="box-close" for="acc-close"></label>
-          <ul class="box-content">
-            <li><a href="../news/news_1.html">공지사항</a></li>
-            <li><a href="../news/news_2.html">업데이트</a></li>
-            <li><a href="../news/news_3.html">이벤트</a></li>
-          </ul>
-        </section>
-        <input type="radio" name="accordion" id="cb2" />
-        <section class="box">
-          <label class="box-title" for="cb2">정보</label>
-          <label class="box-close" for="acc-close"></label>
-          <ul class="box-content">
-            <li><a href="../info/game_info.html">게임정보</a></li>
-            <li><a href="../info/mohum.html">모험</a></li>
-            <li><a href="../info/tamhum.html">탐험</a></li>
-            <li><a href="../info/jejak.html">제작</a></li>
-          </ul>
-        </section>
-        <input type="radio" name="accordion" id="cb3" />
-        <section class="box">
-          <label class="box-title" for="cb3">커뮤니티</label>
-          <label class="box-close" for="acc-close"></label>
-          <ul class="box-content">
-            <li><a href="../board/jayou.html">자유게시판</a></li>
-            <li><a href="../board/info_board.html">정보게시판</a></li>
-            <li><a href="../board/img_board.html">이미지게시판</a></li>
-          </ul>
-        </section>
-        <input type="radio" name="accordion" id="cb4" />
-        <section class="box">
-          <label class="box-title" for="cb4">캐시샵</label>
-          <label class="box-close" for="acc-close"></label>
-          <ul class="box-content">
-            <li><a href="../cash/cash_1.html">패키지</a></li>
-            <li><a href="../cash/cash_2.html">프리미엄</a></li>
-            <li><a href="../cash/cash_3.html">크레딧</a></li>
-            <li><a href="../cash/cash_4.html">포인트샵</a></li>
-          </ul>
-        </section>
-        <input type="radio" name="accordion" id="cb5" />
-        <section class="box">
-          <label class="box-title" for="cb5">다운로드</label>
-          <label class="box-close" for="acc-close"></label>
-          <ul class="box-content">
-            <li><a href="../download/download.html">클라이언트 다운</a></li>
-          </ul>
-        </section>
-        <input type="radio" name="accordion" id="cb6" />
-        <section class="box">
-          <label class="box-title" for="cb6">고객지원</label>
-          <label class="box-close" for="acc-close"></label>
-          <ul class="box-content">
-            <li><a href="../mun/1_1mun.html">1:1 문의</a></li>
-            <li><a href="../mun/1_3mun.html">FAQ</a></li>
-          </ul>
-        </section>
-        <input type="radio" name="accordion" id="acc-close" />
-      </div>
-    </div>
-    <header>
-      <div class="topMenu">
-        <div class="dept-shade"></div>
-        <ul class="menu01">
-          <li class="mobile-sidebtn">
-            <div class="hamburger" id="hamburger-11">
-              <span class="line"></span>
-              <span class="line"></span>
-              <span class="line"></span>
-            </div>
-          </li>
-          <li>
-            <span>
-              <h2>
-                <a href="../index.html">
-                  <img src="../../img/TROVE_LOGO.png" alt="" class="logo_img" />
-                </a>
-              </h2>
-            </span>
-            <ul class="dept01"></ul>
-          </li>
-          <li class="header-nav">
-            <span>뉴스</span>
-            <ul class="dept01" >
-              <li class="nop"><a href="../news/news_1.html">공지사항</a></li>
-              <li class="nop"><a href="../news/news_2.html">업데이트</a></li>
-              <li class="nop"><a href="../news/news_3.html">이벤트</a></li>
-            </ul>
-          </li>
-          <li class="header-nav">
-            <span>정보</span>
-            <ul class="dept01" >
-              <li class="nop"><a href="../info/game_info.html">게임정보</a></li>
-              <li class="nop"><a href="../info/mohum.html">모험</a></li>
-              <li class="nop"><a href="../info/tamhum.html">탐험</a></li>
-              <li class="nop"><a href="../info/jejak.html">제작</a></li>
-            </ul>
-          </li>
-          <li class="header-nav">
-            <span>커뮤니티</span>
-            <ul class="dept01" >
-              <li class="nop"><a href="../board/jayou.html">자유게시판</a></li>
-              <li class="nop"><a href="../board/info_board.html">정보게시판</a></li>
-              <li class="nop"><a href="../board/img_board.html">이미지게시판</a></li>
-            </ul>
-          </li>
-          <li class="header-nav">
-            <span>캐시샵</span>
-            <ul class="dept01" >
-              <li class="nop"><a href="../cash/cash_1.html">패키지</a></li>
-              <li class="nop"><a href="../cash/cash_2.html">프리미엄</a></li>
-              <li class="nop"><a href="../cash/cash_3.html">크레딧</a></li>
-              <li class="nop"><a href="../cash/cash_4.html">포인트샵</a></li>
-            </ul>
-          </li>
-          <li class="header-nav">
-            <span>다운로드</span>
-            <ul class="dept01" >
-              <li class="nop"><a href="../download/download.html">클라이언트 다운</a></li>
-            </ul>
-          </li>
-          <li class="header-nav">
-            <span>고객지원</span>
-            <ul class="dept01" >
-              <li class="nop"><a href="../mun/1_1mun.html">1:1 문의</a></li>
-              <li class="nop"><a href="../mun/1_3mun.html">FAQ</a></li>
-            </ul>
-          </li>
-          <li class="login_btn">
-            <a href="../my_info/login.html"><img src="../../img/login_btn.png" class="login_btn" /></a>
-          </li>
-        </ul>
-      </div>
-    </header>
-    <section
-      class="visual_sub"
-      style="background-image: url('../../img/info_banner.jpg');"
-    >
-      <input type="button" class="start_btn" />
-      <h2 class="page_title">정보</h2>
-    </section>
-    <section class="sub_nao">
-      <div class="sub_nav four-item">
-        <a href="./game_info.html" class="g_info">게임정보</a>
-        <a href="./mohum.html" class="g_info">모험</a>
-        <a href="./tamhum.html" class="g_info_selec">탐험</a>
-        <a href="./jejak.html" class="g_info">제작</a>
-      </div>
-      <hr color="#cccccc" />
-    </section>
-        <h2 class="trove_intro">탐험</h2>
-    <div class="tamhum-content">
-        <section id="game_infoo">
-        <div class="gamu_infom">
-            <div class="aaa2 wow bounceInUp" data-wow-duration="1s">
-            <img src="../../img/tamhum_1.png" alt="" />
-            </div>
 
-            <div class="gamu-text wow bounceInUp" data-wow-duration="1s">
-            <h2 class="gamu_info">타이틀 텍스트 입니다.</h2>
-            <h5 class="gamu_content">
-                텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트
-                텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트
-                텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트
-                텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트
-                텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트
-                텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트
-                텍스트
-            </h5>
-            </div>
-        </div>
-        </section>
-        <section id="tamhum_slider">
-            <div id="item-swiper-container" class="swiper-container">
-              <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="mySlide-area" style="background-image: url('../../img/main_banner.png')"></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="mySlide-area" style="background-image: url('../../img/banner_test_1.png')"></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="mySlide-area" style="background-image: url('../../img/info_banner.jpg')"></div>
-                    </div>
-                </div>
-                <div id="item-swiper-pagination" class="swiper-pagination"></div>
-            </div>
-        </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trove</title>
+  <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/info_style.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/adven_style.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/slide_bar_st.css" />
+  <link rel="stylesheet" href="../../css/animate.css">
+
+  <script src="../../wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=Number.isNaN"></script>
+  <!-- <link rel="stylesheet" href="/lib/w3.css" /> -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!-- ! slick -->
+  <link rel="stylesheet" href="../../css/slider.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+  <div class="mobile-sidebar">
+    <div class="mobile-sidebar-header">
+      <img src="../../img/plus.svg" class="sidebar-closebtn" />
     </div>
-    <footer class="footer">
-      <ul>
-        <li class="footer_nav_2">
-          <span>(주)TROVE&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호: 123-456-7890&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;전화: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;팩스: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;주소: 서울 중구 세종대로 110 &nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;E-mail: trove@trove.co.kr</span>
+    <div class="accordion arrows">
+      <input type="radio" name="accordion" id="cb1" />
+      <section class="box">
+        <label class="box-title" for="cb1">뉴스</label>
+        <label class="box-close" for="acc-close"></label>
+        <ul class="box-content">
+          <li><a href="../news/news_1.html">공지사항</a></li>
+          <li><a href="../news/news_2.html">업데이트</a></li>
+          <li><a href="../news/news_3.html">이벤트</a></li>
+        </ul>
+      </section>
+      <input type="radio" name="accordion" id="cb2" />
+      <section class="box">
+        <label class="box-title" for="cb2">정보</label>
+        <label class="box-close" for="acc-close"></label>
+        <ul class="box-content">
+          <li><a href="../info/game_info.html">게임정보</a></li>
+          <li><a href="../info/mohum.html">모험</a></li>
+          <li><a href="../info/tamhum.html">탐험</a></li>
+          <li><a href="../info/jejak.html">제작</a></li>
+        </ul>
+      </section>
+      <input type="radio" name="accordion" id="cb3" />
+      <section class="box">
+        <label class="box-title" for="cb3">커뮤니티</label>
+        <label class="box-close" for="acc-close"></label>
+        <ul class="box-content">
+          <li><a href="../board/jayou.html">자유게시판</a></li>
+          <li><a href="../board/info_board.html">정보게시판</a></li>
+          <li><a href="../board/img_board.html">이미지게시판</a></li>
+        </ul>
+      </section>
+      <input type="radio" name="accordion" id="cb4" />
+      <section class="box">
+        <label class="box-title" for="cb4">캐시샵</label>
+        <label class="box-close" for="acc-close"></label>
+        <ul class="box-content">
+          <li><a href="../cash/cash_1.html">패키지</a></li>
+          <li><a href="../cash/cash_2.html">프리미엄</a></li>
+          <li><a href="../cash/cash_3.html">크레딧</a></li>
+          <li><a href="../cash/cash_4.html">포인트샵</a></li>
+        </ul>
+      </section>
+      <input type="radio" name="accordion" id="cb5" />
+      <section class="box">
+        <label class="box-title" for="cb5">다운로드</label>
+        <label class="box-close" for="acc-close"></label>
+        <ul class="box-content">
+          <li><a href="../download/download.html">클라이언트 다운</a></li>
+        </ul>
+      </section>
+      <input type="radio" name="accordion" id="cb6" />
+      <section class="box">
+        <label class="box-title" for="cb6">고객지원</label>
+        <label class="box-close" for="acc-close"></label>
+        <ul class="box-content">
+          <li><a href="../mun/1_1mun.html">1:1 문의</a></li>
+          <li><a href="../mun/1_3mun.html">FAQ</a></li>
+        </ul>
+      </section>
+      <input type="radio" name="accordion" id="acc-close" />
+    </div>
+  </div>
+  <header>
+    <div class="topMenu">
+      <div class="dept-shade"></div>
+      <ul class="menu01">
+        <li class="mobile-sidebtn">
+          <div class="hamburger" id="hamburger-11">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
         </li>
-        <hr class="footerline_2" />
-        <li class="footer_nav_2">
-          <span>통신판매업 신고번호: 제2020-서울-1234호&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp; ⓒ 2020 TROVE KOREA Corporation</span>
-          <span> ALL Rights Reserverd.</span>
+        <li>
+          <span>
+            <h2>
+              <a href="../index.html">
+                <img src="../../img/TROVE_LOGO.png" alt="" class="logo_img" />
+              </a>
+            </h2>
+          </span>
+          <ul class="dept01"></ul>
+        </li>
+        <li class="header-nav">
+          <span>뉴스</span>
+          <ul class="dept01" >
+            <li class="nop"><a href="../news/news_1.html">공지사항</a></li>
+            <li class="nop"><a href="../news/news_2.html">업데이트</a></li>
+            <li class="nop"><a href="../news/news_3.html">이벤트</a></li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>정보</span>
+          <ul class="dept01" >
+            <li class="nop"><a href="../info/game_info.html">게임정보</a></li>
+            <li class="nop"><a href="../info/mohum.html">모험</a></li>
+            <li class="nop"><a href="../info/tamhum.html">탐험</a></li>
+            <li class="nop"><a href="../info/jejak.html">제작</a></li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>커뮤니티</span>
+          <ul class="dept01" >
+            <li class="nop"><a href="../board/jayou.html">자유게시판</a></li>
+            <li class="nop"><a href="../board/info_board.html">정보게시판</a></li>
+            <li class="nop"><a href="../board/img_board.html">이미지게시판</a></li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>캐시샵</span>
+          <ul class="dept01" >
+            <li class="nop"><a href="../cash/cash_1.html">패키지</a></li>
+            <li class="nop"><a href="../cash/cash_2.html">프리미엄</a></li>
+            <li class="nop"><a href="../cash/cash_3.html">크레딧</a></li>
+            <li class="nop"><a href="../cash/cash_4.html">포인트샵</a></li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>다운로드</span>
+          <ul class="dept01" >
+            <li class="nop"><a href="../download/download.html">클라이언트 다운</a></li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>고객지원</span>
+          <ul class="dept01" >
+            <li class="nop"><a href="../mun/1_1mun.html">1:1 문의</a></li>
+            <li class="nop"><a href="../mun/1_3mun.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li class="login_btn-area">
+          <a class="login_btn" href="../my_info/login.html">
+            로그인
+          </a>
         </li>
       </ul>
-      <hr class="footerline" />
-      <div class="footer-bottom">
-        <a href="../mun/1_1mun.html" class="footer_nav">고객센터</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="../data_contact/eyong.html" class="footer_nav">이용약관</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="../data_contact/jungbo.html" class="footer_nav">개인정보처리방침</a>
-      </div>
-    </footer>
-    <div class="mobile-move_top">
-      <img src="../../img/move_top.svg" />
     </div>
-  </body>
-  <script>
-    var mobileMoveTop = document.querySelector(".mobile-move_top")
-    window.addEventListener("scroll", function (e) {
-      var scrollpos = window.scrollY || window.pageYOffset;
-      if (scrollpos < 200) { mobileMoveTop.classList.remove('visible') }
-      else { mobileMoveTop.classList.add('visible') }
-    })
-    mobileMoveTop.addEventListener('click', function (e) {
-      window.scrollTo({top:0, left:0, behavior:'smooth'});
-    })
-    
-  
+  </header>
+  <section class="visual_sub" style="background-image: url('../../img/info_banner.jpg');">
+    <div class="start-btn-area">
+      <input type="button" class="start_btn" />
+      <h2 class="page_title">정보</h2>
+    </div>
+  </section>
+  <section class="sub_nao">
+    <div class="sub_nav four-item">
+      <a href="./game_info.html" class="g_info">게임정보</a>
+      <a href="./mohum.html" class="g_info">모험</a>
+      <a href="./tamhum.html" class="g_info_selec">탐험</a>
+      <a href="./jejak.html" class="g_info">제작</a>
+    </div>
+    <hr color="#cccccc" />
+  </section>
+  <h2 class="trove_intro">탐험</h2>
+  <div class="tamhum-content">
+    <section id="game_infoo">
+      <div class="gamu_infom">
+        <div class="aaa2 wow bounceInUp" data-wow-duration="1s">
+          <img src="../../img/tamhum_1.png" alt="" />
+        </div>
+
+        <div class="gamu-text wow bounceInUp" data-wow-duration="1s">
+          <h2 class="gamu_info">타이틀 텍스트 입니다.</h2>
+          <h5 class="gamu_content">
+            텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트
+            텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트
+            텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트
+            텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트
+            텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트
+            텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트
+            텍스트
+          </h5>
+        </div>
+      </div>
+    </section>
+    <section id="tamhum_slider" style='position: relative;'>
+      <span class="prev" id='prev_arrow'><img src="../../img/slider/prev_arrow.png" alt="" class='arrow-style'></span>
+      <span class="next" id='next_arrow'><img src="../../img/slider/next_arrow.png" alt="" class='arrow-style'></span>
+      <div class="slider_items">
+        <img src="../../img/slider/slider_image1.png" alt="" class="slider-image ">
+        <img src="../../img/slider/slider_image2.png" alt="" class="slider-image ">
+        <img src="../../img/slider/slider_image3.png" alt="" class="slider-image ">
+        <img src="../../img/slider/slider_image4.png" alt="" class="slider-image ">
+        <img src="../../img/slider/slider_image2.png" alt="" class="slider-image ">
+      </div>
+    </section>
+    <script>
+      $(".slider_items").slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+
+        prevArrow: $('#prev_arrow'),
+        nextArrow: $('#next_arrow'),
+        responsive: [
+          {
+            breakpoint: 1025,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 769,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 451,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      })
+    </script>
+  </div>
+  <footer class="footer">
+    <ul>
+      <li class="footer_nav_2">
+        <span>(주)TROVE&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호: 123-456-7890&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp;전화: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp;팩스: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp;주소: 서울 중구 세종대로 110 &nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp;E-mail: trove@trove.co.kr</span>
+      </li>
+      <hr class="footerline_2" />
+      <li class="footer_nav_2">
+        <span>통신판매업 신고번호: 제2020-서울-1234호&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp; ⓒ 2020 TROVE KOREA Corporation</span>
+        <span> ALL Rights Reserverd.</span>
+      </li>
+    </ul>
+    <hr class="footerline" />
+    <div class="footer-bottom">
+      <a href="../mun/1_1mun.html" class="footer_nav">고객센터</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../data_contact/eyong.html" class="footer_nav">이용약관</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../data_contact/jungbo.html" class="footer_nav">개인정보처리방침</a>
+    </div>
+  </footer>
+  <div class="mobile-move_top">
+    <img src="../../img/move_top.svg" />
+  </div>
+</body>
+<script>
+  var mobileMoveTop = document.querySelector(".mobile-move_top")
+  window.addEventListener("scroll", function (e) {
+    var scrollpos = window.scrollY || window.pageYOffset;
+    if (scrollpos < 200) { mobileMoveTop.classList.remove('visible') }
+    else { mobileMoveTop.classList.add('visible') }
+  })
+  mobileMoveTop.addEventListener('click', function (e) {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  })
+
+
   document.querySelector('.hamburger').addEventListener('click', function (e) {
-        $("body").toggleClass("open-sidebar");
-        $("html").toggleClass("hidden")
-      });
-      $(".sidebar-closebtn").click(function () {
-        $("body").removeClass("open-sidebar");
-        $("html").removeClass("hidden")
-      });
+    $("body").toggleClass("open-sidebar");
+    $("html").toggleClass("hidden")
+  });
+  $(".sidebar-closebtn").click(function () {
+    $("body").removeClass("open-sidebar");
+    $("html").removeClass("hidden")
+  });
 
 
 
 
-    $(".tab_menu_btn").on("click", function () {
-      //버튼 색 제거,추가
-      $(".tab_menu_btn").removeClass("on");
-      $(this).addClass("on");
+  $(".tab_menu_btn").on("click", function () {
+    //버튼 색 제거,추가
+    $(".tab_menu_btn").removeClass("on");
+    $(this).addClass("on");
 
-      //컨텐츠 제거 후 인덱스에 맞는 컨텐츠 노출
-      var idx = $(".tab_menu_btn").index(this);
+    //컨텐츠 제거 후 인덱스에 맞는 컨텐츠 노출
+    var idx = $(".tab_menu_btn").index(this);
 
-      $(".tab_box").hide();
-      $(".tab_box").eq(idx).show();
-    });
-    
-    const itemBannerSwiper = new Swiper('#item-swiper-container', {
-      // Optional parameters
-      direction: 'horizontal',
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
+    $(".tab_box").hide();
+    $(".tab_box").eq(idx).show();
+  });
+</script>
 
-      // If we need pagination
-      pagination: {
-        el: '#item-swiper-pagination',
-      },
-    })
-  </script>
-  </script>
 </html>

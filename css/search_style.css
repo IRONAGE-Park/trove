@@ -1,5 +1,6 @@
 section#search_chaing {
   padding-bottom: 10px;
+  
 }
 fieldset {
   position: relative;
@@ -13,14 +14,13 @@ fieldset {
 }
 form {
   margin-top: 50px;
-  padding: 0 10px;
   height: 50px;
   text-align: right;
 }
 fieldset input,
 fieldset button {
   position: relative;
-  width: calc(100% - 50px);
+  width: 100%;
   height: 100%;
   display: inline-block;
   border: 1px solid #dbdbdb;
@@ -37,19 +37,6 @@ input:focus {
   outline: 0 none;
 }
 
-input:focus + button {
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-
-input:focus + button .fa {
-  -webkit-transform: translate(0px, 0);
-  -ms-transform: translate(0px, 0);
-  transform: translate(0px, 0);
-  color: #29abe2;
-}
-
 fieldset button {
   z-index: 1;
   width: 50px;
@@ -57,24 +44,15 @@ fieldset button {
   border-left: 0px;
   background: #ffffff;
   cursor: pointer;
-  -webkit-transform: translate(-50px, 0);
-  -ms-transform: translate(-50px, 0);
-  transform: translate(-50px, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  position: absolute;
+  right: 0;
 }
 
 .fa-search {
+  width: 30px; height: 30px;
   font-size: 1.4rem;
   color: #000000;
   z-index: 3;
-  top: 25%;
-  -webkit-transform: translate(-250px, 0);
-  -ms-transform: translate(-250px, 0);
-  transform: translate(-250px, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
 
@@ -85,35 +63,27 @@ fieldset button {
   fieldset.full-size {
     width: 100%;
   }
-  .fa-search {
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-  fieldset button {
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-
   input {
     padding: 0 10px;
   }
   
   form {
     margin-top: 20px;
-    padding: 0 10px;
     text-align: right;
+  }
+  .fa-search {
+    width: 25px; height: 25px;
   }
 }
 @media screen and (max-width: 450px) {
   form {
     height: 32px;
   }
-  fieldset input {
-    width: calc(100% - 32px);
-  }
   fieldset button {
     width: 32px;
+  }
+  
+  .fa-search {
+    width: 20px; height: 20px;
   }
 }

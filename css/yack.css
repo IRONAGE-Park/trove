@@ -1,26 +1,26 @@
 .yack_title {
   margin: 0 auto;
-  padding: 0 10px;
-  max-width: 1374px;
-  font-family: NotoSansKR;
+  padding: 0 20px;
+  max-width: 1280px;
   font-size: 2.667rem;
   text-align: left;
   color: #333333;
   margin-top: 122px;
+  box-sizing: content-box;
 }
 .Y_sly {
-  padding: 0 10px;
   margin: 0 auto;
-  max-width: 1374px;
+  max-width: 1280px;
   height: 2px;
   background-color: #777777;
   margin-top: 40px;
 }
 .eyong {
-  padding: 0 10px;
+  padding: 0 20px;
   margin: 0 auto;
+  box-sizing: content-box;
   margin-top: 60px;
-  max-width: 1374px;
+  max-width: 1280px;
   padding-bottom: 100px;
   background-color: #ffffff;
 }

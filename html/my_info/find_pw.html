@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trove</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/info_style.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/p_info.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/login.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  </head>
+  <div class="modal_form">
+    <div class="inner_login">
+      <div class="login_tistory">
+        <h5 class="nic_title">비밀번호 찾기</h5>
+        <div class="nick_byun">
+          <div class="find-input-area">
+            <h4 class="hyun_name">아이디</h4>
+            <div class="nick_byun_input">
+              <input type="text" class="byunnick" />
+            </div>
+          </div>
+          <div class="find-input-area">
+            <h4 class="hyun_name">이름</h4>
+            <div class="nick_byun_input">
+              <input type="text" class="byunnick" />
+            </div>
+          </div>
+          <div class="find-input-area">
+            <h4 class="hyun_numb">휴대폰 번호</h4>
+            <div class="nick_byun_input">
+              <input type="text" class="input_num" />
+              <input
+                type="submit"
+                id="requestNumber"
+                class="req_num"
+                value="인증번호 받기"
+                tabindex="0"
+              />
+            </div>
+          </div>
+          <div class="find-input-area">
+            <h4 class="hyun_numb"></h4>
+            <div class="nick_byun_input">
+              <input id="inputRequestNumber" type="text" class="input_sms" />
+              <span id="timer" class="time_text"></span>
+            </div>
+          </div>
+          <button type="submit" class="btn_OK_2" onclick="location.href = './result_pw.html'">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function $ComTimer() {
+      //prototype extend
+    }
+    $ComTimer.prototype = {
+      comSecond: "",
+      timer: "",
+      domId: "",
+      fnTimer: function () {
+        var m = Math.floor(this.comSecond / 60) + ": " + (this.comSecond % 60); // 남은 시간 계산
+        this.comSecond--; // 1초씩 감소
+        this.domId.innerText = m;
+        if (this.comSecond < 0) {
+          // 시간이 종료 되었으면..
+          clearInterval(this.timer); // 타이머 해제
+          alert("인증시간이 초과하였습니다. 다시 인증해주시기 바랍니다.");
+        }
+      },
+      fnStop: function () {
+        clearInterval(this.timer);
+      },
+    };
+
+    const AuthTimer = new $ComTimer();
+    document
+      .getElementById("requestNumber")
+      .addEventListener("click", function (e) {
+        if (AuthTimer.timer) AuthTimer.fnStop();
+        AuthTimer.comSecond = 180;
+        AuthTimer.timer = setInterval(function () {
+          AuthTimer.fnTimer();
+        }, 1000);
+        AuthTimer.domId = document.getElementById("timer");
+      });
+
+    document
+      .getElementById("inputRequestNumber")
+      .addEventListener("change", function (e) {
+        if (e.target.value === "123456") {
+          e.target.classList.remove("discord");
+          e.target.classList.add("coincide");
+        } else {
+          e.target.classList.remove("coincide");
+          e.target.classList.add("discord");
+        }
+      });
+  </script>
+</html>

@@ -1,505 +1,560 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Trove</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-    <link rel="stylesheet" type="text/css" href="../css/slide_bar_st.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
-    
-    <link rel="stylesheet" href="../css/animate.css">
-    <script src="../wow.min.js"></script>
-    <script>
-      new WOW().init();
-    </script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=Number.isNaN"></script>
-    <script
-      type="text/javascript"
-      src="http://code.jquery.com/jquery-2.1.4.min.js"
-    ></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trove</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  <link rel="stylesheet" type="text/css" href="../css/slide_bar_st.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="../css/animate.css">
+  <script src="../wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=Number.isNaN"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  </head>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <body>
-    <div class="mobile-sidebar">
-      <div class="mobile-sidebar-header">
-        <img src="../img/plus.svg" class="sidebar-closebtn" />
-      </div>
-      <div class="accordion arrows">
-        <input type="radio" name="accordion" id="cb1" />
-        <section class="box">
-          <label class="box-title" for="cb1">뉴스</label>
-          <label class="box-close" for="acc-close"></label>
-          <ul class="box-content">
-            <li><a href="./news/news_1.html">공지사항</a></li>
-            <li><a href="./news/news_2.html">업데이트</a></li>
-            <li><a href="./news/news_3.html">이벤트</a></li>
-          </ul>
-        </section>
-        <input type="radio" name="accordion" id="cb2" />
-        <section class="box">
-          <label class="box-title" for="cb2">정보</label>
-          <label class="box-close" for="acc-close"></label>
-          <ul class="box-content">
-            <li><a href="./info/game_info.html">게임정보</a></li>
-            <li><a href="./info/mohum.html">모험</a></li>
-            <li><a href="./info/tamhum.html">탐험</a></li>
-            <li><a href="./info/jejak.html">제작</a></li>
-          </ul>
-        </section>
-        <input type="radio" name="accordion" id="cb3" />
-        <section class="box">
-          <label class="box-title" for="cb3">커뮤니티</label>
-          <label class="box-close" for="acc-close"></label>
-          <ul class="box-content">
-            <li><a href="./board/jayou.html">자유게시판</a></li>
-            <li><a href="./board/info_board.html">정보게시판</a></li>
-            <li><a href="./board/img_board.html">이미지게시판</a></li>
-          </ul>
-        </section>
-        <input type="radio" name="accordion" id="cb4" />
-        <section class="box">
-          <label class="box-title" for="cb4">캐시샵</label>
-          <label class="box-close" for="acc-close"></label>
-          <ul class="box-content">
-            <li><a href="./cash/cash_1.html">패키지</a></li>
-            <li><a href="./cash/cash_2.html">프리미엄</a></li>
-            <li><a href="./cash/cash_3.html">크레딧</a></li>
-            <li><a href="./cash/cash_4.html">포인트샵</a></li>
-          </ul>
-        </section>
-        <input type="radio" name="accordion" id="cb5" />
-        <section class="box">
-          <label class="box-title" for="cb5">다운로드</label>
-          <label class="box-close" for="acc-close"></label>
-          <ul class="box-content">
-            <li><a href="./download/download.html">클라이언트 다운</a></li>
-          </ul>
-        </section>
-        <input type="radio" name="accordion" id="cb6" />
-        <section class="box">
-          <label class="box-title" for="cb6">고객지원</label>
-          <label class="box-close" for="acc-close"></label>
-          <ul class="box-content">
-            <li><a href="./mun/1_1mun.html">1:1 문의</a></li>
-            <li><a href="./mun/1_3mun.html">FAQ</a></li>
-          </ul>
-        </section>
-        <input type="radio" name="accordion" id="acc-close" />
-      </div>
+  <!-- ! slick -->
+  <link rel="stylesheet" href="../css/index_slider.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+  <div class="mobile-sidebar">
+    <div class="mobile-sidebar-header">
+      <img src="../img/plus.svg" class="sidebar-closebtn" />
     </div>
-    <header>
-      <div class="topMenu">
-        <div class="dept-shade"></div>
-        <ul class="menu01">
-          <li class="mobile-sidebtn">
-            <div class="hamburger" id="hamburger-11">
-              <span class="line"></span>
-              <span class="line"></span>
-              <span class="line"></span>
-            </div>
-          </li>
-          <li>
-            <span>
-              <h2>
-                <a href="./index.html">
-                  <img src="../img/TROVE_LOGO.png" alt="" class="logo_img" />
-                </a>
-              </h2>
-            </span>
-            <ul class="dept01"></ul>
-          </li>
-          <li class="header-nav">
-            <span>뉴스</span>
-            <ul class="dept01" >
-              <li class="nop"><a href="./news/news_1.html">공지사항</a></li>
-              <li class="nop"><a href="./news/news_2.html">업데이트</a></li>
-              <li class="nop"><a href="./news/news_3.html">이벤트</a></li>
-            </ul>
-          </li>
-          <li class="header-nav">
-            <span>정보</span>
-            <ul class="dept01" >
-              <li class="nop"><a href="./info/game_info.html">게임정보</a></li>
-              <li class="nop"><a href="./info/mohum.html">모험</a></li>
-              <li class="nop"><a href="./info/tamhum.html">탐험</a></li>
-              <li class="nop"><a href="./info/jejak.html">제작</a></li>
-            </ul>
-          </li>
-          <li class="header-nav">
-            <span>커뮤니티</span>
-            <ul class="dept01" >
-              <li class="nop"><a href="./board/jayou.html">자유게시판</a></li>
-              <li class="nop"><a href="./board/info_board.html">정보게시판</a></li>
-              <li class="nop"><a href="./board/img_board.html">이미지게시판</a></li>
-            </ul>
-          </li>
-          <li class="header-nav">
-            <span>캐시샵</span>
-            <ul class="dept01" >
-              <li class="nop"><a href="./cash/cash_1.html">패키지</a></li>
-              <li class="nop"><a href="./cash/cash_2.html">프리미엄</a></li>
-              <li class="nop"><a href="./cash/cash_3.html">크레딧</a></li>
-              <li class="nop"><a href="./cash/cash_4.html">포인트샵</a></li>
-            </ul>
-          </li>
-          <li class="header-nav">
-            <span>다운로드</span>
-            <ul class="dept01" >
-              <li class="nop"><a href="./download/download.html">클라이언트 다운</a></li>
-            </ul>
-          </li>
-          <li class="header-nav">
-            <span>고객지원</span>
-            <ul class="dept01" >
-              <li class="nop"><a href="./mun/1_1mun.html">1:1 문의</a></li>
-              <li class="nop"><a href="./mun/1_3mun.html">FAQ</a></li>
-            </ul>
-          </li>
-          <li class="login_btn-area">
-            <a class="login_btn" href="./my_info/login.html">
-              로그인
-            </a>
-          </li>
+    <div class="accordion arrows">
+      <input type="radio" name="accordion" id="cb1" />
+      <section class="box">
+        <label class="box-title" for="cb1">뉴스</label>
+        <label class="box-close" for="acc-close"></label>
+        <ul class="box-content">
+          <li><a href="./news/news_1.html">공지사항</a></li>
+          <li><a href="./news/news_2.html">업데이트</a></li>
+          <li><a href="./news/news_3.html">이벤트</a></li>
         </ul>
-      </div>
-    </header>
-    <div class="wrap_content">
-      <input type="button" class="start_btn">
-      <div id="mainBanner-swiper-container" class="swiper-container">
-        <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="mySlide-area" style="background-image: url('../img/main_banner1.png')"></div>
-              </div>
-              <div class="swiper-slide">
-                <div class="mySlide-area" style="background-image: url('../img/banner_test_1.png')"></div>
-              </div>
-              <div class="swiper-slide">
-                <div class="mySlide-area" style="background-image: url('../img/info_banner.jpg')"></div>
-              </div>
+      </section>
+      <input type="radio" name="accordion" id="cb2" />
+      <section class="box">
+        <label class="box-title" for="cb2">정보</label>
+        <label class="box-close" for="acc-close"></label>
+        <ul class="box-content">
+          <li><a href="./info/game_info.html">게임정보</a></li>
+          <li><a href="./info/mohum.html">모험</a></li>
+          <li><a href="./info/tamhum.html">탐험</a></li>
+          <li><a href="./info/jejak.html">제작</a></li>
+        </ul>
+      </section>
+      <input type="radio" name="accordion" id="cb3" />
+      <section class="box">
+        <label class="box-title" for="cb3">커뮤니티</label>
+        <label class="box-close" for="acc-close"></label>
+        <ul class="box-content">
+          <li><a href="./board/jayou.html">자유게시판</a></li>
+          <li><a href="./board/info_board.html">정보게시판</a></li>
+          <li><a href="./board/img_board.html">이미지게시판</a></li>
+        </ul>
+      </section>
+      <input type="radio" name="accordion" id="cb4" />
+      <section class="box">
+        <label class="box-title" for="cb4">캐시샵</label>
+        <label class="box-close" for="acc-close"></label>
+        <ul class="box-content">
+          <li><a href="./cash/cash_1.html">패키지</a></li>
+          <li><a href="./cash/cash_2.html">프리미엄</a></li>
+          <li><a href="./cash/cash_3.html">크레딧</a></li>
+          <li><a href="./cash/cash_4.html">포인트샵</a></li>
+        </ul>
+      </section>
+      <input type="radio" name="accordion" id="cb5" />
+      <section class="box">
+        <label class="box-title" for="cb5">다운로드</label>
+        <label class="box-close" for="acc-close"></label>
+        <ul class="box-content">
+          <li><a href="./download/download.html">클라이언트 다운</a></li>
+        </ul>
+      </section>
+      <input type="radio" name="accordion" id="cb6" />
+      <section class="box">
+        <label class="box-title" for="cb6">고객지원</label>
+        <label class="box-close" for="acc-close"></label>
+        <ul class="box-content">
+          <li><a href="./mun/1_1mun.html">1:1 문의</a></li>
+          <li><a href="./mun/1_3mun.html">FAQ</a></li>
+        </ul>
+      </section>
+      <input type="radio" name="accordion" id="acc-close" />
+    </div>
+  </div>
+  <header>
+    <div class="topMenu">
+      <div class="dept-shade"></div>
+      <ul class="menu01">
+        <li class="mobile-sidebtn">
+          <div class="hamburger" id="hamburger-11">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
           </div>
-          <div id="mainBanner-swiper-pagination" class="swiper-pagination"></div>
-          <div class="swiper-navigation">
-            <div id="mainBanner-swiper-button-prev" class="swiper-button-prev"></div>
-            <div id="mainBanner-swiper-button-next" class="swiper-button-next"></div>
-          </div>
-      </div>
-      <section class="info-content">
-        <h2 class="sosic_intro">
-          트로브 소식
-          <a href="./news/news_1.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-              <g id="그룹_34" data-name="그룹 34" transform="translate(-1568 -3510)">
-                <g id="사각형_147" data-name="사각형 147" transform="translate(1568 3510)" fill="none" stroke="#aaa" stroke-width="1">
-                  <rect width="32" height="32" stroke="none"/>
-                  <rect x="0.5" y="0.5" width="31" height="31" fill="none"/>
-                </g>
-                <line id="선_21" data-name="선 21" x2="20" transform="translate(1574 3526)" fill="none" stroke="#777" stroke-width="1"/>
-                <line id="선_22" data-name="선 22" x2="20" transform="translate(1584 3516) rotate(90)" fill="none" stroke="#777" stroke-width="1"/>
-              </g>
-            </svg>      
-          </a>    
-        </h2>
-        <section class="sosick wow fadeInUp" data-wow-duration="1s">
-          <div class="sosick_div">
-            <div class="aaa">
-              <img src="../img/event_440ban.png" alt="" />
-            </div>
-
-            <div class="news">
-              <article class="artic">
-                <li class="cont_text">
-                  <h5 class="itstitle">
-                    <img src="../img/news_2.png" class="news_icon" />
-                    20.6월 정기점검 공지
-                  </h5>
-                  20년 6월 20일 정기점검 있습니다.....
-                </li>
-                <hr class="woowha" />
-                <li class="cont_text">
-                  <h5 class="itstitle">
-                    <img src="../img/news_1.png" class="news_icon" />20.6월
-                    정기점검 공지
-                  </h5>
-                  20년 6월 20일 정기점검 있습니다.....
-                </li>
-                <hr class="woowha" />
-                <li class="cont_text">
-                  <h5 class="itstitle">
-                    <img src="../img/news_1.png" class="news_icon" />20.6월
-                    정기점검 공지
-                  </h5>
-                  20년 6월 20일 정기점검 있습니다.....
-                </li>
-              </article>
-            </div>
-          </div>
-        </section>
-        <h2 class="sosic_intro">
-          캐시샵
-          <a href="./cash/cash_1.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-              <g id="그룹_34" data-name="그룹 34" transform="translate(-1568 -3510)">
-                <g id="사각형_147" data-name="사각형 147" transform="translate(1568 3510)" fill="none" stroke="#aaa" stroke-width="1">
-                  <rect width="32" height="32" stroke="none"/>
-                  <rect x="0.5" y="0.5" width="31" height="31" fill="none"/>
-                </g>
-                <line id="선_21" data-name="선 21" x2="20" transform="translate(1574 3526)" fill="none" stroke="#777" stroke-width="1"/>
-                <line id="선_22" data-name="선 22" x2="20" transform="translate(1584 3516) rotate(90)" fill="none" stroke="#777" stroke-width="1"/>
-              </g>
-            </svg>
-          </a>
-        </h2>
-        <section class="cash">
-          <div class="topic">
-            <div id="item-swiper-container" class="swiper-container">
-              <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="cash-swiper-item">
-                        <div class="cash-swiper-image"><img src="../img/main_banner_item1.png" /></div>
-                        <p class="cash-swiper-text">Summer Pinata</p>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="cash-swiper-item">
-                        <div class="cash-swiper-image"><img src="../img/main_banner_item2.png" /></div>
-                        <p class="cash-swiper-text">Summer Pinata</p>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="cash-swiper-item">
-                        <div class="cash-swiper-image"><img src="../img/main_banner_item3.png" /></div>
-                        <p class="cash-swiper-text">Summer Pinata</p>
-                      </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-        </section>
-        <section class="commu">
-          <div class="commu-area">
-            <div class="com-banner-area" style="background-image: url('../img/commu_bg.png');">
-              <h2 class="com_intro">
-                커뮤니티
-                <a href="./board/info_board.html">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                    <g id="그룹_34" data-name="그룹 34" transform="translate(-1568 -3510)">
-                      <g id="사각형_147" data-name="사각형 147" transform="translate(1568 3510)" fill="none" stroke="#aaa" stroke-width="1">
-                        <rect width="32" height="32" stroke="none"/>
-                        <rect x="0.5" y="0.5" width="31" height="31" fill="none"/>
-                      </g>
-                      <line id="선_21" data-name="선 21" x2="20" transform="translate(1574 3526)" fill="none" stroke="#777" stroke-width="1"/>
-                      <line id="선_22" data-name="선 22" x2="20" transform="translate(1584 3516) rotate(90)" fill="none" stroke="#777" stroke-width="1"/>
-                    </g>
-                  </svg>      
-                </a>    
-              </h2>
-            </div>
-            <div class="com-box-area">
-              <div class="com_box  wow fadeInUp" data-wow-duration="1s">
-                <h4 class="bd_tag">[자유게시판]</h4>
-                <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
-                <hr class="com_line" />
-                <h5 class="cont_com">
-                    트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.트로브 완전 좋은 팁 알려준다.
-                </h5>
-                <div class="com_box_bottom">
-                  <h4 class="nickname">트로브</h4>
-                  <h4 class="made_day">2020.00.00</h4>
-                </div>
-              </div>
-              <div class="com_box  wow fadeInUp" data-wow-duration="1s">
-                <h4 class="bd_tag">[자유게시판]</h4>
-                <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
-                <hr class="com_line" />
-                <h5 class="cont_com">
-                    트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.트로브 완전 좋은 팁 알려준다.
-                </h5>
-                <div class="com_box_bottom">
-                  <h4 class="nickname">트로브</h4>
-                  <h4 class="made_day">2020.00.00</h4>
-                </div>
-              </div>
-              <div class="com_box  wow fadeInUp" data-wow-duration="1s">
-                <h4 class="bd_tag">[자유게시판]</h4>
-                <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
-                <hr class="com_line" />
-                <h5 class="cont_com">
-                    트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.트로브 완전 좋은 팁 알려준다.
-                </h5>
-                <div class="com_box_bottom">
-                  <h4 class="nickname">트로브</h4>
-                  <h4 class="made_day">2020.00.00</h4>
-                </div>
-              </div>
-              <div class="com_box  wow fadeInUp" data-wow-duration="1s">
-                <h4 class="bd_tag">[자유게시판]</h4>
-                <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
-                <hr class="com_line" />
-                <h5 class="cont_com">
-                    트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.
-                </h5>
-                <div class="com_box_bottom">
-                  <h4 class="nickname">트로브</h4>
-                  <h4 class="made_day">2020.00.00</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <h2 class="title_3">
-          게임 정보
-          <a href="./info/game_info.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-              <g id="그룹_34" data-name="그룹 34" transform="translate(-1568 -3510)">
-                <g id="사각형_147" data-name="사각형 147" transform="translate(1568 3510)" fill="none" stroke="#aaa" stroke-width="1">
-                  <rect width="32" height="32" stroke="none"/>
-                  <rect x="0.5" y="0.5" width="31" height="31" fill="none"/>
-                </g>
-                <line id="선_21" data-name="선 21" x2="20" transform="translate(1574 3526)" fill="none" stroke="#777" stroke-width="1"/>
-                <line id="선_22" data-name="선 22" x2="20" transform="translate(1584 3516) rotate(90)" fill="none" stroke="#777" stroke-width="1"/>
-              </g>
-            </svg>
-          </a>
-        </h2>
-        <section class="content">
-          <div class="item wow fadeInUp" data-wow-duration="1s">
-            <div class="img">
-              <img src="../img/trove_info.png" />
-            </div>
-            <div class="info">
-              <h4 class="new-font">트로브 세계관</h4>
-              <p class="n-font">
-                uptatem accusantium accusantium doloremque laudanti…
-              </p>
-            </div>
-          </div>
-          <div class="item wow fadeInUp" data-wow-duration="1s">
-            <div class="img">
-              <img src="../img/trove_world_2.png" />
-            </div>
-            <div class="info_2">
-              <h4 class="new-font">트로브 세계관</h4>
-              <p class="n-font">
-                uptatem accusantium accusantium doloremque laudanti…
-              </p>
-            </div>
-          </div>
-          <div class="item wow fadeInUp" data-wow-duration="1s">
-            <div class="img">
-              <img src="../img/trove_world.png" />
-            </div>
-            <div class="info_3">
-              <h4 class="new-font">트로브 세계관</h4>
-              <p class="n-font">
-                uptatem accusantium accusantium doloremque laudanti…
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-    <footer class="footer">
-      <ul>
-        <li class="footer_nav_2">
-          <span>(주)TROVE&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호: 123-456-7890&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;전화: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;팩스: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;주소: 서울 중구 세종대로 110 &nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;E-mail: trove@trove.co.kr</span>
         </li>
-        <hr class="footerline_2" />
-        <li class="footer_nav_2">
-          <span>통신판매업 신고번호: 제2020-서울-1234호&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp; ⓒ 2020 TROVE KOREA Corporation</span>
-          <span> ALL Rights Reserverd.</span>
+        <li>
+          <span>
+            <h2>
+              <a href="./index.html">
+                <img src="../img/TROVE_LOGO.png" alt="" class="logo_img" />
+              </a>
+            </h2>
+          </span>
+          <ul class="dept01"></ul>
+        </li>
+        <li class="header-nav">
+          <span>뉴스</span>
+          <ul class="dept01">
+            <li class="nop"><a href="./news/news_1.html">공지사항</a></li>
+            <li class="nop"><a href="./news/news_2.html">업데이트</a></li>
+            <li class="nop"><a href="./news/news_3.html">이벤트</a></li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>정보</span>
+          <ul class="dept01">
+            <li class="nop"><a href="./info/game_info.html">게임정보</a></li>
+            <li class="nop"><a href="./info/mohum.html">모험</a></li>
+            <li class="nop"><a href="./info/tamhum.html">탐험</a></li>
+            <li class="nop"><a href="./info/jejak.html">제작</a></li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>커뮤니티</span>
+          <ul class="dept01">
+            <li class="nop"><a href="./board/jayou.html">자유게시판</a></li>
+            <li class="nop"><a href="./board/info_board.html">정보게시판</a></li>
+            <li class="nop"><a href="./board/img_board.html">이미지게시판</a></li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>캐시샵</span>
+          <ul class="dept01">
+            <li class="nop"><a href="./cash/cash_1.html">패키지</a></li>
+            <li class="nop"><a href="./cash/cash_2.html">프리미엄</a></li>
+            <li class="nop"><a href="./cash/cash_3.html">크레딧</a></li>
+            <li class="nop"><a href="./cash/cash_4.html">포인트샵</a></li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>다운로드</span>
+          <ul class="dept01">
+            <li class="nop"><a href="./download/download.html">클라이언트 다운</a></li>
+          </ul>
+        </li>
+        <li class="header-nav">
+          <span>고객지원</span>
+          <ul class="dept01">
+            <li class="nop"><a href="./mun/1_1mun.html">1:1 문의</a></li>
+            <li class="nop"><a href="./mun/1_3mun.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li class="login_btn-area">
+          <a class="login_btn" href="./my_info/login.html">
+            로그인
+          </a>
         </li>
       </ul>
-      <hr class="footerline" />
-      <div class="footer-bottom">
-        <a href="./mun/1_1mun.html" class="footer_nav">고객센터</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="./data_contact/eyong.html" class="footer_nav">이용약관</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="./data_contact/jungbo.html" class="footer_nav">개인정보처리방침</a>
-      </div>
-    </footer>
-    <div class="mobile-move_top">
-      <img src="../img/move_top.svg" />
     </div>
-  </body>
-  <script>
-      var mobileMoveTop = document.querySelector(".mobile-move_top")
-    window.addEventListener("scroll", function (e) {
-      var scrollpos = window.scrollY || window.pageYOffset;
-      if (scrollpos < 200) { mobileMoveTop.classList.remove('visible') }
-      else { mobileMoveTop.classList.add('visible') }
-    })
-    mobileMoveTop.addEventListener('click', function (e) {
-      window.scrollTo({top:0, left:0, behavior:'smooth'});
-    })
-    
-    document.querySelector('.hamburger').addEventListener('click', function (e) {
-        $("body").toggleClass("open-sidebar");
-        $("html").toggleClass("hidden")
-      });
-      $(".sidebar-closebtn").click(function () {
-        $("body").removeClass("open-sidebar");
-        $("html").removeClass("hidden")
-      });
+  </header>
+  <div class="wrap_content">
+    <input type="button" class="start_btn">
+    <div id="mainBanner-swiper-container" class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="mySlide-area" style="background-image: url('../img/main_banner1.png')"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="mySlide-area" style="background-image: url('../img/banner_test_1.png')"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="mySlide-area" style="background-image: url('../img/info_banner.jpg')"></div>
+        </div>
+      </div>
+      <div id="mainBanner-swiper-pagination" class="swiper-pagination"></div>
+      <div class="swiper-navigation">
+        <div id="mainBanner-swiper-button-prev" class="swiper-button-prev"></div>
+        <div id="mainBanner-swiper-button-next" class="swiper-button-next"></div>
+      </div>
+    </div>
+    <section class="info-content">
+      <h2 class="sosic_intro">
+        트로브 소식
+        <a href="./news/news_1.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <g id="그룹_34" data-name="그룹 34" transform="translate(-1568 -3510)">
+              <g id="사각형_147" data-name="사각형 147" transform="translate(1568 3510)" fill="none" stroke="#aaa"
+                stroke-width="1">
+                <rect width="32" height="32" stroke="none" />
+                <rect x="0.5" y="0.5" width="31" height="31" fill="none" />
+              </g>
+              <line id="선_21" data-name="선 21" x2="20" transform="translate(1574 3526)" fill="none" stroke="#777"
+                stroke-width="1" />
+              <line id="선_22" data-name="선 22" x2="20" transform="translate(1584 3516) rotate(90)" fill="none"
+                stroke="#777" stroke-width="1" />
+            </g>
+          </svg>
+        </a>
+      </h2>
+      <section class="sosick wow fadeInUp" data-wow-duration="1s">
+        <div class="sosick_div">
+          <div class="aaa">
+            <img src="../img/event_440ban.png" alt="" />
+          </div>
 
-    const mainBannerSwiper = new Swiper('#mainBanner-swiper-container', {
-      // Optional parameters
-      direction: 'horizontal',
-      loop: true,
+          <div class="news">
+            <article class="artic">
+              <li class="cont_text">
+                <h5 class="itstitle">
+                  <img src="../img/news_2.png" class="news_icon" />
+                  20.6월 정기점검 공지
+                </h5>
+                20년 6월 20일 정기점검 있습니다.....
+              </li>
+              <hr class="woowha" />
+              <li class="cont_text">
+                <h5 class="itstitle">
+                  <img src="../img/news_1.png" class="news_icon" />20.6월
+                  정기점검 공지
+                </h5>
+                20년 6월 20일 정기점검 있습니다.....
+              </li>
+              <hr class="woowha" />
+              <li class="cont_text">
+                <h5 class="itstitle">
+                  <img src="../img/news_1.png" class="news_icon" />20.6월
+                  정기점검 공지
+                </h5>
+                20년 6월 20일 정기점검 있습니다.....
+              </li>
+            </article>
+          </div>
+        </div>
+      </section>
+      <h2 class="sosic_intro">
+        캐시샵
+        <a href="./cash/cash_1.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <g id="그룹_34" data-name="그룹 34" transform="translate(-1568 -3510)">
+              <g id="사각형_147" data-name="사각형 147" transform="translate(1568 3510)" fill="none" stroke="#aaa"
+                stroke-width="1">
+                <rect width="32" height="32" stroke="none" />
+                <rect x="0.5" y="0.5" width="31" height="31" fill="none" />
+              </g>
+              <line id="선_21" data-name="선 21" x2="20" transform="translate(1574 3526)" fill="none" stroke="#777"
+                stroke-width="1" />
+              <line id="선_22" data-name="선 22" x2="20" transform="translate(1584 3516) rotate(90)" fill="none"
+                stroke="#777" stroke-width="1" />
+            </g>
+          </svg>
+        </a>
+      </h2>
+      <section class="cash">
+        <span class="prev" id='prev_arrow'><img src="../img/slider/prev_arrow.png" alt="" class='arrow-style'></span>
+        <span class="next" id='next_arrow'><img src="../img/slider/next_arrow.png" alt="" class='arrow-style'></span>
+        <div class="slider-wrapper">
+          <div class="cash-swiper-item">
+            <div class="cash-swiper-image"><img src="../img/main_banner_item1.png" /></div>
+            <p class="cash-swiper-text">Summer Pinata</p>
+          </div>
+          <div class="cash-swiper-item">
+            <div class="cash-swiper-image"><img src="../img/main_banner_item2.png" /></div>
+            <p class="cash-swiper-text">Summer Pinata</p>
+          </div>
+          <div class="cash-swiper-item">
+            <div class="cash-swiper-image"><img src="../img/main_banner_item3.png" /></div>
+            <p class="cash-swiper-text">Summer Pinata</p>
+          </div>
+          <div class="cash-swiper-item">
+            <div class="cash-swiper-image"><img src="../img/main_banner_item2.png" /></div>
+            <p class="cash-swiper-text">Summer Pinata</p>
+          </div>
+          <div class="cash-swiper-item">
+            <div class="cash-swiper-image"><img src="../img/main_banner_item3.png" /></div>
+            <p class="cash-swiper-text">Summer Pinata</p>
+          </div>
 
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
+        </div>
+        <script>
+          $(".slider-wrapper").slick({
+            dots: false,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            prevArrow: $('#prev_arrow'),
+            nextArrow: $('#next_arrow'),
+            responsive: [
+              {
+                breakpoint: 769,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+                }
+              },
+              {
+                breakpoint: 451,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+          })
+        </script>
+  </div>
+  </section>
+  <section class="commu">
+    <div class="commu-area ">
+      <div class="com-banner-area" style="background-image: url('../img/commu_bg.png');">
+        <h2 class="com_intro">
+          커뮤니티
+          <a href="./board/info_board.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <g id="그룹_34" data-name="그룹 34" transform="translate(-1568 -3510)">
+                <g id="사각형_147" data-name="사각형 147" transform="translate(1568 3510)" fill="none" stroke="#aaa"
+                  stroke-width="1">
+                  <rect width="32" height="32" stroke="none" />
+                  <rect x="0.5" y="0.5" width="31" height="31" fill="none" />
+                </g>
+                <line id="선_21" data-name="선 21" x2="20" transform="translate(1574 3526)" fill="none" stroke="#777"
+                  stroke-width="1" />
+                <line id="선_22" data-name="선 22" x2="20" transform="translate(1584 3516) rotate(90)" fill="none"
+                  stroke="#777" stroke-width="1" />
+              </g>
+            </svg>
+          </a>
+        </h2>
+      </div>
+      <div class="com-box-area">
+        <div class="com_box  wow fadeInUp" data-wow-duration="1s">
+          <h4 class="bd_tag">[자유게시판]</h4>
+          <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
+          <hr class="com_line" />
+          <h5 class="cont_com">
+            트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.트로브 완전 좋은 팁 알려준다.
+          </h5>
+          <div class="com_box_bottom">
+            <h4 class="nickname">트로브</h4>
+            <h4 class="made_day">2020.00.00</h4>
+          </div>
+        </div>
+        <div class="com_box  wow fadeInUp" data-wow-duration="1s">
+          <h4 class="bd_tag">[자유게시판]</h4>
+          <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
+          <hr class="com_line" />
+          <h5 class="cont_com">
+            트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.트로브 완전 좋은 팁 알려준다.
+          </h5>
+          <div class="com_box_bottom">
+            <h4 class="nickname">트로브</h4>
+            <h4 class="made_day">2020.00.00</h4>
+          </div>
+        </div>
+        <div class="com_box  wow fadeInUp" data-wow-duration="1s">
+          <h4 class="bd_tag">[자유게시판]</h4>
+          <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
+          <hr class="com_line" />
+          <h5 class="cont_com">
+            트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.트로브 완전 좋은 팁 알려준다.
+          </h5>
+          <div class="com_box_bottom">
+            <h4 class="nickname">트로브</h4>
+            <h4 class="made_day">2020.00.00</h4>
+          </div>
+        </div>
+        <div class="com_box  wow fadeInUp" data-wow-duration="1s">
+          <h4 class="bd_tag">[자유게시판]</h4>
+          <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
+          <hr class="com_line" />
+          <h5 class="cont_com">
+            트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.
+          </h5>
+          <div class="com_box_bottom">
+            <h4 class="nickname">트로브</h4>
+            <h4 class="made_day">2020.00.00</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      $(".com-box-area").slick({
+        dots: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 1297,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 769,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 451,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      })
+    </script>
+  </section>
+  <h2 class="title_3">
+    게임 정보
+    <a href="./info/game_info.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+        <g id="그룹_34" data-name="그룹 34" transform="translate(-1568 -3510)">
+          <g id="사각형_147" data-name="사각형 147" transform="translate(1568 3510)" fill="none" stroke="#aaa"
+            stroke-width="1">
+            <rect width="32" height="32" stroke="none" />
+            <rect x="0.5" y="0.5" width="31" height="31" fill="none" />
+          </g>
+          <line id="선_21" data-name="선 21" x2="20" transform="translate(1574 3526)" fill="none" stroke="#777"
+            stroke-width="1" />
+          <line id="선_22" data-name="선 22" x2="20" transform="translate(1584 3516) rotate(90)" fill="none" stroke="#777"
+            stroke-width="1" />
+        </g>
+      </svg>
+    </a>
+  </h2>
+  <section class="content">
+    <div class="item wow fadeInUp" data-wow-duration="1s">
+      <div class="img">
+        <img src="../img/trove_info.png" />
+      </div>
+      <div class="info">
+        <h4 class="new-font">트로브 세계관</h4>
+        <p class="n-font">
+          uptatem accusantium accusantium doloremque laudanti…
+        </p>
+      </div>
+    </div>
+    <div class="item wow fadeInUp" data-wow-duration="1s">
+      <div class="img">
+        <img src="../img/trove_world_2.png" />
+      </div>
+      <div class="info_2">
+        <h4 class="new-font">트로브 세계관</h4>
+        <p class="n-font">
+          uptatem accusantium accusantium doloremque laudanti…
+        </p>
+      </div>
+    </div>
+    <div class="item wow fadeInUp" data-wow-duration="1s">
+      <div class="img">
+        <img src="../img/trove_world.png" />
+      </div>
+      <div class="info_3">
+        <h4 class="new-font">트로브 세계관</h4>
+        <p class="n-font">
+          uptatem accusantium accusantium doloremque laudanti…
+        </p>
+      </div>
+    </div>
+  </section>
+  </div>
+  </section>
+  <footer class="footer">
+    <ul>
+      <li class="footer_nav_2">
+        <span>(주)TROVE&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호: 123-456-7890&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp;전화: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp;팩스: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp;주소: 서울 중구 세종대로 110 &nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp;E-mail: trove@trove.co.kr</span>
+      </li>
+      <hr class="footerline_2" />
+      <li class="footer_nav_2">
+        <span>통신판매업 신고번호: 제2020-서울-1234호&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>|&nbsp;&nbsp;&nbsp;&nbsp; ⓒ 2020 TROVE KOREA Corporation</span>
+        <span> ALL Rights Reserverd.</span>
+      </li>
+    </ul>
+    <hr class="footerline" />
+    <div class="footer-bottom">
+      <a href="./mun/1_1mun.html" class="footer_nav">고객센터</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="./data_contact/eyong.html" class="footer_nav">이용약관</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="./data_contact/jungbo.html" class="footer_nav">개인정보처리방침</a>
+    </div>
+  </footer>
+  <div class="mobile-move_top">
+    <img src="../img/move_top.svg" />
+  </div>
+</body>
+<script>
+  var mobileMoveTop = document.querySelector(".mobile-move_top")
+  window.addEventListener("scroll", function (e) {
+    var scrollpos = window.scrollY || window.pageYOffset;
+    if (scrollpos < 200) { mobileMoveTop.classList.remove('visible') }
+    else { mobileMoveTop.classList.add('visible') }
+  })
+  mobileMoveTop.addEventListener('click', function (e) {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  })
+
+  document.querySelector('.hamburger').addEventListener('click', function (e) {
+    $("body").toggleClass("open-sidebar");
+    $("html").toggleClass("hidden")
+  });
+  $(".sidebar-closebtn").click(function () {
+    $("body").removeClass("open-sidebar");
+    $("html").removeClass("hidden")
+  });
+
+  const mainBannerSwiper = new Swiper('#mainBanner-swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: '#mainBanner-swiper-button-next',
+      prevEl: '#mainBanner-swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
       },
-      // Navigation arrows
-      navigation: {
-        nextEl: '#mainBanner-swiper-button-next',
-        prevEl: '#mainBanner-swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + '</span>';
-        },
-      },
+    }
+  })
+</script>
 
-
-      // And if we need scrollbar
-      // scrollbar: {
-      //   el: '.swiper-scrollbar',
-      // },
-    })
-    const itemBannerSwiper = new Swiper('#item-swiper-container', {
-      // Optional parameters
-      direction: 'horizontal',
-      slidesPerView: 3,
-      spaceBetween: 30,
-      loop: true,
-      loopFillGroupWithBlank: true,
-
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-    })
-  </script>
 </html>

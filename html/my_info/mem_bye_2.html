@@ -11,19 +11,8 @@
     <link rel="stylesheet" type="text/css" href="../../css/board_style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/mem_style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/slide_bar_st.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
-    <!-- <link rel="stylesheet" href="http://www.w3ii.com/lib/w3.css" /> -->
-    <script
-      type="text/javascript"
-      src="http://code.jquery.com/jquery-2.1.4.min.js"
-    ></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js" ></script>
   </head>
-
   <body>
     <div class="mobile-sidebar">
       <div class="mobile-sidebar-header">
@@ -115,7 +104,7 @@
           </li>
           <li class="header-nav">
             <span>뉴스</span>
-            <ul class="dept01" >
+            <ul class="dept01">
               <li class="nop"><a href="../news/news_1.html">공지사항</a></li>
               <li class="nop"><a href="../news/news_2.html">업데이트</a></li>
               <li class="nop"><a href="../news/news_3.html">이벤트</a></li>
@@ -123,7 +112,7 @@
           </li>
           <li class="header-nav">
             <span>정보</span>
-            <ul class="dept01" >
+            <ul class="dept01">
               <li class="nop"><a href="../info/game_info.html">게임정보</a></li>
               <li class="nop"><a href="../info/mohum.html">모험</a></li>
               <li class="nop"><a href="../info/tamhum.html">탐험</a></li>
@@ -132,15 +121,19 @@
           </li>
           <li class="header-nav">
             <span>커뮤니티</span>
-            <ul class="dept01" >
+            <ul class="dept01">
               <li class="nop"><a href="../board/jayou.html">자유게시판</a></li>
-              <li class="nop"><a href="../board/info_board.html">정보게시판</a></li>
-              <li class="nop"><a href="../board/img_board.html">이미지게시판</a></li>
+              <li class="nop">
+                <a href="../board/info_board.html">정보게시판</a>
+              </li>
+              <li class="nop">
+                <a href="../board/img_board.html">이미지게시판</a>
+              </li>
             </ul>
           </li>
           <li class="header-nav">
             <span>캐시샵</span>
-            <ul class="dept01" >
+            <ul class="dept01">
               <li class="nop"><a href="../cash/cash_1.html">패키지</a></li>
               <li class="nop"><a href="../cash/cash_2.html">프리미엄</a></li>
               <li class="nop"><a href="../cash/cash_3.html">크레딧</a></li>
@@ -149,29 +142,32 @@
           </li>
           <li class="header-nav">
             <span>다운로드</span>
-            <ul class="dept01" >
-              <li class="nop"><a href="../download/download.html">클라이언트 다운</a></li>
+            <ul class="dept01">
+              <li class="nop">
+                <a href="../download/download.html">클라이언트 다운</a>
+              </li>
             </ul>
           </li>
           <li class="header-nav">
             <span>고객지원</span>
-            <ul class="dept01" >
+            <ul class="dept01">
               <li class="nop"><a href="../mun/1_1mun.html">1:1 문의</a></li>
               <li class="nop"><a href="../mun/1_3mun.html">FAQ</a></li>
             </ul>
           </li>
-          <li class="login_btn">
-            <a href="../my_info/login.html"><img src="../../img/login_btn.png" class="login_btn" /></a>
+          <li class="login_btn-area">
+            <a class="login_btn" href="../my_info/login.html">
+              로그인
+            </a>
           </li>
         </ul>
       </div>
     </header>
-    <section
-      class="visual_sub"
-      style="background-image: url('../../img/my_info_main.jpg');"
-    >
-      <input type="button" class="start_btn" />
-      <h2 class="page_title">회원정보</h2>
+    <section class="visual_sub" style="background-image: url('../../img/my_info_main.jpg');">
+      <div class="start-btn-area">
+        <input type="button" class="start_btn" />
+        <h2 class="page_title">회원정보</h2>
+      </div>
     </section>
     <section class="sub_nao">
       <div class="sub_nav four-item small-font">
@@ -182,66 +178,79 @@
       </div>
       <hr color="#cccccc" />
     </section>
-    <h2 class="trove_intro">회원탈퇴</h2>
-    <h5 class="byebye">회원탈퇴시 주의사항입니다.</h5>
-    <hr class="hr_sly" />
-    <form action="" id="joinForm">
-      <ul class="join_box">
-        <li class="checkBox check02">
-          <ul class="clearfix">
-            <li>1.텍스트텍스트</li>
-          </ul>
-          <textarea name="" id="">
-  제1장
-                    </textarea
-          >
-        </li>
-        <li class="checkBox check03">
-          <ul class="clearfix">
-            <li>2.텍스트텍스트</li>
-          </ul>
-
-          <textarea name="" id="">
-  제1장
-                    </textarea
-          >
-        </li>
-        <li class="checkBox check03">
-          <ul class="clearfix">
-            <li>3.텍스트텍스트</li>
-          </ul>
-
-          <textarea name="" id="">
-  제1장
-                    </textarea
-          >
-        </li>
-        <li class="checkBox check04">
-          <ul class="clearfix">
-            <li>위의 회원탈퇴시 주의사항을 모두 숙지하였습니다.</li>
-            <li class="checkBtn">
-              <input type="checkbox" name="chk" />
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="footBtwrap clearfix">
-        <li><button class="fpmgBt2">회원탈퇴</button></li>
-      </ul>
-    </form>
+    <main class="join-main">
+      <h2 class="trove_intro">회원탈퇴</h2>
+      <h5 class="byebye">회원탈퇴시 주의사항입니다.</h5>
+      <hr class="hr_sly" />
+      <form action="./mem_bye_3.html" id="joinForm">
+        <ul class="join_box">
+          <li class="checkBox check02">
+            <ul class="clearfix">
+              <li>1.텍스트텍스트</li>
+            </ul>
+            <div class="join_form-terms">
+              <textarea readonly>제 1장</textarea>
+            </div>
+          </li>
+          <li class="checkBox check03">
+            <ul class="clearfix">
+              <li>2.텍스트텍스트</li>
+            </ul>
+            <div class="join_form-terms">
+              <textarea readonly>제 1장</textarea>
+            </div>
+          </li>
+          <li class="checkBox check03">
+            <ul class="clearfix">
+              <li>3.텍스트텍스트</li>
+            </ul>
+            <div class="join_form-terms">
+              <textarea readonly>제 1장</textarea>
+            </div>
+          </li>
+          <li class="checkBox check04">
+            <ul class="clearfix">
+              <li class="checkBtn">
+                <input type="checkbox" name="chk" id="joinChk04" class="ch-checkbox"/>
+                <label tabindex="0" class="ch-checkbox" for="joinChk04"></label>
+              </li>
+              <li>위의 회원탈퇴시 주의사항을 모두 숙지하였습니다.</li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="footBtwrap clearfix">
+          <li><button class="fpmgBt2">회원탈퇴</button></li>
+        </ul>
+      </form>
+    </main>
     <footer class="footer">
       <ul>
         <li class="footer_nav_2">
           <span>(주)TROVE&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호: 123-456-7890&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;전화: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;팩스: 1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span>|&nbsp;&nbsp;&nbsp;&nbsp;주소: 서울 중구 세종대로 110 &nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span
+            >|&nbsp;&nbsp;&nbsp;&nbsp;사업자등록번호:
+            123-456-7890&nbsp;&nbsp;&nbsp;&nbsp;</span
+          >
+          <span
+            >|&nbsp;&nbsp;&nbsp;&nbsp;전화:
+            1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span
+          >
+          <span
+            >|&nbsp;&nbsp;&nbsp;&nbsp;팩스:
+            1234-5678&nbsp;&nbsp;&nbsp;&nbsp;</span
+          >
+          <span
+            >|&nbsp;&nbsp;&nbsp;&nbsp;주소: 서울 중구 세종대로 110
+            &nbsp;&nbsp;&nbsp;&nbsp;</span
+          >
           <span>|&nbsp;&nbsp;&nbsp;&nbsp;E-mail: trove@trove.co.kr</span>
         </li>
         <hr class="footerline_2" />
         <li class="footer_nav_2">
-          <span>통신판매업 신고번호: 제2020-서울-1234호&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span
+            >통신판매업 신고번호:
+            제2020-서울-1234호&nbsp;&nbsp;&nbsp;&nbsp;</span
+          >
           <span>|&nbsp;&nbsp;&nbsp;&nbsp; ⓒ 2020 TROVE KOREA Corporation</span>
           <span> ALL Rights Reserverd.</span>
         </li>
@@ -252,7 +261,9 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="../data_contact/eyong.html" class="footer_nav">이용약관</a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="../data_contact/jungbo.html" class="footer_nav">개인정보처리방침</a>
+        <a href="../data_contact/jungbo.html" class="footer_nav"
+          >개인정보처리방침</a
+        >
       </div>
     </footer>
     <div class="mobile-move_top">
@@ -260,27 +271,29 @@
     </div>
   </body>
   <script>
-    var mobileMoveTop = document.querySelector(".mobile-move_top")
+    var mobileMoveTop = document.querySelector(".mobile-move_top");
     window.addEventListener("scroll", function (e) {
       var scrollpos = window.scrollY || window.pageYOffset;
-      if (scrollpos < 200) { mobileMoveTop.classList.remove('visible') }
-      else { mobileMoveTop.classList.add('visible') }
-    })
-    mobileMoveTop.addEventListener('click', function (e) {
-      window.scrollTo({top:0, left:0, behavior:'smooth'});
-    })
+      if (scrollpos < 200) {
+        mobileMoveTop.classList.remove("visible");
+      } else {
+        mobileMoveTop.classList.add("visible");
+      }
+    });
+    mobileMoveTop.addEventListener("click", function (e) {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    });
 
-    
-  document.querySelector('.hamburger').addEventListener('click', function (e) {
+    document
+      .querySelector(".hamburger")
+      .addEventListener("click", function (e) {
         $("body").toggleClass("open-sidebar");
-        $("html").toggleClass("hidden")
+        $("html").toggleClass("hidden");
       });
-      $(".sidebar-closebtn").click(function () {
-        $("body").removeClass("open-sidebar");
-        $("html").removeClass("hidden")
-      });
-
-
+    $(".sidebar-closebtn").click(function () {
+      $("body").removeClass("open-sidebar");
+      $("html").removeClass("hidden");
+    });
 
     $(document).ready(function () {
       $("ul.tabs li").click(function () {

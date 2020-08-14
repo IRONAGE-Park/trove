@@ -9,17 +9,8 @@
     <link rel="stylesheet" type="text/css" href="../../css/yack.css" />
     <link rel="stylesheet" type="text/css" href="../../css/info_style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/slide_bar_st.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
-    <!-- <link rel="stylesheet" href="http://www.w3ii.com/lib/w3.css" /> -->
-    <script
-      type="text/javascript"
-      src="http://code.jquery.com/jquery-2.1.4.min.js"
-    ></script>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   </head>
 
   <body>
@@ -158,8 +149,10 @@
               <li class="nop"><a href="../mun/1_3mun.html">FAQ</a></li>
             </ul>
           </li>
-          <li class="login_btn">
-            <a href="../my_info/login.html"><img src="../../img/login_btn.png" class="login_btn" /></a>
+          <li class="login_btn-area">
+            <a class="login_btn" href="../my_info/login.html">
+              로그인
+            </a>
           </li>
         </ul>
       </div>
@@ -277,17 +270,5 @@
         $("body").removeClass("open-sidebar");
         $("html").removeClass("hidden")
       });
-
-    $(document).ready(function () {
-      $("ul.tabs li").click(function () {
-        var tab_id = $(this).attr("data-tab");
-
-        $("ul.tabs li").removeClass("current");
-        $(".tab-content").removeClass("current");
-
-        $(this).addClass("current");
-        $("#" + tab_id).addClass("current");
-      });
-    });
   </script>
 </html>

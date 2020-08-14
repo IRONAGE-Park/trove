@@ -10,8 +10,6 @@
     <link rel="stylesheet" type="text/css" href="../../css/res-default_board_style.css">
     <link rel="stylesheet" type="text/css"href="../../css/search_style.css">
     <link rel="stylesheet" type="text/css" href="../../css/slide_bar_st.css" />
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="/lib/w3.css"> -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 
@@ -151,20 +149,19 @@
             <li class="nop"><a href="../mun/1_3mun.html">FAQ</a></li>
           </ul>
         </li>
-        <li class="login_btn">
-          <a href="../my_info/login.html"><img src="../../img/login_btn.png" class="login_btn" /></a>
+        <li class="login_btn-area">
+          <a class="login_btn" href="../my_info/login.html">
+            로그인
+          </a>
         </li>
       </ul>
     </div>
   </header>
-
-
-        <section
-            class="visual_sub"
-            style="background-image: url('../../img/commu_banner.jpg');"
-        >
-            <input type="button" class="start_btn">
-            <h2 class="page_title">커뮤니티</h2>
+    <section class="visual_sub" style="background-image: url('../../img/commu_banner.jpg');">
+      <div class="start-btn-area">
+        <input type="button" class="start_btn">
+        <h2 class="page_title">커뮤니티</h2>
+      </div>
 		</section>
         <section class="sub_nao">
           <div class="sub_nav three-item">
@@ -178,7 +175,7 @@
         <main class="board-main">
         <h2 class="trove_intro">정보게시판</h2>
 <section id="search_chaing">
-    <form><fieldset class="full-size"><input type="search" /><button type="submit"><i class="fa fa-search"></i></button></fieldset></form>
+    <form><fieldset class="full-size"><input type="search" /><button type="submit"><img class="fa fa-search" src="../../img/search_button.svg" /></button></fieldset></form>
     	</section><div class="row">
 		<div class="col-sm-9">
 			<div class="right_area page_cs_notice board-content">
@@ -188,74 +185,56 @@
 				<div class="right_contents">
 					<table class="table_basic">
 						<colgroup>
-							<col width="70%">
-                            <col width="10%">
-							<col width="10%">
-							<col width="10%">
+							<col width="50%">
+                            <col width="15%">
+							<col width="20%">
+							<col width="15%">
 						</colgroup>
-						<thead>
-							<tr>
-								<th class="tab-title" scope="col">제목</th>
-								<th class="tab-regist" scope="col">등록일</th>
-                <th class="tab-nickname" scope="col">닉네임</th>
-                <th class="tab-view_count" scope="col">조회수</th>
-							</tr>
-						</thead>
 						<tbody>
 							
 								<tr>
 									<td class="tit_contents_td">
-										<a href=>트로브 정보게시판 글입니다.</a>
+										<a href="./info_detail.html">트로브 정보게시판 글입니다.</a>
 									</td>
-									<td>2020.07.10</td>
-                                    <td>TROVE</td>
-                                    <td>123
-									</td>
+                  <td>TROVE</td>
+									<td><img class="board_content_icon" src="../../img/date_icon.svg">2020.07.10</td>
+                  <td><img class="board_content_icon" src="../../img/view-count_icon.svg">123</td>
 								</tr>
-                            								<tr>
+                <tr>
 								<td class="tit_contents_td">
-										<a href=>트로브 정보 게시판 글입니다.</a>
+                  <a href="./info_detail.html">트로브 정보 게시판 글입니다.</a>
 									</td>
-									<td>2020.07.10</td>
-                                    <td>TROVE</td>
-                                    <td >123
-									</td>
+                  <td>TROVE</td>
+									<td><img class="board_content_icon" src="../../img/date_icon.svg">2020.07.10</td>
+                  <td><img class="board_content_icon" src="../../img/view-count_icon.svg">123</td>
 								</tr>
                             								<tr>
 																		<td class="tit_contents_td">
-										<a href=>트로브 정보 게시판 글입니다.</a>
+                                      <a href="./info_detail.html">트로브 정보 게시판 글입니다.</a>
 									</td>
-									<td>2020.07.10</td>
-                                    <td>TROVE</td>
-                                    <td>123
-									</td>
+                  <td>TROVE</td>
+									<td><img class="board_content_icon" src="../../img/date_icon.svg">2020.07.10</td>
+                  <td><img class="board_content_icon" src="../../img/view-count_icon.svg">123</td>
 								</tr>
 							
 							
 							
 						</tbody>
 					</table>
-					<div class="boxed-list-wrapper">
-
-						<!-- 하단 페이징 -->
-						<div class="pagination-box box">
-							<div class="pagination">
-							
-								<div class="wrapper">
-									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=1" class="fa fa-angle-double-left paging-btn btn first"></a>
-									
-									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=${page-1}" class="fa fa-angle-left paging-btn btn prev"></a>
-									
-									
-									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=${i}" class="paging-btn btn active">1</a> 
-									
-									
-									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=${page+1}" class="fa fa-angle-right paging-btn btn next"></a>
-									
-									<a href="${pageContext.request.contextPath}/CScenter/CScenterNotice?page=${tempEndPage}" class="fa fa-angle-double-right paging-btn btn last"></a>
-								</div>
-							</div>
-						</div>
+          <div class="board-pagination">
+            <div class="board-pagination-wrapper">
+              <a class="pagination-to_prev" href="">
+                <img src="../../img/more_left.svg" />
+              </a>
+              <a class="pagination-page pagination-current" href="">1</a>
+              <a class="pagination-page" href="">2</a>
+              <a class="pagination-page" href="">3</a>
+              <a class="pagination-page" href="">4</a>
+              <a class="pagination-page" href="">5</a>
+              <a class="pagination-to_next" href="">
+                <img src="../../img/more_right.svg" />
+              </a>
+            </div>
           </div>
           <div class='mobile-pagination'>
             <div class="mobile-pagination-select">

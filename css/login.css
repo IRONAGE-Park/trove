@@ -59,29 +59,26 @@ img {
 }
 .login_tistory .box_login {
   margin: 35px 0 0;
-  border: 1px solid #ddd;
-  border-radius: 3px;
   background-color: #fff;
   box-sizing: border-box;
 }
 .login_tistory .inp_text {
   position: relative;
-  width: 100%;
-  height: 56px;
+  width: 100%; height: 56px;
   margin: 0;
+  border: 1px solid #ddd;
   padding: 18px 19px 19px;
   box-sizing: border-box;
 }
 .login_tistory .inp_text + .inp_text {
-  border-top: 1px solid #ddd;
-  width: 100%;
+  margin-top: 10px;
 }
 .inp_text input {
+  width: 100%;
   margin-top: -18px;
   display: block;
   height: 56px;
   font-size: 1.333rem;
-  color: #dbdbdb;
   border: none;
   outline: 0;
   -webkit-appearance: none;
@@ -142,21 +139,23 @@ img {
 }
 .trove_login {
   font-size: 2.667rem;
+  font-weight: 500;
   text-align: center;
 }
 .btn_login_1 {
   margin: 20px 0 0;
   position: relative;
-  width: 100%;
-  height: 56px;
+  cursor: pointer;
+  width: 100%; height: 56px;
   border: 1px solid #e2e2e2;
   font-size: 1.333rem;
   color: #777777;
+  outline: none;
   background-color: #ffffff;
 }
 .logo_img {
-  width: 24px;
-  height: 24px;
-  left: 10%;
+  width: 24px; height: 24px;
+  left: 10%; top: 50%;
+  transform: translateY(-50%);
   position: absolute;
 }
