@@ -16,8 +16,9 @@
 .to_board_list {
   position: absolute;
   top: 50%; right: 0;
+  font-size: 1.5rem;
   transform: translateY(-50%);
-  padding: 10px 30px;
+  padding: 5px 20px;
   border: solid 1px #DBDBDB;
 }
 .to_board_list:hover {

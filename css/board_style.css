@@ -16,8 +16,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: #F9F9F9;
-  height: 100px;
-  padding: 0 20px;
+  padding: 20px;
   border-top: solid 2px #555;
   border-bottom: solid 1px #999;
 }
@@ -385,7 +384,7 @@
 
 .table_basic {
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.333rem;
   border-top: 1px solid #000;
   border-spacing: 0;
   font-family: "Open Sans", Open Sans, Arial, sans-serif;
@@ -399,6 +398,7 @@
   position: relative;
 }
 .table_basic th {
+  font-size: 1.667rem;
   border-top: 1px solid #444444;
   border-bottom: 2px solid #dbdbdb;
   vertical-align: middle;
@@ -689,7 +689,7 @@
 
 @media screen and (max-width: 1024px) {
   .board-head {
-    height: 80px;
+    padding: 15px;
   }
   .g_board_selec {
     padding-bottom: 16px;
@@ -726,8 +726,7 @@
 
 @media screen and (max-width: 768px) {
   .board-head {
-    height: 60px;
-    padding: 0 10px;
+    padding: 10px;
   }
   .g_board {
     margin: 0;
@@ -854,5 +853,9 @@
   .board-comment-regist {
     padding: 5px 20px;
     margin-left: 15px;
+  }
+  
+  .board-comment-writer {
+    margin-bottom: 5px;
   }
 }

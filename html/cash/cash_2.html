@@ -11,17 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/cash_st.css" />
     <link rel="stylesheet" type="text/css" href="../../css/search_style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/slide_bar_st.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
-    <!-- <link rel="stylesheet" href="/lib/w3.css"> -->
-    <script
-      type="text/javascript"
-      src="http://code.jquery.com/jquery-2.1.4.min.js"
-    ></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   </head>
   <body>
     <div class="mobile-sidebar">
@@ -159,12 +149,15 @@
               <li class="nop"><a href="../mun/1_3mun.html">FAQ</a></li>
             </ul>
           </li>
-          <li class="login_btn">
-            <a href="../my_info/login.html"><img src="../../img/login_btn.png" class="login_btn" /></a>
+          <li class="login_btn-area">
+            <a class="login_btn" href="../my_info/login.html">
+              로그인
+            </a>
           </li>
         </ul>
       </div>
     </header>
+    <div class="shade" onclick="closeNav()"></div>
     <div id="mysidenav" class="sidenav">
       <div class="sl_idid">
         <a href="#" class="closebtn" onclick="closeNav()">
@@ -177,15 +170,20 @@
         <div class="sidenav-action">
           <button class="hre_minfo">내정보</button>
           <button class="hre_logout">로그아웃</button>
-          <h5 class="PcBang_text">PC방</h5>
-          <h5 class="OFF">OFF</h5>
-          <h5 class="ON">ON</h5>
+          <div>
+            <div class="PcBang_Content">
+              <h5 class="PcBang_text">PC방</h5><h5 class="OFF">OFF</h5>
+            </div>
+            <div class="PcBang_Content">
+              <h5 class="PcBang_text">PC방</h5><h5 class="ON">ON</h5>
+            </div>
+          </div>
         </div>
       </div>
       <div class="sidenav-cashinfo">
         <h5 class="My_cash">나의 캐시</h5>
         <hr class="herhr" />
-        <div class="My_credit cash-area">
+        <div class="My_credit cash-area" onclick="togglePopup('MyCredit')">
           <h5 class="t_t_t">보유 크레딧</h5>
           <div class="t_cash-amount">
             <h5 class="t_m_t">29,000</h5>
@@ -199,23 +197,38 @@
             <h6 style="background-color: #f7cd19;" class="t_t">P</h6>
           </div>
         </div>
+        <div id="MyCredit" class="cash-popup">
+          <div class="cash-popup-content">
+            <span class="popup-title">충전캐시</span>
+            <span class="popup-amount">19,000</span>
+          </div>
+          <hr class="herhr" style="margin: 5px 0;"/>
+          <div class="cash-popup-content">
+            <span class="popup-title">보너스캐시</span>
+            <span class="popup-amount">10,000</span>
+          </div>
+        </div>
       </div>
     </div>
     <script>
       function openNav() {
         document.getElementById("mysidenav").classList.add('open-sidenav');
+        document.querySelector('.shade').classList.add('open-sidenav');
       }
       function closeNav() {
         document.getElementById("mysidenav").classList.remove('open-sidenav');
+        document.querySelector('.shade').classList.remove('open-sidenav');
+      }
+      function togglePopup(id) {
+        document.getElementById(id).classList.toggle('open-popup');
       }
     </script>
-    <section
-      class="visual_sub"
-      style="background-image: url('../../img/cash_main.jpg');"
-    >
-      <input type="button" class="start_btn" />
-      <h2 class="page_title">캐시샵</h2>
-    </section>
+      <section class="visual_sub" style="background-image: url('../../img/cash_main.jpg');">
+        <div class="start-btn-area">
+          <input type="button" class="start_btn" />
+          <h2 class="page_title">캐시샵</h2>
+        </div>
+      </section>
     <section class="sub_nao">
       <div class="sub_nav four-item">
         <a href="./cash_1.html" class="g_board">패키지</a>
