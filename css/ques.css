@@ -176,7 +176,9 @@
   color: #333333;
 }
 .mun_text {
+  text-align: center;
   margin: 20px 0;
+  margin-bottom: 100px;
   padding: 0 10px;
   font-size: 1.333rem;
   color: #555555;
@@ -192,6 +194,9 @@
   .mun_title {
     margin-top: 60px;
     font-size: 2.667rem;
+  }
+  .mun_text {
+    margin-bottom: 80px;
   }
 }
 
@@ -236,7 +241,13 @@
   .mun_text {
     font-size: 1rem;
   }
+  .mun_text {
+    margin-bottom: 50px;
+  }
 }
 @media screen and (max-width: 450px) {
 
+  .mun_text {
+    margin-bottom: 30px;
+  }
 }

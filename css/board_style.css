@@ -399,10 +399,11 @@
 }
 .table_basic th {
   font-size: 1.667rem;
-  border-top: 1px solid #444444;
-  border-bottom: 2px solid #dbdbdb;
+  border-top: 1px solid #777777;
+  border-bottom: 1px solid #dbdbdb;
   vertical-align: middle;
   padding: 10px;
+  background-color: #F9F9F9;
 }
 
 .table_basic td {
