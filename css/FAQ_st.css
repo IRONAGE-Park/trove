@@ -130,4 +130,7 @@
     height: 36px;
     max-width: 100%;
   }
+  .article_search_field::placeholder {
+    text-align: left;
+  }
 }

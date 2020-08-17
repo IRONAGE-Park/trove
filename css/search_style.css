@@ -58,7 +58,7 @@ fieldset button {
 
 @media screen and (max-width: 768px) {
   fieldset {
-    width: calc(100% - 80px);
+    width: calc(100% - 100px);
   }
   fieldset.full-size {
     width: 100%;

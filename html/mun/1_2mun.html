@@ -163,8 +163,10 @@
             class="visual_sub"
             style="background-image: url('../../img/contact_main.jpg');"
         >
+        <div class="start-btn-area">
             <input type="button" class="start_btn">
             <h2 class="page_title">무엇을 도와드릴까요?</h2>
+        </div>
 		</section>
         <section class="sub_nao">
           <div class="sub_nav three-item">
@@ -188,37 +190,62 @@
 					<table class="table_basic">
 						<colgroup>
 							<col width="10%">
-                            <col width="70%">
+              <col width="70%">
 							<col width="10%">
 							<col width="10%">
 						</colgroup>
-						<tbody>
-							
-		<tr>
-            <td>1</td>
-			<td class="tit_contents_td">
-				<a href=>트로브 이용중에 발생한 문제 문의 드립니다.</a>
-									</td>
-				<td>2020.07.10</td>
-                <td>처리중</td></tr>
-         <tr>
-            <td>2</td>
-		    <td class="tit_contents_td">
-			<a href=>트로브 이용중에 발생한 문제 문의 드립니다.</a>
-									</td>
-			<td>2020.07.10</td>
-            <td>처리중</td></tr>
-<tr>
-    <td>3</td>
-	<td class="tit_contents_td">
-        <a href=>트로브 이용중에 발생한 문제 문의 드립니다.</a>
-							</td>
-		<td>2020.07.10</td>
-        <td>처리중</td>
-								</tr>
-							
-							
-							
+						<tbody>			
+              <tr class="question-title">
+                <td>1</td>
+                <td class="tit_contents_td">트로브 이용중에 발생한 문제 문의 드립니다.</td>
+                <td>2020.07.10</td>
+                <td>처리중</td>
+              </tr>
+              <tr class="question-content">
+                <td class="question-content-area" colspan="4">
+                  <div class="question-content-box">
+                    <div class="question-name">트로브 이용 중에 발생한 문제 문의드립니다.</div>
+                    <div class="question-reply">
+                      <h3 class="question-reply-name">[답변] 이용중 발생한 문제에 대한 답변입니다.</h3>
+                      <p class="question-reply-content">트로브 이용중에 발생한 문제 문의드립니다.</p>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="question-title">
+                <td>2</td>
+                <td class="tit_contents_td">트로브 이용중에 발생한 문제 문의 드립니다.</td>
+                <td>2020.07.10</td>
+                <td>처리중</td>
+              </tr>
+              <tr class="question-content">
+                <td class="question-content-area" colspan="4">
+                  <div class="question-content-box">
+                    <div class="question-name">트로브 이용 중에 발생한 문제 문의드립니다.</div>
+                    <div class="question-reply">
+                      <h3 class="question-reply-name">[답변] 이용중 발생한 문제에 대한 답변입니다.</h3>
+                      <p class="question-reply-content">트로브 이용중에 발생한 문제 문의드립니다.</p>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="question-title">
+                <td>3</td>
+                <td class="tit_contents_td">트로브 이용중에 발생한 문제 문의 드립니다.</td>
+                <td>2020.07.10</td>
+                <td>처리중</td>
+              </tr>
+              <tr class="question-content">
+                <td class="question-content-area" colspan="4">
+                  <div class="question-content-box">
+                    <div class="question-name">트로브 이용 중에 발생한 문제 문의드립니다.</div>
+                    <div class="question-reply">
+                      <h3 class="question-reply-name">[답변] 이용중 발생한 문제에 대한 답변입니다.</h3>
+                      <p class="question-reply-content">트로브 이용중에 발생한 문제 문의드립니다.</p>
+                    </div>
+                  </div>
+                </td>
+              </tr>
 						</tbody>
 					</table>
           <div class="board-pagination">
@@ -236,7 +263,6 @@
               </a>
             </div>
           </div>
-          
           <div class='mobile-pagination'>
             <div class="mobile-pagination-select">
               <select
@@ -296,19 +322,16 @@
 </div>
 </body>
 <script>
-var mobileMoveTop = document.querySelector(".mobile-move_top")
-window.addEventListener("scroll", function (e) {
-      var scrollpos = window.scrollY || window.pageYOffset;
-      if (scrollpos < 200) { mobileMoveTop.classList.remove('visible') }
-  else { mobileMoveTop.classList.add('visible') }
-})
-mobileMoveTop.addEventListener('click', function (e) {
-  window.scrollTo({top:0, left:0, behavior:'smooth'});
-})
-
-
-
-document.querySelector('.hamburger').addEventListener('click', function (e) {
+    var mobileMoveTop = document.querySelector(".mobile-move_top")
+    window.addEventListener("scroll", function (e) {
+          var scrollpos = window.scrollY || window.pageYOffset;
+          if (scrollpos < 200) { mobileMoveTop.classList.remove('visible') }
+      else { mobileMoveTop.classList.add('visible') }
+    })
+    mobileMoveTop.addEventListener('click', function (e) {
+      window.scrollTo({top:0, left:0, behavior:'smooth'});
+    })
+    document.querySelector('.hamburger').addEventListener('click', function (e) {
         $("body").toggleClass("open-sidebar");
         $("html").toggleClass("hidden")
       });
@@ -316,9 +339,6 @@ document.querySelector('.hamburger').addEventListener('click', function (e) {
         $("body").removeClass("open-sidebar");
         $("html").removeClass("hidden")
       });
-
-
-
     $(document).ready(function () {
       $("ul.tabs li").click(function () {
         var tab_id = $(this).attr("data-tab");
@@ -330,18 +350,14 @@ document.querySelector('.hamburger').addEventListener('click', function (e) {
         $("#" + tab_id).addClass("current");
       });
     });
-    $(document).ready(function () {
-      var fileTarget = $(".filebox .upload-hidden");
-
-      fileTarget.on("change", function () {
-        if (window.FileReader) {
-          var filename = $(this)[0].files[0].name;
-        } else {
-          var filename = $(this).val().split("/").pop().split("\\").pop();
-        }
-
-        $(this).siblings(".upload-name").val(filename);
+  var questionTitle = document.querySelectorAll('.question-title');
+  questionTitle.forEach(function (qt, index) {
+    qt.addEventListener('click', function (e) {
+      questionTitle.forEach(function (qt2) {
+        if(qt !== qt2) qt2.classList.remove('active')
       });
+      qt.classList.toggle('active');
     });
+  });
   </script>
 </html>

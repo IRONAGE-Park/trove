@@ -8,14 +8,11 @@
     <link rel="stylesheet" type="text/css" href="../../css/info_style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/board_style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/cash_st.css" />
-    <link rel="stylesheet" href="../../css/cash_slider.css" />
     <link rel="stylesheet" type="text/css" href="../../css/slide_bar_st.css" />
     <script
       type="text/javascript"
       src="http://code.jquery.com/jquery-2.1.4.min.js"
     ></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </head>
   <body>
     <div class="mobile-sidebar">
@@ -245,8 +242,8 @@
       </section>
       <section class="sub_nao">
         <div class="sub_nav four-item">
-          <a href="./cash_1.html" class="g_board_selec">패키지</a>
-          <a href="./cash_2.html" class="g_board">프리미엄</a>
+          <a href="./cash_1.html" class="g_board">패키지</a>
+          <a href="./cash_2.html" class="g_board_selec">프리미엄</a>
           <a href="./cash_3.html" class="g_board">크레딧</a>
           <a href="./cash_4.html" class="g_board">포인트샵</a>
         </div>
@@ -270,282 +267,48 @@
           </div>
         </div>
       </div>
-      <main class="cash-main detail">
-        <div class="cash-product-info">
-          <div class="product-info-image">
-            <img
-              src="../../img/item/equipment_flask_effect_damagereflect.png"
-            />
-          </div>
-          <div class="product-info-content">
-            <h1 class="product-info-title">패키지</h1>
-            <div class="product-info-text">
-              패키지설명텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스텍스트텍스트텍스트
+      <main class="cash-main">
+        <h2 class="cash_intro">결제하기</h2>
+        <div class="cash-payment">
+            <div class="cash-payment-info">
+                <div class="cash-payment-info-image">
+                    <img src="../../img/item/item_coin_xp_level_25_set.png" alt="info_image">
+                </div>
+                <div class="cash-payment-info-content">
+                    <div class="cash-payment-info-name">
+                        <p class="cash-payment-content-name">상품명</p>
+                        <p class="cash-payment-content-value">트로브 아이템 이름</p>
+                    </div>
+                    <div class="cash-payment-info-amount">
+                        <p class="cash-payment-content-name">수량</p>
+                        <p class="cash-payment-content-value">1개</p>
+                    </div>
+                    <div class="cash-payment-info-value">
+                        <p class="cash-payment-content-name">가격</p>
+                        <p class="cash-payment-content-value bold">99,000C</p>
+                    </div>
+                    <div class="cash-payment-point">
+                        <p class="cash-payment-content-name">적립 포인트</p>
+                        <p class="cash-payment-content-value bold">9,900C</p>
+                    </div>
+                </div>
             </div>
-            <hr class="product-info-line" />
-            <div class="product-info-value">
-              <p class="product-info-name">가격</p>
-              <p class="product-info-price">23,000</p>
+            <div class="cash-payment-action">
+                <div class="cash-payment-total">
+                    <h3 class="cash-payment-total-name">총 결제 예정 금액</h3>
+                    <p class="cash-payment-total-value">99,000C</p>
+                </div>
+                <hr class="cash-payment-line" />
+                <div class="checkBtn">
+                  <input type="checkbox" name="chk" id="joinChk03" class="ch-checkbox" />
+                  <label tabindex="0" class="ch-checkbox" for="joinChk03"></label>
+                  <p>최종 수량 및 결제 금액을 확인하였습니다.</p>
+                </div>
+                
+                <button onclick="location.href = './cash_1_payment.html'" class="product-buy-button payment">구매하기</button>
             </div>
-            <div class="product-info-amount">
-              <p class="product-info-name">수량</p>
-              <div class="product-amount-setter">
-                <button id="amount-minus">
-                  <img src="../../img/minus.svg" />
-                </button>
-                <input id="amount-value" type="text" value="1" readonly />
-                <button id="amount-plus">
-                  <img src="../../img/plus.svg" />
-                </button>
-              </div>
-            </div>
-            <hr class="product-info-line" />
-            <div class="product-total-value">
-              <p class="product-total-name">총 결제예정 금액</p>
-              <p class="product-total-price">23,000C</p>
-            </div>
-            <div class="product-accumulate-point">
-              <p class="product-total-name">총 적립 예정 포인트</p>
-              <p class="product-total-price">2,300P</p>
-            </div>
-            <button onclick="location.href = './cash_1_payment.html'" class="product-buy-button">구매하기</button>
-          </div>
-        </div>
-        <div class="other-item align-buy-button">
-          <div class="other-item-title">
-            <h2>패키지 구성품</h2>
-          </div>
-          <span class="prev" id="prev_arrow"><img src="../../img/slider/prev_arrow.png" alt="" class="arrow-style arrow-style-prev" /></span>
-          <span class="next" id="next_arrow"><img src="../../img/slider/next_arrow.png" alt="" class="arrow-style arrow-style-next" /></span>
-          <div class="other-component-list">
-              <div class="other-item-box">
-                <a href="cash_1.html">
-                  <div class="other-item-image">
-                    <img src="../../img/item/item_box_pegasus_dark.png" />
-                  </div>
-                  <div class="other-item-content">
-                    <div class="other-item-name">패키지</div>
-                    <p class="other-item-explain">
-                      패키지설명텍스트텍스트텍스트텍스트텍스트트텍스트
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="other-item-box">
-                <a href="cash_1.html">
-                  <div class="other-item-image">
-                    <img src="../../img/item/item_box_pegasus_dark.png" />
-                  </div>
-                  <div class="other-item-content">
-                    <div class="other-item-name">패키지</div>
-                    <p class="other-item-explain">
-                      패키지설명텍스트텍스트텍스트텍스트텍스트트텍스트
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="other-item-box">
-                <a href="cash_1.html">
-                  <div class="other-item-image">
-                    <img src="../../img/item/item_box_pegasus_dark.png" />
-                  </div>
-                  <div class="other-item-content">
-                    <div class="other-item-name">패키지</div>
-                    <p class="other-item-explain">
-                      패키지설명텍스트텍스트텍스트텍스트텍스트트텍스트
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="other-item-box">
-                <a href="cash_1.html">
-                  <div class="other-item-image">
-                    <img src="../../img/item/item_box_pegasus_dark.png" />
-                  </div>
-                  <div class="other-item-content">
-                    <div class="other-item-name">패키지</div>
-                    <p class="other-item-explain">
-                      패키지설명텍스트텍스트텍스트텍스트텍스트트텍스트
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="other-item-box">
-                <a href="cash_1.html">
-                  <div class="other-item-image">
-                    <img src="../../img/item/item_box_pegasus_dark.png" />
-                  </div>
-                  <div class="other-item-content">
-                    <div class="other-item-name">패키지</div>
-                    <p class="other-item-explain">
-                      패키지설명텍스트텍스트텍스트텍스트텍스트트텍스트
-                    </p>
-                  </div>
-                </a>
-              </div>
-          </div>
-        </div>
-          <script>
-            $(".other-component-list").slick({
-              dots: false,
-              infinite: true,
-              slidesToShow: 4,
-              slidesToScroll: 1,
-              arrows: true,
-
-              prevArrow: $("#prev_arrow"),
-              nextArrow: $("#next_arrow"),
-              responsive: [
-                {
-                  breakpoint: 1025,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                  },
-                },
-                {
-                  breakpoint: 769,
-                  settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                  },
-                },
-                {
-                  breakpoint: 451,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                  },
-                },
-              ],
-            })
-          </script>
-        <div class="cause_div">
-          <div class="cause_title">주의사항</div>
-          <h5 class="cause_cint">
-            주의사항설명텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트
-            주의사항설명텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트
-            주의사항설명텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트
-            주의사항설명텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트
-            주의사항설명텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트
-            주의사항설명텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트
-            주의사항설명텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트
-          </h5>
         </div>
       </main>
-      <article class="grey-area">
-        <section class="cash-main detail">
-          <div class="other-item" style="position: relative;">
-            <div class="other-item-title">
-              <h3>트로브의 다른 아이템</h3>
-            </div>
-            <span class="prev" id="prev_component_arrow"><img src="../../img/slider/prev_arrow.png" alt="" class="arrow-style arrow-style-prev" /></span>
-            <span class="next" id="next_component_arrow"><img src="../../img/slider/next_arrow.png" alt="" class="arrow-style arrow-style-next" /></span>
-            <div class="other-item-list">
-              <div class="other-item-box">
-                <a href="cash_1.html">
-                  <div class="other-item-image">
-                    <img src="../../img/item/item_box_pegasus_dark.png" />
-                  </div>
-                  <div class="other-item-content">
-                    <div class="other-item-name">패키지</div>
-                    <p class="other-item-explain">
-                      패키지설명텍스트텍스트텍스트텍스트텍스트트텍스트
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="other-item-box">
-                <a href="cash_1.html">
-                  <div class="other-item-image">
-                    <img src="../../img/item/item_box_pegasus_dark.png" />
-                  </div>
-                  <div class="other-item-content">
-                    <div class="other-item-name">패키지</div>
-                    <p class="other-item-explain">
-                      패키지설명텍스트텍스트텍스트텍스트텍스트트텍스트
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="other-item-box">
-                <a href="cash_1.html">
-                  <div class="other-item-image">
-                    <img src="../../img/item/item_box_pegasus_dark.png" />
-                  </div>
-                  <div class="other-item-content">
-                    <div class="other-item-name">패키지</div>
-                    <p class="other-item-explain">
-                      패키지설명텍스트텍스트텍스트텍스트텍스트트텍스트
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="other-item-box">
-                <a href="cash_1.html">
-                  <div class="other-item-image">
-                    <img src="../../img/item/item_box_pegasus_dark.png" />
-                  </div>
-                  <div class="other-item-content">
-                    <div class="other-item-name">패키지</div>
-                    <p class="other-item-explain">
-                      패키지설명텍스트텍스트텍스트텍스트텍스트트텍스트
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="other-item-box">
-                <a href="cash_1.html">
-                  <div class="other-item-image">
-                    <img src="../../img/item/item_box_pegasus_dark.png" />
-                  </div>
-                  <div class="other-item-content">
-                    <div class="other-item-name">패키지</div>
-                    <p class="other-item-explain">
-                      패키지설명텍스트텍스트텍스트텍스트텍스트트텍스트
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <script>
-            $(".other-item-list").slick({
-              dots: false,
-              infinite: true,
-              slidesToShow: 4,
-              slidesToScroll: 1,
-              arrows: true,
-
-              prevArrow: $("#prev_component_arrow"),
-              nextArrow: $("#next_component_arrow"),
-              responsive: [
-                {
-                  breakpoint: 1025,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                  },
-                },
-                {
-                  breakpoint: 769,
-                  settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                  },
-                },
-                {
-                  breakpoint: 451,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                  },
-                },
-              ],
-            })
-          </script>
-        </section>
-      </article>
     </div>
     <footer class="footer">
       <ul>

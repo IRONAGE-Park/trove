@@ -26,7 +26,8 @@
   pointer-events: none;
 }
 .box-title {
-  width: 100%; height: 48px;
+  width: 100%;
+  height: 48px;
   color: rgba(255, 255, 255, 0.6);
   font-size: 1.833rem;
   line-height: 48px;
@@ -59,7 +60,8 @@
 }
 .box-close {
   position: absolute;
-  height: 48px; width: 100%;
+  height: 48px;
+  width: 100%;
   top: 0;
   left: 0;
   cursor: pointer;
@@ -143,33 +145,41 @@ body {
   bottom: 0;
 }
 .swiper-pagination-bullet {
-	padding: 5px 10px;
-	border-radius: 0;
-	width: auto;
-	height: 30px;
-	text-align: center;
-	line-height: 30px;
-	font-size: 12px;
-	color:#000;
-	opacity: 1;
-	background: rgba(0,0,0,0.2);
+  padding: 5px 10px;
+  border-radius: 0;
+  width: auto;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
 }
 .swiper-pagination-bullet-active {
-	color:#fff;
-	background: #007aff;
+  color: #fff;
+  background: #007aff;
 }
 
 .mainBanner-container,
 .swiper-container {
   width: 100%;
   height: 450px;
+  position: relative;
+  overflow: hidden;
   transition: height 0.3s ease-in-out;
+  background-color: #333;
 }
 
 #item-swiper-container {
   height: auto;
 }
 
+.ib_cnt {
+  display: inline-block;
+  font-size: 1.333rem;
+  color: #999999;
+}
 .fn-font {
   font-family: "Noto Sans KR", sans-serif;
 }
@@ -181,17 +191,18 @@ body {
 }
 .login_btn {
   text-align: center;
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
   border-radius: 24px;
   border: solid 2px #555555;
   color: #555555;
-  transition: background .15s ease-in-out;
+  transition: background 0.15s ease-in-out;
 }
 .login_btn:hover {
-  background-color: #187E7F;
-  border: solid 2px #187E7F !important;
-  color: #ebebeb !important; 
+  background-color: #187e7f;
+  border: solid 2px #187e7f !important;
+  color: #ebebeb !important;
 }
 .logout_btn {
   display: flex;
@@ -287,7 +298,7 @@ header > nav {
 header ul {
   max-width: 1280px;
   box-sizing: content-box;
-  padding: 0 20px; 
+  padding: 0 20px;
   margin: 0 auto;
   height: 100%;
   display: flex;
@@ -305,8 +316,7 @@ header ul > li {
   text-align: center;
 }
 .visual {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(visual.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(visual.png);
   background-size: cover;
   background-position: 0% 20%;
   width: 100%;
@@ -316,7 +326,7 @@ header ul > li {
 .sosic_intro {
   max-width: 1280px;
   box-sizing: content-box;
-  padding: 0 20px; 
+  padding: 0 20px;
   margin: 0 auto;
   position: relative;
   text-align: center;
@@ -342,14 +352,14 @@ input.start_btn {
   width: 272px;
   height: 307px;
   position: absolute;
-  z-index: 50;
+  z-index: 500;
   outline: none;
   cursor: pointer;
 }
 .sosick {
   max-width: 1280px;
   box-sizing: content-box;
-  padding: 0 20px; 
+  padding: 0 20px;
   margin: 0 auto;
   margin-top: 55px;
   margin-bottom: 125px;
@@ -373,9 +383,6 @@ input.start_btn {
   width: 100%;
 }
 
-
-
-
 .modal_form {
   max-width: 640px;
   padding-top: 50px;
@@ -384,20 +391,19 @@ input.start_btn {
   border: solid 1px #dbdbdb;
 }
 .modal_form::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
-  top: 50px; right: 5%;
-  width: 32px; height: 32px;
+  top: 50px;
+  right: 5%;
+  width: 32px;
+  height: 32px;
   transform: rotate(45deg);
   background-image: url(../img/plus.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-
-
-
 
 .aaa {
   max-width: 440px;
@@ -424,10 +430,10 @@ input.start_btn {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  max-width: 1280px;
+  max-width: 1320px;
   box-sizing: content-box;
   justify-content: center;
-  padding: 0 20px; 
+  padding: 0 20px;
   margin: 0 auto;
   top: 300px;
   padding-bottom: 300px;
@@ -449,7 +455,7 @@ input.start_btn {
   margin-top: 100px;
   max-width: 1280px;
   box-sizing: content-box;
-  padding: 0 20px; 
+  padding: 0 20px;
   font-size: 3.667rem;
   position: relative;
 }
@@ -486,7 +492,7 @@ input.start_btn {
 }
 .cash {
   max-width: 1280px;
-  padding: 0 80px; 
+  padding: 0 80px;
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 160px;
@@ -507,7 +513,7 @@ input.start_btn {
   margin: 64px auto;
   max-width: 1280px;
   box-sizing: content-box;
-  padding: 0 20px; 
+  padding: 0 20px;
 }
 
 #focus {
@@ -594,7 +600,7 @@ input.start_btn {
 .footer-bottom {
   max-width: 1280px;
   box-sizing: content-box;
-  padding: 0 20px; 
+  padding: 0 20px;
   margin: 0 auto;
 }
 .footerline {
@@ -633,8 +639,8 @@ input.start_btn {
   background-size: cover;
 }
 .cash-swiper-item {
-  border: solid 1px #EBEBEB;
-  background-color: #F9F9F9;
+  border: solid 1px #ebebeb;
+  background-color: #f9f9f9;
   text-align: center;
   overflow: hidden;
   padding: 40px;
@@ -655,9 +661,10 @@ input.start_btn {
 
 .topMenu {
   position: relative;
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  transition: background .3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 .topMenu:hover .menu01 .dept01,
 .topMenu:hover .dept-shade {
@@ -667,11 +674,11 @@ input.start_btn {
   background-color: #333333;
 }
 .topMenu:hover .menu01 span {
-  color: #EBEBEB;
+  color: #ebebeb;
 }
 .topMenu:hover .login_btn {
-  border: solid 2px #CCCCCC;
-  color: #EBEBEB;
+  border: solid 2px #cccccc;
+  color: #ebebeb;
 }
 
 .dept-shade {
@@ -735,18 +742,20 @@ input.start_btn {
 }
 .nop a {
   position: relative;
-  color: #CCCCCC;
+  color: #cccccc;
   font-weight: bold;
   transition: color 0.3s ease-in-out;
 }
 .nop a::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
-  left: 0; bottom: 0;
-  width: 0px; height: 1px;
+  left: 0;
+  bottom: 0;
+  width: 0px;
+  height: 1px;
   background-color: #fff;
-  transition: width .1s ease-in-out;
+  transition: width 0.1s ease-in-out;
 }
 .nop a:hover {
   color: #fff;
@@ -948,6 +957,9 @@ div.hamburger {
     height: 242px;
     top: 350px;
   }
+  .swiper-navigation-container {
+    display: none;
+  }
 }
 @media screen and (max-width: 1024px) {
   html {
@@ -1000,7 +1012,9 @@ div.hamburger {
     max-width: 380px;
     max-height: 372px;
   }
-
+  .cash-swiper-item {
+    padding: 30px;
+  }
   .commu-area {
     position: relative;
     width: 100%;
@@ -1037,7 +1051,7 @@ div.hamburger {
   .content {
     margin-top: 32px;
   }
-  
+
   .topMenu:hover {
     background-color: #fff;
   }
@@ -1048,7 +1062,6 @@ div.hamburger {
   .topMenu:hover .logout_btn span {
     color: #555;
   }
-
 }
 @media screen and (max-width: 768px) {
   html {
@@ -1169,6 +1182,9 @@ div.hamburger {
   }
   .modal_form::after {
     top: 10px;
+  }
+  .cash-swiper-item {
+    padding: 20px;
   }
 }
 

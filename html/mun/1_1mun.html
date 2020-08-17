@@ -171,8 +171,10 @@
       class="visual_sub"
       style="background-image: url('../../img/contact_main.jpg');"
     >
+    <div class="start-btn-area">
       <input type="button" class="start_btn" />
       <h2 class="page_title">무엇을 도와드릴까요?</h2>
+    </div>
     </section>
     <section class="sub_nao">
       <div class="sub_nav three-item">
@@ -226,14 +228,24 @@
         </div>
         <div class="filebox bs3-primary">
           <h5 class="cate_title">파일첨부</h5>
-          <input
-            class="upload-name"
-            value="파일은 최대 3개까지 선택 가능합니다."
-            disabled="disabled"
-          />
+
+          <div class="upload-name">
+            <div class="upload-name-area">
+              <p class="upload-file-name"></p>
+              <p class="upload-file-size"></p>
+            </div>
+            <div class="upload-name-area">
+              <p class="upload-file-name"></p>
+              <p class="upload-file-size"></p>
+            </div>
+            <div class="upload-name-area">
+              <p class="upload-file-name"></p>
+              <p class="upload-file-size"></p>
+            </div>
+          </div>
 
           <label for="ex_filename">찾아보기</label>
-          <input type="file" id="ex_filename" class="upload-hidden" />
+          <input multiple type="file" id="ex_filename" class="upload-hidden" />
         </div>
         <input type="submit" class="quest_accept" value="문의접수" />
       </div>
@@ -302,15 +314,31 @@
     });
     $(document).ready(function () {
       var fileTarget = $(".filebox .upload-hidden");
+      var uploadNameArea = document.querySelectorAll('.upload-name-area');
 
-      fileTarget.on("change", function () {
-        if (window.FileReader) {
-          var filename = $(this)[0].files[0].name;
-        } else {
-          var filename = $(this).val().split("/").pop().split("\\").pop();
-        }
+      for (var j = 0; j < uploadNameArea.length; j++) {
+        uploadNameArea[j].addEventListener('click', function (e) {
+          console.log(e.currentTarget);
+          e.currentTarget.classList.remove('active');
+        })
+      }
+      fileTarget.on("change", function (e) {
+        console.log($(this).get(0).files);
+        // if (window.FileReader) {
+        //   var filename = $(this)[0].files[0].name;
+        // } else {
+        //   var filename = $(this).val().split("/").pop().split("\\").pop();
+        // }
+        // $(this).siblings(".upload-name").val(filename);
+        var files = $(this).get(0).files;
+        for(var i = 0; i < files.length && i < 3; i++) {
+          var uploadFileName = uploadNameArea[i].querySelector('.upload-file-name');
+          var uploadFileSize = uploadNameArea[i].querySelector('.upload-file-size');
+          uploadFileName.innerText = files[i].name;
+          uploadFileSize.innerText = '(' + Math.round(files[i].size / 1024) + "mb)";
 
-        $(this).siblings(".upload-name").val(filename);
+          uploadNameArea[i].classList.add('active')
+        };
       });
     });
   </script>

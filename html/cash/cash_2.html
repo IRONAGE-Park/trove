@@ -187,14 +187,14 @@
           <h5 class="t_t_t">보유 크레딧</h5>
           <div class="t_cash-amount">
             <h5 class="t_m_t">29,000</h5>
-            <h6 style="background-color: #0069c3;" class="t_t">C</h6>
+            <img class="cash_icon" style="margin-right: 0;" src="../../img/cash_icon.svg" />
           </div>
         </div>
         <div class="My_Point cash-area">
           <h5 class="t_t_t">보유 포인트</h5>
           <div class="t_cash-amount">
             <h5 class="t_m_t">1,000</h5>
-            <h6 style="background-color: #f7cd19;" class="t_t">P</h6>
+            <img class="point_icon_t" style="margin-right: 0;" src="../../img/point_icon.svg" />
           </div>
         </div>
         <div id="MyCredit" class="cash-popup">
@@ -240,23 +240,41 @@
     </section>
 
     <div class="cash_area">
-        <div class="private-cash-info">
-          <div class="chase_much">
+      <div class="private-cash-info">
+        <div class="chase_much">
           <div class="cash_content_area">
-            <h5 class="cash_icon">C</h5>
+            <img class="cash_icon" src="../../img/cash_icon.svg" />
             <h2 class="cash_money_t">29,000</h2>
           </div>
-            <button class="chung_btn">캐시충전</button>
+          <button class="chung_btn" onclick="togglePopup('MyCredit2')">
+            캐시충전      
+            <div id="MyCredit2" class="cash-popup">
+              <div class="cash-popup-content">
+                <span class="popup-title">충전캐시</span>
+                <span class="popup-amount">19,000</span>
+              </div>
+              <hr class="herhr" style="margin: 5px 0;"/>
+              <div class="cash-popup-content">
+                <span class="popup-title">보너스캐시</span>
+                <span class="popup-amount">10,000</span>
+              </div>
+            </div>
+          </button>
+          <script>        
+            function togglePopup(id) {
+              document.getElementById(id).classList.toggle('open-popup');
+            }
+          </script>
           <div class="cash_content_area">
-            <h5 class="point_icon_t">P</h5>
+            <img class="point_icon_t" src="../../img/point_icon.svg" />
             <h2 class="cash_point_t">29,000</h2>
           </div>
-          </div>
-          <div class="more_aa">
-            <img src="../../img/more_ic.png" class="icon_posi" />
-          </div>
+        </div>
+        <div class="more_aa">
+          <img src="../../img/more_ic.png" class="icon_posi" />
         </div>
       </div>
+    </div>
     <main class="cash-main">
       <h2 class="cash_intro">프리미엄</h2>
       <h3 class="cash_text">
@@ -277,7 +295,7 @@
             1개월 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 총99,000C<br />
             <hr class="gd_line_2" />
             <h6 class="pre_cont">월 8,250C</h6>
-            <button class="crediit">구매하기</button>
+            <button onclick="location.href= './cash_2_payment.html'" class="crediit">구매하기</button>
           </div>
         </div>
         <div id="pre_gallery">
@@ -291,7 +309,7 @@
             1개월 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 총55,000C<br />
             <hr class="gd_line_2" />
             <h6 class="pre_cont">월 9,116C</h6>
-            <button class="crediit">구매하기</button>
+            <button onclick="location.href= './cash_2_payment.html'" class="crediit">구매하기</button>
           </div>
         </div>
         <div id="pre_gallery">
@@ -305,7 +323,7 @@
             1개월 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 총32,000C<br />
             <hr class="gd_line_2" />
             <h6 class="pre_cont">월 10,666C</h6>
-            <button class="crediit">구매하기</button>
+            <button onclick="location.href= './cash_2_payment.html'" class="crediit">구매하기</button>
           </div>
         </div>
         <div id="pre_gallery">
@@ -319,7 +337,7 @@
             1개월 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 총11,000C<br />
             <hr class="gd_line_2" />
             <h6 class="pre_cont">월 11,000C</h6>
-            <button class="crediit">구매하기</button>
+            <button onclick="location.href= './cash_2_payment.html'" class="crediit">구매하기</button>
           </div>
         </div>
       </section>

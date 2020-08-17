@@ -86,11 +86,10 @@
   border-radius: 0.25em;
 }
 
-/* named upload */
 .filebox .upload-name {
   height: 48px;
   width: 740px;
-  display: inline-block;
+  display: flex;
   font-size: 1.167rem;
   color: #999999;
   font-family: inherit;
@@ -101,6 +100,51 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  position: relative;
+}
+.filebox .upload-name::after {
+  position: absolute;
+  content: '파일은 최대 3개까지 첨부 가능합니다.';
+  left: 0; top: 100%;
+}
+
+.upload-name-area {
+  width: 33%;
+  padding: 0 20px;
+  overflow: hidden;
+  align-items: center;
+  position: relative;
+  display: none;
+  cursor: pointer;
+}
+.upload-name-area:hover {
+  text-decoration: underline;
+}
+.upload-name-area.active {
+  display: flex;
+}
+.upload-name-area::after {
+  content: '';
+  position: absolute;
+  top: 50%; right: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 15px; height: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/file-remove.svg);
+}
+.upload-file-name {
+  font-size: 1.333rem;
+  white-space: nowrap;
+  color: #555555;
+  font-weight: lighter;
+}
+.upload-file-size {
+  font-size: 1.333rem;
+  color: #999999;
+  font-weight: lighter;
+  margin-left: 10px;
 }
 
 .filebox.bs3-primary label {

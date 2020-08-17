@@ -8,12 +8,11 @@
     <link rel="stylesheet" type="text/css" href="../../css/info_style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/board_style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/cash_st.css" />
-    <link rel="stylesheet" href="../../css/cash_slider.css" />
     <link rel="stylesheet" type="text/css" href="../../css/slide_bar_st.css" />
-    <script
-      type="text/javascript"
-      src="http://code.jquery.com/jquery-2.1.4.min.js"
-    ></script>
+    <link rel="stylesheet" href="../../css/cash_slider.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- ! slick -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </head>
@@ -182,10 +181,12 @@
           <button class="hre_logout">로그아웃</button>
           <div>
             <div class="PcBang_Content">
-              <h5 class="PcBang_text">PC방</h5><h5 class="OFF">OFF</h5>
+              <h5 class="PcBang_text">PC방</h5>
+              <h5 class="OFF">OFF</h5>
             </div>
             <div class="PcBang_Content">
-              <h5 class="PcBang_text">PC방</h5><h5 class="ON">ON</h5>
+              <h5 class="PcBang_text">PC방</h5>
+              <h5 class="ON">ON</h5>
             </div>
           </div>
         </div>
@@ -212,7 +213,7 @@
             <span class="popup-title">충전캐시</span>
             <span class="popup-amount">19,000</span>
           </div>
-          <hr class="herhr" style="margin: 5px 0;"/>
+          <hr class="herhr" style="margin: 5px 0;" />
           <div class="cash-popup-content">
             <span class="popup-title">보너스캐시</span>
             <span class="popup-amount">10,000</span>
@@ -222,22 +223,19 @@
     </div>
     <script>
       function openNav() {
-        document.getElementById("mysidenav").classList.add("open-sidenav");
-        document.querySelector(".shade").classList.add("open-sidenav");
+        document.getElementById("mysidenav").classList.add("open-sidenav")
+        document.querySelector(".shade").classList.add("open-sidenav")
       }
       function closeNav() {
-        document.getElementById("mysidenav").classList.remove("open-sidenav");
-        document.querySelector(".shade").classList.remove("open-sidenav");
+        document.getElementById("mysidenav").classList.remove("open-sidenav")
+        document.querySelector(".shade").classList.remove("open-sidenav")
       }
       function togglePopup(id) {
-        document.getElementById(id).classList.toggle("open-popup");
+        document.getElementById(id).classList.toggle("open-popup")
       }
     </script>
     <div class="you_bodyu">
-      <section
-        class="visual_sub"
-        style="background-image: url('../../img/cash_main.jpg');"
-      >
+      <section class="visual_sub" style="background-image: url('../../img/cash_main.jpg');">
         <div class="start-btn-area">
           <input type="button" class="start_btn" />
           <h2 class="page_title">캐시샵</h2>
@@ -245,10 +243,10 @@
       </section>
       <section class="sub_nao">
         <div class="sub_nav four-item">
-          <a href="./cash_1.html" class="g_board_selec">패키지</a>
+          <a href="./cash_1.html" class="g_board">패키지</a>
           <a href="./cash_2.html" class="g_board">프리미엄</a>
           <a href="./cash_3.html" class="g_board">크레딧</a>
-          <a href="./cash_4.html" class="g_board">포인트샵</a>
+          <a href="./cash_4.html" class="g_board_selec">포인트샵</a>
         </div>
         <hr color="#cccccc" />
       </section>
@@ -273,19 +271,17 @@
       <main class="cash-main detail">
         <div class="cash-product-info">
           <div class="product-info-image">
-            <img
-              src="../../img/item/equipment_flask_effect_damagereflect.png"
-            />
+            <img src="../../img/item/equipment_flask_effect_ally_rangedphysical.png" />
           </div>
           <div class="product-info-content">
-            <h1 class="product-info-title">패키지</h1>
+            <h1 class="product-info-title">아이템명</h1>
             <div class="product-info-text">
-              패키지설명텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스텍스트텍스트텍스트
+              크레딧설명텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트
             </div>
             <hr class="product-info-line" />
             <div class="product-info-value">
               <p class="product-info-name">가격</p>
-              <p class="product-info-price">23,000</p>
+              <p class="product-info-price">3,000</p>
             </div>
             <div class="product-info-amount">
               <p class="product-info-name">수량</p>
@@ -300,127 +296,15 @@
               </div>
             </div>
             <hr class="product-info-line" />
-            <div class="product-total-value">
-              <p class="product-total-name">총 결제예정 금액</p>
-              <p class="product-total-price">23,000C</p>
-            </div>
+            <div class="product-total-value"></div>
             <div class="product-accumulate-point">
-              <p class="product-total-name">총 적립 예정 포인트</p>
-              <p class="product-total-price">2,300P</p>
+              <p class="product-total-name">총 결제 예정 포인트</p>
+              <p class="product-total-price">3,000P</p>
             </div>
-            <button onclick="location.href = './cash_1_payment.html'" class="product-buy-button">구매하기</button>
+            <button onclick="location.href='./cash_4_payment.html'" class="product-buy-button">구매하기</button>
           </div>
         </div>
-        <div class="other-item align-buy-button">
-          <div class="other-item-title">
-            <h2>패키지 구성품</h2>
-          </div>
-          <span class="prev" id="prev_arrow"><img src="../../img/slider/prev_arrow.png" alt="" class="arrow-style arrow-style-prev" /></span>
-          <span class="next" id="next_arrow"><img src="../../img/slider/next_arrow.png" alt="" class="arrow-style arrow-style-next" /></span>
-          <div class="other-component-list">
-              <div class="other-item-box">
-                <a href="cash_1.html">
-                  <div class="other-item-image">
-                    <img src="../../img/item/item_box_pegasus_dark.png" />
-                  </div>
-                  <div class="other-item-content">
-                    <div class="other-item-name">패키지</div>
-                    <p class="other-item-explain">
-                      패키지설명텍스트텍스트텍스트텍스트텍스트트텍스트
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="other-item-box">
-                <a href="cash_1.html">
-                  <div class="other-item-image">
-                    <img src="../../img/item/item_box_pegasus_dark.png" />
-                  </div>
-                  <div class="other-item-content">
-                    <div class="other-item-name">패키지</div>
-                    <p class="other-item-explain">
-                      패키지설명텍스트텍스트텍스트텍스트텍스트트텍스트
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="other-item-box">
-                <a href="cash_1.html">
-                  <div class="other-item-image">
-                    <img src="../../img/item/item_box_pegasus_dark.png" />
-                  </div>
-                  <div class="other-item-content">
-                    <div class="other-item-name">패키지</div>
-                    <p class="other-item-explain">
-                      패키지설명텍스트텍스트텍스트텍스트텍스트트텍스트
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="other-item-box">
-                <a href="cash_1.html">
-                  <div class="other-item-image">
-                    <img src="../../img/item/item_box_pegasus_dark.png" />
-                  </div>
-                  <div class="other-item-content">
-                    <div class="other-item-name">패키지</div>
-                    <p class="other-item-explain">
-                      패키지설명텍스트텍스트텍스트텍스트텍스트트텍스트
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="other-item-box">
-                <a href="cash_1.html">
-                  <div class="other-item-image">
-                    <img src="../../img/item/item_box_pegasus_dark.png" />
-                  </div>
-                  <div class="other-item-content">
-                    <div class="other-item-name">패키지</div>
-                    <p class="other-item-explain">
-                      패키지설명텍스트텍스트텍스트텍스트텍스트트텍스트
-                    </p>
-                  </div>
-                </a>
-              </div>
-          </div>
-        </div>
-          <script>
-            $(".other-component-list").slick({
-              dots: false,
-              infinite: true,
-              slidesToShow: 4,
-              slidesToScroll: 1,
-              arrows: true,
-
-              prevArrow: $("#prev_arrow"),
-              nextArrow: $("#next_arrow"),
-              responsive: [
-                {
-                  breakpoint: 1025,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                  },
-                },
-                {
-                  breakpoint: 769,
-                  settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                  },
-                },
-                {
-                  breakpoint: 451,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                  },
-                },
-              ],
-            })
-          </script>
-        <div class="cause_div">
+        <div class="cause_div align-buy-button">
           <div class="cause_title">주의사항</div>
           <h5 class="cause_cint">
             주의사항설명텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트텍스트
@@ -439,8 +323,8 @@
             <div class="other-item-title">
               <h3>트로브의 다른 아이템</h3>
             </div>
-            <span class="prev" id="prev_component_arrow"><img src="../../img/slider/prev_arrow.png" alt="" class="arrow-style arrow-style-prev" /></span>
-            <span class="next" id="next_component_arrow"><img src="../../img/slider/next_arrow.png" alt="" class="arrow-style arrow-style-next" /></span>
+            <span class="prev" id="prev_arrow"><img src="../../img/slider/prev_arrow.png" alt="" class="arrow-style arrow-style-prev" /></span>
+            <span class="next" id="next_arrow"><img src="../../img/slider/next_arrow.png" alt="" class="arrow-style arrow-style-next" /></span>
             <div class="other-item-list">
               <div class="other-item-box">
                 <a href="cash_1.html">
@@ -517,8 +401,8 @@
               slidesToScroll: 1,
               arrows: true,
 
-              prevArrow: $("#prev_component_arrow"),
-              nextArrow: $("#next_component_arrow"),
+              prevArrow: $("#prev_arrow"),
+              nextArrow: $("#next_arrow"),
               responsive: [
                 {
                   breakpoint: 1025,
@@ -578,58 +462,58 @@
     </div>
   </body>
   <script>
-    var mobileMoveTop = document.querySelector(".mobile-move_top");
+    var mobileMoveTop = document.querySelector(".mobile-move_top")
     window.addEventListener("scroll", function (e) {
-      var scrollpos = window.scrollY || window.pageYOffset;
+      var scrollpos = window.scrollY || window.pageYOffset
       if (scrollpos < 200) {
-        mobileMoveTop.classList.remove("visible");
+        mobileMoveTop.classList.remove("visible")
       } else {
-        mobileMoveTop.classList.add("visible");
+        mobileMoveTop.classList.add("visible")
       }
-    });
+    })
     mobileMoveTop.addEventListener("click", function (e) {
-      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-    });
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+    })
 
-    document.querySelector(".more_aa").addEventListener("click", openNav);
+    document.querySelector(".more_aa").addEventListener("click", openNav)
 
     document.querySelector(".hamburger").addEventListener("click", function (e) {
-        $("body").toggleClass("open-sidebar");
-        $("html").toggleClass("hidden");
-      });
+      $("body").toggleClass("open-sidebar")
+      $("html").toggleClass("hidden")
+    })
     $(".sidebar-closebtn").click(function () {
-      $("body").removeClass("open-sidebar");
-      $("html").removeClass("hidden");
-    });
+      $("body").removeClass("open-sidebar")
+      $("html").removeClass("hidden")
+    })
 
-    var productAmountMinus = document.getElementById("amount-minus");
-    var productAmountPlus = document.getElementById("amount-plus");
-    var productAmountValue = document.getElementById("amount-value");
-    productAmountMinus.addEventListener("click", valueSet);
-    productAmountPlus.addEventListener("click", valueSet);
+    var productAmountMinus = document.getElementById("amount-minus")
+    var productAmountPlus = document.getElementById("amount-plus")
+    var productAmountValue = document.getElementById("amount-value")
+    productAmountMinus.addEventListener("click", valueSet)
+    productAmountPlus.addEventListener("click", valueSet)
 
     function valueSet(event) {
       switch (event.target.id) {
         case "amount-minus":
-          productAmountValue.value = parseInt(productAmountValue.value) - 1;
-          break;
+          productAmountValue.value = parseInt(productAmountValue.value) - 1
+          break
         case "amount-plus":
-          productAmountValue.value = parseInt(productAmountValue.value) + 1;
-          break;
+          productAmountValue.value = parseInt(productAmountValue.value) + 1
+          break
       }
       // productAmountValue.value = "0";
     }
 
     $(document).ready(function () {
       $("ul.tabs li").click(function () {
-        var tab_id = $(this).attr("data-tab");
+        var tab_id = $(this).attr("data-tab")
 
-        $("ul.tabs li").removeClass("current");
-        $(".tab-content").removeClass("current");
+        $("ul.tabs li").removeClass("current")
+        $(".tab-content").removeClass("current")
 
-        $(this).addClass("current");
-        $("#" + tab_id).addClass("current");
-      });
-    });
+        $(this).addClass("current")
+        $("#" + tab_id).addClass("current")
+      })
+    })
   </script>
 </html>

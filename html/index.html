@@ -15,12 +15,6 @@
   </script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=Number.isNaN"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
-
-  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <!-- ! slick -->
   <link rel="stylesheet" href="../css/index_slider.css">
@@ -174,24 +168,121 @@
   </header>
   <div class="wrap_content">
     <input type="button" class="start_btn">
-    <div id="mainBanner-swiper-container" class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="mySlide-area" style="background-image: url('../img/main_banner1.png')"></div>
+    <div class="mainBanner-container">
+      <div class="swiper-container">
+        <div class="mainBanner-slick-image_box">
+          <div class="mainBanner-slick-image" style="background-image: url('../img/main_banner1.png');"></div>
         </div>
-        <div class="swiper-slide">
-          <div class="mySlide-area" style="background-image: url('../img/banner_test_1.png')"></div>
+        <div class="mainBanner-slick-image_box">
+          <div class="mainBanner-slick-image" style="background-image: url('../img/banner_test_1.png');"></div>
         </div>
-        <div class="swiper-slide">
-          <div class="mySlide-area" style="background-image: url('../img/info_banner.jpg')"></div>
+        <div class="mainBanner-slick-image_box">
+          <div class="mainBanner-slick-image" style="background-image: url('../img/cash_main.jpg');"></div>
+        </div>
+        <div class="mainBanner-slick-image_box">
+          <div class="mainBanner-slick-image" style="background-image: url('../img/cash_main.jpg');"></div>
         </div>
       </div>
-      <div id="mainBanner-swiper-pagination" class="swiper-pagination"></div>
-      <div class="swiper-navigation">
-        <div id="mainBanner-swiper-button-prev" class="swiper-button-prev"></div>
-        <div id="mainBanner-swiper-button-next" class="swiper-button-next"></div>
+      <div class="swiper-navigation-container">
+        <div class="swiper-navigation">
+          <span class="prev-arrow_box">
+            <img src="../img/slider/mainBanner/mainBanner_prev.png" alt="" class='mainBanner_prev'>
+          </span>
+            <div class="slick-image-title_box">
+              <div class="slick-image-title" style="color: white;">
+                새로운 맵 확인하고
+                  아이템 받자 
+              </div>
+            </div>
+            <div class="slick-image-title_box" style="margin-right: 500px;">
+              <div class="slick-image-title">
+                새로운 맵 확인하고
+                  아이템 받자 
+              </div>
+            </div>
+            <div class="slick-image-title_box">
+              <div class="slick-image-title">
+                정식 서비스
+                기념 이벤트
+              </div>
+            </div>
+            <div class="slick-image-title_box" style='margin:0'>
+              <div class="slick-image-title">
+                새로운 맵 확인하고
+                아이템 받자 
+              </div>
+            </div>
+          <span class="next-arrow_box">
+            <img src="../img/slider/mainBanner/mainBanner_next.png" alt="" class='mainBanner_next'>
+          </span>
+        </div>
       </div>
+
     </div>
+    <script>
+      let dots = document.querySelectorAll('.slick-image-title');
+      let index=0;
+      $(".swiper-container").slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        arrows: true,
+        draggable:false,
+        prevArrow: $('.mainBanner_prev'),
+        nextArrow: $('.mainBanner_next'),
+        customPaging: function (slider, i) {
+        },
+        responsive: [
+          {
+            breakpoint: 1375,
+            settings: {
+              autoplay: true,
+              autoplaySpeed: 1000,
+            }
+          },
+        ]
+      })
+      $('.slick-image-title_box').click(function(){
+        let slideNo = $(this).index()-1;
+        index =slideNo;
+        $('.swiper-container').slick('slickGoTo', slideNo);
+        for(let i=0;i<dots.length;i++){
+          if(dots[i].style.color='white')
+          dots[i].style.color='#555';
+        }
+        dots[slideNo].style.color='white';
+      })
+
+      $('.mainBanner_prev').click(function(){
+        
+        if(index === 0){
+          index = dots.length -1;
+          dots[index].style.color='white';
+          dots[0].style.color='#555';
+        }
+        else{
+          dots[index].style.color='#555';
+          index=index-1;
+          dots[index].style.color='white';
+        }
+      })
+      $('.mainBanner_next').click(function(){
+        if(index === dots.length-1){
+          dots[index].style.color='#555';
+          dots[0].style.color='white';
+          index=0;
+        }
+        else{
+          dots[index].style.color='#555';
+          index=index+1;
+          dots[index].style.color='white';
+        }
+      })
+
+    </script>
+
     <section class="info-content">
       <h2 class="sosic_intro">
         트로브 소식
@@ -378,18 +469,19 @@
             <h4 class="made_day">2020.00.00</h4>
           </div>
         </div>
-        <div class="com_box  wow fadeInUp" data-wow-duration="1s">
+           <div class="com_box  wow fadeInUp" data-wow-duration="1s">
           <h4 class="bd_tag">[자유게시판]</h4>
           <h2 class="comuu_title">트로브 완전 좋은 팁 알려준다.</h2>
           <hr class="com_line" />
           <h5 class="cont_com">
-            트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.
+            트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다. 트로브 완전 좋은 팁 알려준다.트로브 완전 좋은 팁 알려준다.
           </h5>
           <div class="com_box_bottom">
             <h4 class="nickname">트로브</h4>
             <h4 class="made_day">2020.00.00</h4>
           </div>
         </div>
+   
       </div>
 
     </div>
@@ -397,26 +489,27 @@
     <script>
       $(".com-box-area").slick({
         dots: false,
+        infinite:false,
         slidesToShow: 4,
         slidesToScroll: 1,
         arrows: false,
         responsive: [
           {
-            breakpoint: 1297,
+            breakpoint: 1329,
             settings: {
               slidesToShow: 3,
               slidesToScroll: 1
             }
           },
           {
-            breakpoint: 769,
+            breakpoint: 990,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 1
             }
           },
           {
-            breakpoint: 451,
+            breakpoint: 656,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1
@@ -530,29 +623,6 @@
     $("body").removeClass("open-sidebar");
     $("html").removeClass("hidden")
   });
-
-  const mainBannerSwiper = new Swiper('#mainBanner-swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    // Navigation arrows
-    navigation: {
-      nextEl: '#mainBanner-swiper-button-next',
-      prevEl: '#mainBanner-swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + '</span>';
-      },
-    }
-  })
 </script>
 
 </html>

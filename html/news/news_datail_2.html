@@ -240,7 +240,7 @@
               </div>
               <div class="board-comment-write">
                 <div class="board-comment-input">
-                  <textarea></textarea>
+                  <textarea id="comment-box"></textarea>
                 </div>
                 <div class="board-comment-state">
                   <span>(0/200)</span>
@@ -291,6 +291,17 @@
     window.scrollTo({top:0, left:0, behavior:'smooth'});
   })
   
+  var commentState = document.querySelector('.board-comment-state span');
+
+  document.getElementById('comment-box').addEventListener('keydown', function (e) {
+    if (e.target.value.length > 200) {
+      e.preventDefault();
+      alert('200자 이내에만 입력할 수 있습니다.')
+    } else {
+      commentState.innerText = '(' + e.target.value.length + '/200)';
+    }
+  })
+
   document.querySelector('.hamburger').addEventListener('click', function (e) {
         $("body").toggleClass("open-sidebar");
         $("html").toggleClass("hidden")
